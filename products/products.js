@@ -7,7 +7,7 @@ const products = [
     "Article name": "FN-UX-HATS000149",
     "Color": "Black",
     "Article number": "C40223-900",
-    "image_link": "https://cdn.acnestudios.com/products/C4/C40223-/C40223-900_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C4/C40223-/2000x/C40223-900_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -19,7 +19,7 @@ const products = [
     "Article name": "FN-WN-SUIT000456",
     "Color": "Black",
     "Article number": "AH0241-900",
-    "image_link": "https://cdn.acnestudios.com/products/AH/AH0241-/AH0241-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AH/AH0241-/2000x/AH0241-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -31,7 +31,7 @@ const products = [
     "Article name": "FN-UX-HATS000203",
     "Color": "Mid blue",
     "Article number": "C40284-AUZ",
-    "image_link": "https://cdn.acnestudios.com/products/C4/C40284-/C40284-AUZ_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C4/C40284-/2000x/C40284-AUZ_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -43,7 +43,7 @@ const products = [
     "Article name": "FN-UX-SLGS000115",
     "Color": "Camel brown",
     "Article number": "CG0106-640",
-    "image_link": "https://cdn.acnestudios.com/products/CG/CG0106-/CG0106-640_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CG/CG0106-/2000x/CG0106-640_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -55,7 +55,7 @@ const products = [
     "Article name": "FA-UX-HATS000177",
     "Color": "Black",
     "Article number": "C40272-900",
-    "image_link": "https://cdn.acnestudios.com/products/C4/C40272-/C40272-900_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C4/C40272-/2000x/C40272-900_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -67,7 +67,7 @@ const products = [
     "Article name": "FN-WN-LEAT000236",
     "Color": "Black",
     "Article number": "A70132-900",
-    "image_link": "https://cdn.acnestudios.com/products/A7/A70132-/A70132-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A7/A70132-/2000x/A70132-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -79,7 +79,7 @@ const products = [
     "Article name": "FN-WN-SHOE000836",
     "Color": "Black",
     "Article number": "AD0693-900",
-    "image_link": "https://cdn.acnestudios.com/products/AD/AD0693-/AD0693-900_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AD/AD0693-/2000x/AD0693-900_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -91,7 +91,7 @@ const products = [
     "Article name": "FN-WN-SKIR000388",
     "Color": "Black",
     "Article number": "AF0253-900",
-    "image_link": "https://cdn.acnestudios.com/products/AF/AF0253-/AF0253-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AF/AF0253-/2000x/AF0253-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -103,7 +103,7 @@ const products = [
     "Article name": "FN-WN-SKIR000318",
     "Color": "Mid Blue",
     "Article number": "AF0207-863",
-    "image_link": "https://cdn.acnestudios.com/products/AF/AF0207-/AF0207-863_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AF/AF0207-/2000x/AF0207-863_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -115,7 +115,7 @@ const products = [
     "Article name": "FN-MN-LEAT000212",
     "Color": "Black",
     "Article number": "B70121-900",
-    "image_link": "https://cdn.acnestudios.com/products/B7/B70121-/B70121-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B7/B70121-/2000x/B70121-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -127,7 +127,7 @@ const products = [
     "Article name": "FN-MN-SHOE000262",
     "Color": "Black",
     "Article number": "BD0297-900",
-    "image_link": "https://cdn.acnestudios.com/products/BD/BD0297-/BD0297-900_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BD/BD0297-/2000x/BD0297-900_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -139,7 +139,7 @@ const products = [
     "Article name": "FN-MN-TROU000844",
     "Color": "Black",
     "Article number": "BK0560-900",
-    "image_link": "https://cdn.acnestudios.com/products/BK/BK0560-/BK0560-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BK/BK0560-/2000x/BK0560-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -151,7 +151,7 @@ const products = [
     "Article name": "Multipocket Mini Gilirosh Sprayed",
     "Color": "Beige/green",
     "Article number": "A10324-AMR",
-    "image_link": "https://cdn.acnestudios.com/products/A1/A10324-/A10324-AMR_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A1/A10324-/2000x/A10324-AMR_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -163,7 +163,7 @@ const products = [
     "Article name": "FN-WN-BAGS000331",
     "Color": "Black",
     "Article number": "A10284-900",
-    "image_link": "https://cdn.acnestudios.com/products/A1/A10284-/A10284-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A1/A10284-/2000x/A10284-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -175,7 +175,7 @@ const products = [
     "Article name": "FN-WN-BAGS000332",
     "Color": "Black",
     "Article number": "A10280-900",
-    "image_link": "https://cdn.acnestudios.com/products/A1/A10280-/A10280-900_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A1/A10280-/2000x/A10280-900_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -187,7 +187,7 @@ const products = [
     "Article name": "FN-UX-JEWE000420",
     "Color": "Antique Silver",
     "Article number": "C50387-BWF",
-    "image_link": "https://cdn.acnestudios.com/products/C5/C50387-/C50387-BWF_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C5/C50387-/2000x/C50387-BWF_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -199,7 +199,7 @@ const products = [
     "Article name": "FN-UX-ACCS000130",
     "Color": "Camel brown",
     "Article number": "C80182-640",
-    "image_link": "https://cdn.acnestudios.com/products/C8/C80182-/C80182-640_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C8/C80182-/2000x/C80182-640_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -211,7 +211,7 @@ const products = [
     "Article name": "FN-UX-5PKT000044",
     "Color": "Mid blue",
     "Article number": "C00048-AUZ",
-    "image_link": "https://cdn.acnestudios.com/products/C0/C00048-/C00048-AUZ_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C0/C00048-/2000x/C00048-AUZ_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -223,7 +223,7 @@ const products = [
     "Article name": "Bars Stars W",
     "Color": "Peach pink/brown",
     "Article number": "AD0713-DMG",
-    "image_link": "https://cdn.acnestudios.com/products/AD/AD0713-/AD0713-DMG_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AD/AD0713-/2000x/AD0713-DMG_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -235,7 +235,7 @@ const products = [
     "Article name": "FN-WN-SHOE000775",
     "Color": "Black",
     "Article number": "AD0679-900",
-    "image_link": "https://cdn.acnestudios.com/products/AD/AD0679-/AD0679-900_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AD/AD0679-/2000x/AD0679-900_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -247,7 +247,7 @@ const products = [
     "Article name": "FN-WN-SHOE000912",
     "Color": "Black",
     "Article number": "AD0756-900",
-    "image_link": "https://cdn.acnestudios.com/products/AD/AD0756-/AD0756-900_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AD/AD0756-/2000x/AD0756-900_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -259,7 +259,7 @@ const products = [
     "Article name": "FN-WN-SHOE000833",
     "Color": "Black",
     "Article number": "AD0689-900",
-    "image_link": "https://cdn.acnestudios.com/products/AD/AD0689-/AD0689-900_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AD/AD0689-/2000x/AD0689-900_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -271,7 +271,7 @@ const products = [
     "Article name": "FN-WN-SHOE000904",
     "Color": "Anthracite grey",
     "Article number": "AD0714-AA2",
-    "image_link": "https://cdn.acnestudios.com/products/AD/AD0714-/AD0714-AA2_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AD/AD0714-/2000x/AD0714-AA2_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -283,7 +283,7 @@ const products = [
     "Article name": "FN-WN-SKIR000676",
     "Color": "Light blue",
     "Article number": "AF0422-228",
-    "image_link": "https://cdn.acnestudios.com/products/AF/AF0422-/AF0422-228_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AF/AF0422-/2000x/AF0422-228_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -295,7 +295,7 @@ const products = [
     "Article name": "FN-WN-SKIR000685",
     "Color": "Black",
     "Article number": "AF0442-900",
-    "image_link": "https://cdn.acnestudios.com/products/AF/AF0442-/AF0442-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AF/AF0442-/2000x/AF0442-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -307,7 +307,7 @@ const products = [
     "Article name": "FN-WN-TROU001218",
     "Color": "Light blue",
     "Article number": "C00052-228",
-    "image_link": "https://cdn.acnestudios.com/products/C0/C00052-/C00052-228_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C0/C00052-/2000x/C00052-228_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -319,7 +319,7 @@ const products = [
     "Article name": "FN-MN-LEAT000255",
     "Color": "Black",
     "Article number": "B70142-900",
-    "image_link": "https://cdn.acnestudios.com/products/B7/B70142-/B70142-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B7/B70142-/2000x/B70142-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -331,7 +331,7 @@ const products = [
     "Article name": "FN-UX-OUTW000042",
     "Color": "Blue/beige",
     "Article number": "C90168-BUF",
-    "image_link": "https://cdn.acnestudios.com/products/C9/C90168-/C90168-BUF_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C9/C90168-/2000x/C90168-BUF_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -343,7 +343,7 @@ const products = [
     "Article name": "FN-UX-SHIR000018",
     "Color": "Blue/beige",
     "Article number": "CB0073-BUF",
-    "image_link": "https://cdn.acnestudios.com/products/CB/CB0073-/CB0073-BUF_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CB/CB0073-/2000x/CB0073-BUF_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -355,7 +355,7 @@ const products = [
     "Article name": "FN-MN-SHIR000645 FW23",
     "Color": "Dusty blue",
     "Article number": "BB0512-AAT",
-    "image_link": "https://cdn.acnestudios.com/products/BB/BB0512-/BB0512-AAT_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BB/BB0512-/2000x/BB0512-AAT_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -367,7 +367,7 @@ const products = [
     "Article name": "FN-MN-SHIR000742",
     "Color": "White",
     "Article number": "BB0576-100",
-    "image_link": "https://cdn.acnestudios.com/products/BB/BB0576-/BB0576-100_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BB/BB0576-/2000x/BB0576-100_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -379,7 +379,7 @@ const products = [
     "Article name": "FN-MN-SHIR000768",
     "Color": "Blue/beige",
     "Article number": "BB0562-BUF",
-    "image_link": "https://cdn.acnestudios.com/products/BB/BB0562-/BB0562-BUF_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BB/BB0562-/2000x/BB0562-BUF_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -391,7 +391,7 @@ const products = [
     "Article name": "FN-UX-SHOR000021",
     "Color": "Blue/beige",
     "Article number": "CE0054-BUF",
-    "image_link": "https://cdn.acnestudios.com/products/CE/CE0054-/CE0054-BUF_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CE/CE0054-/2000x/CE0054-BUF_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -403,7 +403,7 @@ const products = [
     "Article name": "FN-MN-SUIT000379",
     "Color": "Vintage grey melange",
     "Article number": "BH0202-DFL",
-    "image_link": "https://cdn.acnestudios.com/products/BH/BH0202-/BH0202-DFL_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BH/BH0202-/2000x/BH0202-DFL_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -415,7 +415,7 @@ const products = [
     "Article name": "FN-MN-TROU000962",
     "Color": "Silver/blue",
     "Article number": "B00346-BBR",
-    "image_link": "https://cdn.acnestudios.com/products/B0/B00346-/B00346-BBR_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B0/B00346-/2000x/B00346-BBR_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -427,7 +427,7 @@ const products = [
     "Article name": "FN-MN-TROU000960",
     "Color": "Blue/brown",
     "Article number": "B00344-AG7",
-    "image_link": "https://cdn.acnestudios.com/products/B0/B00344-/B00344-AG7_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B0/B00344-/2000x/B00344-AG7_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -439,7 +439,7 @@ const products = [
     "Article name": "FN-MN-TROU000953",
     "Color": "Vintage grey melange",
     "Article number": "BK0604-DFL",
-    "image_link": "https://cdn.acnestudios.com/products/BK/BK0604-/BK0604-DFL_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BK/BK0604-/2000x/BK0604-DFL_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -451,7 +451,7 @@ const products = [
     "Article name": "FN-WN-BAGS000421",
     "Color": "Light blue/pink",
     "Article number": "A10214-AZB",
-    "image_link": "https://cdn.acnestudios.com/products/A1/A10214-/A10214-AZB_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A1/A10214-/2000x/A10214-AZB_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -463,7 +463,7 @@ const products = [
     "Article name": "Multipocket Rev Brush",
     "Color": "Brown/bronze",
     "Article number": "A10342-AFO",
-    "image_link": "https://cdn.acnestudios.com/products/A1/A10342-/A10342-AFO_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A1/A10342-/2000x/A10342-AFO_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -475,7 +475,7 @@ const products = [
     "Article name": "FN-WN-BAGS000244",
     "Color": "Black",
     "Article number": "A10226-900",
-    "image_link": "https://cdn.acnestudios.com/products/A1/A10226-/A10226-900_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A1/A10226-/2000x/A10226-900_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -487,7 +487,7 @@ const products = [
     "Article name": "FN-WN-BAGS000244",
     "Color": "Camel brown",
     "Article number": "A10226-640",
-    "image_link": "https://cdn.acnestudios.com/products/A1/A10226-/A10226-640_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A1/A10226-/2000x/A10226-640_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -499,7 +499,7 @@ const products = [
     "Article name": "FN-WN-BAGS000244",
     "Color": "White/black",
     "Article number": "A10226-AL4",
-    "image_link": "https://cdn.acnestudios.com/products/A1/A10226-/A10226-AL4_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A1/A10226-/2000x/A10226-AL4_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -511,7 +511,7 @@ const products = [
     "Article name": "Platt Mini R",
     "Color": "Black",
     "Article number": "A10360-900",
-    "image_link": "https://cdn.acnestudios.com/products/A1/A10360-/A10360-900_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A1/A10360-/2000x/A10360-900_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -523,7 +523,7 @@ const products = [
     "Article name": "FN-UX-HATS000243",
     "Color": "Blue/beige",
     "Article number": "C40330-BUF",
-    "image_link": "https://cdn.acnestudios.com/products/C4/C40330-/C40330-BUF_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C4/C40330-/2000x/C40330-BUF_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -535,7 +535,7 @@ const products = [
     "Article name": "FN-UX-HATS000245",
     "Color": "Black",
     "Article number": "C40327-900",
-    "image_link": "https://cdn.acnestudios.com/products/C4/C40327-/C40327-900_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C4/C40327-/2000x/C40327-900_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -547,7 +547,7 @@ const products = [
     "Article name": "FN-UX-HATS000241",
     "Color": "Blue/beige",
     "Article number": "C40328-BUF",
-    "image_link": "https://cdn.acnestudios.com/products/C4/C40328-/C40328-BUF_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C4/C40328-/2000x/C40328-BUF_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -559,7 +559,7 @@ const products = [
     "Article name": "FN-UX-JEWE000433",
     "Color": "Antique gold",
     "Article number": "C50373-BYK",
-    "image_link": "https://cdn.acnestudios.com/products/C5/C50373-/C50373-BYK_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C5/C50373-/2000x/C50373-BYK_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -571,7 +571,7 @@ const products = [
     "Article name": "FN-UX-JEWE000433",
     "Color": "Antique Silver",
     "Article number": "C50373-BWF",
-    "image_link": "https://cdn.acnestudios.com/products/C5/C50373-/C50373-BWF_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C5/C50373-/2000x/C50373-BWF_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -583,7 +583,7 @@ const products = [
     "Article name": "FN-UX-JEWE000431",
     "Color": "Antique gold",
     "Article number": "C50395-BYK",
-    "image_link": "https://cdn.acnestudios.com/products/C5/C50395-/C50395-BYK_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C5/C50395-/2000x/C50395-BYK_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -595,7 +595,7 @@ const products = [
     "Article name": "FN-UX-JEWE000431",
     "Color": "Antique Silver",
     "Article number": "C50395-BWF",
-    "image_link": "https://cdn.acnestudios.com/products/C5/C50395-/C50395-BWF_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C5/C50395-/2000x/C50395-BWF_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -607,7 +607,7 @@ const products = [
     "Article name": "FN-UX-JEWE000434",
     "Color": "Antique gold",
     "Article number": "C50393-BYK",
-    "image_link": "https://cdn.acnestudios.com/products/C5/C50393-/C50393-BYK_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C5/C50393-/2000x/C50393-BYK_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -619,7 +619,7 @@ const products = [
     "Article name": "FN-UX-JEWE000434",
     "Color": "Antique Silver",
     "Article number": "C50393-BWF",
-    "image_link": "https://cdn.acnestudios.com/products/C5/C50393-/C50393-BWF_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C5/C50393-/2000x/C50393-BWF_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -631,7 +631,7 @@ const products = [
     "Article name": "FN-UX-JEWE000471",
     "Color": "Silver/green",
     "Article number": "C50421-AYH",
-    "image_link": "https://cdn.acnestudios.com/products/C5/C50421-/C50421-AYH_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C5/C50421-/2000x/C50421-AYH_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -643,7 +643,7 @@ const products = [
     "Article name": "FN-UX-JEWE000469",
     "Color": "Silver/green",
     "Article number": "C50422-AYH",
-    "image_link": "https://cdn.acnestudios.com/products/C5/C50422-/C50422-AYH_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C5/C50422-/2000x/C50422-AYH_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -655,7 +655,7 @@ const products = [
     "Article name": "FN-UX-JEWE000470",
     "Color": "Silver/green",
     "Article number": "C50423-AYH",
-    "image_link": "https://cdn.acnestudios.com/products/C5/C50423-/C50423-AYH_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C5/C50423-/2000x/C50423-AYH_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -667,7 +667,7 @@ const products = [
     "Article name": "FN-UX-JEWE000467",
     "Color": "Black",
     "Article number": "C50428-900",
-    "image_link": "https://cdn.acnestudios.com/products/C5/C50428-/C50428-900_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C5/C50428-/2000x/C50428-900_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -679,7 +679,7 @@ const products = [
     "Article name": "FN-UX-JEWE000468",
     "Color": "Black",
     "Article number": "C50424-900",
-    "image_link": "https://cdn.acnestudios.com/products/C5/C50424-/C50424-900_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C5/C50424-/2000x/C50424-900_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -691,7 +691,7 @@ const products = [
     "Article name": "FN-UX-ACCS000143",
     "Color": "Black",
     "Article number": "C80429-900",
-    "image_link": "https://cdn.acnestudios.com/products/C8/C80429-/C80429-900_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C8/C80429-/2000x/C80429-900_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -703,7 +703,7 @@ const products = [
     "Article name": "FN-UX-ACCS000143",
     "Color": "Salmon pink",
     "Article number": "C80429-AD2",
-    "image_link": "https://cdn.acnestudios.com/products/C8/C80429-/C80429-AD2_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C8/C80429-/2000x/C80429-AD2_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -715,7 +715,7 @@ const products = [
     "Article name": "FN-UX-JEWE000463",
     "Color": "Black",
     "Article number": "C50425-900",
-    "image_link": "https://cdn.acnestudios.com/products/C5/C50425-/C50425-900_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C5/C50425-/2000x/C50425-900_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -727,7 +727,7 @@ const products = [
     "Article name": "FN-UX-JEWE000463",
     "Color": "Salmon pink",
     "Article number": "C50425-AD2",
-    "image_link": "https://cdn.acnestudios.com/products/C5/C50425-/C50425-AD2_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C5/C50425-/2000x/C50425-AD2_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -739,7 +739,7 @@ const products = [
     "Article name": "FN-UX-ACCS000116",
     "Color": "Black/gold",
     "Article number": "C80171-BW8",
-    "image_link": "https://cdn.acnestudios.com/products/C8/C80171-/C80171-BW8_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C8/C80171-/2000x/C80171-BW8_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -751,7 +751,7 @@ const products = [
     "Article name": "FN-UX-ACCS000116",
     "Color": "Brown",
     "Article number": "C80171-700",
-    "image_link": "https://cdn.acnestudios.com/products/C8/C80171-/C80171-700_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C8/C80171-/2000x/C80171-700_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -763,7 +763,7 @@ const products = [
     "Article name": "FN-UX-SCAR000370",
     "Color": "Black",
     "Article number": "CA0316-900",
-    "image_link": "https://cdn.acnestudios.com/products/CA/CA0316-/CA0316-900_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CA/CA0316-/2000x/CA0316-900_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -775,7 +775,7 @@ const products = [
     "Article name": "FN-UX-SCAR000384",
     "Color": "Pink",
     "Article number": "CA0326-415",
-    "image_link": "https://cdn.acnestudios.com/products/CA/CA0326-/CA0326-415_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CA/CA0326-/2000x/CA0326-415_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -787,7 +787,7 @@ const products = [
     "Article name": "FN-UX-SCAR000343",
     "Color": "Brown",
     "Article number": "CA0325-700",
-    "image_link": "https://cdn.acnestudios.com/products/CA/CA0325-/CA0325-700_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CA/CA0325-/2000x/CA0325-700_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -799,7 +799,7 @@ const products = [
     "Article name": "FN-UX-SCAR000343",
     "Color": "Green",
     "Article number": "CA0325-AB8",
-    "image_link": "https://cdn.acnestudios.com/products/CA/CA0325-/CA0325-AB8_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CA/CA0325-/2000x/CA0325-AB8_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -811,7 +811,7 @@ const products = [
     "Article name": "FN-UX-SCAR000343",
     "Color": "Violet purple",
     "Article number": "CA0325-ADE",
-    "image_link": "https://cdn.acnestudios.com/products/CA/CA0325-/CA0325-ADE_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CA/CA0325-/2000x/CA0325-ADE_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -823,7 +823,7 @@ const products = [
     "Article name": "FN-UX-SCAR000344",
     "Color": "Violet purple",
     "Article number": "CA0324-ADE",
-    "image_link": "https://cdn.acnestudios.com/products/CA/CA0324-/CA0324-ADE_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CA/CA0324-/2000x/CA0324-ADE_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -835,7 +835,7 @@ const products = [
     "Article name": "FN-UX-SCAR000345",
     "Color": "Brown/green",
     "Article number": "CA0323-AL9",
-    "image_link": "https://cdn.acnestudios.com/products/CA/CA0323-/CA0323-AL9_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CA/CA0323-/2000x/CA0323-AL9_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -847,7 +847,7 @@ const products = [
     "Article name": "FN-UX-SLGS000270",
     "Color": "Black",
     "Article number": "CG0240-900",
-    "image_link": "https://cdn.acnestudios.com/products/CG/CG0240-/CG0240-900_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CG/CG0240-/2000x/CG0240-900_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -859,7 +859,7 @@ const products = [
     "Article name": "FN-UX-SLGS000270",
     "Color": "Pastel pink",
     "Article number": "CG0240-BKY",
-    "image_link": "https://cdn.acnestudios.com/products/CG/CG0240-/CG0240-BKY_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CG/CG0240-/2000x/CG0240-BKY_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -871,7 +871,7 @@ const products = [
     "Article name": "FN-UX-SLGS000115",
     "Color": "Black",
     "Article number": "CG0106-900",
-    "image_link": "https://cdn.acnestudios.com/products/CG/CG0106-/CG0106-900_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CG/CG0106-/2000x/CG0106-900_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -883,7 +883,7 @@ const products = [
     "Article name": "Acne Studios 1981F FN Monogram",
     "Color": "Blue/beige",
     "Article number": "A00433-BUF",
-    "image_link": "https://cdn.acnestudios.com/products/A0/A00433-/A00433-BUF_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A0/A00433-/2000x/A00433-BUF_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -895,7 +895,7 @@ const products = [
     "Article name": "Acne Studios 1992M Vintage Blue",
     "Color": "Mid Blue",
     "Article number": "B00303-863",
-    "image_link": "https://cdn.acnestudios.com/products/B0/B00303-/B00303-863_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B0/B00303-/2000x/B00303-863_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -907,7 +907,7 @@ const products = [
     "Article name": "Acne Studios 2004 FN Vintage Black",
     "Color": "Black",
     "Article number": "A00438-900",
-    "image_link": "https://cdn.acnestudios.com/products/A0/A00438-/A00438-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A0/A00438-/2000x/A00438-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -919,7 +919,7 @@ const products = [
     "Article name": "Acne Studios 2005 Delta",
     "Color": "Blue/beige",
     "Article number": "A00436-BUF",
-    "image_link": "https://cdn.acnestudios.com/products/A0/A00436-/A00436-BUF_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A0/A00436-/2000x/A00436-BUF_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -931,7 +931,7 @@ const products = [
     "Article name": "Acne Studios 2021F Delta",
     "Color": "Blue/beige",
     "Article number": "A00434-BUF",
-    "image_link": "https://cdn.acnestudios.com/products/A0/A00434-/A00434-BUF_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A0/A00434-/2000x/A00434-BUF_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -943,7 +943,7 @@ const products = [
     "Article name": "Acne Studios 2021M Delta",
     "Color": "Blue/beige",
     "Article number": "B00338-BUF",
-    "image_link": "https://cdn.acnestudios.com/products/B0/B00338-/B00338-BUF_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B0/B00338-/2000x/B00338-BUF_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -955,7 +955,7 @@ const products = [
     "Article name": "Acne Studios 2023F FN Delta",
     "Color": "Blue/beige",
     "Article number": "A00443-BUF",
-    "image_link": "https://cdn.acnestudios.com/products/A0/A00443-/A00443-BUF_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A0/A00443-/2000x/A00443-BUF_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -967,7 +967,7 @@ const products = [
     "Article name": "Acne Studios 2023F FN Vegas",
     "Color": "Light blue",
     "Article number": "A00503-228",
-    "image_link": "https://cdn.acnestudios.com/products/A0/A00503-/A00503-228_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A0/A00503-/2000x/A00503-228_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -979,7 +979,7 @@ const products = [
     "Article name": "Acne Studios 2023M FN Delta",
     "Color": "Blue/beige",
     "Article number": "B00336-BUF",
-    "image_link": "https://cdn.acnestudios.com/products/B0/B00336-/B00336-BUF_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B0/B00336-/2000x/B00336-BUF_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -991,7 +991,7 @@ const products = [
     "Article name": "Acne Studios 2021F Vegas",
     "Color": "Light blue",
     "Article number": "A00469-228",
-    "image_link": "https://cdn.acnestudios.com/products/A0/A00469-/A00469-228_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A0/A00469-/2000x/A00469-228_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1003,7 +1003,7 @@ const products = [
     "Article name": "SP-UX-SLGS000041",
     "Color": "Salmon pink",
     "Article number": "CG0249-AD2",
-    "image_link": "https://cdn.acnestudios.com/products/CG/CG0249-/CG0249-AD2_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CG/CG0249-/2000x/CG0249-AD2_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -1015,7 +1015,7 @@ const products = [
     "Article name": "FA-UX-HATS000211",
     "Color": "Dark grey",
     "Article number": "C40345-AA3",
-    "image_link": "https://cdn.acnestudios.com/products/C4/C40345-/C40345-AA3_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C4/C40345-/2000x/C40345-AA3_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -1027,7 +1027,7 @@ const products = [
     "Article name": "FA-UX-HATS000211",
     "Color": "Oatmeal melange",
     "Article number": "C40345-633",
-    "image_link": "https://cdn.acnestudios.com/products/C4/C40345-/C40345-633_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C4/C40345-/2000x/C40345-633_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -1039,7 +1039,7 @@ const products = [
     "Article name": "FA-UX-HATS000213",
     "Color": "Black",
     "Article number": "C40349-900",
-    "image_link": "https://cdn.acnestudios.com/products/C4/C40349-/C40349-900_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C4/C40349-/2000x/C40349-900_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -1051,7 +1051,7 @@ const products = [
     "Article name": "FN-WN-KNIT000584",
     "Color": "Dusty pink",
     "Article number": "A60517-416",
-    "image_link": "https://cdn.acnestudios.com/products/A6/A60517-/A60517-416_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A6/A60517-/2000x/A60517-416_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1063,7 +1063,7 @@ const products = [
     "Article name": "FN-WN-KNIT000759",
     "Color": "Rust red",
     "Article number": "A60546-CTB",
-    "image_link": "https://cdn.acnestudios.com/products/A6/A60546-/A60546-CTB_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A6/A60546-/2000x/A60546-CTB_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1075,7 +1075,7 @@ const products = [
     "Article name": "FN-WN-LEAT000385",
     "Color": "Black",
     "Article number": "A70180-900",
-    "image_link": "https://cdn.acnestudios.com/products/A7/A70180-/A70180-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A7/A70180-/2000x/A70180-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1087,7 +1087,7 @@ const products = [
     "Article name": "FN-WN-LEAT000364",
     "Color": "Grey/beige",
     "Article number": "A70177-AJ2",
-    "image_link": "https://cdn.acnestudios.com/products/A7/A70177-/A70177-AJ2_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A7/A70177-/2000x/A70177-AJ2_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1099,7 +1099,7 @@ const products = [
     "Article name": "FN-WN-LEAT000379",
     "Color": "Black",
     "Article number": "A70179-900",
-    "image_link": "https://cdn.acnestudios.com/products/A7/A70179-/A70179-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A7/A70179-/2000x/A70179-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1111,7 +1111,7 @@ const products = [
     "Article name": "FN-WN-OUTW000923",
     "Color": "Anthracite grey",
     "Article number": "A90603-AA2",
-    "image_link": "https://cdn.acnestudios.com/products/A9/A90603-/A90603-AA2_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A9/A90603-/2000x/A90603-AA2_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1123,7 +1123,7 @@ const products = [
     "Article name": "FN-WN-OUTW000923",
     "Color": "Fog grey",
     "Article number": "A90603-CKZ",
-    "image_link": "https://cdn.acnestudios.com/products/A9/A90603-/A90603-CKZ_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A9/A90603-/2000x/A90603-CKZ_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1135,7 +1135,7 @@ const products = [
     "Article name": "FN-WN-OUTW000949",
     "Color": "Faded Grey",
     "Article number": "A90616-DJO",
-    "image_link": "https://cdn.acnestudios.com/products/A9/A90616-/A90616-DJO_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A9/A90616-/2000x/A90616-DJO_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1147,7 +1147,7 @@ const products = [
     "Article name": "FN-WN-OUTW000882",
     "Color": "Blue/beige",
     "Article number": "A90583-BUF",
-    "image_link": "https://cdn.acnestudios.com/products/A9/A90583-/A90583-BUF_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A9/A90583-/2000x/A90583-BUF_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1159,7 +1159,7 @@ const products = [
     "Article name": "FN-WN-BLOU001077",
     "Color": "Dusty pink",
     "Article number": "AC0695-416",
-    "image_link": "https://cdn.acnestudios.com/products/AC/AC0695-/AC0695-416_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AC/AC0695-/2000x/AC0695-416_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1171,7 +1171,7 @@ const products = [
     "Article name": "FN-WN-BLOU001080",
     "Color": "Optic White",
     "Article number": "AC0701-183",
-    "image_link": "https://cdn.acnestudios.com/products/AC/AC0701-/AC0701-183_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AC/AC0701-/2000x/AC0701-183_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1183,7 +1183,7 @@ const products = [
     "Article name": "FN-WN-BLOU000936",
     "Color": "White/blue",
     "Article number": "AC0610-AMC",
-    "image_link": "https://cdn.acnestudios.com/products/AC/AC0610-/AC0610-AMC_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AC/AC0610-/2000x/AC0610-AMC_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1195,7 +1195,7 @@ const products = [
     "Article name": "FN-WN-SHOE000922",
     "Color": "Greige",
     "Article number": "AD0766-AEL",
-    "image_link": "https://cdn.acnestudios.com/products/AD/AD0766-/AD0766-AEL_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AD/AD0766-/2000x/AD0766-AEL_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -1207,7 +1207,7 @@ const products = [
     "Article name": "FN-WN-SHOE000948",
     "Color": "Multi brown",
     "Article number": "AD0773-BPH",
-    "image_link": "https://cdn.acnestudios.com/products/AD/AD0773-/AD0773-BPH_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AD/AD0773-/2000x/AD0773-BPH_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -1219,7 +1219,7 @@ const products = [
     "Article name": "FN-WN-SHOE000900",
     "Color": "Black",
     "Article number": "AD0720-900",
-    "image_link": "https://cdn.acnestudios.com/products/AD/AD0720-/AD0720-900_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AD/AD0720-/2000x/AD0720-900_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -1231,7 +1231,7 @@ const products = [
     "Article name": "Bars W",
     "Color": "Light blue/brown",
     "Article number": "AD0717-AT1",
-    "image_link": "https://cdn.acnestudios.com/products/AD/AD0717-/AD0717-AT1_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AD/AD0717-/2000x/AD0717-AT1_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -1243,7 +1243,7 @@ const products = [
     "Article name": "FN-WN-SHOE000959",
     "Color": "Multi blue",
     "Article number": "AD0770-BQC",
-    "image_link": "https://cdn.acnestudios.com/products/AD/AD0770-/AD0770-BQC_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AD/AD0770-/2000x/AD0770-BQC_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -1255,7 +1255,7 @@ const products = [
     "Article name": "FN-WN-SHOE000962",
     "Color": "Tobacco brown",
     "Article number": "AD0778-AJQ",
-    "image_link": "https://cdn.acnestudios.com/products/AD/AD0778-/AD0778-AJQ_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AD/AD0778-/2000x/AD0778-AJQ_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -1267,7 +1267,7 @@ const products = [
     "Article name": "FN-WN-SHOE000961",
     "Color": "Black",
     "Article number": "AD0782-900",
-    "image_link": "https://cdn.acnestudios.com/products/AD/AD0782-/AD0782-900_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AD/AD0782-/2000x/AD0782-900_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -1279,7 +1279,7 @@ const products = [
     "Article name": "FN-WN-SHOE000880",
     "Color": "Black",
     "Article number": "AD0749-900",
-    "image_link": "https://cdn.acnestudios.com/products/AD/AD0749-/AD0749-900_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AD/AD0749-/2000x/AD0749-900_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -1291,7 +1291,7 @@ const products = [
     "Article name": "FN-WN-SHOE000880",
     "Color": "Pink",
     "Article number": "AD0749-415",
-    "image_link": "https://cdn.acnestudios.com/products/AD/AD0749-/AD0749-415_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AD/AD0749-/2000x/AD0749-415_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -1303,7 +1303,7 @@ const products = [
     "Article name": "FN-WN-SHOE000942",
     "Color": "Black/white",
     "Article number": "AD0772-J83",
-    "image_link": "https://cdn.acnestudios.com/products/AD/AD0772-/AD0772-J83_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AD/AD0772-/2000x/AD0772-J83_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -1315,7 +1315,7 @@ const products = [
     "Article name": "FN-WN-SHOE000943",
     "Color": "Black/white",
     "Article number": "AD0775-J83",
-    "image_link": "https://cdn.acnestudios.com/products/AD/AD0775-/AD0775-J83_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AD/AD0775-/2000x/AD0775-J83_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -1327,7 +1327,7 @@ const products = [
     "Article name": "FN-WN-SHOE000943",
     "Color": "White/black",
     "Article number": "AD0775-AL4",
-    "image_link": "https://cdn.acnestudios.com/products/AD/AD0775-/AD0775-AL4_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AD/AD0775-/2000x/AD0775-AL4_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -1339,7 +1339,7 @@ const products = [
     "Article name": "FN-WN-SKIR000643",
     "Color": "Blue/beige",
     "Article number": "AF0425-BUF",
-    "image_link": "https://cdn.acnestudios.com/products/AF/AF0425-/AF0425-BUF_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AF/AF0425-/2000x/AF0425-BUF_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1351,7 +1351,7 @@ const products = [
     "Article name": "FN-WN-SWEA000244",
     "Color": "Faded Grey",
     "Article number": "AI0157-DJO",
-    "image_link": "https://cdn.acnestudios.com/products/AI/AI0157-/AI0157-DJO_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AI/AI0157-/2000x/AI0157-DJO_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1363,7 +1363,7 @@ const products = [
     "Article name": "FN-WN-SWEA000244",
     "Color": "Ocean blue",
     "Article number": "AI0157-AAM",
-    "image_link": "https://cdn.acnestudios.com/products/AI/AI0157-/AI0157-AAM_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AI/AI0157-/2000x/AI0157-AAM_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1375,7 +1375,7 @@ const products = [
     "Article name": "FN-WN-TSHI000565",
     "Color": "Beige",
     "Article number": "AL0343-AEK",
-    "image_link": "https://cdn.acnestudios.com/products/AL/AL0343-/AL0343-AEK_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AL/AL0343-/2000x/AL0343-AEK_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1387,7 +1387,7 @@ const products = [
     "Article name": "FN-WN-TROU001347",
     "Color": "Black/mid blue",
     "Article number": "AK0863-DHY",
-    "image_link": "https://cdn.acnestudios.com/products/AK/AK0863-/AK0863-DHY_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AK/AK0863-/2000x/AK0863-DHY_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1399,7 +1399,7 @@ const products = [
     "Article name": "FN-WN-TROU001346",
     "Color": "Cognac brown",
     "Article number": "AK0862-295",
-    "image_link": "https://cdn.acnestudios.com/products/AK/AK0862-/AK0862-295_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AK/AK0862-/2000x/AK0862-295_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1411,7 +1411,7 @@ const products = [
     "Article name": "FN-WN-TROU001284",
     "Color": "Faded Grey",
     "Article number": "AK0843-DJO",
-    "image_link": "https://cdn.acnestudios.com/products/AK/AK0843-/AK0843-DJO_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AK/AK0843-/2000x/AK0843-DJO_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1423,7 +1423,7 @@ const products = [
     "Article name": "FN-WN-TROU001284",
     "Color": "Ocean blue",
     "Article number": "AK0843-AAM",
-    "image_link": "https://cdn.acnestudios.com/products/AK/AK0843-/AK0843-AAM_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AK/AK0843-/2000x/AK0843-AAM_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1435,7 +1435,7 @@ const products = [
     "Article name": "FN-WN-TROU001318",
     "Color": "Faded Grey",
     "Article number": "AK0858-DJO",
-    "image_link": "https://cdn.acnestudios.com/products/AK/AK0858-/AK0858-DJO_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AK/AK0858-/2000x/AK0858-DJO_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1447,7 +1447,7 @@ const products = [
     "Article name": "FN-WN-TROU001318",
     "Color": "Ocean blue",
     "Article number": "AK0858-AAM",
-    "image_link": "https://cdn.acnestudios.com/products/AK/AK0858-/AK0858-AAM_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AK/AK0858-/2000x/AK0858-AAM_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1459,7 +1459,7 @@ const products = [
     "Article name": "FN-WN-TROU000889",
     "Color": "Black",
     "Article number": "AK0558-900",
-    "image_link": "https://cdn.acnestudios.com/products/AK/AK0558-/AK0558-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AK/AK0558-/2000x/AK0558-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1471,7 +1471,7 @@ const products = [
     "Article name": "FN-WN-TROU001294",
     "Color": "Black",
     "Article number": "AK0852-900",
-    "image_link": "https://cdn.acnestudios.com/products/AK/AK0852-/AK0852-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AK/AK0852-/2000x/AK0852-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1483,7 +1483,7 @@ const products = [
     "Article name": "FN-WN-TROU001111",
     "Color": "Black",
     "Article number": "AK0703-900",
-    "image_link": "https://cdn.acnestudios.com/products/AK/AK0703-/AK0703-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AK/AK0703-/2000x/AK0703-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1495,7 +1495,7 @@ const products = [
     "Article name": "FN-MN-KNIT000439",
     "Color": "Black",
     "Article number": "B60294-900",
-    "image_link": "https://cdn.acnestudios.com/products/B6/B60294-/B60294-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B6/B60294-/2000x/B60294-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1507,7 +1507,7 @@ const products = [
     "Article name": "FN-MN-KNIT000439",
     "Color": "Deep blue melange",
     "Article number": "B60294-DKB",
-    "image_link": "https://cdn.acnestudios.com/products/B6/B60294-/B60294-DKB_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B6/B60294-/2000x/B60294-DKB_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1519,7 +1519,7 @@ const products = [
     "Article name": "FN-MN-KNIT000439",
     "Color": "Pink melange",
     "Article number": "B60294-AI4",
-    "image_link": "https://cdn.acnestudios.com/products/B6/B60294-/B60294-AI4_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B6/B60294-/2000x/B60294-AI4_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1531,7 +1531,7 @@ const products = [
     "Article name": "FN-MN-KNIT000476",
     "Color": "Beige",
     "Article number": "B60328-AEK",
-    "image_link": "https://cdn.acnestudios.com/products/B6/B60328-/B60328-AEK_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B6/B60328-/2000x/B60328-AEK_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1543,7 +1543,7 @@ const products = [
     "Article name": "FN-MN-KNIT000476",
     "Color": "Black",
     "Article number": "B60328-900",
-    "image_link": "https://cdn.acnestudios.com/products/B6/B60328-/B60328-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B6/B60328-/2000x/B60328-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1555,7 +1555,7 @@ const products = [
     "Article name": "FN-MN-KNIT000446",
     "Color": "Black",
     "Article number": "B60298-900",
-    "image_link": "https://cdn.acnestudios.com/products/B6/B60298-/B60298-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B6/B60298-/2000x/B60298-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1567,7 +1567,7 @@ const products = [
     "Article name": "FN-MN-KNIT000446",
     "Color": "Deep blue melange",
     "Article number": "B60298-DKB",
-    "image_link": "https://cdn.acnestudios.com/products/B6/B60298-/B60298-DKB_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B6/B60298-/2000x/B60298-DKB_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1579,7 +1579,7 @@ const products = [
     "Article name": "FN-MN-KNIT000446",
     "Color": "Light Grey Melange",
     "Article number": "B60298-X92",
-    "image_link": "https://cdn.acnestudios.com/products/B6/B60298-/B60298-X92_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B6/B60298-/2000x/B60298-X92_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1591,7 +1591,7 @@ const products = [
     "Article name": "FN-MN-KNIT000446",
     "Color": "Powder pink",
     "Article number": "B60298-AD5",
-    "image_link": "https://cdn.acnestudios.com/products/B6/B60298-/B60298-AD5_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B6/B60298-/2000x/B60298-AD5_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1603,7 +1603,7 @@ const products = [
     "Article name": "FN-MN-LEAT000255",
     "Color": "Black",
     "Article number": "B70148-900",
-    "image_link": "https://cdn.acnestudios.com/products/B7/B70148-/B70148-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B7/B70148-/2000x/B70148-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1615,7 +1615,7 @@ const products = [
     "Article name": "FN-MN-LEAT000269",
     "Color": "Black",
     "Article number": "B70147-900",
-    "image_link": "https://cdn.acnestudios.com/products/B7/B70147-/B70147-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B7/B70147-/2000x/B70147-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1627,7 +1627,7 @@ const products = [
     "Article name": "FN-MN-OUTW001006",
     "Color": "Black",
     "Article number": "B90733-900",
-    "image_link": "https://cdn.acnestudios.com/products/B9/B90733-/B90733-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B9/B90733-/2000x/B90733-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1639,7 +1639,7 @@ const products = [
     "Article name": "FN-MN-OUTW000939",
     "Color": "Bubble Pink",
     "Article number": "B90699-BP5",
-    "image_link": "https://cdn.acnestudios.com/products/B9/B90699-/B90699-BP5_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B9/B90699-/2000x/B90699-BP5_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1651,7 +1651,7 @@ const products = [
     "Article name": "FN-MN-OUTW001064",
     "Color": "Dark grey melange",
     "Article number": "B90771-AFK",
-    "image_link": "https://cdn.acnestudios.com/products/B9/B90771-/B90771-AFK_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B9/B90771-/2000x/B90771-AFK_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1663,7 +1663,7 @@ const products = [
     "Article name": "FN-UX-OUTW000063",
     "Color": "Black",
     "Article number": "C90178-900",
-    "image_link": "https://cdn.acnestudios.com/products/C9/C90178-/C90178-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C9/C90178-/2000x/C90178-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1675,7 +1675,7 @@ const products = [
     "Article name": "Rye Monogram Dark",
     "Color": "Blue/black",
     "Article number": "B90775-AIL",
-    "image_link": "https://cdn.acnestudios.com/products/B9/B90775-/B90775-AIL_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B9/B90775-/2000x/B90775-AIL_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1687,7 +1687,7 @@ const products = [
     "Article name": "FN-MN-SHIR000799",
     "Color": "Marble purple",
     "Article number": "BB0592-DOY",
-    "image_link": "https://cdn.acnestudios.com/products/BB/BB0592-/BB0592-DOY_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BB/BB0592-/2000x/BB0592-DOY_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1699,7 +1699,7 @@ const products = [
     "Article name": "FN-MN-SHIR000799",
     "Color": "White",
     "Article number": "BB0592-100",
-    "image_link": "https://cdn.acnestudios.com/products/BB/BB0592-/BB0592-100_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BB/BB0592-/2000x/BB0592-100_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1711,7 +1711,7 @@ const products = [
     "Article name": "FN-MN-SHIR000795",
     "Color": "Cornflower blue/yellow",
     "Article number": "BB0597-DP4",
-    "image_link": "https://cdn.acnestudios.com/products/BB/BB0597-/BB0597-DP4_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BB/BB0597-/2000x/BB0597-DP4_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1723,7 +1723,7 @@ const products = [
     "Article name": "FN-MN-SHIR000681",
     "Color": "Dusty blue",
     "Article number": "BB0527-AAT",
-    "image_link": "https://cdn.acnestudios.com/products/BB/BB0527-/BB0527-AAT_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BB/BB0527-/2000x/BB0527-AAT_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1735,7 +1735,7 @@ const products = [
     "Article name": "FN-MN-SHIR000780",
     "Color": "Blush pink",
     "Article number": "BB0591-AD1",
-    "image_link": "https://cdn.acnestudios.com/products/BB/BB0591-/BB0591-AD1_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BB/BB0591-/2000x/BB0591-AD1_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1747,7 +1747,7 @@ const products = [
     "Article name": "FN-UX-SHIR000027",
     "Color": "Indigo blue",
     "Article number": "CB0078-135",
-    "image_link": "https://cdn.acnestudios.com/products/CB/CB0078-/CB0078-135_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CB/CB0078-/2000x/CB0078-135_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1759,7 +1759,7 @@ const products = [
     "Article name": "FN-UX-SHIR000028",
     "Color": "Indigo blue",
     "Article number": "CB0077-135",
-    "image_link": "https://cdn.acnestudios.com/products/CB/CB0077-/CB0077-135_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CB/CB0077-/2000x/CB0077-135_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1771,7 +1771,7 @@ const products = [
     "Article name": "FN-UX-SHIR000042",
     "Color": "Blue/beige",
     "Article number": "CB0084-BUF",
-    "image_link": "https://cdn.acnestudios.com/products/CB/CB0084-/CB0084-BUF_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CB/CB0084-/2000x/CB0084-BUF_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1783,7 +1783,7 @@ const products = [
     "Article name": "FN-MN-SHIR000818",
     "Color": "Light blue",
     "Article number": "BB0607-228",
-    "image_link": "https://cdn.acnestudios.com/products/BB/BB0607-/BB0607-228_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BB/BB0607-/2000x/BB0607-228_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1795,7 +1795,7 @@ const products = [
     "Article name": "Bars M",
     "Color": "Light blue/brown",
     "Article number": "BD0319-AT1",
-    "image_link": "https://cdn.acnestudios.com/products/BD/BD0319-/BD0319-AT1_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BD/BD0319-/2000x/BD0319-AT1_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -1807,7 +1807,7 @@ const products = [
     "Article name": "FN-MN-SHOE000299",
     "Color": "Tobacco brown",
     "Article number": "BD0330-AJQ",
-    "image_link": "https://cdn.acnestudios.com/products/BD/BD0330-/BD0330-AJQ_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BD/BD0330-/2000x/BD0330-AJQ_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -1819,7 +1819,7 @@ const products = [
     "Article name": "FN-MN-SHOE000296",
     "Color": "Multi blue",
     "Article number": "BD0328-BQC",
-    "image_link": "https://cdn.acnestudios.com/products/BD/BD0328-/BD0328-BQC_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BD/BD0328-/2000x/BD0328-BQC_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -1831,7 +1831,7 @@ const products = [
     "Article name": "FN-MN-SHOE000290",
     "Color": "Black",
     "Article number": "BD0327-900",
-    "image_link": "https://cdn.acnestudios.com/products/BD/BD0327-/BD0327-900_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BD/BD0327-/2000x/BD0327-900_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -1843,7 +1843,7 @@ const products = [
     "Article name": "FN-MN-SHOR000236",
     "Color": "Dark Blue",
     "Article number": "BE0155-838",
-    "image_link": "https://cdn.acnestudios.com/products/BE/BE0155-/BE0155-838_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BE/BE0155-/2000x/BE0155-838_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1855,7 +1855,7 @@ const products = [
     "Article name": "FN-MN-SHOR000237",
     "Color": "Blue/beige",
     "Article number": "BE0156-BUF",
-    "image_link": "https://cdn.acnestudios.com/products/BE/BE0156-/BE0156-BUF_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BE/BE0156-/2000x/BE0156-BUF_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1867,7 +1867,7 @@ const products = [
     "Article name": "FN-MN-SHOR000243",
     "Color": "Black",
     "Article number": "BE0167-900",
-    "image_link": "https://cdn.acnestudios.com/products/BE/BE0167-/BE0167-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BE/BE0167-/2000x/BE0167-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1879,7 +1879,7 @@ const products = [
     "Article name": "FN-UX-SWEA000019",
     "Color": "Dusty purple",
     "Article number": "CI0138-ADF",
-    "image_link": "https://cdn.acnestudios.com/products/CI/CI0138-/CI0138-ADF_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CI/CI0138-/2000x/CI0138-ADF_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1891,7 +1891,7 @@ const products = [
     "Article name": "FN-UX-SWEA000017",
     "Color": "Dusty purple",
     "Article number": "CI0137-ADF",
-    "image_link": "https://cdn.acnestudios.com/products/CI/CI0137-/CI0137-ADF_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CI/CI0137-/2000x/CI0137-ADF_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1903,7 +1903,7 @@ const products = [
     "Article name": "FN-MN-SWIM000027",
     "Color": "Black",
     "Article number": "BJ0020-900",
-    "image_link": "https://cdn.acnestudios.com/products/BJ/BJ0020-/BJ0020-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BJ/BJ0020-/2000x/BJ0020-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1915,7 +1915,7 @@ const products = [
     "Article name": "FN-UX-TSHI000106",
     "Color": "Faded black",
     "Article number": "CL0304-BM0",
-    "image_link": "https://cdn.acnestudios.com/products/CL/CL0304-/CL0304-BM0_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CL/CL0304-/2000x/CL0304-BM0_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1927,7 +1927,7 @@ const products = [
     "Article name": "FN-UX-TSHI000026",
     "Color": "Concrete grey",
     "Article number": "CL0263-DKX",
-    "image_link": "https://cdn.acnestudios.com/products/CL/CL0263-/CL0263-DKX_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CL/CL0263-/2000x/CL0263-DKX_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1939,7 +1939,7 @@ const products = [
     "Article name": "FN-UX-TSHI000024",
     "Color": "Soft pink",
     "Article number": "CL0264-DKY",
-    "image_link": "https://cdn.acnestudios.com/products/CL/CL0264-/CL0264-DKY_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CL/CL0264-/2000x/CL0264-DKY_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1951,7 +1951,7 @@ const products = [
     "Article name": "FN-UX-TSHI000090",
     "Color": "Black",
     "Article number": "CL0297-900",
-    "image_link": "https://cdn.acnestudios.com/products/CL/CL0297-/CL0297-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CL/CL0297-/2000x/CL0297-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1963,7 +1963,7 @@ const products = [
     "Article name": "FN-UX-TSHI000090",
     "Color": "Soft pink",
     "Article number": "CL0297-DKY",
-    "image_link": "https://cdn.acnestudios.com/products/CL/CL0297-/CL0297-DKY_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CL/CL0297-/2000x/CL0297-DKY_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1975,7 +1975,7 @@ const products = [
     "Article name": "FN-UX-TSHI000018",
     "Color": "Dusty purple",
     "Article number": "CL0218-ADF",
-    "image_link": "https://cdn.acnestudios.com/products/CL/CL0218-/CL0218-ADF_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CL/CL0218-/2000x/CL0218-ADF_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1987,7 +1987,7 @@ const products = [
     "Article name": "FN-UX-TSHI000018",
     "Color": "Plum purple",
     "Article number": "CL0218-ADB",
-    "image_link": "https://cdn.acnestudios.com/products/CL/CL0218-/CL0218-ADB_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CL/CL0218-/2000x/CL0218-ADB_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -1999,7 +1999,7 @@ const products = [
     "Article name": "FN-UX-TSHI000018",
     "Color": "Soft pink",
     "Article number": "CL0218-DKY",
-    "image_link": "https://cdn.acnestudios.com/products/CL/CL0218-/CL0218-DKY_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CL/CL0218-/2000x/CL0218-DKY_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -2011,7 +2011,7 @@ const products = [
     "Article name": "FN-MN-TROU001005",
     "Color": "Anthracite grey",
     "Article number": "BK0648-AA2",
-    "image_link": "https://cdn.acnestudios.com/products/BK/BK0648-/BK0648-AA2_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BK/BK0648-/2000x/BK0648-AA2_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -2023,7 +2023,7 @@ const products = [
     "Article name": "FN-MN-TROU001044",
     "Color": "Anthracite grey",
     "Article number": "BK0651-AA2",
-    "image_link": "https://cdn.acnestudios.com/products/BK/BK0651-/BK0651-AA2_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BK/BK0651-/2000x/BK0651-AA2_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -2035,7 +2035,7 @@ const products = [
     "Article name": "FN-UX-TROU000015",
     "Color": "Dusty purple",
     "Article number": "CK0088-ADF",
-    "image_link": "https://cdn.acnestudios.com/products/CK/CK0088-/CK0088-ADF_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CK/CK0088-/2000x/CK0088-ADF_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -2047,7 +2047,7 @@ const products = [
     "Article name": "FN-MN-TROU000944",
     "Color": "Dark grey",
     "Article number": "BK0589-AA3",
-    "image_link": "https://cdn.acnestudios.com/products/BK/BK0589-/BK0589-AA3_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BK/BK0589-/2000x/BK0589-AA3_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -2059,7 +2059,7 @@ const products = [
     "Article name": "FN-MN-TROU000944",
     "Color": "Ivory white",
     "Article number": "BK0589-AEF",
-    "image_link": "https://cdn.acnestudios.com/products/BK/BK0589-/BK0589-AEF_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BK/BK0589-/2000x/BK0589-AEF_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -2071,7 +2071,7 @@ const products = [
     "Article name": "FN-UX-BAGS000143",
     "Color": "Beige/blue",
     "Article number": "C10181-AEM",
-    "image_link": "https://cdn.acnestudios.com/products/C1/C10181-/C10181-AEM_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C1/C10181-/2000x/C10181-AEM_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2083,7 +2083,7 @@ const products = [
     "Article name": "FN-UX-BAGS000143",
     "Color": "Grey/black",
     "Article number": "C10181-AMA",
-    "image_link": "https://cdn.acnestudios.com/products/C1/C10181-/C10181-AMA_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C1/C10181-/2000x/C10181-AMA_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2095,7 +2095,7 @@ const products = [
     "Article name": "FN-UX-BAGS000142",
     "Color": "Cream beige/beige",
     "Article number": "C10184-BUL",
-    "image_link": "https://cdn.acnestudios.com/products/C1/C10184-/C10184-BUL_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C1/C10184-/2000x/C10184-BUL_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2107,7 +2107,7 @@ const products = [
     "Article name": "FN-UX-BAGS000142",
     "Color": "Grey/black",
     "Article number": "C10184-AMA",
-    "image_link": "https://cdn.acnestudios.com/products/C1/C10184-/C10184-AMA_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C1/C10184-/2000x/C10184-AMA_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2119,7 +2119,7 @@ const products = [
     "Article name": "FN-UX-BAGS000144",
     "Color": "Beige/blue",
     "Article number": "C10182-AEM",
-    "image_link": "https://cdn.acnestudios.com/products/C1/C10182-/C10182-AEM_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C1/C10182-/2000x/C10182-AEM_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2131,7 +2131,7 @@ const products = [
     "Article name": "FN-UX-BAGS000144",
     "Color": "Cream beige/beige",
     "Article number": "C10182-BUL",
-    "image_link": "https://cdn.acnestudios.com/products/C1/C10182-/C10182-BUL_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C1/C10182-/2000x/C10182-BUL_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2143,7 +2143,7 @@ const products = [
     "Article name": "FN-UX-BAGS000144",
     "Color": "Grey/black",
     "Article number": "C10182-AMA",
-    "image_link": "https://cdn.acnestudios.com/products/C1/C10182-/C10182-AMA_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C1/C10182-/2000x/C10182-AMA_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2155,7 +2155,7 @@ const products = [
     "Article name": "FN-UX-BAGS000159",
     "Color": "Beige/blue",
     "Article number": "C10200-AEM",
-    "image_link": "https://cdn.acnestudios.com/products/C1/C10200-/C10200-AEM_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C1/C10200-/2000x/C10200-AEM_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2167,7 +2167,7 @@ const products = [
     "Article name": "FN-UX-BAGS000159",
     "Color": "Grey/black",
     "Article number": "C10200-AMA",
-    "image_link": "https://cdn.acnestudios.com/products/C1/C10200-/C10200-AMA_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C1/C10200-/2000x/C10200-AMA_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2179,7 +2179,7 @@ const products = [
     "Article name": "FN-WN-BAGS000414",
     "Color": "Dark beige",
     "Article number": "A10349-CQL",
-    "image_link": "https://cdn.acnestudios.com/products/A1/A10349-/A10349-CQL_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A1/A10349-/2000x/A10349-CQL_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2191,7 +2191,7 @@ const products = [
     "Article name": "FN-WN-BAGS000415",
     "Color": "Black",
     "Article number": "A10350-900",
-    "image_link": "https://cdn.acnestudios.com/products/A1/A10350-/A10350-900_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A1/A10350-/2000x/A10350-900_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2203,7 +2203,7 @@ const products = [
     "Article name": "FN-UX-BAGS000172",
     "Color": "Beige/black",
     "Article number": "C10226-AG0",
-    "image_link": "https://cdn.acnestudios.com/products/C1/C10226-/C10226-AG0_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C1/C10226-/2000x/C10226-AG0_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2215,7 +2215,7 @@ const products = [
     "Article name": "FN-WN-BAGS000462",
     "Color": "Black",
     "Article number": "A10388-900",
-    "image_link": "https://cdn.acnestudios.com/products/A1/A10388-/A10388-900_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A1/A10388-/2000x/A10388-900_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2227,7 +2227,7 @@ const products = [
     "Article name": "FN-WN-BAGS000473",
     "Color": "Dark brown/beige",
     "Article number": "A10381-AIP",
-    "image_link": "https://cdn.acnestudios.com/products/A1/A10381-/A10381-AIP_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A1/A10381-/2000x/A10381-AIP_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2239,7 +2239,7 @@ const products = [
     "Article name": "FN-WN-BAGS000468",
     "Color": "Dark brown/beige",
     "Article number": "A10389-AIP",
-    "image_link": "https://cdn.acnestudios.com/products/A1/A10389-/A10389-AIP_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A1/A10389-/2000x/A10389-AIP_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2251,7 +2251,7 @@ const products = [
     "Article name": "FN-UX-EYEW000060",
     "Color": "Black",
     "Article number": "C30053-900",
-    "image_link": "https://cdn.acnestudios.com/products/C3/C30053-/C30053-900_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C3/C30053-/2000x/C30053-900_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2263,7 +2263,7 @@ const products = [
     "Article name": "FN-UX-HATS000288",
     "Color": "Pale blue",
     "Article number": "C40382-AAV",
-    "image_link": "https://cdn.acnestudios.com/products/C4/C40382-/C40382-AAV_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C4/C40382-/2000x/C40382-AAV_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2275,7 +2275,7 @@ const products = [
     "Article name": "FN-UX-HATS000267",
     "Color": "Dark Blue",
     "Article number": "C40355-838",
-    "image_link": "https://cdn.acnestudios.com/products/C4/C40355-/C40355-838_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C4/C40355-/2000x/C40355-838_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2287,7 +2287,7 @@ const products = [
     "Article name": "FN-UX-HATS000290",
     "Color": "Dirty blue/aqua blue",
     "Article number": "C40378-DCL",
-    "image_link": "https://cdn.acnestudios.com/products/C4/C40378-/C40378-DCL_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C4/C40378-/2000x/C40378-DCL_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2299,7 +2299,7 @@ const products = [
     "Article name": "FN-UX-HATS000281",
     "Color": "Pink",
     "Article number": "C40380-415",
-    "image_link": "https://cdn.acnestudios.com/products/C4/C40380-/C40380-415_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C4/C40380-/2000x/C40380-415_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2311,7 +2311,7 @@ const products = [
     "Article name": "FN-UX-HATS000301",
     "Color": "Shark grey/multi",
     "Article number": "C40381-DRH",
-    "image_link": "https://cdn.acnestudios.com/products/C4/C40381-/C40381-DRH_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C4/C40381-/2000x/C40381-DRH_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2323,7 +2323,7 @@ const products = [
     "Article name": "FN-UX-HATS000231",
     "Color": "Dark beige",
     "Article number": "C40305-CQL",
-    "image_link": "https://cdn.acnestudios.com/products/C4/C40305-/C40305-CQL_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C4/C40305-/2000x/C40305-CQL_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2335,7 +2335,7 @@ const products = [
     "Article name": "FN-UX-HATS000261",
     "Color": "Navy",
     "Article number": "C40359-BG3",
-    "image_link": "https://cdn.acnestudios.com/products/C4/C40359-/C40359-BG3_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C4/C40359-/2000x/C40359-BG3_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2347,7 +2347,7 @@ const products = [
     "Article name": "FN-UX-HATS000261",
     "Color": "Pink",
     "Article number": "C40359-415",
-    "image_link": "https://cdn.acnestudios.com/products/C4/C40359-/C40359-415_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C4/C40359-/2000x/C40359-415_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2359,7 +2359,7 @@ const products = [
     "Article name": "FN-UX-JEWE000429",
     "Color": "Antique gold",
     "Article number": "C50401-BYK",
-    "image_link": "https://cdn.acnestudios.com/products/C5/C50401-/C50401-BYK_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C5/C50401-/2000x/C50401-BYK_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2371,7 +2371,7 @@ const products = [
     "Article name": "FN-UX-JEWE000429",
     "Color": "Antique Silver",
     "Article number": "C50401-BWF",
-    "image_link": "https://cdn.acnestudios.com/products/C5/C50401-/C50401-BWF_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C5/C50401-/2000x/C50401-BWF_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2383,7 +2383,7 @@ const products = [
     "Article name": "FN-UX-JEWE000498",
     "Color": "Silver/transparent",
     "Article number": "C50444-AWN",
-    "image_link": "https://cdn.acnestudios.com/products/C5/C50444-/C50444-AWN_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C5/C50444-/2000x/C50444-AWN_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2395,7 +2395,7 @@ const products = [
     "Article name": "FN-UX-JEWE000497",
     "Color": "Silver/transparent",
     "Article number": "C50442-AWN",
-    "image_link": "https://cdn.acnestudios.com/products/C5/C50442-/C50442-AWN_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C5/C50442-/2000x/C50442-AWN_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2407,7 +2407,7 @@ const products = [
     "Article name": "FN-UX-JEWE000499",
     "Color": "Silver/transparent",
     "Article number": "C50445-AWN",
-    "image_link": "https://cdn.acnestudios.com/products/C5/C50445-/C50445-AWN_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C5/C50445-/2000x/C50445-AWN_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2419,7 +2419,7 @@ const products = [
     "Article name": "FN-UX-JEWE000509",
     "Color": "Silver/black",
     "Article number": "C50435-BSD",
-    "image_link": "https://cdn.acnestudios.com/products/C5/C50435-/C50435-BSD_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C5/C50435-/2000x/C50435-BSD_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2431,7 +2431,7 @@ const products = [
     "Article name": "FN-UX-JEWE000440",
     "Color": "Silver/grey",
     "Article number": "C50378-AXA",
-    "image_link": "https://cdn.acnestudios.com/products/C5/C50378-/C50378-AXA_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C5/C50378-/2000x/C50378-AXA_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2443,7 +2443,7 @@ const products = [
     "Article name": "FN-UX-JEWE000487",
     "Color": "Black",
     "Article number": "C50448-900",
-    "image_link": "https://cdn.acnestudios.com/products/C5/C50448-/C50448-900_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C5/C50448-/2000x/C50448-900_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2455,7 +2455,7 @@ const products = [
     "Article name": "FN-UX-JEWE000486",
     "Color": "Black",
     "Article number": "C50449-900",
-    "image_link": "https://cdn.acnestudios.com/products/C5/C50449-/C50449-900_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C5/C50449-/2000x/C50449-900_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2467,7 +2467,7 @@ const products = [
     "Article name": "FN-UX-ACCS000148",
     "Color": "Black",
     "Article number": "C80205-900",
-    "image_link": "https://cdn.acnestudios.com/products/C8/C80205-/C80205-900_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C8/C80205-/2000x/C80205-900_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2479,7 +2479,7 @@ const products = [
     "Article name": "FN-UX-ACCS000148",
     "Color": "White",
     "Article number": "C80205-100",
-    "image_link": "https://cdn.acnestudios.com/products/C8/C80205-/C80205-100_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C8/C80205-/2000x/C80205-100_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2491,7 +2491,7 @@ const products = [
     "Article name": "FN-UX-SCAR000290",
     "Color": "Green multi",
     "Article number": "CA0284-BHM",
-    "image_link": "https://cdn.acnestudios.com/products/CA/CA0284-/CA0284-BHM_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CA/CA0284-/2000x/CA0284-BHM_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2503,7 +2503,7 @@ const products = [
     "Article name": "FN-UX-SCAR000369",
     "Color": "Multicolor",
     "Article number": "CA0305-BIO",
-    "image_link": "https://cdn.acnestudios.com/products/CA/CA0305-/CA0305-BIO_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CA/CA0305-/2000x/CA0305-BIO_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2515,7 +2515,7 @@ const products = [
     "Article name": "FN-UX-SCAR000369",
     "Color": "Pink/black",
     "Article number": "CA0305-BR0",
-    "image_link": "https://cdn.acnestudios.com/products/CA/CA0305-/CA0305-BR0_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CA/CA0305-/2000x/CA0305-BR0_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2527,7 +2527,7 @@ const products = [
     "Article name": "FN-UX-SCAR000397",
     "Color": "Brown/blue",
     "Article number": "CA0345-AI8",
-    "image_link": "https://cdn.acnestudios.com/products/CA/CA0345-/CA0345-AI8_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CA/CA0345-/2000x/CA0345-AI8_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2539,7 +2539,7 @@ const products = [
     "Article name": "FN-UX-SCAR000397",
     "Color": "Khaki/green",
     "Article number": "CA0345-DE4",
-    "image_link": "https://cdn.acnestudios.com/products/CA/CA0345-/CA0345-DE4_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CA/CA0345-/2000x/CA0345-DE4_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2551,7 +2551,7 @@ const products = [
     "Article name": "FN-UX-SCAR000401",
     "Color": "Denim blue",
     "Article number": "CA0350-AAL",
-    "image_link": "https://cdn.acnestudios.com/products/CA/CA0350-/CA0350-AAL_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CA/CA0350-/2000x/CA0350-AAL_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2563,7 +2563,7 @@ const products = [
     "Article name": "FN-UX-SCAR000303",
     "Color": "Denim blue/black",
     "Article number": "CA0266-DJB",
-    "image_link": "https://cdn.acnestudios.com/products/CA/CA0266-/CA0266-DJB_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CA/CA0266-/2000x/CA0266-DJB_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2575,7 +2575,7 @@ const products = [
     "Article name": "FN-UX-SCAR000371",
     "Color": "Beige/light blue",
     "Article number": "CA0303-BX2",
-    "image_link": "https://cdn.acnestudios.com/products/CA/CA0303-/CA0303-BX2_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CA/CA0303-/2000x/CA0303-BX2_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2587,7 +2587,7 @@ const products = [
     "Article name": "FN-UX-SCAR000371",
     "Color": "Brown/purple",
     "Article number": "CA0303-AJ8",
-    "image_link": "https://cdn.acnestudios.com/products/CA/CA0303-/CA0303-AJ8_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CA/CA0303-/2000x/CA0303-AJ8_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2599,7 +2599,7 @@ const products = [
     "Article name": "FN-UX-SCAR000409",
     "Color": "Beige/blue",
     "Article number": "CA0354-AEM",
-    "image_link": "https://cdn.acnestudios.com/products/CA/CA0354-/CA0354-AEM_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CA/CA0354-/2000x/CA0354-AEM_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2611,7 +2611,7 @@ const products = [
     "Article name": "FN-UX-SCAR000400",
     "Color": "Blue/green",
     "Article number": "CA0344-AFY",
-    "image_link": "https://cdn.acnestudios.com/products/CA/CA0344-/CA0344-AFY_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CA/CA0344-/2000x/CA0344-AFY_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2623,7 +2623,7 @@ const products = [
     "Article name": "FN-UX-SCAR000400",
     "Color": "Brown/beige",
     "Article number": "CA0344-AFQ",
-    "image_link": "https://cdn.acnestudios.com/products/CA/CA0344-/CA0344-AFQ_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CA/CA0344-/2000x/CA0344-AFQ_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2635,7 +2635,7 @@ const products = [
     "Article name": "FN-UX-SCAR000400",
     "Color": "Denim blue",
     "Article number": "CA0344-AAL",
-    "image_link": "https://cdn.acnestudios.com/products/CA/CA0344-/CA0344-AAL_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CA/CA0344-/2000x/CA0344-AAL_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2647,7 +2647,7 @@ const products = [
     "Article name": "FN-UX-SCAR000400",
     "Color": "Pink",
     "Article number": "CA0344-415",
-    "image_link": "https://cdn.acnestudios.com/products/CA/CA0344-/CA0344-415_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CA/CA0344-/2000x/CA0344-415_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2659,7 +2659,7 @@ const products = [
     "Article name": "FN-UX-SCAR000411",
     "Color": "Black/white",
     "Article number": "CA0353-J83",
-    "image_link": "https://cdn.acnestudios.com/products/CA/CA0353-/CA0353-J83_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CA/CA0353-/2000x/CA0353-J83_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2671,7 +2671,7 @@ const products = [
     "Article name": "FN-UX-SLGS000293",
     "Color": "Black",
     "Article number": "CG0261-900",
-    "image_link": "https://cdn.acnestudios.com/products/CG/CG0261-/CG0261-900_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CG/CG0261-/2000x/CG0261-900_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2683,7 +2683,7 @@ const products = [
     "Article name": "FN-UX-SLGS000277",
     "Color": "Black",
     "Article number": "CG0248-900",
-    "image_link": "https://cdn.acnestudios.com/products/CG/CG0248-/CG0248-900_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CG/CG0248-/2000x/CG0248-900_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2695,7 +2695,7 @@ const products = [
     "Article name": "FN-UX-SLGS000277",
     "Color": "Pastel pink",
     "Article number": "CG0248-BKY",
-    "image_link": "https://cdn.acnestudios.com/products/CG/CG0248-/CG0248-BKY_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CG/CG0248-/2000x/CG0248-BKY_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2707,7 +2707,7 @@ const products = [
     "Article name": "FN-UX-SLGS000276",
     "Color": "Green",
     "Article number": "CG0246-AB8",
-    "image_link": "https://cdn.acnestudios.com/products/CG/CG0246-/CG0246-AB8_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CG/CG0246-/2000x/CG0246-AB8_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2719,7 +2719,7 @@ const products = [
     "Article name": "FN-UX-SLGS000274",
     "Color": "Black",
     "Article number": "CG0241-900",
-    "image_link": "https://cdn.acnestudios.com/products/CG/CG0241-/CG0241-900_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CG/CG0241-/2000x/CG0241-900_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2731,7 +2731,7 @@ const products = [
     "Article name": "FN-UX-SLGS000274",
     "Color": "Pastel pink",
     "Article number": "CG0241-BKY",
-    "image_link": "https://cdn.acnestudios.com/products/CG/CG0241-/CG0241-BKY_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CG/CG0241-/2000x/CG0241-BKY_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2743,7 +2743,7 @@ const products = [
     "Article name": "FN-UX-SLGS000273",
     "Color": "Black",
     "Article number": "CG0242-900",
-    "image_link": "https://cdn.acnestudios.com/products/CG/CG0242-/CG0242-900_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CG/CG0242-/2000x/CG0242-900_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2755,7 +2755,7 @@ const products = [
     "Article name": "FN-UX-SLGS000273",
     "Color": "Pastel pink",
     "Article number": "CG0242-BKY",
-    "image_link": "https://cdn.acnestudios.com/products/CG/CG0242-/CG0242-BKY_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CG/CG0242-/2000x/CG0242-BKY_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2767,7 +2767,7 @@ const products = [
     "Article name": "FN-UX-SLGS000300",
     "Color": "Lavender purple",
     "Article number": "CG0257-ADH",
-    "image_link": "https://cdn.acnestudios.com/products/CG/CG0257-/CG0257-ADH_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CG/CG0257-/2000x/CG0257-ADH_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2779,7 +2779,7 @@ const products = [
     "Article name": "FN-UX-SLGS000299",
     "Color": "Red",
     "Article number": "CG0259-ACK",
-    "image_link": "https://cdn.acnestudios.com/products/CG/CG0259-/CG0259-ACK_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CG/CG0259-/2000x/CG0259-ACK_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2791,7 +2791,7 @@ const products = [
     "Article name": "FN-UX-SLGS000275",
     "Color": "Green",
     "Article number": "CG0245-AB8",
-    "image_link": "https://cdn.acnestudios.com/products/CG/CG0245-/CG0245-AB8_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CG/CG0245-/2000x/CG0245-AB8_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2803,7 +2803,7 @@ const products = [
     "Article name": "FN-UX-SLGS000257",
     "Color": "Baby blue/brown",
     "Article number": "CG0234-DR1",
-    "image_link": "https://cdn.acnestudios.com/products/CG/CG0234-/CG0234-DR1_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CG/CG0234-/2000x/CG0234-DR1_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2815,7 +2815,7 @@ const products = [
     "Article name": "FN-UX-SLGS000261",
     "Color": "Baby blue/brown",
     "Article number": "CG0232-DR1",
-    "image_link": "https://cdn.acnestudios.com/products/CG/CG0232-/CG0232-DR1_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CG/CG0232-/2000x/CG0232-DR1_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -2827,7 +2827,7 @@ const products = [
     "Article name": "Acne Studios 1981F FN Monogram Dark",
     "Color": "Blue/black",
     "Article number": "A00493-AIL",
-    "image_link": "https://cdn.acnestudios.com/products/A0/A00493-/A00493-AIL_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A0/A00493-/2000x/A00493-AIL_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -2839,7 +2839,7 @@ const products = [
     "Article name": "Acne Studios 1981M FN Monogram Dark",
     "Color": "Blue/black",
     "Article number": "B00377-AIL",
-    "image_link": "https://cdn.acnestudios.com/products/B0/B00377-/B00377-AIL_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B0/B00377-/2000x/B00377-AIL_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -2851,7 +2851,7 @@ const products = [
     "Article name": "Acne Studios 1991 Toj U Indigo Sand",
     "Color": "Light Sand",
     "Article number": "C00071-14L",
-    "image_link": "https://cdn.acnestudios.com/products/C0/C00071-/C00071-14L_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C0/C00071-/2000x/C00071-14L_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -2863,7 +2863,7 @@ const products = [
     "Article name": "Acne Studios 2005 Monogram",
     "Color": "Blue/beige",
     "Article number": "A00440-BUF",
-    "image_link": "https://cdn.acnestudios.com/products/A0/A00440-/A00440-BUF_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A0/A00440-/2000x/A00440-BUF_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -2875,7 +2875,7 @@ const products = [
     "Article name": "Acne Studios 2021M Indigo Sand",
     "Color": "Light Sand",
     "Article number": "B00369-14L",
-    "image_link": "https://cdn.acnestudios.com/products/B0/B00369-/B00369-14L_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B0/B00369-/2000x/B00369-14L_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -2887,7 +2887,7 @@ const products = [
     "Article name": "Acne Studios 2023 Asphalt Coating",
     "Color": "Black/mid blue",
     "Article number": "C00072-DHY",
-    "image_link": "https://cdn.acnestudios.com/products/C0/C00072-/C00072-DHY_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C0/C00072-/2000x/C00072-DHY_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -2899,7 +2899,7 @@ const products = [
     "Article name": "Acne Studios 2024F FN Matrix",
     "Color": "Dark Blue",
     "Article number": "A00497-838",
-    "image_link": "https://cdn.acnestudios.com/products/A0/A00497-/A00497-838_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A0/A00497-/2000x/A00497-838_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -2911,7 +2911,7 @@ const products = [
     "Article name": "FA-UX-KNIT000110",
     "Color": "Cameo pink",
     "Article number": "C60104-DRM",
-    "image_link": "https://cdn.acnestudios.com/products/C6/C60104-/C60104-DRM_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C6/C60104-/2000x/C60104-DRM_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -2923,7 +2923,7 @@ const products = [
     "Article name": "FA-UX-SHIR000088",
     "Color": "Light blue",
     "Article number": "CB0096-228",
-    "image_link": "https://cdn.acnestudios.com/products/CB/CB0096-/CB0096-228_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CB/CB0096-/2000x/CB0096-228_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -2935,7 +2935,7 @@ const products = [
     "Article name": "FA-UX-SHIR000084",
     "Color": "Navy black/white",
     "Article number": "CB0097-DRL",
-    "image_link": "https://cdn.acnestudios.com/products/CB/CB0097-/CB0097-DRL_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CB/CB0097-/2000x/CB0097-DRL_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -2947,7 +2947,7 @@ const products = [
     "Article name": "FA-UX-SHIR000087",
     "Color": "Off white/pink",
     "Article number": "CB0095-DCJ",
-    "image_link": "https://cdn.acnestudios.com/products/CB/CB0095-/CB0095-DCJ_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CB/CB0095-/2000x/CB0095-DCJ_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -2959,7 +2959,7 @@ const products = [
     "Article name": "FA-UX-TSHI000317",
     "Color": "Navy blue",
     "Article number": "CL0311-885",
-    "image_link": "https://cdn.acnestudios.com/products/CL/CL0311-/CL0311-885_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CL/CL0311-/2000x/CL0311-885_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -2971,7 +2971,7 @@ const products = [
     "Article name": "FA-UX-TSHI000314",
     "Color": "Black",
     "Article number": "CL0314-900",
-    "image_link": "https://cdn.acnestudios.com/products/CL/CL0314-/CL0314-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CL/CL0314-/2000x/CL0314-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -2983,7 +2983,7 @@ const products = [
     "Article name": "FA-UX-TSHI000314",
     "Color": "Optic White",
     "Article number": "CL0314-183",
-    "image_link": "https://cdn.acnestudios.com/products/CL/CL0314-/CL0314-183_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CL/CL0314-/2000x/CL0314-183_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -2995,7 +2995,7 @@ const products = [
     "Article name": "FA-UX-TSHI000318",
     "Color": "Pale blue",
     "Article number": "CL0306-AAV",
-    "image_link": "https://cdn.acnestudios.com/products/CL/CL0306-/CL0306-AAV_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CL/CL0306-/2000x/CL0306-AAV_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3007,7 +3007,7 @@ const products = [
     "Article name": "FN-WN-DRES001400",
     "Color": "Multi grey",
     "Article number": "A20776-BQ9",
-    "image_link": "https://cdn.acnestudios.com/products/A2/A20776-/A20776-BQ9_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A2/A20776-/2000x/A20776-BQ9_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3019,7 +3019,7 @@ const products = [
     "Article name": "FN-WN-DRES001374",
     "Color": "Multi grey",
     "Article number": "A20777-BQ9",
-    "image_link": "https://cdn.acnestudios.com/products/A2/A20777-/A20777-BQ9_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A2/A20777-/2000x/A20777-BQ9_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3031,7 +3031,7 @@ const products = [
     "Article name": "FN-WN-DRES001374",
     "Color": "Multi pink",
     "Article number": "A20777-BM3",
-    "image_link": "https://cdn.acnestudios.com/products/A2/A20777-/A20777-BM3_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A2/A20777-/2000x/A20777-BM3_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3043,7 +3043,7 @@ const products = [
     "Article name": "FN-WN-DRES001417",
     "Color": "Mid blue",
     "Article number": "A20779-AUZ",
-    "image_link": "https://cdn.acnestudios.com/products/A2/A20779-/A20779-AUZ_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A2/A20779-/2000x/A20779-AUZ_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3055,7 +3055,7 @@ const products = [
     "Article name": "FN-WN-DRES001419",
     "Color": "Sky blue",
     "Article number": "A20801-AAS",
-    "image_link": "https://cdn.acnestudios.com/products/A2/A20801-/A20801-AAS_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A2/A20801-/2000x/A20801-AAS_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3067,7 +3067,7 @@ const products = [
     "Article name": "FN-WN-DRES001448",
     "Color": "Multi brown",
     "Article number": "A20793-BPH",
-    "image_link": "https://cdn.acnestudios.com/products/A2/A20793-/A20793-BPH_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A2/A20793-/2000x/A20793-BPH_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3079,7 +3079,7 @@ const products = [
     "Article name": "FN-WN-DRES001402",
     "Color": "Mid blue",
     "Article number": "A20780-AUZ",
-    "image_link": "https://cdn.acnestudios.com/products/A2/A20780-/A20780-AUZ_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A2/A20780-/2000x/A20780-AUZ_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3091,7 +3091,7 @@ const products = [
     "Article name": "FN-WN-DRES001379",
     "Color": "Black",
     "Article number": "A20774-900",
-    "image_link": "https://cdn.acnestudios.com/products/A2/A20774-/A20774-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A2/A20774-/2000x/A20774-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3103,7 +3103,7 @@ const products = [
     "Article name": "FN-WN-KNIT000818",
     "Color": "Pink/red",
     "Article number": "A60560-ALW",
-    "image_link": "https://cdn.acnestudios.com/products/A6/A60560-/A60560-ALW_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A6/A60560-/2000x/A60560-ALW_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3115,7 +3115,7 @@ const products = [
     "Article name": "FN-WN-KNIT000818",
     "Color": "White/black",
     "Article number": "A60560-AL4",
-    "image_link": "https://cdn.acnestudios.com/products/A6/A60560-/A60560-AL4_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A6/A60560-/2000x/A60560-AL4_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3127,7 +3127,7 @@ const products = [
     "Article name": "FN-WN-KNIT000773",
     "Color": "Anthracite grey",
     "Article number": "A60534-AA2",
-    "image_link": "https://cdn.acnestudios.com/products/A6/A60534-/A60534-AA2_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A6/A60534-/2000x/A60534-AA2_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3139,7 +3139,7 @@ const products = [
     "Article name": "FN-WN-KNIT000773",
     "Color": "Mushroom beige",
     "Article number": "A60534-ADY",
-    "image_link": "https://cdn.acnestudios.com/products/A6/A60534-/A60534-ADY_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A6/A60534-/2000x/A60534-ADY_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3151,7 +3151,7 @@ const products = [
     "Article name": "FN-WN-KNIT000801",
     "Color": "Purple",
     "Article number": "A60554-ADA",
-    "image_link": "https://cdn.acnestudios.com/products/A6/A60554-/A60554-ADA_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A6/A60554-/2000x/A60554-ADA_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3163,7 +3163,7 @@ const products = [
     "Article name": "FN-WN-KNIT000759",
     "Color": "Anthracite grey",
     "Article number": "A60546-AA2",
-    "image_link": "https://cdn.acnestudios.com/products/A6/A60546-/A60546-AA2_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A6/A60546-/2000x/A60546-AA2_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3175,7 +3175,7 @@ const products = [
     "Article name": "FN-WN-KNIT000759",
     "Color": "Mushroom beige",
     "Article number": "A60546-ADY",
-    "image_link": "https://cdn.acnestudios.com/products/A6/A60546-/A60546-ADY_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A6/A60546-/2000x/A60546-ADY_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3187,7 +3187,7 @@ const products = [
     "Article name": "FN-WN-KNIT000802",
     "Color": "Beige",
     "Article number": "A60553-AEK",
-    "image_link": "https://cdn.acnestudios.com/products/A6/A60553-/A60553-AEK_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A6/A60553-/2000x/A60553-AEK_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3199,7 +3199,7 @@ const products = [
     "Article name": "FN-WN-OUTW000997",
     "Color": "Dark brown",
     "Article number": "A90636-ADM",
-    "image_link": "https://cdn.acnestudios.com/products/A9/A90636-/A90636-ADM_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A9/A90636-/2000x/A90636-ADM_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3211,7 +3211,7 @@ const products = [
     "Article name": "FN-WN-OUTW001050",
     "Color": "Charcoal Grey",
     "Article number": "A90645-Z79",
-    "image_link": "https://cdn.acnestudios.com/products/A9/A90645-/A90645-Z79_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A9/A90645-/2000x/A90645-Z79_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3223,7 +3223,7 @@ const products = [
     "Article name": "FN-WN-OUTW001030",
     "Color": "Black",
     "Article number": "A90631-900",
-    "image_link": "https://cdn.acnestudios.com/products/A9/A90631-/A90631-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A9/A90631-/2000x/A90631-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3235,7 +3235,7 @@ const products = [
     "Article name": "FN-WN-OUTW001031",
     "Color": "Dark green",
     "Article number": "A90637-AAX",
-    "image_link": "https://cdn.acnestudios.com/products/A9/A90637-/A90637-AAX_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A9/A90637-/2000x/A90637-AAX_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3247,7 +3247,7 @@ const products = [
     "Article name": "FN-WN-OUTW000949",
     "Color": "Black",
     "Article number": "A90616-900",
-    "image_link": "https://cdn.acnestudios.com/products/A9/A90616-/A90616-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A9/A90616-/2000x/A90616-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3259,7 +3259,7 @@ const products = [
     "Article name": "FN-WN-BLOU001031",
     "Color": "Blue/white",
     "Article number": "AC0663-AF2",
-    "image_link": "https://cdn.acnestudios.com/products/AC/AC0663-/AC0663-AF2_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AC/AC0663-/2000x/AC0663-AF2_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3271,7 +3271,7 @@ const products = [
     "Article name": "FN-WN-BLOU001031",
     "Color": "Olive green/white",
     "Article number": "AC0663-DIF",
-    "image_link": "https://cdn.acnestudios.com/products/AC/AC0663-/AC0663-DIF_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AC/AC0663-/2000x/AC0663-DIF_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3283,7 +3283,7 @@ const products = [
     "Article name": "FN-WN-BLOU001031",
     "Color": "Salmon pink/white",
     "Article number": "AC0663-DJA",
-    "image_link": "https://cdn.acnestudios.com/products/AC/AC0663-/AC0663-DJA_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AC/AC0663-/2000x/AC0663-DJA_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3295,7 +3295,7 @@ const products = [
     "Article name": "FN-WN-BLOU001126",
     "Color": "Olive green/white",
     "Article number": "AC0727-DIF",
-    "image_link": "https://cdn.acnestudios.com/products/AC/AC0727-/AC0727-DIF_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AC/AC0727-/2000x/AC0727-DIF_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3307,7 +3307,7 @@ const products = [
     "Article name": "FN-WN-SHOE000987",
     "Color": "Off white",
     "Article number": "AD0788-AEG",
-    "image_link": "https://cdn.acnestudios.com/products/AD/AD0788-/AD0788-AEG_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AD/AD0788-/2000x/AD0788-AEG_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -3319,7 +3319,7 @@ const products = [
     "Article name": "Bars W",
     "Color": "Multi",
     "Article number": "AD0717-ALC",
-    "image_link": "https://cdn.acnestudios.com/products/AD/AD0717-/AD0717-ALC_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AD/AD0717-/2000x/AD0717-ALC_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -3331,7 +3331,7 @@ const products = [
     "Article name": "Bars W",
     "Color": "Yellow/black",
     "Article number": "AD0717-ANE",
-    "image_link": "https://cdn.acnestudios.com/products/AD/AD0717-/AD0717-ANE_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AD/AD0717-/2000x/AD0717-ANE_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -3343,7 +3343,7 @@ const products = [
     "Article name": "FN-WN-SHOE000806",
     "Color": "Black",
     "Article number": "AD0654-900",
-    "image_link": "https://cdn.acnestudios.com/products/AD/AD0654-/AD0654-900_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AD/AD0654-/2000x/AD0654-900_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -3355,7 +3355,7 @@ const products = [
     "Article name": "FN-WN-SHOR000123",
     "Color": "Mauve Grey",
     "Article number": "AE0080-DMN",
-    "image_link": "https://cdn.acnestudios.com/products/AE/AE0080-/AE0080-DMN_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AE/AE0080-/2000x/AE0080-DMN_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3367,7 +3367,7 @@ const products = [
     "Article name": "FN-WN-SKIR000791",
     "Color": "Black",
     "Article number": "AF0505-900",
-    "image_link": "https://cdn.acnestudios.com/products/AF/AF0505-/AF0505-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AF/AF0505-/2000x/AF0505-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3379,7 +3379,7 @@ const products = [
     "Article name": "FN-WN-SKIR000791",
     "Color": "Mud Brown",
     "Article number": "AF0505-DLD",
-    "image_link": "https://cdn.acnestudios.com/products/AF/AF0505-/AF0505-DLD_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AF/AF0505-/2000x/AF0505-DLD_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3391,7 +3391,7 @@ const products = [
     "Article name": "FN-WN-SKIR000790",
     "Color": "Black",
     "Article number": "AF0508-900",
-    "image_link": "https://cdn.acnestudios.com/products/AF/AF0508-/AF0508-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AF/AF0508-/2000x/AF0508-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3403,7 +3403,7 @@ const products = [
     "Article name": "FN-WN-SKIR000804",
     "Color": "Golden brown",
     "Article number": "AF0509-DP3",
-    "image_link": "https://cdn.acnestudios.com/products/AF/AF0509-/AF0509-DP3_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AF/AF0509-/2000x/AF0509-DP3_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3415,7 +3415,7 @@ const products = [
     "Article name": "FN-WN-SKIR000804",
     "Color": "Multi grey",
     "Article number": "AF0509-BQ9",
-    "image_link": "https://cdn.acnestudios.com/products/AF/AF0509-/AF0509-BQ9_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AF/AF0509-/2000x/AF0509-BQ9_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3427,7 +3427,7 @@ const products = [
     "Article name": "FN-WN-SUIT000613",
     "Color": "Navy blue",
     "Article number": "AH0301-885",
-    "image_link": "https://cdn.acnestudios.com/products/AH/AH0301-/AH0301-885_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AH/AH0301-/2000x/AH0301-885_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3439,7 +3439,7 @@ const products = [
     "Article name": "FN-WN-SUIT000629",
     "Color": "Camel Beige",
     "Article number": "AH0302-DFJ",
-    "image_link": "https://cdn.acnestudios.com/products/AH/AH0302-/AH0302-DFJ_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AH/AH0302-/2000x/AH0302-DFJ_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3451,7 +3451,7 @@ const products = [
     "Article name": "FN-WN-SUIT000628",
     "Color": "Black",
     "Article number": "AH0300-900",
-    "image_link": "https://cdn.acnestudios.com/products/AH/AH0300-/AH0300-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AH/AH0300-/2000x/AH0300-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3463,7 +3463,7 @@ const products = [
     "Article name": "FN-WN-SWEA000246",
     "Color": "Mauve Grey",
     "Article number": "AI0158-DMN",
-    "image_link": "https://cdn.acnestudios.com/products/AI/AI0158-/AI0158-DMN_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AI/AI0158-/2000x/AI0158-DMN_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3475,7 +3475,7 @@ const products = [
     "Article name": "FN-WN-SWEA000246",
     "Color": "Taupe Brown",
     "Article number": "AI0158-DIA",
-    "image_link": "https://cdn.acnestudios.com/products/AI/AI0158-/AI0158-DIA_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AI/AI0158-/2000x/AI0158-DIA_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3487,7 +3487,7 @@ const products = [
     "Article name": "FN-WN-TSHI000738",
     "Color": "Black/white",
     "Article number": "AL0450-J83",
-    "image_link": "https://cdn.acnestudios.com/products/AL/AL0450-/AL0450-J83_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AL/AL0450-/2000x/AL0450-J83_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3499,7 +3499,7 @@ const products = [
     "Article name": "FN-WN-TSHI000735",
     "Color": "Dark mauve",
     "Article number": "AL0454-CJD",
-    "image_link": "https://cdn.acnestudios.com/products/AL/AL0454-/AL0454-CJD_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AL/AL0454-/2000x/AL0454-CJD_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3511,7 +3511,7 @@ const products = [
     "Article name": "FN-WN-TSHI000726",
     "Color": "Black",
     "Article number": "AL0453-900",
-    "image_link": "https://cdn.acnestudios.com/products/AL/AL0453-/AL0453-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AL/AL0453-/2000x/AL0453-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3523,7 +3523,7 @@ const products = [
     "Article name": "FN-WN-TSHI000702",
     "Color": "Black",
     "Article number": "AL0438-900",
-    "image_link": "https://cdn.acnestudios.com/products/AL/AL0438-/AL0438-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AL/AL0438-/2000x/AL0438-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3535,7 +3535,7 @@ const products = [
     "Article name": "FN-WN-TSHI000704",
     "Color": "Black",
     "Article number": "AL0437-900",
-    "image_link": "https://cdn.acnestudios.com/products/AL/AL0437-/AL0437-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AL/AL0437-/2000x/AL0437-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3547,7 +3547,7 @@ const products = [
     "Article name": "FN-WN-TSHI000704",
     "Color": "Mud Brown",
     "Article number": "AL0437-DLD",
-    "image_link": "https://cdn.acnestudios.com/products/AL/AL0437-/AL0437-DLD_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AL/AL0437-/2000x/AL0437-DLD_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3559,7 +3559,7 @@ const products = [
     "Article name": "FN-WN-TROU001402",
     "Color": "Blue/multi",
     "Article number": "AK0898-ALD",
-    "image_link": "https://cdn.acnestudios.com/products/AK/AK0898-/AK0898-ALD_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AK/AK0898-/2000x/AK0898-ALD_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3571,7 +3571,7 @@ const products = [
     "Article name": "FN-WN-TROU001414",
     "Color": "Blue/multi",
     "Article number": "AK0905-ALD",
-    "image_link": "https://cdn.acnestudios.com/products/AK/AK0905-/AK0905-ALD_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AK/AK0905-/2000x/AK0905-ALD_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3583,7 +3583,7 @@ const products = [
     "Article name": "FN-WN-TROU001265",
     "Color": "Camel Beige",
     "Article number": "AK0826-DFJ",
-    "image_link": "https://cdn.acnestudios.com/products/AK/AK0826-/AK0826-DFJ_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AK/AK0826-/2000x/AK0826-DFJ_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3595,7 +3595,7 @@ const products = [
     "Article name": "FN-WN-TROU001352",
     "Color": "Mid blue",
     "Article number": "AK0870-AUZ",
-    "image_link": "https://cdn.acnestudios.com/products/AK/AK0870-/AK0870-AUZ_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AK/AK0870-/2000x/AK0870-AUZ_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3607,7 +3607,7 @@ const products = [
     "Article name": "FN-WN-TROU001366",
     "Color": "Multi brown",
     "Article number": "AK0897-BPH",
-    "image_link": "https://cdn.acnestudios.com/products/AK/AK0897-/AK0897-BPH_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AK/AK0897-/2000x/AK0897-BPH_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3619,7 +3619,7 @@ const products = [
     "Article name": "FN-WN-TROU001335",
     "Color": "Black",
     "Article number": "AK0868-900",
-    "image_link": "https://cdn.acnestudios.com/products/AK/AK0868-/AK0868-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AK/AK0868-/2000x/AK0868-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3631,7 +3631,7 @@ const products = [
     "Article name": "FN-WN-TROU001364",
     "Color": "Black",
     "Article number": "AK0869-900",
-    "image_link": "https://cdn.acnestudios.com/products/AK/AK0869-/AK0869-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AK/AK0869-/2000x/AK0869-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3643,7 +3643,7 @@ const products = [
     "Article name": "FN-WN-TROU001334",
     "Color": "Mid blue",
     "Article number": "AK0872-AUZ",
-    "image_link": "https://cdn.acnestudios.com/products/AK/AK0872-/AK0872-AUZ_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AK/AK0872-/2000x/AK0872-AUZ_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3655,7 +3655,7 @@ const products = [
     "Article name": "FN-WN-TROU001311",
     "Color": "Navy blue",
     "Article number": "AK0873-885",
-    "image_link": "https://cdn.acnestudios.com/products/AK/AK0873-/AK0873-885_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AK/AK0873-/2000x/AK0873-885_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3667,7 +3667,7 @@ const products = [
     "Article name": "FN-MN-KNIT000531",
     "Color": "Denim Blue",
     "Article number": "B60357-822",
-    "image_link": "https://cdn.acnestudios.com/products/B6/B60357-/B60357-822_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B6/B60357-/2000x/B60357-822_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3679,7 +3679,7 @@ const products = [
     "Article name": "FN-MN-KNIT000529",
     "Color": "Camel brown",
     "Article number": "B60355-640",
-    "image_link": "https://cdn.acnestudios.com/products/B6/B60355-/B60355-640_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B6/B60355-/2000x/B60355-640_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3691,7 +3691,7 @@ const products = [
     "Article name": "FN-MN-KNIT000528",
     "Color": "Baby pink",
     "Article number": "B60361-DR5",
-    "image_link": "https://cdn.acnestudios.com/products/B6/B60361-/B60361-DR5_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B6/B60361-/2000x/B60361-DR5_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3703,7 +3703,7 @@ const products = [
     "Article name": "FN-MN-KNIT000528",
     "Color": "Khaki green",
     "Article number": "B60361-AB6",
-    "image_link": "https://cdn.acnestudios.com/products/B6/B60361-/B60361-AB6_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B6/B60361-/2000x/B60361-AB6_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3715,7 +3715,7 @@ const products = [
     "Article name": "FN-UX-OUTW000059",
     "Color": "Light Sand",
     "Article number": "C90173-14L",
-    "image_link": "https://cdn.acnestudios.com/products/C9/C90173-/C90173-14L_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C9/C90173-/2000x/C90173-14L_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3727,7 +3727,7 @@ const products = [
     "Article name": "FN-MN-OUTW001149",
     "Color": "Black",
     "Article number": "B90813-900",
-    "image_link": "https://cdn.acnestudios.com/products/B9/B90813-/B90813-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B9/B90813-/2000x/B90813-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3739,7 +3739,7 @@ const products = [
     "Article name": "FN-MN-OUTW001123",
     "Color": "Black",
     "Article number": "B90802-900",
-    "image_link": "https://cdn.acnestudios.com/products/B9/B90802-/B90802-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B9/B90802-/2000x/B90802-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3751,7 +3751,7 @@ const products = [
     "Article name": "FN-MN-OUTW001171",
     "Color": "Brown",
     "Article number": "B90801-700",
-    "image_link": "https://cdn.acnestudios.com/products/B9/B90801-/B90801-700_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B9/B90801-/2000x/B90801-700_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3763,7 +3763,7 @@ const products = [
     "Article name": "FN-MN-OUTW001136",
     "Color": "Black",
     "Article number": "B90811-900",
-    "image_link": "https://cdn.acnestudios.com/products/B9/B90811-/B90811-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B9/B90811-/2000x/B90811-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3775,7 +3775,7 @@ const products = [
     "Article name": "FN-MN-OUTW001136",
     "Color": "Camel Beige",
     "Article number": "B90811-DFJ",
-    "image_link": "https://cdn.acnestudios.com/products/B9/B90811-/B90811-DFJ_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B9/B90811-/2000x/B90811-DFJ_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3787,7 +3787,7 @@ const products = [
     "Article name": "FN-MN-OUTW001150",
     "Color": "Beige",
     "Article number": "B90815-AEK",
-    "image_link": "https://cdn.acnestudios.com/products/B9/B90815-/B90815-AEK_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B9/B90815-/2000x/B90815-AEK_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3799,7 +3799,7 @@ const products = [
     "Article name": "FN-MN-OUTW001175",
     "Color": "Black",
     "Article number": "B90808-900",
-    "image_link": "https://cdn.acnestudios.com/products/B9/B90808-/B90808-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B9/B90808-/2000x/B90808-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3811,7 +3811,7 @@ const products = [
     "Article name": "FN-UX-OUTW000074",
     "Color": "Light blue",
     "Article number": "C90191-228",
-    "image_link": "https://cdn.acnestudios.com/products/C9/C90191-/C90191-228_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C9/C90191-/2000x/C90191-228_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3823,7 +3823,7 @@ const products = [
     "Article name": "FN-MN-OUTW001218",
     "Color": "Light blue",
     "Article number": "B90820-228",
-    "image_link": "https://cdn.acnestudios.com/products/B9/B90820-/B90820-228_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B9/B90820-/2000x/B90820-228_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3835,7 +3835,7 @@ const products = [
     "Article name": "FN-UX-SHIR000051",
     "Color": "Mint green",
     "Article number": "CB0102-AB9",
-    "image_link": "https://cdn.acnestudios.com/products/CB/CB0102-/CB0102-AB9_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CB/CB0102-/2000x/CB0102-AB9_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3847,7 +3847,7 @@ const products = [
     "Article name": "FN-MN-SHIR000842",
     "Color": "Green",
     "Article number": "BB0615-AB8",
-    "image_link": "https://cdn.acnestudios.com/products/BB/BB0615-/BB0615-AB8_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BB/BB0615-/2000x/BB0615-AB8_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3859,7 +3859,7 @@ const products = [
     "Article name": "FN-UX-SHIR000059",
     "Color": "Blue/beige",
     "Article number": "CB0104-BUF",
-    "image_link": "https://cdn.acnestudios.com/products/CB/CB0104-/CB0104-BUF_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CB/CB0104-/2000x/CB0104-BUF_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3871,7 +3871,7 @@ const products = [
     "Article name": "Bars M",
     "Color": "Multi",
     "Article number": "BD0319-ALC",
-    "image_link": "https://cdn.acnestudios.com/products/BD/BD0319-/BD0319-ALC_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BD/BD0319-/2000x/BD0319-ALC_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -3883,7 +3883,7 @@ const products = [
     "Article name": "Bars M",
     "Color": "Yellow/black",
     "Article number": "BD0319-ANE",
-    "image_link": "https://cdn.acnestudios.com/products/BD/BD0319-/BD0319-ANE_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BD/BD0319-/2000x/BD0319-ANE_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -3895,7 +3895,7 @@ const products = [
     "Article name": "FN-MN-SHOR000251",
     "Color": "Black",
     "Article number": "BE0182-900",
-    "image_link": "https://cdn.acnestudios.com/products/BE/BE0182-/BE0182-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BE/BE0182-/2000x/BE0182-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3907,7 +3907,7 @@ const products = [
     "Article name": "FN-MN-SHOR000248",
     "Color": "Black",
     "Article number": "BE0172-900",
-    "image_link": "https://cdn.acnestudios.com/products/BE/BE0172-/BE0172-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BE/BE0172-/2000x/BE0172-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3919,7 +3919,7 @@ const products = [
     "Article name": "FN-UX-SHOR000033",
     "Color": "Mud brown camo",
     "Article number": "CE0065-DRY",
-    "image_link": "https://cdn.acnestudios.com/products/CE/CE0065-/CE0065-DRY_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CE/CE0065-/2000x/CE0065-DRY_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3931,7 +3931,7 @@ const products = [
     "Article name": "FN-UX-SHOR000008",
     "Color": "Dusty purple",
     "Article number": "CE0038-ADF",
-    "image_link": "https://cdn.acnestudios.com/products/CE/CE0038-/CE0038-ADF_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CE/CE0038-/2000x/CE0038-ADF_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3943,7 +3943,7 @@ const products = [
     "Article name": "FN-UX-SWEA000063",
     "Color": "Concrete grey camo",
     "Article number": "CI0193-DRX",
-    "image_link": "https://cdn.acnestudios.com/products/CI/CI0193-/CI0193-DRX_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CI/CI0193-/2000x/CI0193-DRX_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3955,7 +3955,7 @@ const products = [
     "Article name": "FN-UX-SWEA000019",
     "Color": "Plum purple",
     "Article number": "CI0138-ADB",
-    "image_link": "https://cdn.acnestudios.com/products/CI/CI0138-/CI0138-ADB_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CI/CI0138-/2000x/CI0138-ADB_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3967,7 +3967,7 @@ const products = [
     "Article name": "FN-UX-SWEA000062",
     "Color": "Sand beige",
     "Article number": "CI0192-AE0",
-    "image_link": "https://cdn.acnestudios.com/products/CI/CI0192-/CI0192-AE0_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CI/CI0192-/2000x/CI0192-AE0_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3979,7 +3979,7 @@ const products = [
     "Article name": "FN-UX-SWEA000061",
     "Color": "Bright green",
     "Article number": "CI0190-BCD",
-    "image_link": "https://cdn.acnestudios.com/products/CI/CI0190-/CI0190-BCD_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CI/CI0190-/2000x/CI0190-BCD_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -3991,7 +3991,7 @@ const products = [
     "Article name": "FN-UX-SWEA000044",
     "Color": "Ice blue",
     "Article number": "CI0179-AQH",
-    "image_link": "https://cdn.acnestudios.com/products/CI/CI0179-/CI0179-AQH_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CI/CI0179-/2000x/CI0179-AQH_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -4003,7 +4003,7 @@ const products = [
     "Article name": "FN-UX-TSHI000138",
     "Color": "White",
     "Article number": "CL0341-100",
-    "image_link": "https://cdn.acnestudios.com/products/CL/CL0341-/CL0341-100_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CL/CL0341-/2000x/CL0341-100_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -4015,7 +4015,7 @@ const products = [
     "Article name": "FN-UX-TSHI000123",
     "Color": "Plum purple",
     "Article number": "CL0332-ADB",
-    "image_link": "https://cdn.acnestudios.com/products/CL/CL0332-/CL0332-ADB_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CL/CL0332-/2000x/CL0332-ADB_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -4027,7 +4027,7 @@ const products = [
     "Article name": "FN-UX-TSHI000099",
     "Color": "Mud brown camo",
     "Article number": "CL0317-DRY",
-    "image_link": "https://cdn.acnestudios.com/products/CL/CL0317-/CL0317-DRY_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CL/CL0317-/2000x/CL0317-DRY_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -4039,7 +4039,7 @@ const products = [
     "Article name": "FN-UX-TSHI000116",
     "Color": "Innocent pink",
     "Article number": "CL0333-DSC",
-    "image_link": "https://cdn.acnestudios.com/products/CL/CL0333-/CL0333-DSC_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CL/CL0333-/2000x/CL0333-DSC_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -4051,7 +4051,7 @@ const products = [
     "Article name": "FN-UX-TSHI000116",
     "Color": "Optic White",
     "Article number": "CL0333-183",
-    "image_link": "https://cdn.acnestudios.com/products/CL/CL0333-/CL0333-183_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CL/CL0333-/2000x/CL0333-183_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -4063,7 +4063,7 @@ const products = [
     "Article name": "FN-UX-TSHI000122",
     "Color": "Plum purple",
     "Article number": "CL0335-ADB",
-    "image_link": "https://cdn.acnestudios.com/products/CL/CL0335-/CL0335-ADB_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CL/CL0335-/2000x/CL0335-ADB_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -4075,7 +4075,7 @@ const products = [
     "Article name": "FN-UX-TSHI000078",
     "Color": "Faded black",
     "Article number": "CL0298-BM0",
-    "image_link": "https://cdn.acnestudios.com/products/CL/CL0298-/CL0298-BM0_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CL/CL0298-/2000x/CL0298-BM0_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -4087,7 +4087,7 @@ const products = [
     "Article name": "FN-UX-TSHI000079",
     "Color": "Ice blue",
     "Article number": "CL0294-AQH",
-    "image_link": "https://cdn.acnestudios.com/products/CL/CL0294-/CL0294-AQH_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CL/CL0294-/2000x/CL0294-AQH_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -4099,7 +4099,7 @@ const products = [
     "Article name": "FN-UX-TSHI000098",
     "Color": "Concrete grey camo",
     "Article number": "CL0315-DRX",
-    "image_link": "https://cdn.acnestudios.com/products/CL/CL0315-/CL0315-DRX_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CL/CL0315-/2000x/CL0315-DRX_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -4111,7 +4111,7 @@ const products = [
     "Article name": "FN-UX-TSHI000110",
     "Color": "Bright green",
     "Article number": "CL0321-BCD",
-    "image_link": "https://cdn.acnestudios.com/products/CL/CL0321-/CL0321-BCD_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CL/CL0321-/2000x/CL0321-BCD_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -4123,7 +4123,7 @@ const products = [
     "Article name": "FN-UX-TSHI000111",
     "Color": "Sand beige",
     "Article number": "CL0316-AE0",
-    "image_link": "https://cdn.acnestudios.com/products/CL/CL0316-/CL0316-AE0_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CL/CL0316-/2000x/CL0316-AE0_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -4135,7 +4135,7 @@ const products = [
     "Article name": "FN-MN-TROU001103",
     "Color": "Rust orange",
     "Article number": "BK0682-ABY",
-    "image_link": "https://cdn.acnestudios.com/products/BK/BK0682-/BK0682-ABY_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BK/BK0682-/2000x/BK0682-ABY_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -4147,7 +4147,7 @@ const products = [
     "Article name": "FN-UX-TROU000015",
     "Color": "Plum purple",
     "Article number": "CK0088-ADB",
-    "image_link": "https://cdn.acnestudios.com/products/CK/CK0088-/CK0088-ADB_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CK/CK0088-/2000x/CK0088-ADB_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -4159,7 +4159,7 @@ const products = [
     "Article name": "FN-WN-BAGS000429",
     "Color": "Black",
     "Article number": "A10346-900",
-    "image_link": "https://cdn.acnestudios.com/products/A1/A10346-/A10346-900_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A1/A10346-/2000x/A10346-900_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -4171,7 +4171,7 @@ const products = [
     "Article name": "FN-WN-BAGS000429",
     "Color": "White",
     "Article number": "A10346-100",
-    "image_link": "https://cdn.acnestudios.com/products/A1/A10346-/A10346-100_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A1/A10346-/2000x/A10346-100_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -4183,7 +4183,7 @@ const products = [
     "Article name": "FN-WN-BAGS000466",
     "Color": "Black",
     "Article number": "A10377-900",
-    "image_link": "https://cdn.acnestudios.com/products/A1/A10377-/A10377-900_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A1/A10377-/2000x/A10377-900_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -4195,7 +4195,7 @@ const products = [
     "Article name": "FN-WN-BAGS000466",
     "Color": "Denim Blue",
     "Article number": "A10377-822",
-    "image_link": "https://cdn.acnestudios.com/products/A1/A10377-/A10377-822_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A1/A10377-/2000x/A10377-822_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -4207,7 +4207,7 @@ const products = [
     "Article name": "FN-WN-BAGS000414",
     "Color": "Black",
     "Article number": "A10349-900",
-    "image_link": "https://cdn.acnestudios.com/products/A1/A10349-/A10349-900_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A1/A10349-/2000x/A10349-900_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -4219,7 +4219,7 @@ const products = [
     "Article name": "FN-WN-BAGS000414",
     "Color": "Pastel pink",
     "Article number": "A10349-BKY",
-    "image_link": "https://cdn.acnestudios.com/products/A1/A10349-/A10349-BKY_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A1/A10349-/2000x/A10349-BKY_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -4231,7 +4231,7 @@ const products = [
     "Article name": "FN-WN-BAGS000414",
     "Color": "White",
     "Article number": "A10349-100",
-    "image_link": "https://cdn.acnestudios.com/products/A1/A10349-/A10349-100_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A1/A10349-/2000x/A10349-100_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -4243,7 +4243,7 @@ const products = [
     "Article name": "FN-WN-BAGS000465",
     "Color": "Black",
     "Article number": "A10384-900",
-    "image_link": "https://cdn.acnestudios.com/products/A1/A10384-/A10384-900_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A1/A10384-/2000x/A10384-900_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -4255,7 +4255,7 @@ const products = [
     "Article name": "FN-WN-BAGS000413",
     "Color": "Black",
     "Article number": "A10351-900",
-    "image_link": "https://cdn.acnestudios.com/products/A1/A10351-/A10351-900_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A1/A10351-/2000x/A10351-900_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -4267,7 +4267,7 @@ const products = [
     "Article name": "FN-WN-BAGS000413",
     "Color": "Pastel pink",
     "Article number": "A10351-BKY",
-    "image_link": "https://cdn.acnestudios.com/products/A1/A10351-/A10351-BKY_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A1/A10351-/2000x/A10351-BKY_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -4279,7 +4279,7 @@ const products = [
     "Article name": "FN-WN-BAGS000413",
     "Color": "White",
     "Article number": "A10351-100",
-    "image_link": "https://cdn.acnestudios.com/products/A1/A10351-/A10351-100_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A1/A10351-/2000x/A10351-100_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -4291,7 +4291,7 @@ const products = [
     "Article name": "FN-UX-EYEW000067",
     "Color": "Antique Silver",
     "Article number": "C30060-BWF",
-    "image_link": "https://cdn.acnestudios.com/products/C3/C30060-/C30060-BWF_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C3/C30060-/2000x/C30060-BWF_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -4303,7 +4303,7 @@ const products = [
     "Article name": "FN-UX-HATS000306",
     "Color": "Warm beige",
     "Article number": "C40404-AE2",
-    "image_link": "https://cdn.acnestudios.com/products/C4/C40404-/C40404-AE2_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C4/C40404-/2000x/C40404-AE2_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -4315,7 +4315,7 @@ const products = [
     "Article name": "FN-UX-HATS000307",
     "Color": "Beige",
     "Article number": "C40395-AEK",
-    "image_link": "https://cdn.acnestudios.com/products/C4/C40395-/C40395-AEK_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C4/C40395-/2000x/C40395-AEK_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -4327,7 +4327,7 @@ const products = [
     "Article name": "FN-UX-JEWE000520",
     "Color": "Silver",
     "Article number": "C50454-AAE",
-    "image_link": "https://cdn.acnestudios.com/products/C5/C50454-/C50454-AAE_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C5/C50454-/2000x/C50454-AAE_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -4339,7 +4339,7 @@ const products = [
     "Article name": "FN-UX-JEWE000523",
     "Color": "Silver",
     "Article number": "C50452-AAE",
-    "image_link": "https://cdn.acnestudios.com/products/C5/C50452-/C50452-AAE_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C5/C50452-/2000x/C50452-AAE_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -4351,7 +4351,7 @@ const products = [
     "Article name": "FN-UX-JEWE000522",
     "Color": "Silver",
     "Article number": "C50453-AAE",
-    "image_link": "https://cdn.acnestudios.com/products/C5/C50453-/C50453-AAE_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C5/C50453-/2000x/C50453-AAE_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -4363,7 +4363,7 @@ const products = [
     "Article name": "FN-UX-ACCS000157",
     "Color": "Beige",
     "Article number": "C80211-AEK",
-    "image_link": "https://cdn.acnestudios.com/products/C8/C80211-/C80211-AEK_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C8/C80211-/2000x/C80211-AEK_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -4375,7 +4375,7 @@ const products = [
     "Article name": "FN-UX-SCAR000401",
     "Color": "Neon green",
     "Article number": "CA0350-AQR",
-    "image_link": "https://cdn.acnestudios.com/products/CA/CA0350-/CA0350-AQR_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CA/CA0350-/2000x/CA0350-AQR_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -4387,7 +4387,7 @@ const products = [
     "Article name": "FN-UX-SCAR000401",
     "Color": "Red",
     "Article number": "CA0350-ACK",
-    "image_link": "https://cdn.acnestudios.com/products/CA/CA0350-/CA0350-ACK_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CA/CA0350-/2000x/CA0350-ACK_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -4399,7 +4399,7 @@ const products = [
     "Article name": "FN-UX-SCAR000431",
     "Color": "Baby pink",
     "Article number": "CA0366-DR5",
-    "image_link": "https://cdn.acnestudios.com/products/CA/CA0366-/CA0366-DR5_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CA/CA0366-/2000x/CA0366-DR5_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -4411,7 +4411,7 @@ const products = [
     "Article name": "FN-UX-SCAR000431",
     "Color": "Black/grey",
     "Article number": "CA0366-AIK",
-    "image_link": "https://cdn.acnestudios.com/products/CA/CA0366-/CA0366-AIK_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CA/CA0366-/2000x/CA0366-AIK_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -4423,7 +4423,7 @@ const products = [
     "Article name": "FN-UX-SLGS000294",
     "Color": "Black",
     "Article number": "CG0262-900",
-    "image_link": "https://cdn.acnestudios.com/products/CG/CG0262-/CG0262-900_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CG/CG0262-/2000x/CG0262-900_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -4435,7 +4435,7 @@ const products = [
     "Article name": "FN-UX-SLGS000294",
     "Color": "Denim blue",
     "Article number": "CG0262-AAL",
-    "image_link": "https://cdn.acnestudios.com/products/CG/CG0262-/CG0262-AAL_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CG/CG0262-/2000x/CG0262-AAL_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -4447,7 +4447,7 @@ const products = [
     "Article name": "FN-UX-SLGS000294",
     "Color": "Neon red",
     "Article number": "CG0262-BQ7",
-    "image_link": "https://cdn.acnestudios.com/products/CG/CG0262-/CG0262-BQ7_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CG/CG0262-/2000x/CG0262-BQ7_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -4459,7 +4459,7 @@ const products = [
     "Article name": "FN-UX-SLGS000306",
     "Color": "Powder pink",
     "Article number": "CG0273-AD5",
-    "image_link": "https://cdn.acnestudios.com/products/CG/CG0273-/CG0273-AD5_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CG/CG0273-/2000x/CG0273-AD5_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -4471,7 +4471,7 @@ const products = [
     "Article name": "FN-UX-SLGS000307",
     "Color": "Denim Blue",
     "Article number": "CG0275-822",
-    "image_link": "https://cdn.acnestudios.com/products/CG/CG0275-/CG0275-822_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CG/CG0275-/2000x/CG0275-822_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -4483,7 +4483,7 @@ const products = [
     "Article name": "FN-UX-SLGS000307",
     "Color": "White",
     "Article number": "CG0275-100",
-    "image_link": "https://cdn.acnestudios.com/products/CG/CG0275-/CG0275-100_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CG/CG0275-/2000x/CG0275-100_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -4495,7 +4495,7 @@ const products = [
     "Article name": "Acne Studios 1981M FN Carver",
     "Color": "Light blue",
     "Article number": "B00395-228",
-    "image_link": "https://cdn.acnestudios.com/products/B0/B00395-/B00395-228_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B0/B00395-/2000x/B00395-228_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -4507,7 +4507,7 @@ const products = [
     "Article name": "Acne Studios 1981M FN Monogram",
     "Color": "Blue/beige",
     "Article number": "B00349-BUF",
-    "image_link": "https://cdn.acnestudios.com/products/B0/B00349-/B00349-BUF_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B0/B00349-/2000x/B00349-BUF_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -4519,7 +4519,7 @@ const products = [
     "Article name": "Acne Studios 1981M FN Traffic Mint Glow",
     "Color": "Mint green",
     "Article number": "B00394-AB9",
-    "image_link": "https://cdn.acnestudios.com/products/B0/B00394-/B00394-AB9_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B0/B00394-/2000x/B00394-AB9_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -4531,7 +4531,7 @@ const products = [
     "Article name": "Acne Studios 1996 Holo Mermaid",
     "Color": "Light blue",
     "Article number": "B00398-228",
-    "image_link": "https://cdn.acnestudios.com/products/B0/B00398-/B00398-228_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B0/B00398-/2000x/B00398-228_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -4543,7 +4543,7 @@ const products = [
     "Article name": "Acne Studios 1999 Carver",
     "Color": "Light blue",
     "Article number": "B00391-228",
-    "image_link": "https://cdn.acnestudios.com/products/B0/B00391-/B00391-228_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B0/B00391-/2000x/B00391-228_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -4555,7 +4555,7 @@ const products = [
     "Article name": "Acne Studios 2021F Carver",
     "Color": "Light blue",
     "Article number": "A00519-228",
-    "image_link": "https://cdn.acnestudios.com/products/A0/A00519-/A00519-228_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A0/A00519-/2000x/A00519-228_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -4567,7 +4567,7 @@ const products = [
     "Article name": "Acne Studios 2021M Indigo Sand",
     "Color": "Light Sand",
     "Article number": "B00384-14L",
-    "image_link": "https://cdn.acnestudios.com/products/B0/B00384-/B00384-14L_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B0/B00384-/2000x/B00384-14L_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -4579,7 +4579,7 @@ const products = [
     "Article name": "Acne Studios 2022 Indigo Sand",
     "Color": "Light Sand",
     "Article number": "A00502-14L",
-    "image_link": "https://cdn.acnestudios.com/products/A0/A00502-/A00502-14L_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A0/A00502-/2000x/A00502-14L_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -4591,7 +4591,7 @@ const products = [
     "Article name": "Acne Studios 2022 Monogram",
     "Color": "Blue/beige",
     "Article number": "A00446-BUF",
-    "image_link": "https://cdn.acnestudios.com/products/A0/A00446-/A00446-BUF_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A0/A00446-/2000x/A00446-BUF_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -4603,7 +4603,7 @@ const products = [
     "Article name": "Acne Studios 2023 Denim Mossy Oak",
     "Color": "Brown",
     "Article number": "C00074-700",
-    "image_link": "https://cdn.acnestudios.com/products/C0/C00074-/C00074-700_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C0/C00074-/2000x/C00074-700_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -4615,7 +4615,7 @@ const products = [
     "Article name": "Acne Studios 2023 Dirty Halo",
     "Color": "Mid blue",
     "Article number": "C00077-AUZ",
-    "image_link": "https://cdn.acnestudios.com/products/C0/C00077-/C00077-AUZ_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C0/C00077-/2000x/C00077-AUZ_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -4627,7 +4627,7 @@ const products = [
     "Article name": "SP-WN-DRES000014",
     "Color": "Fire red",
     "Article number": "A20815-DS0",
-    "image_link": "https://cdn.acnestudios.com/products/A2/A20815-/A20815-DS0_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A2/A20815-/2000x/A20815-DS0_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -4639,7 +4639,7 @@ const products = [
     "Article name": "SP-WN-TSHI000017",
     "Color": "Grey",
     "Article number": "AL0467-902",
-    "image_link": "https://cdn.acnestudios.com/products/AL/AL0467-/AL0467-902_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AL/AL0467-/2000x/AL0467-902_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -4651,7 +4651,7 @@ const products = [
     "Article name": "SP-WN-TSHI000017",
     "Color": "Red",
     "Article number": "AL0467-ACK",
-    "image_link": "https://cdn.acnestudios.com/products/AL/AL0467-/AL0467-ACK_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AL/AL0467-/2000x/AL0467-ACK_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -4663,7 +4663,7 @@ const products = [
     "Article name": "FN-UX-SCAR000401",
     "Color": "Fuchsia pink",
     "Article number": "CA0350-ACT",
-    "image_link": "https://cdn.acnestudios.com/products/CA/CA0350-/CA0350-ACT_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CA/CA0350-/2000x/CA0350-ACT_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -4675,7 +4675,7 @@ const products = [
     "Article name": "FN-UX-SCAR000401",
     "Color": "Grey",
     "Article number": "CA0350-902",
-    "image_link": "https://cdn.acnestudios.com/products/CA/CA0350-/CA0350-902_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CA/CA0350-/2000x/CA0350-902_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -4687,7 +4687,7 @@ const products = [
     "Article name": "FN-UX-SCAR000401",
     "Color": "White",
     "Article number": "CA0350-100",
-    "image_link": "https://cdn.acnestudios.com/products/CA/CA0350-/CA0350-100_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CA/CA0350-/2000x/CA0350-100_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -4699,7 +4699,7 @@ const products = [
     "Article name": "FN-UX-SLGS000253",
     "Color": "Black",
     "Article number": "CG0230-900",
-    "image_link": "https://cdn.acnestudios.com/products/CG/CG0230-/CG0230-900_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CG/CG0230-/2000x/CG0230-900_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -4711,7 +4711,7 @@ const products = [
     "Article name": "FN-UX-SLGS000253",
     "Color": "Optic white/black",
     "Article number": "CG0230-56J",
-    "image_link": "https://cdn.acnestudios.com/products/CG/CG0230-/CG0230-56J_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CG/CG0230-/2000x/CG0230-56J_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -4723,7 +4723,7 @@ const products = [
     "Article name": "FN-UX-EYEW000067",
     "Color": "Rose copper",
     "Article number": "C30060-COD",
-    "image_link": "https://cdn.acnestudios.com/products/C3/C30060-/C30060-COD_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C3/C30060-/2000x/C30060-COD_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -4735,7 +4735,7 @@ const products = [
     "Article name": "FN-UX-HATS000318",
     "Color": "Brown",
     "Article number": "C40401-700",
-    "image_link": "https://cdn.acnestudios.com/products/C4/C40401-/C40401-700_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C4/C40401-/2000x/C40401-700_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -4747,7 +4747,7 @@ const products = [
     "Article name": "FN-UX-HATS000296",
     "Color": "Brown",
     "Article number": "C40403-700",
-    "image_link": "https://cdn.acnestudios.com/products/C4/C40403-/C40403-700_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C4/C40403-/2000x/C40403-700_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -4759,7 +4759,7 @@ const products = [
     "Article name": "FN-UX-JEWE000488",
     "Color": "Silver blue",
     "Article number": "C50437-DGZ",
-    "image_link": "https://cdn.acnestudios.com/products/C5/C50437-/C50437-DGZ_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C5/C50437-/2000x/C50437-DGZ_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -4771,7 +4771,7 @@ const products = [
     "Article name": "FN-UX-JEWE000491",
     "Color": "Silver blue",
     "Article number": "C50441-DGZ",
-    "image_link": "https://cdn.acnestudios.com/products/C5/C50441-/C50441-DGZ_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C5/C50441-/2000x/C50441-DGZ_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -4783,7 +4783,7 @@ const products = [
     "Article name": "FN-UX-SLGS000308",
     "Color": "Vanilla yellow",
     "Article number": "CG0274-ABV",
-    "image_link": "https://cdn.acnestudios.com/products/CG/CG0274-/CG0274-ABV_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CG/CG0274-/2000x/CG0274-ABV_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -4795,7 +4795,7 @@ const products = [
     "Article name": "Acne Studios 2023 Distressed Monogram Coating",
     "Color": "Brown",
     "Article number": "B00406-700",
-    "image_link": "https://cdn.acnestudios.com/products/B0/B00406-/B00406-700_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B0/B00406-/2000x/B00406-700_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -4807,7 +4807,7 @@ const products = [
     "Article name": "Acne Studios 2024F FN Ladders",
     "Color": "Mid blue",
     "Article number": "A00517-AUZ",
-    "image_link": "https://cdn.acnestudios.com/products/A0/A00517-/A00517-AUZ_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A0/A00517-/2000x/A00517-AUZ_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -4819,7 +4819,7 @@ const products = [
     "Article name": "FA-UX-HATS000243",
     "Color": "Navy blue",
     "Article number": "C40389-885",
-    "image_link": "https://cdn.acnestudios.com/products/C4/C40389-/C40389-885_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C4/C40389-/2000x/C40389-885_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -4831,7 +4831,7 @@ const products = [
     "Article name": "FA-UX-HATS000243",
     "Color": "Wood green",
     "Article number": "C40389-CDK",
-    "image_link": "https://cdn.acnestudios.com/products/C4/C40389-/C40389-CDK_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C4/C40389-/2000x/C40389-CDK_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -4843,7 +4843,7 @@ const products = [
     "Article name": "FN-MN-KNIT000544",
     "Color": "Black",
     "Article number": "B60356-900",
-    "image_link": "https://cdn.acnestudios.com/products/B6/B60356-/B60356-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B6/B60356-/2000x/B60356-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -4855,7 +4855,7 @@ const products = [
     "Article name": "FN-MN-KNIT000533",
     "Color": "Dark purple",
     "Article number": "B60359-AD8",
-    "image_link": "https://cdn.acnestudios.com/products/B6/B60359-/B60359-AD8_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B6/B60359-/2000x/B60359-AD8_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -4867,7 +4867,7 @@ const products = [
     "Article name": "FN-MN-KNIT000527",
     "Color": "Multicolor",
     "Article number": "B60360-BIO",
-    "image_link": "https://cdn.acnestudios.com/products/B6/B60360-/B60360-BIO_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B6/B60360-/2000x/B60360-BIO_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -4879,7 +4879,7 @@ const products = [
     "Article name": "FN-MN-KNIT000536",
     "Color": "Light pink/white",
     "Article number": "B60362-BQS",
-    "image_link": "https://cdn.acnestudios.com/products/B6/B60362-/B60362-BQS_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B6/B60362-/2000x/B60362-BQS_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -4891,7 +4891,7 @@ const products = [
     "Article name": "FN-MN-KNIT000463",
     "Color": "Denim blue/White",
     "Article number": "B60322-DN2",
-    "image_link": "https://cdn.acnestudios.com/products/B6/B60322-/B60322-DN2_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B6/B60322-/2000x/B60322-DN2_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -4903,7 +4903,7 @@ const products = [
     "Article name": "FN-MN-OUTW001166",
     "Color": "Black",
     "Article number": "B90804-900",
-    "image_link": "https://cdn.acnestudios.com/products/B9/B90804-/B90804-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B9/B90804-/2000x/B90804-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -4915,7 +4915,7 @@ const products = [
     "Article name": "FN-MN-OUTW001166",
     "Color": "Red",
     "Article number": "B90804-ACK",
-    "image_link": "https://cdn.acnestudios.com/products/B9/B90804-/B90804-ACK_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B9/B90804-/2000x/B90804-ACK_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -4927,7 +4927,7 @@ const products = [
     "Article name": "FN-MN-OUTW001135",
     "Color": "Black",
     "Article number": "B90812-900",
-    "image_link": "https://cdn.acnestudios.com/products/B9/B90812-/B90812-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B9/B90812-/2000x/B90812-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -4939,7 +4939,7 @@ const products = [
     "Article name": "FN-MN-OUTW001135",
     "Color": "Blue",
     "Article number": "B90812-AAN",
-    "image_link": "https://cdn.acnestudios.com/products/B9/B90812-/B90812-AAN_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B9/B90812-/2000x/B90812-AAN_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -4951,7 +4951,7 @@ const products = [
     "Article name": "FN-MN-OUTW001122",
     "Color": "Brown",
     "Article number": "B90799-700",
-    "image_link": "https://cdn.acnestudios.com/products/B9/B90799-/B90799-700_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B9/B90799-/2000x/B90799-700_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -4963,7 +4963,7 @@ const products = [
     "Article name": "FN-MN-OUTW001167",
     "Color": "Brown",
     "Article number": "B90807-700",
-    "image_link": "https://cdn.acnestudios.com/products/B9/B90807-/B90807-700_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B9/B90807-/2000x/B90807-700_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -4975,7 +4975,7 @@ const products = [
     "Article name": "FN-MN-OUTW001139",
     "Color": "Pink",
     "Article number": "B90814-415",
-    "image_link": "https://cdn.acnestudios.com/products/B9/B90814-/B90814-415_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B9/B90814-/2000x/B90814-415_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -4987,7 +4987,7 @@ const products = [
     "Article name": "FN-MN-SHIR000841",
     "Color": "Grey",
     "Article number": "BB0614-902",
-    "image_link": "https://cdn.acnestudios.com/products/BB/BB0614-/BB0614-902_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BB/BB0614-/2000x/BB0614-902_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -4999,7 +4999,7 @@ const products = [
     "Article name": "FN-MN-SHIR000877",
     "Color": "Black",
     "Article number": "BB0619-900",
-    "image_link": "https://cdn.acnestudios.com/products/BB/BB0619-/BB0619-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BB/BB0619-/2000x/BB0619-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5011,7 +5011,7 @@ const products = [
     "Article name": "FN-MN-SHIR000863",
     "Color": "Pink",
     "Article number": "BB0624-415",
-    "image_link": "https://cdn.acnestudios.com/products/BB/BB0624-/BB0624-415_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BB/BB0624-/2000x/BB0624-415_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5023,7 +5023,7 @@ const products = [
     "Article name": "FN-MN-SHIR000825",
     "Color": "White",
     "Article number": "BB0622-100",
-    "image_link": "https://cdn.acnestudios.com/products/BB/BB0622-/BB0622-100_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BB/BB0622-/2000x/BB0622-100_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5035,7 +5035,7 @@ const products = [
     "Article name": "FN-MN-SHIR000857",
     "Color": "Warm Grey",
     "Article number": "BB0625-BG2",
-    "image_link": "https://cdn.acnestudios.com/products/BB/BB0625-/BB0625-BG2_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BB/BB0625-/2000x/BB0625-BG2_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5047,7 +5047,7 @@ const products = [
     "Article name": "FN-MN-SHIR000823",
     "Color": "Taupe Brown",
     "Article number": "BB0608-DIA",
-    "image_link": "https://cdn.acnestudios.com/products/BB/BB0608-/BB0608-DIA_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BB/BB0608-/2000x/BB0608-DIA_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5059,7 +5059,7 @@ const products = [
     "Article name": "FN-MN-SHIR000861",
     "Color": "Black",
     "Article number": "BB0620-900",
-    "image_link": "https://cdn.acnestudios.com/products/BB/BB0620-/BB0620-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BB/BB0620-/2000x/BB0620-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5071,7 +5071,7 @@ const products = [
     "Article name": "FN-MN-SHIR000861",
     "Color": "Yellow/brown",
     "Article number": "BB0620-CL2",
-    "image_link": "https://cdn.acnestudios.com/products/BB/BB0620-/BB0620-CL2_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BB/BB0620-/2000x/BB0620-CL2_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5083,7 +5083,7 @@ const products = [
     "Article name": "FN-MN-SHIR000850",
     "Color": "Black/blue",
     "Article number": "BB0623-AHJ",
-    "image_link": "https://cdn.acnestudios.com/products/BB/BB0623-/BB0623-AHJ_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BB/BB0623-/2000x/BB0623-AHJ_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5095,7 +5095,7 @@ const products = [
     "Article name": "FN-MN-SHIR000864",
     "Color": "Green",
     "Article number": "BB0618-AB8",
-    "image_link": "https://cdn.acnestudios.com/products/BB/BB0618-/BB0618-AB8_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BB/BB0618-/2000x/BB0618-AB8_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5107,7 +5107,7 @@ const products = [
     "Article name": "FN-MN-SHIR000822",
     "Color": "Dark purple",
     "Article number": "BB0616-AD8",
-    "image_link": "https://cdn.acnestudios.com/products/BB/BB0616-/BB0616-AD8_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BB/BB0616-/2000x/BB0616-AD8_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5119,7 +5119,7 @@ const products = [
     "Article name": "FN-MN-SHIR000822",
     "Color": "Military green",
     "Article number": "BB0616-BGU",
-    "image_link": "https://cdn.acnestudios.com/products/BB/BB0616-/BB0616-BGU_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BB/BB0616-/2000x/BB0616-BGU_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5131,7 +5131,7 @@ const products = [
     "Article name": "FN-MN-SHOE000303",
     "Color": "Black/grey",
     "Article number": "BD0341-AIK",
-    "image_link": "https://cdn.acnestudios.com/products/BD/BD0341-/BD0341-AIK_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BD/BD0341-/2000x/BD0341-AIK_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -5143,7 +5143,7 @@ const products = [
     "Article name": "FN-MN-SHOE000301",
     "Color": "Brown",
     "Article number": "BD0337-700",
-    "image_link": "https://cdn.acnestudios.com/products/BD/BD0337-/BD0337-700_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BD/BD0337-/2000x/BD0337-700_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -5155,7 +5155,7 @@ const products = [
     "Article name": "FN-MN-SHOR000274",
     "Color": "Faded black",
     "Article number": "BE0187-BM0",
-    "image_link": "https://cdn.acnestudios.com/products/BE/BE0187-/BE0187-BM0_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BE/BE0187-/2000x/BE0187-BM0_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5167,7 +5167,7 @@ const products = [
     "Article name": "FN-MN-SHOR000260",
     "Color": "Brown",
     "Article number": "BE0176-700",
-    "image_link": "https://cdn.acnestudios.com/products/BE/BE0176-/BE0176-700_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BE/BE0176-/2000x/BE0176-700_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5179,7 +5179,7 @@ const products = [
     "Article name": "FN-MN-SHOR000262",
     "Color": "Brown",
     "Article number": "BE0181-700",
-    "image_link": "https://cdn.acnestudios.com/products/BE/BE0181-/BE0181-700_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BE/BE0181-/2000x/BE0181-700_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5191,7 +5191,7 @@ const products = [
     "Article name": "FN-MN-SHOR000256",
     "Color": "Brown",
     "Article number": "BE0175-700",
-    "image_link": "https://cdn.acnestudios.com/products/BE/BE0175-/BE0175-700_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BE/BE0175-/2000x/BE0175-700_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5203,7 +5203,7 @@ const products = [
     "Article name": "FN-MN-SHOR000244",
     "Color": "Dark purple",
     "Article number": "BE0180-AD8",
-    "image_link": "https://cdn.acnestudios.com/products/BE/BE0180-/BE0180-AD8_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BE/BE0180-/2000x/BE0180-AD8_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5215,7 +5215,7 @@ const products = [
     "Article name": "FN-MN-SHOR000244",
     "Color": "Military green",
     "Article number": "BE0180-BGU",
-    "image_link": "https://cdn.acnestudios.com/products/BE/BE0180-/BE0180-BGU_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BE/BE0180-/2000x/BE0180-BGU_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5227,7 +5227,7 @@ const products = [
     "Article name": "FN-MN-SHOR000275",
     "Color": "Green",
     "Article number": "BE0185-AB8",
-    "image_link": "https://cdn.acnestudios.com/products/BE/BE0185-/BE0185-AB8_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BE/BE0185-/2000x/BE0185-AB8_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5239,7 +5239,7 @@ const products = [
     "Article name": "FN-MN-SHOR000266",
     "Color": "Warm Grey",
     "Article number": "BE0186-BG2",
-    "image_link": "https://cdn.acnestudios.com/products/BE/BE0186-/BE0186-BG2_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BE/BE0186-/2000x/BE0186-BG2_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5251,7 +5251,7 @@ const products = [
     "Article name": "FN-MN-SWIM000038",
     "Color": "Black",
     "Article number": "BJ0026-900",
-    "image_link": "https://cdn.acnestudios.com/products/BJ/BJ0026-/BJ0026-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BJ/BJ0026-/2000x/BJ0026-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5263,7 +5263,7 @@ const products = [
     "Article name": "FN-MN-TROU001074",
     "Color": "Rust orange",
     "Article number": "BK0658-ABY",
-    "image_link": "https://cdn.acnestudios.com/products/BK/BK0658-/BK0658-ABY_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BK/BK0658-/2000x/BK0658-ABY_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5275,7 +5275,7 @@ const products = [
     "Article name": "FN-MN-TROU001096",
     "Color": "Black",
     "Article number": "BK0680-900",
-    "image_link": "https://cdn.acnestudios.com/products/BK/BK0680-/BK0680-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BK/BK0680-/2000x/BK0680-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5287,7 +5287,7 @@ const products = [
     "Article name": "FN-MN-TROU001056",
     "Color": "Black",
     "Article number": "BK0671-900",
-    "image_link": "https://cdn.acnestudios.com/products/BK/BK0671-/BK0671-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BK/BK0671-/2000x/BK0671-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5299,7 +5299,7 @@ const products = [
     "Article name": "FN-MN-TROU001055",
     "Color": "Old pink/rust orange",
     "Article number": "BK0664-DIZ",
-    "image_link": "https://cdn.acnestudios.com/products/BK/BK0664-/BK0664-DIZ_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BK/BK0664-/2000x/BK0664-DIZ_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5311,7 +5311,7 @@ const products = [
     "Article name": "FN-MN-TROU001073",
     "Color": "Faded black",
     "Article number": "BK0678-BM0",
-    "image_link": "https://cdn.acnestudios.com/products/BK/BK0678-/BK0678-BM0_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BK/BK0678-/2000x/BK0678-BM0_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5323,7 +5323,7 @@ const products = [
     "Article name": "FN-MN-TROU001104",
     "Color": "Faded black",
     "Article number": "BK0684-BM0",
-    "image_link": "https://cdn.acnestudios.com/products/BK/BK0684-/BK0684-BM0_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BK/BK0684-/2000x/BK0684-BM0_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5335,7 +5335,7 @@ const products = [
     "Article name": "FN-MN-TROU001024",
     "Color": "Grey",
     "Article number": "BK0670-902",
-    "image_link": "https://cdn.acnestudios.com/products/BK/BK0670-/BK0670-902_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BK/BK0670-/2000x/BK0670-902_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5347,7 +5347,7 @@ const products = [
     "Article name": "FN-MN-TROU001076",
     "Color": "Grey",
     "Article number": "BK0675-902",
-    "image_link": "https://cdn.acnestudios.com/products/BK/BK0675-/BK0675-902_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BK/BK0675-/2000x/BK0675-902_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5359,7 +5359,7 @@ const products = [
     "Article name": "FN-MN-TSHI000622",
     "Color": "Faded black",
     "Article number": "BL0412-BM0",
-    "image_link": "https://cdn.acnestudios.com/products/BL/BL0412-/BL0412-BM0_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BL/BL0412-/2000x/BL0412-BM0_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5371,7 +5371,7 @@ const products = [
     "Article name": "FN-MN-TSHI000634",
     "Color": "Faded black",
     "Article number": "BL0407-BM0",
-    "image_link": "https://cdn.acnestudios.com/products/BL/BL0407-/BL0407-BM0_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BL/BL0407-/2000x/BL0407-BM0_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5383,7 +5383,7 @@ const products = [
     "Article name": "FN-MN-TSHI000639",
     "Color": "Taupe beige",
     "Article number": "BL0410-CGZ",
-    "image_link": "https://cdn.acnestudios.com/products/BL/BL0410-/BL0410-CGZ_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BL/BL0410-/2000x/BL0410-CGZ_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5395,7 +5395,7 @@ const products = [
     "Article name": "FN-MN-TSHI000645",
     "Color": "Light grey",
     "Article number": "BL0406-AAB",
-    "image_link": "https://cdn.acnestudios.com/products/BL/BL0406-/BL0406-AAB_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BL/BL0406-/2000x/BL0406-AAB_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5407,7 +5407,7 @@ const products = [
     "Article name": "FN-MN-TSHI000636",
     "Color": "Faded pink",
     "Article number": "BL0408-COA",
-    "image_link": "https://cdn.acnestudios.com/products/BL/BL0408-/BL0408-COA_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BL/BL0408-/2000x/BL0408-COA_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5419,7 +5419,7 @@ const products = [
     "Article name": "FN-MN-TSHI000642",
     "Color": "Black",
     "Article number": "BL0411-900",
-    "image_link": "https://cdn.acnestudios.com/products/BL/BL0411-/BL0411-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BL/BL0411-/2000x/BL0411-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5431,7 +5431,7 @@ const products = [
     "Article name": "FN-UX-TSHI000116",
     "Color": "Black",
     "Article number": "CL0333-900",
-    "image_link": "https://cdn.acnestudios.com/products/CL/CL0333-/CL0333-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CL/CL0333-/2000x/CL0333-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5443,7 +5443,7 @@ const products = [
     "Article name": "FN-UX-TSHI000116",
     "Color": "Mustard yellow",
     "Article number": "CL0333-ABM",
-    "image_link": "https://cdn.acnestudios.com/products/CL/CL0333-/CL0333-ABM_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CL/CL0333-/2000x/CL0333-ABM_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5455,7 +5455,7 @@ const products = [
     "Article name": "Multipocket Micro Crossbody CNY2025",
     "Color": "Burgundy",
     "Article number": "A10438-479",
-    "image_link": "https://cdn.acnestudios.com/products/A1/A10438-/A10438-479_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A1/A10438-/2000x/A10438-479_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -5467,7 +5467,7 @@ const products = [
     "Article name": "FN-WN-DRES001475",
     "Color": "Soft yellow",
     "Article number": "A20792-BN7",
-    "image_link": "https://cdn.acnestudios.com/products/A2/A20792-/A20792-BN7_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A2/A20792-/2000x/A20792-BN7_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5479,7 +5479,7 @@ const products = [
     "Article name": "FN-WN-KNIT000804",
     "Color": "Grey",
     "Article number": "A60575-902",
-    "image_link": "https://cdn.acnestudios.com/products/A6/A60575-/A60575-902_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A6/A60575-/2000x/A60575-902_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5491,7 +5491,7 @@ const products = [
     "Article name": "FN-WN-KNIT000845",
     "Color": "Green",
     "Article number": "A60581-AB8",
-    "image_link": "https://cdn.acnestudios.com/products/A6/A60581-/A60581-AB8_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A6/A60581-/2000x/A60581-AB8_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5503,7 +5503,7 @@ const products = [
     "Article name": "FN-WN-KNIT000820",
     "Color": "Grey/yellow",
     "Article number": "A60576-AMY",
-    "image_link": "https://cdn.acnestudios.com/products/A6/A60576-/A60576-AMY_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A6/A60576-/2000x/A60576-AMY_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5515,7 +5515,7 @@ const products = [
     "Article name": "FN-WN-KNIT000819",
     "Color": "Brown/multi",
     "Article number": "A60577-BKF",
-    "image_link": "https://cdn.acnestudios.com/products/A6/A60577-/A60577-BKF_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A6/A60577-/2000x/A60577-BKF_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5527,7 +5527,7 @@ const products = [
     "Article name": "FN-WN-LEAT000420",
     "Color": "Black",
     "Article number": "A70191-900",
-    "image_link": "https://cdn.acnestudios.com/products/A7/A70191-/A70191-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A7/A70191-/2000x/A70191-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5539,7 +5539,7 @@ const products = [
     "Article name": "FN-WN-OUTW001028",
     "Color": "Black",
     "Article number": "A90634-900",
-    "image_link": "https://cdn.acnestudios.com/products/A9/A90634-/A90634-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A9/A90634-/2000x/A90634-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5551,7 +5551,7 @@ const products = [
     "Article name": "FN-WN-OUTW001027",
     "Color": "Brown melange",
     "Article number": "A90632-AHS",
-    "image_link": "https://cdn.acnestudios.com/products/A9/A90632-/A90632-AHS_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A9/A90632-/2000x/A90632-AHS_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5563,7 +5563,7 @@ const products = [
     "Article name": "FN-WN-OUTW001029",
     "Color": "Faded ochre",
     "Article number": "A90635-DRV",
-    "image_link": "https://cdn.acnestudios.com/products/A9/A90635-/A90635-DRV_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A9/A90635-/2000x/A90635-DRV_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5575,7 +5575,7 @@ const products = [
     "Article name": "FN-WN-OUTW000999",
     "Color": "Mushroom beige",
     "Article number": "A90630-ADY",
-    "image_link": "https://cdn.acnestudios.com/products/A9/A90630-/A90630-ADY_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A9/A90630-/2000x/A90630-ADY_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5587,7 +5587,7 @@ const products = [
     "Article name": "FN-WN-OUTW001031",
     "Color": "Light tan",
     "Article number": "A90637-BPX",
-    "image_link": "https://cdn.acnestudios.com/products/A9/A90637-/A90637-BPX_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A9/A90637-/2000x/A90637-BPX_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5599,7 +5599,7 @@ const products = [
     "Article name": "FN-WN-BLOU001147",
     "Color": "Blue/multi",
     "Article number": "AC0724-ALD",
-    "image_link": "https://cdn.acnestudios.com/products/AC/AC0724-/AC0724-ALD_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AC/AC0724-/2000x/AC0724-ALD_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5611,7 +5611,7 @@ const products = [
     "Article name": "FN-WN-BLOU001136",
     "Color": "Multi grey",
     "Article number": "AC0722-BQ9",
-    "image_link": "https://cdn.acnestudios.com/products/AC/AC0722-/AC0722-BQ9_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AC/AC0722-/2000x/AC0722-BQ9_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5623,7 +5623,7 @@ const products = [
     "Article name": "FN-WN-BLOU001121",
     "Color": "Multi blue",
     "Article number": "AC0718-BQC",
-    "image_link": "https://cdn.acnestudios.com/products/AC/AC0718-/AC0718-BQC_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AC/AC0718-/2000x/AC0718-BQC_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5635,7 +5635,7 @@ const products = [
     "Article name": "FN-WN-SHOE000977",
     "Color": "Rust brown",
     "Article number": "AD0789-BUT",
-    "image_link": "https://cdn.acnestudios.com/products/AD/AD0789-/AD0789-BUT_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AD/AD0789-/2000x/AD0789-BUT_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -5647,7 +5647,7 @@ const products = [
     "Article name": "FN-WN-SKIR000802",
     "Color": "Faded ochre",
     "Article number": "AF0507-DRV",
-    "image_link": "https://cdn.acnestudios.com/products/AF/AF0507-/AF0507-DRV_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AF/AF0507-/2000x/AF0507-DRV_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5659,7 +5659,7 @@ const products = [
     "Article name": "FN-WN-SKIR000808",
     "Color": "Brown",
     "Article number": "AF0506-700",
-    "image_link": "https://cdn.acnestudios.com/products/AF/AF0506-/AF0506-700_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AF/AF0506-/2000x/AF0506-700_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5671,7 +5671,7 @@ const products = [
     "Article name": "FN-WN-SUIT000639",
     "Color": "Black",
     "Article number": "AH0305-900",
-    "image_link": "https://cdn.acnestudios.com/products/AH/AH0305-/AH0305-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AH/AH0305-/2000x/AH0305-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5683,7 +5683,7 @@ const products = [
     "Article name": "FN-WN-SUIT000634",
     "Color": "Multi brown",
     "Article number": "AH0304-BPH",
-    "image_link": "https://cdn.acnestudios.com/products/AH/AH0304-/AH0304-BPH_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AH/AH0304-/2000x/AH0304-BPH_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5695,7 +5695,7 @@ const products = [
     "Article name": "FN-WN-SWEA000256",
     "Color": "Grey Melange",
     "Article number": "AI0159-990",
-    "image_link": "https://cdn.acnestudios.com/products/AI/AI0159-/AI0159-990_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AI/AI0159-/2000x/AI0159-990_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5707,7 +5707,7 @@ const products = [
     "Article name": "FN-WN-SWEA000255",
     "Color": "Bright Yellow",
     "Article number": "AI0160-AXK",
-    "image_link": "https://cdn.acnestudios.com/products/AI/AI0160-/AI0160-AXK_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AI/AI0160-/2000x/AI0160-AXK_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5719,7 +5719,7 @@ const products = [
     "Article name": "FN-WN-SWEA000255",
     "Color": "Grey",
     "Article number": "AI0160-902",
-    "image_link": "https://cdn.acnestudios.com/products/AI/AI0160-/AI0160-902_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AI/AI0160-/2000x/AI0160-902_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5731,7 +5731,7 @@ const products = [
     "Article name": "FN-WN-TROU001317",
     "Color": "Grey Melange",
     "Article number": "AK0901-990",
-    "image_link": "https://cdn.acnestudios.com/products/AK/AK0901-/AK0901-990_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AK/AK0901-/2000x/AK0901-990_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5743,7 +5743,7 @@ const products = [
     "Article name": "FN-WN-TROU001420",
     "Color": "Grey Melange",
     "Article number": "AK0908-990",
-    "image_link": "https://cdn.acnestudios.com/products/AK/AK0908-/AK0908-990_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AK/AK0908-/2000x/AK0908-990_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5755,7 +5755,7 @@ const products = [
     "Article name": "FN-WN-TROU001374",
     "Color": "Anthracite/black",
     "Article number": "AK0879-BB9",
-    "image_link": "https://cdn.acnestudios.com/products/AK/AK0879-/AK0879-BB9_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AK/AK0879-/2000x/AK0879-BB9_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5767,7 +5767,7 @@ const products = [
     "Article name": "FN-WN-TROU001351",
     "Color": "Taupe Brown",
     "Article number": "AK0865-DIA",
-    "image_link": "https://cdn.acnestudios.com/products/AK/AK0865-/AK0865-DIA_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AK/AK0865-/2000x/AK0865-DIA_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5779,7 +5779,7 @@ const products = [
     "Article name": "FN-WN-TROU001354",
     "Color": "Taupe Brown",
     "Article number": "AK0864-DIA",
-    "image_link": "https://cdn.acnestudios.com/products/AK/AK0864-/AK0864-DIA_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AK/AK0864-/2000x/AK0864-DIA_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5791,7 +5791,7 @@ const products = [
     "Article name": "FN-WN-TROU001406",
     "Color": "Multi brown",
     "Article number": "AK0895-BPH",
-    "image_link": "https://cdn.acnestudios.com/products/AK/AK0895-/AK0895-BPH_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AK/AK0895-/2000x/AK0895-BPH_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5803,7 +5803,7 @@ const products = [
     "Article name": "FN-WN-TROU001389",
     "Color": "Multi grey",
     "Article number": "AK0899-BQ9",
-    "image_link": "https://cdn.acnestudios.com/products/AK/AK0899-/AK0899-BQ9_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AK/AK0899-/2000x/AK0899-BQ9_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5815,7 +5815,7 @@ const products = [
     "Article name": "FN-WN-TROU001405",
     "Color": "Multi brown",
     "Article number": "AK0887-BPH",
-    "image_link": "https://cdn.acnestudios.com/products/AK/AK0887-/AK0887-BPH_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AK/AK0887-/2000x/AK0887-BPH_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5827,7 +5827,7 @@ const products = [
     "Article name": "FN-WN-TROU001338",
     "Color": "Faded ochre",
     "Article number": "AK0875-DRV",
-    "image_link": "https://cdn.acnestudios.com/products/AK/AK0875-/AK0875-DRV_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AK/AK0875-/2000x/AK0875-DRV_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5839,7 +5839,7 @@ const products = [
     "Article name": "FN-WN-TROU001365",
     "Color": "Faded ochre",
     "Article number": "AK0876-DRV",
-    "image_link": "https://cdn.acnestudios.com/products/AK/AK0876-/AK0876-DRV_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AK/AK0876-/2000x/AK0876-DRV_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5851,7 +5851,7 @@ const products = [
     "Article name": "FN-WN-TROU001332",
     "Color": "Charcoal Grey",
     "Article number": "AK0894-Z79",
-    "image_link": "https://cdn.acnestudios.com/products/AK/AK0894-/AK0894-Z79_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AK/AK0894-/2000x/AK0894-Z79_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5863,7 +5863,7 @@ const products = [
     "Article name": "FN-WN-TROU001403",
     "Color": "Charcoal Grey",
     "Article number": "AK0884-Z79",
-    "image_link": "https://cdn.acnestudios.com/products/AK/AK0884-/AK0884-Z79_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AK/AK0884-/2000x/AK0884-Z79_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5875,7 +5875,7 @@ const products = [
     "Article name": "FN-WN-TROU001409",
     "Color": "Mid blue",
     "Article number": "AK0903-863",
-    "image_link": "https://cdn.acnestudios.com/products/AK/AK0903-/AK0903-863_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AK/AK0903-/2000x/AK0903-863_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5887,7 +5887,7 @@ const products = [
     "Article name": "FN-WN-TSHI000735",
     "Color": "Sand beige",
     "Article number": "AL0454-AE0",
-    "image_link": "https://cdn.acnestudios.com/products/AL/AL0454-/AL0454-AE0_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AL/AL0454-/2000x/AL0454-AE0_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5899,7 +5899,7 @@ const products = [
     "Article name": "FN-WN-TSHI000765",
     "Color": "Grey Melange",
     "Article number": "AL0465-990",
-    "image_link": "https://cdn.acnestudios.com/products/AL/AL0465-/AL0465-990_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AL/AL0465-/2000x/AL0465-990_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5911,7 +5911,7 @@ const products = [
     "Article name": "FN-WN-TSHI000734",
     "Color": "Bright green",
     "Article number": "AL0460-BCD",
-    "image_link": "https://cdn.acnestudios.com/products/AL/AL0460-/AL0460-BCD_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AL/AL0460-/2000x/AL0460-BCD_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5923,7 +5923,7 @@ const products = [
     "Article name": "FN-WN-TSHI000734",
     "Color": "Pearl grey",
     "Article number": "AL0460-AR8",
-    "image_link": "https://cdn.acnestudios.com/products/AL/AL0460-/AL0460-AR8_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AL/AL0460-/2000x/AL0460-AR8_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5935,7 +5935,7 @@ const products = [
     "Article name": "FN-MN-OUTW001219",
     "Color": "Black",
     "Article number": "B90822-900",
-    "image_link": "https://cdn.acnestudios.com/products/B9/B90822-/B90822-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B9/B90822-/2000x/B90822-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5947,7 +5947,7 @@ const products = [
     "Article name": "FN-WN-DRES001475",
     "Color": "Black",
     "Article number": "A20792-900",
-    "image_link": "https://cdn.acnestudios.com/products/A2/A20792-/A20792-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A2/A20792-/2000x/A20792-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5959,7 +5959,7 @@ const products = [
     "Article name": "FN-WN-OUTW000997",
     "Color": "Sand beige",
     "Article number": "A90636-AE0",
-    "image_link": "https://cdn.acnestudios.com/products/A9/A90636-/A90636-AE0_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A9/A90636-/2000x/A90636-AE0_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5971,7 +5971,7 @@ const products = [
     "Article name": "FN-WN-BAGS000466",
     "Color": "Neon red",
     "Article number": "A10377-BQ7",
-    "image_link": "https://cdn.acnestudios.com/products/A1/A10377-/A10377-BQ7_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A1/A10377-/2000x/A10377-BQ7_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -5983,7 +5983,7 @@ const products = [
     "Article name": "FA-UX-KNIT000109",
     "Color": "Black",
     "Article number": "C60102-900",
-    "image_link": "https://cdn.acnestudios.com/products/C6/C60102-/C60102-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C6/C60102-/2000x/C60102-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -5995,7 +5995,7 @@ const products = [
     "Article name": "FA-UX-KNIT000109",
     "Color": "Cameo pink",
     "Article number": "C60102-DRM",
-    "image_link": "https://cdn.acnestudios.com/products/C6/C60102-/C60102-DRM_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C6/C60102-/2000x/C60102-DRM_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -6007,7 +6007,7 @@ const products = [
     "Article name": "FA-UX-TSHI000315",
     "Color": "Navy blue",
     "Article number": "CL0309-885",
-    "image_link": "https://cdn.acnestudios.com/products/CL/CL0309-/CL0309-885_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CL/CL0309-/2000x/CL0309-885_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -6019,7 +6019,7 @@ const products = [
     "Article name": "FN-WN-DRES001396",
     "Color": "Black",
     "Article number": "A20807-900",
-    "image_link": "https://cdn.acnestudios.com/products/A2/A20807-/A20807-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A2/A20807-/2000x/A20807-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -6031,7 +6031,7 @@ const products = [
     "Article name": "FN-WN-DRES001487",
     "Color": "Blue/multi",
     "Article number": "A20788-ALD",
-    "image_link": "https://cdn.acnestudios.com/products/A2/A20788-/A20788-ALD_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A2/A20788-/2000x/A20788-ALD_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -6043,7 +6043,7 @@ const products = [
     "Article name": "FN-WN-OUTW001016",
     "Color": "Black",
     "Article number": "A90646-900",
-    "image_link": "https://cdn.acnestudios.com/products/A9/A90646-/A90646-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A9/A90646-/2000x/A90646-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -6055,7 +6055,7 @@ const products = [
     "Article name": "FN-WN-BLOU001156",
     "Color": "Off white",
     "Article number": "AC0730-AEG",
-    "image_link": "https://cdn.acnestudios.com/products/AC/AC0730-/AC0730-AEG_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AC/AC0730-/2000x/AC0730-AEG_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -6067,7 +6067,7 @@ const products = [
     "Article name": "FN-WN-SKIR000807",
     "Color": "Mid blue",
     "Article number": "AF0510-AUZ",
-    "image_link": "https://cdn.acnestudios.com/products/AF/AF0510-/AF0510-AUZ_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AF/AF0510-/2000x/AF0510-AUZ_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -6079,7 +6079,7 @@ const products = [
     "Article name": "FN-WN-TROU001368",
     "Color": "Brown melange",
     "Article number": "AK0888-AHS",
-    "image_link": "https://cdn.acnestudios.com/products/AK/AK0888-/AK0888-AHS_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AK/AK0888-/2000x/AK0888-AHS_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -6091,7 +6091,7 @@ const products = [
     "Article name": "FN-MN-KNIT000463",
     "Color": "Black",
     "Article number": "B60322-900",
-    "image_link": "https://cdn.acnestudios.com/products/B6/B60322-/B60322-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/B6/B60322-/2000x/B60322-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -6103,7 +6103,7 @@ const products = [
     "Article name": "FN-UX-KNIT000025",
     "Color": "Black/oatmeal melange",
     "Article number": "C60105-CW8",
-    "image_link": "https://cdn.acnestudios.com/products/C6/C60105-/C60105-CW8_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C6/C60105-/2000x/C60105-CW8_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -6115,7 +6115,7 @@ const products = [
     "Article name": "FN-MN-TSHI000641",
     "Color": "Rose pink",
     "Article number": "BL0413-ACU",
-    "image_link": "https://cdn.acnestudios.com/products/BL/BL0413-/BL0413-ACU_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BL/BL0413-/2000x/BL0413-ACU_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -6127,7 +6127,7 @@ const products = [
     "Article name": "FN-UX-TSHI000130",
     "Color": "Sea foam green",
     "Article number": "CL0338-BM7",
-    "image_link": "https://cdn.acnestudios.com/products/CL/CL0338-/CL0338-BM7_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CL/CL0338-/2000x/CL0338-BM7_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -6139,7 +6139,7 @@ const products = [
     "Article name": "FN-MN-TSHI000639",
     "Color": "Dark khaki green",
     "Article number": "BL0410-CJE",
-    "image_link": "https://cdn.acnestudios.com/products/BL/BL0410-/BL0410-CJE_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BL/BL0410-/2000x/BL0410-CJE_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -6151,7 +6151,7 @@ const products = [
     "Article name": "FN-UX-TSHI000139",
     "Color": "Blue/multi",
     "Article number": "CL0342-ALD",
-    "image_link": "https://cdn.acnestudios.com/products/CL/CL0342-/CL0342-ALD_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/CL/CL0342-/2000x/CL0342-ALD_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -6163,7 +6163,7 @@ const products = [
     "Article name": "FN-WN-BAGS000465",
     "Color": "Neon red",
     "Article number": "A10384-BQ7",
-    "image_link": "https://cdn.acnestudios.com/products/A1/A10384-/A10384-BQ7_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A1/A10384-/2000x/A10384-BQ7_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -6175,7 +6175,7 @@ const products = [
     "Article name": "FN-WN-BAGS000465",
     "Color": "Denim Blue",
     "Article number": "A10384-822",
-    "image_link": "https://cdn.acnestudios.com/products/A1/A10384-/A10384-822_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A1/A10384-/2000x/A10384-822_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -6187,7 +6187,7 @@ const products = [
     "Article name": "FN-UX-HATS000281",
     "Color": "Burgundy",
     "Article number": "C40380-479",
-    "image_link": "https://cdn.acnestudios.com/products/C4/C40380-/C40380-479_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C4/C40380-/2000x/C40380-479_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -6199,7 +6199,7 @@ const products = [
     "Article name": "FN-UX-HATS000281",
     "Color": "Khaki beige",
     "Article number": "C40380-CVI",
-    "image_link": "https://cdn.acnestudios.com/products/C4/C40380-/C40380-CVI_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C4/C40380-/2000x/C40380-CVI_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -6211,7 +6211,7 @@ const products = [
     "Article name": "FN-MN-SHIR000825",
     "Color": "Black",
     "Article number": "BB0622-900",
-    "image_link": "https://cdn.acnestudios.com/products/BB/BB0622-/BB0622-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BB/BB0622-/2000x/BB0622-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -6223,7 +6223,7 @@ const products = [
     "Article name": "FN-MN-SHIR000862",
     "Color": "Black",
     "Article number": "BB0629-900",
-    "image_link": "https://cdn.acnestudios.com/products/BB/BB0629-/BB0629-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BB/BB0629-/2000x/BB0629-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -6235,7 +6235,7 @@ const products = [
     "Article name": "FN-MN-TROU001100",
     "Color": "Black",
     "Article number": "BK0681-900",
-    "image_link": "https://cdn.acnestudios.com/products/BK/BK0681-/BK0681-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BK/BK0681-/2000x/BK0681-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -6247,7 +6247,7 @@ const products = [
     "Article name": "FN-WN-DRES001440",
     "Color": "Black",
     "Article number": "A20805-900",
-    "image_link": "https://cdn.acnestudios.com/products/A2/A20805-/A20805-900_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A2/A20805-/2000x/A20805-900_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -6259,7 +6259,7 @@ const products = [
     "Article name": "FN-WN-DRES001485",
     "Color": "Pink/purple",
     "Article number": "A20810-BMY",
-    "image_link": "https://cdn.acnestudios.com/products/A2/A20810-/A20810-BMY_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A2/A20810-/2000x/A20810-BMY_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -6271,7 +6271,7 @@ const products = [
     "Article name": "FN-WN-DRES001461",
     "Color": "Navy blue",
     "Article number": "A20786-885",
-    "image_link": "https://cdn.acnestudios.com/products/A2/A20786-/A20786-885_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A2/A20786-/2000x/A20786-885_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -6283,7 +6283,7 @@ const products = [
     "Article name": "FN-WN-TSHI000702",
     "Color": "Mud Brown",
     "Article number": "AL0438-DLD",
-    "image_link": "https://cdn.acnestudios.com/products/AL/AL0438-/AL0438-DLD_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AL/AL0438-/2000x/AL0438-DLD_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -6295,7 +6295,7 @@ const products = [
     "Article name": "FN-WN-BLOU001148",
     "Color": "Orange/white",
     "Article number": "AC0723-AZY",
-    "image_link": "https://cdn.acnestudios.com/products/AC/AC0723-/AC0723-AZY_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AC/AC0723-/2000x/AC0723-AZY_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -6307,7 +6307,7 @@ const products = [
     "Article name": "FN-WN-BLOU001154",
     "Color": "Black/white",
     "Article number": "AC0729-J83",
-    "image_link": "https://cdn.acnestudios.com/products/AC/AC0729-/AC0729-J83_FLAT.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/AC/AC0729-/2000x/AC0729-J83_FLAT.jpg?sw=560,sh=840",
     "type": "FLAT",
     "Image preview": ""
   },
@@ -6319,7 +6319,7 @@ const products = [
     "Article name": "FN-UX-JEWE000305",
     "Color": "Silver",
     "Article number": "C50303-AAE",
-    "image_link": "https://cdn.acnestudios.com/products/C5/C50303-/C50303-AAE_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/C5/C50303-/2000x/C50303-AAE_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -6331,7 +6331,7 @@ const products = [
     "Article name": "FN-MN-SHOE000279",
     "Color": "Black",
     "Article number": "BD0316-900",
-    "image_link": "https://cdn.acnestudios.com/products/BD/BD0316-/BD0316-900_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/BD/BD0316-/2000x/BD0316-900_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   },
@@ -6343,7 +6343,7 @@ const products = [
     "Article name": "FN-WN-BAGS000433",
     "Color": "Black",
     "Article number": "A10362-900",
-    "image_link": "https://cdn.acnestudios.com/products/A1/A10362-/A10362-900_A.jpg?q=90&resize=p_4,h_840,w_560",
+    "image_link": "https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwc1b73965/images/A1/A10362-/2000x/A10362-900_A.jpg?sw=560,sh=840",
     "type": "A",
     "Image preview": ""
   }

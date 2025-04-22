@@ -1,4 +1,5 @@
 const grid = document.getElementById("grid");
+const imageCache = new Map();
 
 function normalizeGender(gender) {
   return gender && gender.trim() !== "" ? gender : "Unisex";
@@ -65,6 +66,19 @@ function expandGenders(selectedGenders) {
   return [...new Set(result)];
 }
 
+function preloadAllImages(imagePrefix, suffixes) {
+  suffixes.forEach((suffix) => {
+    const preloadSrc = `${imagePrefix}${suffix}.jpg?sw=560,sh=840`;
+    if (!imageCache.has(preloadSrc)) {
+      console.log("Preloading image:", preloadSrc);
+      const preloadImg = new Image();
+      preloadImg.src = preloadSrc;
+      preloadImg.onload = () => imageCache.set(preloadSrc, true);
+      preloadImg.onerror = () => imageCache.set(preloadSrc, false);
+    }
+  });
+}
+
 function renderGrid(lastInteractedGroup = null) {
   const selectedGenders = getSelectedValuesFromChips("genderFilter");
   const selectedCategories = getSelectedValuesFromChips("categoryFilter");
@@ -91,11 +105,6 @@ function renderGrid(lastInteractedGroup = null) {
 
     const cleanUrl = product.image_link.replace(/^"|"$/g, "");
 
-    const link = document.createElement("a");
-    link.href = `https://www.acnestudios.com/${product["Article number"]}.html`;
-    link.target = "_blank";
-    link.rel = "noopener noreferrer";
-
     const wrapper = document.createElement("div");
     wrapper.className = "image-wrapper";
 
@@ -108,15 +117,95 @@ function renderGrid(lastInteractedGroup = null) {
     img.alt = product["Article name"];
     img.loading = "lazy";
 
-    img.onload = () => spinner.remove();
+    img.onload = () => {
+      if (!wrapper.dataset.preloading) spinner.remove();
+    };
     img.onerror = () => {
       wrapper.classList.add("error");
       spinner.remove();
     };
 
     wrapper.appendChild(img);
-    link.appendChild(wrapper);
-    div.appendChild(link);
+    div.appendChild(wrapper);
+
+    // Image cycling on click
+    const imageSuffixes = ["_FLAT", "_A", "_B", "_C", "_D", "_E"];
+    let currentIndex = 0;
+    const articleBase = product["Article number"];
+    const basePath = product.image_link.split(articleBase)[0];
+    const baseFile = articleBase.split("-")[0];
+    const imagePrefix = `${basePath}/${articleBase}`;
+
+    // New tryNext implementation: cycles forward to next available image, wrapping, never reverting to original unless part of cycle.
+    const tryNext = (startIndex) => {
+      const tryFrom = startIndex;
+      const tryImage = (index) => {
+        if (index >= imageSuffixes.length) {
+          // Wrap around and continue from beginning, but not the one just shown
+          const wrapIndex = 0;
+          if (wrapIndex === tryFrom) {
+            // No valid alternative image found, stay on current image
+            spinner.style.display = "none";
+            img.style.display = "block";
+            wrapper.dataset.preloading = "";
+            return;
+          }
+          tryImage(wrapIndex);
+          return;
+        }
+
+        const testSrc = `${imagePrefix}${imageSuffixes[index]}.jpg?sw=560,sh=840`;
+        console.log("Trying image:", testSrc);
+
+        // Show spinner immediately, before cache check
+        wrapper.dataset.preloading = "true";
+        spinner.style.display = "block";
+        img.style.display = "none";
+
+        const finalizeImage = () => {
+          img.src = testSrc;
+          currentIndex = index;
+          spinner.style.display = "none";
+          img.style.display = "block";
+          wrapper.dataset.preloading = "";
+
+          if (!wrapper.dataset.preloaded) {
+            wrapper.dataset.preloaded = "true";
+            setTimeout(() => {
+              preloadAllImages(imagePrefix, imageSuffixes);
+            }, 100);
+          }
+        };
+
+        if (imageCache.has(testSrc)) {
+          if (imageCache.get(testSrc)) {
+            finalizeImage();
+          } else {
+            tryImage(index + 1);
+          }
+          return;
+        }
+
+        const testImg = new Image();
+        testImg.src = testSrc;
+        testImg.onload = () => {
+          imageCache.set(testSrc, true);
+          finalizeImage();
+        };
+        testImg.onerror = () => {
+          imageCache.set(testSrc, false);
+          tryImage(index + 1);
+        };
+      };
+      tryImage(startIndex);
+    };
+
+    function handleImageAdvance() {
+      currentIndex = (currentIndex + 1) % imageSuffixes.length;
+      tryNext(currentIndex);
+    }
+
+    wrapper.addEventListener("click", handleImageAdvance);
 
     const name = document.createElement("div");
     name.className = "product-name";
@@ -216,4 +305,4 @@ const observer = new IntersectionObserver(
   }
 );
 
-observer.observe(sentinel);
+observer.observe(sentinel); 
