@@ -19,10 +19,18 @@ function renderChips(containerId, items) {
     chip.dataset.filterType = containerId;
 
     chip.addEventListener("click", () => {
-      if (!chip.classList.contains("inactive")) {
-        chip.classList.toggle("active");
-        renderGrid(containerId);
+      if (chip.classList.contains("inactive")) return;
+    
+      const groupChips = document.querySelectorAll(`#${containerId} .chip`);
+    
+      const isActive = chip.classList.contains("active");
+      groupChips.forEach(c => c.classList.remove("active"));
+    
+      if (!isActive) {
+        chip.classList.add("active");
       }
+    
+      renderGrid(containerId);
     });
 
     container.appendChild(chip);
