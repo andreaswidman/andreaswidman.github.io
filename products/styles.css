@@ -2,6 +2,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #fff;
   margin: 0;
+  padding-top: 30px;
   padding-bottom: 20px;
   -webkit-overflow-scrolling: touch;
   overscroll-behavior: none;
@@ -118,7 +119,6 @@ a {
 }
 
 .grid-item {
-  background-color: #fff;
   text-align: left;
   overflow: hidden;
   color: inherit;
@@ -163,18 +163,20 @@ a {
 }
 
 .product-name {
-  font-size: 13px;
+  font-size: 12px;
   color: #0018A8;
   text-transform: uppercase;
-  margin: 7px 0 4px 10px;
+  margin: 8px 0 3px 10px;
   font-weight: normal;
   cursor: pointer;
+  letter-spacing: 0.02rem;
 }
 
 .brand {
   font-size: 12px;
   color: #777;
   margin-left: 10px;
+  letter-spacing: 0.02rem;
 }
 
 .copied-label {
@@ -224,10 +226,6 @@ a {
 
   .back-to-filters {
     color: #46A9FF;
-  }
-
-  .grid-item {
-    background-color: #1a1a1a;
   }
 
   .image-wrapper {
