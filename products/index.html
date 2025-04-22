@@ -2,24 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Product Grid</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SS25 Sale</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <h1>Product Grid</h1>
-
   <div class="filters">
-    <label>Brand:
-      <select id="brandFilter" multiple></select>
-    </label>
-    <label>Category:
-      <select id="categoryFilter" multiple></select>
-    </label>
+    <div class="filter-group">
+      <div class="filter-label">Gender</div>
+      <div id="genderFilter" class="chip-container"></div>
+    </div>
+    <div class="filter-group">
+      <div class="filter-label">Category</div>
+      <div id="categoryFilter" class="chip-container"></div>
+    </div>
+  </div>
+
+  <div id="sentinel" style="height: 1px;"></div>
+
+  <div class="grid-header">
+    <div class="line"></div>
+    <div class="item-count">
+      <span id="itemCount">0 items</span>
+      <button id="backToFilters" class="back-to-filters">Back to filters</button>
+    </div>
   </div>
 
   <div id="grid" class="grid"></div>
 
+  <script src="products.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Convert CSV to JSON (products.json)</title>
+  <title>Convert CSV to JSON</title>
   <style>
     body {
       font-family: sans-serif;
       padding: 20px;
-      max-width: 600px;
+      max-width: 700px;
       margin: auto;
     }
     textarea {
@@ -23,32 +23,56 @@
 </head>
 <body>
   <h1>Convert CSV to JSON</h1>
-  <p>Paste your CSV below and click "Download products.json":</p>
+  <p>Paste your CSV below and click "Download products.js":</p>
   <textarea id="csvInput" placeholder="Paste CSV data here..."></textarea>
   <br>
-  <button onclick="convertAndDownload()">Download products.json</button>
+  <button onclick="convertAndDownload()">Download products.js</button>
 
   <script>
-    function convertAndDownload() {
-      const csv = document.getElementById('csvInput').value.trim();
-      const lines = csv.split("\n");
-      const headers = lines[0].split(",");
+    function parseCSV(csv) {
+      const lines = csv.trim().split("\n");
+      const headers = lines[0].split(",").map(h => h.trim().replace(/^"|"$/g, ""));
 
-      const products = lines.slice(1).map(line => {
-        const values = line.split(",");
-        const entry = {};
+      return lines.slice(1).map(line => {
+        const values = [];
+        let current = "";
+        let inQuotes = false;
+
+        for (let i = 0; i < line.length; i++) {
+          const char = line[i];
+          if (char === '"' && line[i + 1] === '"') {
+            current += '"';
+            i++; // skip next quote
+          } else if (char === '"') {
+            inQuotes = !inQuotes;
+          } else if (char === ',' && !inQuotes) {
+            values.push(current.trim());
+            current = "";
+          } else {
+            current += char;
+          }
+        }
+        values.push(current.trim());
+
+        const obj = {};
         headers.forEach((header, i) => {
-          entry[header.trim()] = values[i] ? values[i].trim() : "";
+          obj[header] = values[i] || "";
         });
-        return entry;
-      });
 
-      const jsonContent = JSON.stringify(products, null, 2);
-      const blob = new Blob([jsonContent], { type: "application/json" });
+        return obj;
+      });
+    }
+
+    function convertAndDownload() {
+      const csv = document.getElementById('csvInput').value;
+      const products = parseCSV(csv);
+      const jsContent = "const products = " + JSON.stringify(products, null, 2) + ";";
+
+      const blob = new Blob([jsContent], { type: "application/javascript" });
       const url = URL.createObjectURL(blob);
       const link = document.createElement("a");
       link.href = url;
-      link.download = "products.json";
+      link.download = "products.js";
       link.click();
       URL.revokeObjectURL(url);
     }
