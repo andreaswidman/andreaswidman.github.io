@@ -30,12 +30,10 @@ function renderChips(containerId, items) {
 }
 
 function populateFilters() {
-  // Gender: custom sort
   const allGenders = [...new Set(products.map(p => normalizeGender(p.Gender)))];
   const genderOrder = ["Women", "Men", "Unisex"];
   const genders = genderOrder.filter(g => allGenders.includes(g));
 
-  // Category: alphabetical sort
   const categories = [...new Set(products.map(p => p.Category))].sort((a, b) =>
     a.localeCompare(b)
   );
@@ -65,12 +63,15 @@ function renderGrid(lastInteractedGroup = null) {
 
   const expandedGenders = expandGenders(selectedGenders);
 
-  const filtered = products.filter(p => {
+  let filtered = products.filter(p => {
     const gender = normalizeGender(p.Gender);
     const genderMatch = expandedGenders.length === 0 || expandedGenders.includes(gender);
     const categoryMatch = selectedCategories.length === 0 || selectedCategories.includes(p.Category);
     return genderMatch && categoryMatch;
   });
+
+  // Sort filtered products by category alphabetically
+  filtered.sort((a, b) => a.Category.localeCompare(b.Category));
 
   const itemCount = document.getElementById("itemCount");
   itemCount.textContent = `${filtered.length} item${filtered.length === 1 ? "" : "s"}`;
@@ -147,7 +148,6 @@ function updateInactiveChips(lastGroup = null) {
   const selectedCategories = getSelectedValuesFromChips("categoryFilter");
   const expandedGenders = expandGenders(selectedGenders);
 
-  // If opposite group is empty, don't disable anything
   const shouldDisableGender = lastGroup !== "genderFilter" && selectedCategories.length > 0;
   const shouldDisableCategory = lastGroup !== "categoryFilter" && selectedGenders.length > 0;
 
