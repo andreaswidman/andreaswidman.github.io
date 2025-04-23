@@ -8,6 +8,22 @@ body {
   overscroll-behavior: none;
 }
 
+.save-icon {
+  position: absolute;
+  top: 2px;
+  right: 4px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  pointer-events: auto;
+  opacity: 40%;
+  padding:6px;
+}
+
 a {
   -webkit-tap-highlight-color: transparent;
   color: inherit;

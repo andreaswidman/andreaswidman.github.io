@@ -1,12 +1,28 @@
 const grid = document.getElementById("grid");
 const imageCache = new Map();
+function getWishlistFromCookie() {
+  const match = document.cookie.match(/(?:^|;\s*)wishlist=([^;]*)/);
+  if (!match) return [];
+  try {
+    return JSON.parse(decodeURIComponent(match[1]));
+  } catch {
+    return [];
+  }
+}
+const wishlist = new Set(getWishlistFromCookie());
+
+function saveWishlistToLocalStorage() {
+  const value = encodeURIComponent(JSON.stringify([...wishlist]));
+  document.cookie = `wishlist=${value}; path=/; max-age=31536000`; // 1 year
+}
 
 function normalizeGender(gender) {
   return gender && gender.trim() !== "" ? gender : "Unisex";
 }
 
 function getSelectedValuesFromChips(containerId) {
-  return Array.from(document.querySelectorAll(`#${containerId} .chip.active`)).map(chip => chip.dataset.value);
+  const activeValues = Array.from(document.querySelectorAll(`#${containerId} .chip.active`)).map(c => c.dataset.value);
+  return activeValues;
 }
 
 function renderChips(containerId, items) {
@@ -21,17 +37,27 @@ function renderChips(containerId, items) {
 
     chip.addEventListener("click", () => {
       if (chip.classList.contains("inactive")) return;
-    
+
       const groupChips = document.querySelectorAll(`#${containerId} .chip`);
-    
+
       const isActive = chip.classList.contains("active");
       groupChips.forEach(c => c.classList.remove("active"));
-    
+
       if (!isActive) {
         chip.classList.add("active");
       }
-    
-      renderGrid(containerId);
+
+      // Clear other filters when "wishlistFilter" is clicked
+      if (containerId === "wishlistFilter") {
+        // Deselect all chips in gender and category
+        document.querySelectorAll('#genderFilter .chip.active, #categoryFilter .chip.active').forEach(c => {
+          c.classList.remove("active");
+        });
+      }
+
+      requestAnimationFrame(() => {
+        renderGrid();
+      });
     });
 
     container.appendChild(chip);
@@ -70,7 +96,6 @@ function preloadAllImages(imagePrefix, suffixes) {
   suffixes.forEach((suffix) => {
     const preloadSrc = `${imagePrefix}${suffix}.jpg?sw=560,sh=840`;
     if (!imageCache.has(preloadSrc)) {
-      console.log("Preloading image:", preloadSrc);
       const preloadImg = new Image();
       preloadImg.src = preloadSrc;
       preloadImg.onload = () => imageCache.set(preloadSrc, true);
@@ -80,19 +105,29 @@ function preloadAllImages(imagePrefix, suffixes) {
 }
 
 function renderGrid(lastInteractedGroup = null) {
+  const wishlistGroup = document.getElementById("wishlistFilterGroup");
+  if (wishlistGroup) {
+    wishlistGroup.style.display = wishlist.size > 0 ? "flex" : "none";
+
+    if (!wishlistGroup.dataset.initialized) {
+      renderChips("wishlistFilter", ["All", "Saved"]);
+      wishlistGroup.dataset.initialized = "true";
+    }
+  }
+
   const selectedGenders = getSelectedValuesFromChips("genderFilter");
   const selectedCategories = getSelectedValuesFromChips("categoryFilter");
+  const savedFilter = getSelectedValuesFromChips("wishlistFilter")[0] || "All";
 
   const expandedGenders = expandGenders(selectedGenders);
-
   let filtered = products.filter(p => {
     const gender = normalizeGender(p.Gender);
     const genderMatch = expandedGenders.length === 0 || expandedGenders.includes(gender);
     const categoryMatch = selectedCategories.length === 0 || selectedCategories.includes(p.Category);
-    return genderMatch && categoryMatch;
+    const savedMatch = savedFilter === "All" || wishlist.has(p["Article number"]);
+    return genderMatch && categoryMatch && savedMatch;
   });
 
-  // Sort filtered products by category alphabetically
   filtered.sort((a, b) => a.Category.localeCompare(b.Category));
 
   const itemCount = document.getElementById("itemCount");
@@ -134,7 +169,6 @@ function renderGrid(lastInteractedGroup = null) {
     };
 
     wrapper.appendChild(img);
-    div.appendChild(wrapper);
 
     // Image cycling on click
     const imageSuffixes = ["_FLAT", "_A", "_B", "_C", "_D", "_E"];
@@ -150,14 +184,11 @@ function renderGrid(lastInteractedGroup = null) {
     const imagePrefix = `${basePath}${articleBase}`;
 
     function handleImageAdvance() {
-      console.log("handleImageAdvance called for:", product["Article name"]);
       const startIndex = (currentIndex + 1) % imageSuffixes.length;
-      console.log("Starting at index:", startIndex);
       let attempts = 0;
 
       const advanceToNextAvailable = (index) => {
         if (attempts >= imageSuffixes.length) {
-          console.log("All image variants failed.");
           spinner.style.display = "none";
           img.style.display = "block";
           wrapper.dataset.preloading = "";
@@ -166,15 +197,12 @@ function renderGrid(lastInteractedGroup = null) {
 
         attempts++;
         const testSrc = `${imagePrefix}${imageSuffixes[index]}.jpg?sw=560,sh=840`;
-        console.log(`Advance attempt ${attempts} — index: ${index}, suffix: ${imageSuffixes[index]}`);
-        console.log("Trying image:", testSrc);
 
         wrapper.dataset.preloading = "true";
         spinner.style.display = "block";
         img.style.display = "none";
 
         const finalizeImage = () => {
-          console.log("Finalizing image:", testSrc);
           img.src = testSrc;
           currentIndex = index;
           spinner.style.display = "none";
@@ -192,12 +220,10 @@ function renderGrid(lastInteractedGroup = null) {
         const testImg = new Image();
         testImg.src = testSrc;
         testImg.onload = () => {
-          console.log("Image loaded successfully:", testSrc);
           imageCache.set(testSrc, true);
           finalizeImage();
         };
         testImg.onerror = () => {
-          console.log("Image failed:", testSrc);
           imageCache.set(testSrc, false);
           advanceToNextAvailable((index + 1) % imageSuffixes.length);
         };
@@ -206,7 +232,7 @@ function renderGrid(lastInteractedGroup = null) {
       advanceToNextAvailable(startIndex);
     }
 
-    wrapper.addEventListener("click", handleImageAdvance);
+    img.addEventListener("click", handleImageAdvance);
 
     const name = document.createElement("div");
     name.className = "product-name";
@@ -228,12 +254,52 @@ function renderGrid(lastInteractedGroup = null) {
       });
     });
 
-    div.appendChild(name);
-
     const gender = document.createElement("div");
     gender.className = "brand";
     gender.textContent = normalizeGender(product.Gender);
+
+    const save = document.createElement("div");
+    save.className = "save-icon";
+    const isSaved = wishlist.has(product["Article number"]);
+    save.innerHTML = isSaved
+      ? `<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="12" height="12" viewBox="0 0 24 24" fill="black"><path d="M6 2h12a2 2 0 0 1 2 2v18l-8-5-8 5V4a2 2 0 0 1 2-2z"/></svg>`
+      : `<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter"><path d="M6 2h12a2 2 0 0 1 2 2v18l-8-5-8 5V4a2 2 0 0 1 2-2z"/></svg>`;
+    save.addEventListener("click", () => {
+      const articleId = product["Article number"];
+      const isCurrentlySaved = wishlist.has(articleId);
+
+      if (isCurrentlySaved) {
+        wishlist.delete(articleId);
+        save.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter"><path d="M6 2h12a2 2 0 0 1 2 2v18l-8-5-8 5V4a2 2 0 0 1 2-2z"/></svg>`;
+      } else {
+        wishlist.add(articleId);
+        save.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="12" height="12" viewBox="0 0 24 24" fill="black"><path d="M6 2h12a2 2 0 0 1 2 2v18l-8-5-8 5V4a2 2 0 0 1 2-2z"/></svg>`;
+      }
+
+      saveWishlistToLocalStorage();
+
+      const currentSavedFilter = getSelectedValuesFromChips("wishlistFilter")[0] || "All";
+      if (wishlist.size === 0) {
+        document.querySelectorAll('.chip.active').forEach(chip => chip.classList.remove('active'));
+        renderGrid(); // Reset all if wishlist is empty
+      } else if (currentSavedFilter === "Saved") {
+        renderGrid(); // Update grid when in saved filter mode
+      }
+
+      const wishlistGroup = document.getElementById("wishlistFilterGroup");
+      if (wishlistGroup && wishlist.size === 1) {
+        wishlistGroup.style.display = "flex";
+        if (!wishlistGroup.dataset.initialized) {
+          renderChips("wishlistFilter", ["All", "Saved"]);
+          wishlistGroup.dataset.initialized = "true";
+        }
+      }
+    });
+
+    div.appendChild(wrapper);
+    div.appendChild(name);
     div.appendChild(gender);
+    wrapper.appendChild(save);
 
     grid.appendChild(div);
   });
@@ -242,6 +308,26 @@ function renderGrid(lastInteractedGroup = null) {
 }
 
 function updateInactiveChips(lastGroup = null) {
+  const savedFilter = getSelectedValuesFromChips("wishlistFilter")[0] || "All";
+
+  if (savedFilter === "Saved") {
+    const savedProducts = products.filter(p => wishlist.has(p["Article number"]));
+    const gendersInSaved = [...new Set(savedProducts.map(p => normalizeGender(p.Gender)))];
+    const categoriesInSaved = [...new Set(savedProducts.map(p => p.Category))];
+
+    document.querySelectorAll('#genderFilter .chip').forEach(chip => {
+      const value = chip.dataset.value;
+      chip.classList.toggle('inactive', !gendersInSaved.includes(value));
+    });
+
+    document.querySelectorAll('#categoryFilter .chip').forEach(chip => {
+      const value = chip.dataset.value;
+      chip.classList.toggle('inactive', !categoriesInSaved.includes(value));
+    });
+
+    return; // Skip regular logic
+  }
+
   const selectedGenders = getSelectedValuesFromChips("genderFilter");
   const selectedCategories = getSelectedValuesFromChips("categoryFilter");
   const expandedGenders = expandGenders(selectedGenders);
