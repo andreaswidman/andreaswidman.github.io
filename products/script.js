@@ -157,7 +157,7 @@ function renderGrid(lastInteractedGroup = null) {
 
     const img = document.createElement("img");
     img.src = cleanUrl;
-    img.alt = product["Article name"];
+    img.alt = `${product["Article name"]} - ${product["Article number"]}`;
     img.loading = "lazy";
 
     img.onload = () => {
