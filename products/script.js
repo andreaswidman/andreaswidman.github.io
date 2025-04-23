@@ -103,7 +103,15 @@ function renderGrid(lastInteractedGroup = null) {
     const div = document.createElement("div");
     div.className = "grid-item";
 
-    const cleanUrl = product.image_link.replace(/^"|"$/g, "");
+    let imageUrl = product.image_link;
+    let articleBase = product["Article number"];
+    if (articleBase.startsWith("AD")) {
+      const rewritten = articleBase.replace(/^AD/, "A*");
+      articleBase = rewritten;
+      imageUrl = product.image_link.replaceAll(/AD/g, "A*");
+    }
+
+    const cleanUrl = imageUrl.replace(/^"|"$/g, "");
 
     const wrapper = document.createElement("div");
     wrapper.className = "image-wrapper";
@@ -131,38 +139,42 @@ function renderGrid(lastInteractedGroup = null) {
     // Image cycling on click
     const imageSuffixes = ["_FLAT", "_A", "_B", "_C", "_D", "_E"];
     let currentIndex = 0;
-    const articleBase = product["Article number"];
-    const basePath = product.image_link.split(articleBase)[0];
-    const baseFile = articleBase.split("-")[0];
-    const imagePrefix = `${basePath}/${articleBase}`;
+    // Detect which suffix is currently in use for the image
+    for (let i = 0; i < imageSuffixes.length; i++) {
+      if (cleanUrl.includes(imageSuffixes[i])) {
+        currentIndex = i;
+        break;
+      }
+    }
+    const basePath = imageUrl.split(articleBase)[0];
+    const imagePrefix = `${basePath}${articleBase}`;
 
-    // New tryNext implementation: cycles forward to next available image, wrapping, never reverting to original unless part of cycle.
-    const tryNext = (startIndex) => {
-      const tryFrom = startIndex;
-      const tryImage = (index) => {
-        if (index >= imageSuffixes.length) {
-          // Wrap around and continue from beginning, but not the one just shown
-          const wrapIndex = 0;
-          if (wrapIndex === tryFrom) {
-            // No valid alternative image found, stay on current image
-            spinner.style.display = "none";
-            img.style.display = "block";
-            wrapper.dataset.preloading = "";
-            return;
-          }
-          tryImage(wrapIndex);
+    function handleImageAdvance() {
+      console.log("handleImageAdvance called for:", product["Article name"]);
+      const startIndex = (currentIndex + 1) % imageSuffixes.length;
+      console.log("Starting at index:", startIndex);
+      let attempts = 0;
+
+      const advanceToNextAvailable = (index) => {
+        if (attempts >= imageSuffixes.length) {
+          console.log("All image variants failed.");
+          spinner.style.display = "none";
+          img.style.display = "block";
+          wrapper.dataset.preloading = "";
           return;
         }
 
+        attempts++;
         const testSrc = `${imagePrefix}${imageSuffixes[index]}.jpg?sw=560,sh=840`;
+        console.log(`Advance attempt ${attempts} — index: ${index}, suffix: ${imageSuffixes[index]}`);
         console.log("Trying image:", testSrc);
 
-        // Show spinner immediately, before cache check
         wrapper.dataset.preloading = "true";
         spinner.style.display = "block";
         img.style.display = "none";
 
         const finalizeImage = () => {
+          console.log("Finalizing image:", testSrc);
           img.src = testSrc;
           currentIndex = index;
           spinner.style.display = "none";
@@ -177,32 +189,21 @@ function renderGrid(lastInteractedGroup = null) {
           }
         };
 
-        if (imageCache.has(testSrc)) {
-          if (imageCache.get(testSrc)) {
-            finalizeImage();
-          } else {
-            tryImage(index + 1);
-          }
-          return;
-        }
-
         const testImg = new Image();
         testImg.src = testSrc;
         testImg.onload = () => {
+          console.log("Image loaded successfully:", testSrc);
           imageCache.set(testSrc, true);
           finalizeImage();
         };
         testImg.onerror = () => {
+          console.log("Image failed:", testSrc);
           imageCache.set(testSrc, false);
-          tryImage(index + 1);
+          advanceToNextAvailable((index + 1) % imageSuffixes.length);
         };
       };
-      tryImage(startIndex);
-    };
 
-    function handleImageAdvance() {
-      currentIndex = (currentIndex + 1) % imageSuffixes.length;
-      tryNext(currentIndex);
+      advanceToNextAvailable(startIndex);
     }
 
     wrapper.addEventListener("click", handleImageAdvance);
@@ -305,4 +306,4 @@ const observer = new IntersectionObserver(
   }
 );
 
-observer.observe(sentinel); 
+observer.observe(sentinel);
