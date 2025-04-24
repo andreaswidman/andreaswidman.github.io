@@ -125,7 +125,7 @@ a {
   grid-template-columns: repeat(2, 1fr);
   row-gap: 20px;
   column-gap: 0;
-  width: 100vw;
+  width: 100%;
 }
 
 @media (min-width: 768px) {

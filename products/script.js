@@ -1,3 +1,14 @@
+// Utility to update the "Saved" chip state based on wishlist contents
+function updateSavedChipState() {
+  const savedChip = document.querySelector('#wishlistFilter .chip[data-value="Saved"]');
+  if (savedChip) {
+    if (wishlist.size === 0) {
+      savedChip.classList.add("inactive");
+    } else {
+      savedChip.classList.remove("inactive");
+    }
+  }
+}
 function checkAuth() {
   const cookie = document.cookie.match(/(?:^|;\s*)auth=([^;]*)/);
   return cookie && cookie[1] === "pansy";
@@ -45,7 +56,7 @@ function showLogin() {
   button.style.padding = "12px 24px";
   button.style.fontSize = "16px";
   button.style.cursor = "pointer";
-  button.style.width = "300px";
+  button.style.width = input.style.width;
   button.style.borderRadius = "999px";
 
   const error = document.createElement("div");
@@ -70,6 +81,7 @@ function showLogin() {
 
   loginOverlay.appendChild(form);
   document.body.appendChild(loginOverlay);
+  input.focus();
 }
 
 function startApp() {
@@ -188,12 +200,14 @@ function preloadAllImages(imagePrefix, suffixes) {
 function renderGrid(lastInteractedGroup = null) {
   const wishlistGroup = document.getElementById("wishlistFilterGroup");
   if (wishlistGroup) {
-    wishlistGroup.style.display = wishlist.size > 0 ? "flex" : "none";
+    wishlistGroup.style.display = "flex";
 
     if (!wishlistGroup.dataset.initialized) {
       renderChips("wishlistFilter", ["All", "Saved"]);
       wishlistGroup.dataset.initialized = "true";
     }
+
+    updateSavedChipState();
   }
 
   const selectedGenders = getSelectedValuesFromChips("genderFilter");
@@ -358,6 +372,7 @@ function renderGrid(lastInteractedGroup = null) {
       }
 
       saveWishlistToLocalStorage();
+      updateSavedChipState();
 
       const currentSavedFilter = getSelectedValuesFromChips("wishlistFilter")[0] || "All";
       if (wishlist.size === 0) {
