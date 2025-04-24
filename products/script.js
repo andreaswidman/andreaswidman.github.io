@@ -1,3 +1,84 @@
+function checkAuth() {
+  const cookie = document.cookie.match(/(?:^|;\s*)auth=([^;]*)/);
+  return cookie && cookie[1] === "pansy";
+}
+
+function setAuthCookie() {
+  document.cookie = "auth=pansy; path=/; max-age=86400"; // 1 day
+}
+
+function showLogin() {
+  const loginOverlay = document.createElement("div");
+  loginOverlay.id = "login-overlay";
+  loginOverlay.style.position = "fixed";
+  loginOverlay.style.top = 0;
+  loginOverlay.style.left = 0;
+  loginOverlay.style.width = "100vw";
+  loginOverlay.style.height = "100vh";
+  loginOverlay.style.backgroundColor = "#fff";
+  loginOverlay.style.display = "flex";
+  loginOverlay.style.flexDirection = "column";
+  loginOverlay.style.alignItems = "center";
+  loginOverlay.style.justifyContent = "center";
+  loginOverlay.style.zIndex = 9999;
+
+  const form = document.createElement("form");
+  form.style.display = "flex";
+  form.style.flexDirection = "column";
+  form.style.alignItems = "center";
+
+  const input = document.createElement("input");
+  input.type = "password";
+  input.placeholder = "Enter password";
+  input.style.fontSize = "20px";
+  input.style.padding = "12px 20px";
+  input.style.marginBottom = "10px";
+  input.style.width = "300px";
+  input.style.textAlign = "center";
+
+  const button = document.createElement("button");
+  button.textContent = "Login";
+  button.type = "submit";
+  button.style.background = "black";
+  button.style.color = "white";
+  button.style.border = "none";
+  button.style.padding = "12px 24px";
+  button.style.fontSize = "16px";
+  button.style.cursor = "pointer";
+  button.style.width = "300px";
+  button.style.borderRadius = "999px";
+
+  const error = document.createElement("div");
+  error.style.color = "red";
+  error.style.marginTop = "10px";
+  error.style.fontSize = "14px";
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    if (input.value === "pansy") {
+      setAuthCookie();
+      loginOverlay.remove();
+      startApp();
+    } else {
+      error.textContent = "Incorrect password.";
+    }
+  });
+
+  form.appendChild(input);
+  form.appendChild(button);
+  form.appendChild(error);
+
+  loginOverlay.appendChild(form);
+  document.body.appendChild(loginOverlay);
+}
+
+function startApp() {
+  populateFilters();
+  renderGrid();
+  document.getElementById("backToFilters").addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
 const grid = document.getElementById("grid");
 const imageCache = new Map();
 function getWishlistFromCookie() {
@@ -367,13 +448,12 @@ function updateInactiveChips(lastGroup = null) {
   }
 }
 
-// Initialize
-populateFilters();
-renderGrid();
-
-document.getElementById("backToFilters").addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
+// Initialize with authentication
+if (checkAuth()) {
+  startApp();
+} else {
+  showLogin();
+}
 
 const gridHeader = document.querySelector(".grid-header");
 const sentinel = document.getElementById("sentinel");
