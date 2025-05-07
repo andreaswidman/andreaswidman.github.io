@@ -251,33 +251,46 @@ function renderGrid(lastInteractedGroup = null) {
     wrapper.appendChild(spinner);
 
     const img = document.createElement("img");
-    img.src = cleanUrl;
     img.alt = `${product["Article name"]} - ${product["Article number"]}`;
     img.loading = "lazy";
 
-    img.onload = () => {
-      if (!wrapper.dataset.preloading) spinner.remove();
+    // Fallback logic for loading images with suffixes
+    const imageSuffixes = ["_FLAT", "_A", "_B", "_C", "_D", "_E"];
+    const basePath = imageUrl.split(articleBase)[0];
+    const imagePrefix = `${basePath}${articleBase}`;
+    let currentIndex = 0;
+
+    const tryLoadImage = (index) => {
+      const testSrc = `${imagePrefix}${imageSuffixes[index]}.jpg?sw=560,sh=840`;
+      img.src = testSrc;
+
+      img.onload = () => {
+        if (!wrapper.dataset.preloading) spinner.remove();
+      };
+
+      img.onerror = () => {
+        if (index + 1 < imageSuffixes.length) {
+          tryLoadImage(index + 1);
+        } else {
+          wrapper.classList.add("error");
+          spinner.remove();
+        }
+      };
     };
-    img.onerror = () => {
-      wrapper.classList.add("error");
-      spinner.remove();
-    };
+
+    tryLoadImage(0);
 
     wrapper.appendChild(img);
 
     // Image cycling on click
-    const imageSuffixes = ["_FLAT", "_A", "_B", "_C", "_D", "_E"];
-    let currentIndex = 0;
+    // Image cycling on click
     // Detect which suffix is currently in use for the image
     for (let i = 0; i < imageSuffixes.length; i++) {
-      if (cleanUrl.includes(imageSuffixes[i])) {
+      if (img.src.includes(imageSuffixes[i])) {
         currentIndex = i;
         break;
       }
     }
-    const basePath = imageUrl.split(articleBase)[0];
-    const imagePrefix = `${basePath}${articleBase}`;
-
     function handleImageAdvance() {
       const startIndex = (currentIndex + 1) % imageSuffixes.length;
       let attempts = 0;
