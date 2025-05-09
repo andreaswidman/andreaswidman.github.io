@@ -273,7 +273,9 @@ function renderGrid(lastInteractedGroup = null) {
           tryLoadImage(index + 1);
         } else {
           wrapper.classList.add("error");
+          wrapper.style.animation = "none";
           spinner.remove();
+          img.remove(); // Remove the image element completely if all attempts fail
         }
       };
     };
