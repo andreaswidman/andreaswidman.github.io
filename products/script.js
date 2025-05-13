@@ -276,6 +276,7 @@ function renderGrid(lastInteractedGroup = null) {
           wrapper.style.animation = "none";
           spinner.remove();
           img.remove(); // Remove the image element completely if all attempts fail
+          gender.textContent += `, ${product["Article number"]}`;
         }
       };
     };
@@ -366,7 +367,7 @@ function renderGrid(lastInteractedGroup = null) {
 
     const gender = document.createElement("div");
     gender.className = "brand";
-    gender.textContent = normalizeGender(product.Gender);
+    gender.textContent = `${normalizeGender(product.Gender)}, ${product.Color}`;
 
     const save = document.createElement("div");
     save.className = "save-icon";
