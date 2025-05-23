@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Styled with File Converter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <h1>Styled with File Converter</h1>
+    <section>
+      <div class="upload-block">
+        <label for="csvFile">Upload your CSV file</label>
+        <input type="file" id="csvFile" accept=".csv" />
+        <div class="button-row">
+          <button id="convertBtn" disabled>Convert to XML</button>
+          <a href="template.csv" download class="template-link">Download CSV Template</a>
+        </div>
+      </div>
+      <div id="errorBox" class="hidden error-box"></div>
+    </section>
+    <section id="downloadSection" class="hidden">
+      <a id="downloadXml" download="converted.xml">Download XML File</a>
+      <div class="reset-link"><a href="index.html" id="resetLink">Reset</a></div>
+    </section>
+    <div id="snackbar" class="snackbar"></div>
+  </main>
+  <script src="script.js?v1"></script>
+</body>
+</html>
