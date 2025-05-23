@@ -1,4 +1,5 @@
 let snackbarShown = false;
+let products = {};
 
 document.getElementById('csvFile').addEventListener('change', function () {
   const convertBtn = document.getElementById('convertBtn');
@@ -35,7 +36,7 @@ document.getElementById('convertBtn').addEventListener('click', function () {
     const typeMap = { 'replacement': "men's", 'cross-sell': "women's", 'accessory': "other" };
     const typeOrder = { 'replacement': 1, 'cross-sell': 2, 'accessory': 3 };
     const linkTypeCounts = {};
-    const products = {};
+    products = {};
 
     for (let i = 1; i < lines.length; i++) {
       const cols = lines[i].split(';');
@@ -111,4 +112,76 @@ document.getElementById('convertBtn').addEventListener('click', function () {
     }
   };
   reader.readAsText(file);
+});
+
+document.getElementById("previewLink").addEventListener("click", () => {
+  const previewContainer = document.getElementById("previewContainer");
+  previewContainer.innerHTML = "";
+  previewContainer.style.display = "block";
+
+  Object.entries(products).forEach(([productId, links]) => {
+    const row = document.createElement("div");
+    row.style.display = "flex";
+    row.style.alignItems = "flex-start";
+    row.style.marginBottom = "2em";
+    row.style.gap = "20px";
+
+    const pidCol = document.createElement("div");
+    pidCol.style.textAlign = "center";
+
+    const pidImg = document.createElement("img");
+    const basePidUrl = `https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwedd7b2e7/images/${productId.slice(0, 2)}/${productId.split('-')[0]}-/2000x/${productId}`;
+    pidImg.src = `${basePidUrl}_FLAT.jpg?sw=200&sh=300`;
+    pidImg.onerror = () => {
+      pidImg.onerror = null;
+      pidImg.src = `${basePidUrl}_A.jpg?sw=200&sh=300`;
+    };
+    pidImg.alt = productId;
+    pidImg.style.width = "90px";
+    pidImg.style.border = "1px solid black";
+    pidCol.appendChild(pidImg);
+
+    const pidLabel = document.createElement("div");
+    pidLabel.textContent = productId;
+    pidLabel.style.fontSize = "10px";
+    pidCol.appendChild(pidLabel);
+
+    row.appendChild(pidCol);
+
+    links.forEach(([sw, type]) => {
+      const cell = document.createElement("div");
+      cell.style.textAlign = "center";
+
+      const img = document.createElement("img");
+      const baseSwUrl = `https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwedd7b2e7/images/${sw.slice(0, 2)}/${sw.split('-')[0]}-/2000x/${sw}`;
+      img.src = `${baseSwUrl}_FLAT.jpg?sw=200&sh=300`;
+      img.onerror = () => {
+        img.onerror = null;
+        img.src = `${baseSwUrl}_A.jpg?sw=200&sh=300`;
+      };
+      img.alt = sw;
+      img.style.width = "90px";
+      cell.appendChild(img);
+
+      const label = document.createElement("div");
+      label.textContent = sw;
+      label.style.fontSize = "10px";
+      cell.appendChild(label);
+
+      const gender = document.createElement("div");
+      const original = Object.entries({
+        man: 'replacement',
+        woman: 'cross-sell',
+        unisex: 'accessory'
+      }).find(([, mapped]) => mapped === type);
+      gender.textContent = original ? original[0] : type;
+      gender.style.fontSize = "10px";
+      gender.style.color = "#555";
+      cell.appendChild(gender);
+
+      row.appendChild(cell);
+    });
+
+    previewContainer.appendChild(row);
+  });
 });
