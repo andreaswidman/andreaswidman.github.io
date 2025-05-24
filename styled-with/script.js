@@ -179,4 +179,5 @@ document.getElementById("previewLink").addEventListener("click", () => {
 
     previewContainer.appendChild(row);
   });
+  previewContainer.scrollIntoView({ behavior: "smooth" });
 });
