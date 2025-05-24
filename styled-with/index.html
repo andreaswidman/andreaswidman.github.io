@@ -20,15 +20,15 @@
       <div id="errorBox" class="hidden error-box"></div>
     </section>
     <section id="downloadSection" class="hidden">
-      <a id="downloadXml" download="converted.xml">Download XML File</a>
-      <div class="reset-preview">
-        <a href="index.html" id="resetLink">Reset</a>
-        <a href="#" id="previewLink">Preview</a>
+      <div class="button-stack">
+        <a id="downloadXml" class="primary-button" download="converted.xml">Download XML File</a>
+        <a href="#" id="previewLink" class="outlined-button">Preview</a>
+        <a href="index.html" id="resetLink" class="text-link">Reset</a>
       </div>
     </section>
     <div id="snackbar" class="snackbar"></div>
   </main>
-  <div id="previewContainer" style="display: none; margin-top: 2em;"></div>
+  <div id="previewContainer" style="display: none;"></div>
   <script src="script.js?v1"></script>
 </body>
 </html>

@@ -121,13 +121,10 @@ document.getElementById("previewLink").addEventListener("click", () => {
 
   Object.entries(products).forEach(([productId, links]) => {
     const row = document.createElement("div");
-    row.style.display = "flex";
-    row.style.alignItems = "flex-start";
-    row.style.marginBottom = "2em";
-    row.style.gap = "20px";
+    row.className = "preview-row";
 
     const pidCol = document.createElement("div");
-    pidCol.style.textAlign = "center";
+    pidCol.className = "preview-cell";
 
     const pidImg = document.createElement("img");
     const basePidUrl = `https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwedd7b2e7/images/${productId.slice(0, 2)}/${productId.split('-')[0]}-/2000x/${productId}`;
@@ -137,20 +134,19 @@ document.getElementById("previewLink").addEventListener("click", () => {
       pidImg.src = `${basePidUrl}_A.jpg?sw=200&sh=300`;
     };
     pidImg.alt = productId;
-    pidImg.style.width = "90px";
-    pidImg.style.border = "1px solid black";
+    pidImg.className = "preview-image preview-product";
     pidCol.appendChild(pidImg);
 
     const pidLabel = document.createElement("div");
     pidLabel.textContent = productId;
-    pidLabel.style.fontSize = "10px";
+    pidLabel.className = "preview-label";
     pidCol.appendChild(pidLabel);
 
     row.appendChild(pidCol);
 
     links.forEach(([sw, type]) => {
       const cell = document.createElement("div");
-      cell.style.textAlign = "center";
+      cell.className = "preview-cell";
 
       const img = document.createElement("img");
       const baseSwUrl = `https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwedd7b2e7/images/${sw.slice(0, 2)}/${sw.split('-')[0]}-/2000x/${sw}`;
@@ -160,12 +156,12 @@ document.getElementById("previewLink").addEventListener("click", () => {
         img.src = `${baseSwUrl}_A.jpg?sw=200&sh=300`;
       };
       img.alt = sw;
-      img.style.width = "90px";
+      img.className = "preview-image";
       cell.appendChild(img);
 
       const label = document.createElement("div");
       label.textContent = sw;
-      label.style.fontSize = "10px";
+      label.className = "preview-label";
       cell.appendChild(label);
 
       const gender = document.createElement("div");
@@ -175,8 +171,7 @@ document.getElementById("previewLink").addEventListener("click", () => {
         unisex: 'accessory'
       }).find(([, mapped]) => mapped === type);
       gender.textContent = original ? original[0] : type;
-      gender.style.fontSize = "10px";
-      gender.style.color = "#555";
+      gender.className = "preview-gender";
       cell.appendChild(gender);
 
       row.appendChild(cell);
