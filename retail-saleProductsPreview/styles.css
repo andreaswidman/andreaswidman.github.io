@@ -1,8 +1,3 @@
-:root {
-  --primary-blue: #0018A8;
-  --primary-blue-dark: #46A9FF;
-}
-
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #fff;
@@ -11,55 +6,6 @@ body {
   padding-bottom: 20px;
   -webkit-overflow-scrolling: touch;
   overscroll-behavior: none;
-}
-
-/* Login overlay styles */
-.login-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-}
-
-.login-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.login-input {
-  font-size: 20px;
-  padding: 12px 20px;
-  margin-bottom: 10px;
-  width: 300px;
-  text-align: center;
-}
-
-.login-button {
-  font-size: 16px;
-  padding: 10px 24px;
-  background-color: var(--primary-blue);
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.login-button:hover {
-  background-color: #001170;
-}
-
-.login-error {
-  color: red;
-  margin-top: 10px;
-  font-size: 14px;
 }
 
 .save-icon {
@@ -127,7 +73,7 @@ a {
 }
 
 .chip.active {
-  background-color: var(--primary-blue);
+  background-color: #0018A8;
   color: white;
 }
 
@@ -163,7 +109,7 @@ a {
   background: none;
   border: none;
   font-size: 14px;
-  color: var(--primary-blue);
+  color: #0018A8;
   cursor: pointer;
   margin-left: 10px;
   padding: 0;
@@ -238,7 +184,7 @@ a {
 
 .product-name {
   font-size: 12px;
-  color: var(--primary-blue);
+  color: #0018A8;
   text-transform: uppercase;
   margin: 8px 0 3px 10px;
   font-weight: normal;
@@ -280,7 +226,7 @@ a {
   }
 
   .chip.active {
-    background-color: var(--primary-blue-dark);
+    background-color: #46A9FF;
     color: white;
   }
 
@@ -299,7 +245,7 @@ a {
   }
 
   .back-to-filters {
-    color: var(--primary-blue-dark);
+    color: #46A9FF;
   }
 
   .image-wrapper {
@@ -311,7 +257,7 @@ a {
   }
 
   .product-name {
-    color: var(--primary-blue-dark);
+    color: #46A9FF;
   }
 
   .brand {
