@@ -1,6 +1,45 @@
+// Configuration constants
+const CONFIG = {
+  PASSWORD: "pansy",
+  COOKIE_MAXAGE: 86400,              // 1 day
+  WISHLIST_MAXAGE: 31536000,         // 1 year
+  FILTER_VALUES: {
+    ALL: "All",
+    SAVED: "Saved",
+    UNISEX: "Unisex"
+  }
+};
+
+// SVG icon constants
+const BOOKMARK_ICONS = {
+  filled: '<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="12" height="12" viewBox="0 0 24 24" fill="black"><path d="M6 2h12a2 2 0 0 1 2 2v18l-8-5-8 5V4a2 2 0 0 1 2-2z"/></svg>',
+  outline: '<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter"><path d="M6 2h12a2 2 0 0 1 2 2v18l-8-5-8 5V4a2 2 0 0 1 2-2z"/></svg>'
+};
+
+// Helper function to get bookmark SVG based on saved state
+function getBookmarkSvg(isSaved) {
+  return isSaved ? BOOKMARK_ICONS.filled : BOOKMARK_ICONS.outline;
+}
+
+// Helper function to initialize wishlist filter
+function initializeWishlistFilter() {
+  const wishlistGroup = document.getElementById("wishlistFilterGroup");
+  if (!wishlistGroup?.dataset.initialized) {
+    renderChips("wishlistFilter", [CONFIG.FILTER_VALUES.ALL, CONFIG.FILTER_VALUES.SAVED]);
+    if (wishlistGroup) wishlistGroup.dataset.initialized = "true";
+  }
+}
+
+// Helper function to update chip inactive states
+function updateChipInactiveState(containerId, enabledValues) {
+  document.querySelectorAll(`#${containerId} .chip`).forEach(chip => {
+    chip.classList.toggle('inactive', !enabledValues.includes(chip.dataset.value));
+  });
+}
+
 // Utility to update the "Saved" chip state based on wishlist contents
 function updateSavedChipState() {
-  const savedChip = document.querySelector('#wishlistFilter .chip[data-value="Saved"]');
+  const savedChip = document.querySelector(`#wishlistFilter .chip[data-value="${CONFIG.FILTER_VALUES.SAVED}"]`);
   if (savedChip) {
     if (wishlist.size === 0) {
       savedChip.classList.add("inactive");
@@ -11,62 +50,36 @@ function updateSavedChipState() {
 }
 function checkAuth() {
   const cookie = document.cookie.match(/(?:^|;\s*)auth=([^;]*)/);
-  return cookie && cookie[1] === "pansy";
+  return cookie && cookie[1] === CONFIG.PASSWORD;
 }
 
 function setAuthCookie() {
-  document.cookie = "auth=pansy; path=/; max-age=86400"; // 1 day
+  document.cookie = `auth=${CONFIG.PASSWORD}; path=/; max-age=${CONFIG.COOKIE_MAXAGE}`;
 }
 
 function showLogin() {
   const loginOverlay = document.createElement("div");
-  loginOverlay.id = "login-overlay";
-  loginOverlay.style.position = "fixed";
-  loginOverlay.style.top = 0;
-  loginOverlay.style.left = 0;
-  loginOverlay.style.width = "100vw";
-  loginOverlay.style.height = "100vh";
-  loginOverlay.style.backgroundColor = "#fff";
-  loginOverlay.style.display = "flex";
-  loginOverlay.style.flexDirection = "column";
-  loginOverlay.style.alignItems = "center";
-  loginOverlay.style.justifyContent = "center";
-  loginOverlay.style.zIndex = 9999;
+  loginOverlay.className = "login-overlay";
 
   const form = document.createElement("form");
-  form.style.display = "flex";
-  form.style.flexDirection = "column";
-  form.style.alignItems = "center";
+  form.className = "login-form";
 
   const input = document.createElement("input");
   input.type = "password";
   input.placeholder = "Enter password";
-  input.style.fontSize = "20px";
-  input.style.padding = "12px 20px";
-  input.style.marginBottom = "10px";
-  input.style.width = "300px";
-  input.style.textAlign = "center";
+  input.className = "login-input";
 
   const button = document.createElement("button");
   button.textContent = "Login";
   button.type = "submit";
-  button.style.background = "black";
-  button.style.color = "white";
-  button.style.border = "none";
-  button.style.padding = "12px 24px";
-  button.style.fontSize = "16px";
-  button.style.cursor = "pointer";
-  button.style.width = input.style.width;
-  button.style.borderRadius = "999px";
+  button.className = "login-button";
 
   const error = document.createElement("div");
-  error.style.color = "red";
-  error.style.marginTop = "10px";
-  error.style.fontSize = "14px";
+  error.className = "login-error";
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
-    if (input.value === "pansy") {
+    if (input.value === CONFIG.PASSWORD) {
       setAuthCookie();
       loginOverlay.remove();
       startApp();
@@ -106,11 +119,11 @@ const wishlist = new Set(getWishlistFromCookie());
 
 function saveWishlistToLocalStorage() {
   const value = encodeURIComponent(JSON.stringify([...wishlist]));
-  document.cookie = `wishlist=${value}; path=/; max-age=31536000`; // 1 year
+  document.cookie = `wishlist=${value}; path=/; max-age=${CONFIG.WISHLIST_MAXAGE}`;
 }
 
 function normalizeGender(gender) {
-  return gender && gender.trim() !== "" ? gender : "Unisex";
+  return gender && gender.trim() !== "" ? gender : CONFIG.FILTER_VALUES.UNISEX;
 }
 
 function getSelectedValuesFromChips(containerId) {
@@ -159,7 +172,7 @@ function renderChips(containerId, items) {
 
 function populateFilters() {
   const allGenders = [...new Set(products.map(p => normalizeGender(p.Gender)))];
-  const genderOrder = ["Women", "Men", "Unisex"];
+  const genderOrder = ["Women", "Men", CONFIG.FILTER_VALUES.UNISEX];
   const genders = genderOrder.filter(g => allGenders.includes(g));
 
   const categories = [...new Set(products.map(p => p.Category))].sort((a, b) =>
@@ -175,11 +188,11 @@ function expandGenders(selectedGenders) {
 
   const includesMen = selectedGenders.includes("Men");
   const includesWomen = selectedGenders.includes("Women");
-  const includesUnisex = selectedGenders.includes("Unisex");
+  const includesUnisex = selectedGenders.includes(CONFIG.FILTER_VALUES.UNISEX);
 
   const result = [...selectedGenders];
   if ((includesMen || includesWomen) && !includesUnisex) {
-    result.push("Unisex");
+    result.push(CONFIG.FILTER_VALUES.UNISEX);
   }
 
   return [...new Set(result)];
@@ -198,28 +211,26 @@ function preloadAllImages(imagePrefix, suffixes) {
 }
 
 function renderGrid(lastInteractedGroup = null) {
+  if (!grid) return; // Early exit if grid doesn't exist
+
   const wishlistGroup = document.getElementById("wishlistFilterGroup");
   if (wishlistGroup) {
     wishlistGroup.style.display = "flex";
+    initializeWishlistFilter();
 
-    if (!wishlistGroup.dataset.initialized) {
-      renderChips("wishlistFilter", ["All", "Saved"]);
-      wishlistGroup.dataset.initialized = "true";
-    }
-
-    updateSavedChipState();
+    updateCONFIG.FILTER_VALUES.SAVEDChipState();
   }
 
   const selectedGenders = getSelectedValuesFromChips("genderFilter");
   const selectedCategories = getSelectedValuesFromChips("categoryFilter");
-  const savedFilter = getSelectedValuesFromChips("wishlistFilter")[0] || "All";
+  const savedFilter = getSelectedValuesFromChips("wishlistFilter")[0] || "CONFIG.FILTER_VALUES.ALL";
 
   const expandedGenders = expandGenders(selectedGenders);
   let filtered = products.filter(p => {
     const gender = normalizeGender(p.Gender);
     const genderMatch = expandedGenders.length === 0 || expandedGenders.includes(gender);
     const categoryMatch = selectedCategories.length === 0 || selectedCategories.includes(p.Category);
-    const savedMatch = savedFilter === "All" || wishlist.has(p["Article number"]);
+    const savedMatch = savedFilter === "CONFIG.FILTER_VALUES.ALL" || wishlist.has(p["Article number"]);
     return genderMatch && categoryMatch && savedMatch;
   });
 
@@ -236,8 +247,7 @@ function renderGrid(lastInteractedGroup = null) {
     let imageUrl = product.image_link;
     let articleBase = product["Article number"];
     if (articleBase.startsWith("AD")) {
-      const rewritten = articleBase.replace(/^AD/, "A*");
-      articleBase = rewritten;
+      articleBase = articleBase.replace(/^AD/, "A*");
       imageUrl = product.image_link.replaceAll(/AD/g, "A*");
     }
 
@@ -261,6 +271,7 @@ function renderGrid(lastInteractedGroup = null) {
     let currentIndex = 0;
 
     const tryLoadImage = (index) => {
+      currentIndex = index; // Track current index as we load
       const testSrc = `${imagePrefix}${imageSuffixes[index]}.jpg?sw=560,sh=840`;
       img.src = testSrc;
 
@@ -286,14 +297,6 @@ function renderGrid(lastInteractedGroup = null) {
     wrapper.appendChild(img);
 
     // Image cycling on click
-    // Image cycling on click
-    // Detect which suffix is currently in use for the image
-    for (let i = 0; i < imageSuffixes.length; i++) {
-      if (img.src.includes(imageSuffixes[i])) {
-        currentIndex = i;
-        break;
-      }
-    }
     function handleImageAdvance() {
       const startIndex = (currentIndex + 1) % imageSuffixes.length;
       let attempts = 0;
@@ -372,39 +375,34 @@ function renderGrid(lastInteractedGroup = null) {
     const save = document.createElement("div");
     save.className = "save-icon";
     const isSaved = wishlist.has(product["Article number"]);
-    save.innerHTML = isSaved
-      ? `<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="12" height="12" viewBox="0 0 24 24" fill="black"><path d="M6 2h12a2 2 0 0 1 2 2v18l-8-5-8 5V4a2 2 0 0 1 2-2z"/></svg>`
-      : `<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter"><path d="M6 2h12a2 2 0 0 1 2 2v18l-8-5-8 5V4a2 2 0 0 1 2-2z"/></svg>`;
+    save.innerHTML = getBookmarkSvg(isSaved);
+
     save.addEventListener("click", () => {
       const articleId = product["Article number"];
       const isCurrentlySaved = wishlist.has(articleId);
 
       if (isCurrentlySaved) {
         wishlist.delete(articleId);
-        save.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter"><path d="M6 2h12a2 2 0 0 1 2 2v18l-8-5-8 5V4a2 2 0 0 1 2-2z"/></svg>`;
       } else {
         wishlist.add(articleId);
-        save.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="12" height="12" viewBox="0 0 24 24" fill="black"><path d="M6 2h12a2 2 0 0 1 2 2v18l-8-5-8 5V4a2 2 0 0 1 2-2z"/></svg>`;
       }
 
+      save.innerHTML = getBookmarkSvg(!isCurrentlySaved);
       saveWishlistToLocalStorage();
       updateSavedChipState();
 
-      const currentSavedFilter = getSelectedValuesFromChips("wishlistFilter")[0] || "All";
+      const currentSavedFilter = getSelectedValuesFromChips("wishlistFilter")[0] || CONFIG.FILTER_VALUES.ALL;
       if (wishlist.size === 0) {
         document.querySelectorAll('.chip.active').forEach(chip => chip.classList.remove('active'));
         renderGrid(); // Reset all if wishlist is empty
-      } else if (currentSavedFilter === "Saved") {
+      } else if (currentSavedFilter === CONFIG.FILTER_VALUES.SAVED) {
         renderGrid(); // Update grid when in saved filter mode
       }
 
       const wishlistGroup = document.getElementById("wishlistFilterGroup");
       if (wishlistGroup && wishlist.size === 1) {
         wishlistGroup.style.display = "flex";
-        if (!wishlistGroup.dataset.initialized) {
-          renderChips("wishlistFilter", ["All", "Saved"]);
-          wishlistGroup.dataset.initialized = "true";
-        }
+        initializeWishlistFilter();
       }
     });
 
@@ -420,21 +418,21 @@ function renderGrid(lastInteractedGroup = null) {
 }
 
 function updateInactiveChips(lastGroup = null) {
-  const savedFilter = getSelectedValuesFromChips("wishlistFilter")[0] || "All";
+  const savedFilter = getSelectedValuesFromChips("wishlistFilter")[0] || "CONFIG.FILTER_VALUES.ALL";
 
-  if (savedFilter === "Saved") {
+  if (savedFilter === "CONFIG.FILTER_VALUES.SAVED") {
     const savedProducts = products.filter(p => wishlist.has(p["Article number"]));
-    const gendersInSaved = [...new Set(savedProducts.map(p => normalizeGender(p.Gender)))];
-    const categoriesInSaved = [...new Set(savedProducts.map(p => p.Category))];
+    const gendersInCONFIG.FILTER_VALUES.SAVED = [...new Set(savedProducts.map(p => normalizeGender(p.Gender)))];
+    const categoriesInCONFIG.FILTER_VALUES.SAVED = [...new Set(savedProducts.map(p => p.Category))];
 
     document.querySelectorAll('#genderFilter .chip').forEach(chip => {
       const value = chip.dataset.value;
-      chip.classList.toggle('inactive', !gendersInSaved.includes(value));
+      chip.classList.toggle('inactive', !gendersInCONFIG.FILTER_VALUES.SAVED.includes(value));
     });
 
     document.querySelectorAll('#categoryFilter .chip').forEach(chip => {
       const value = chip.dataset.value;
-      chip.classList.toggle('inactive', !categoriesInSaved.includes(value));
+      chip.classList.toggle('inactive', !categoriesInCONFIG.FILTER_VALUES.SAVED.includes(value));
     });
 
     return; // Skip regular logic
