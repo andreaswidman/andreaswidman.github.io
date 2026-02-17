@@ -9,6 +9,21 @@ function updateSavedChipState() {
     }
   }
 }
+
+function getBookmarkSvg(isSaved) {
+  return isSaved
+    ? `<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="12" height="12" viewBox="0 0 24 24" fill="black"><path d="M6 2h12a2 2 0 0 1 2 2v18l-8-5-8 5V4a2 2 0 0 1 2-2z"/></svg>`
+    : `<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter"><path d="M6 2h12a2 2 0 0 1 2 2v18l-8-5-8 5V4a2 2 0 0 1 2-2z"/></svg>`;
+}
+
+function initializeWishlistFilter() {
+  const wishlistGroup = document.getElementById("wishlistFilterGroup");
+  if (wishlistGroup && !wishlistGroup.dataset.initialized) {
+    renderChips("wishlistFilter", ["All", "Saved"]);
+    wishlistGroup.dataset.initialized = "true";
+  }
+}
+
 function checkAuth() {
   const cookie = document.cookie.match(/(?:^|;\s*)auth=([^;]*)/);
   return cookie && cookie[1] === "pansy";
@@ -20,49 +35,23 @@ function setAuthCookie() {
 
 function showLogin() {
   const loginOverlay = document.createElement("div");
-  loginOverlay.id = "login-overlay";
-  loginOverlay.style.position = "fixed";
-  loginOverlay.style.top = 0;
-  loginOverlay.style.left = 0;
-  loginOverlay.style.width = "100vw";
-  loginOverlay.style.height = "100vh";
-  loginOverlay.style.backgroundColor = "#fff";
-  loginOverlay.style.display = "flex";
-  loginOverlay.style.flexDirection = "column";
-  loginOverlay.style.alignItems = "center";
-  loginOverlay.style.justifyContent = "center";
-  loginOverlay.style.zIndex = 9999;
+  loginOverlay.className = "login-overlay";
 
   const form = document.createElement("form");
-  form.style.display = "flex";
-  form.style.flexDirection = "column";
-  form.style.alignItems = "center";
+  form.className = "login-form";
 
   const input = document.createElement("input");
   input.type = "password";
   input.placeholder = "Enter password";
-  input.style.fontSize = "20px";
-  input.style.padding = "12px 20px";
-  input.style.marginBottom = "10px";
-  input.style.width = "300px";
-  input.style.textAlign = "center";
+  input.className = "login-input";
 
   const button = document.createElement("button");
   button.textContent = "Login";
   button.type = "submit";
-  button.style.background = "black";
-  button.style.color = "white";
-  button.style.border = "none";
-  button.style.padding = "12px 24px";
-  button.style.fontSize = "16px";
-  button.style.cursor = "pointer";
-  button.style.width = input.style.width;
-  button.style.borderRadius = "999px";
+  button.className = "login-button";
 
   const error = document.createElement("div");
-  error.style.color = "red";
-  error.style.marginTop = "10px";
-  error.style.fontSize = "14px";
+  error.className = "login-error";
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -201,12 +190,7 @@ function renderGrid(lastInteractedGroup = null) {
   const wishlistGroup = document.getElementById("wishlistFilterGroup");
   if (wishlistGroup) {
     wishlistGroup.style.display = "flex";
-
-    if (!wishlistGroup.dataset.initialized) {
-      renderChips("wishlistFilter", ["All", "Saved"]);
-      wishlistGroup.dataset.initialized = "true";
-    }
-
+    initializeWishlistFilter();
     updateSavedChipState();
   }
 
@@ -236,8 +220,7 @@ function renderGrid(lastInteractedGroup = null) {
     let imageUrl = product.image_link;
     let articleBase = product["Article number"];
     if (articleBase.startsWith("AD")) {
-      const rewritten = articleBase.replace(/^AD/, "A*");
-      articleBase = rewritten;
+      articleBase = articleBase.replace(/^AD/, "A*");
       imageUrl = product.image_link.replaceAll(/AD/g, "A*");
     }
 
@@ -261,6 +244,7 @@ function renderGrid(lastInteractedGroup = null) {
     let currentIndex = 0;
 
     const tryLoadImage = (index) => {
+      currentIndex = index;
       const testSrc = `${imagePrefix}${imageSuffixes[index]}.jpg?sw=560,sh=840`;
       img.src = testSrc;
 
@@ -286,14 +270,6 @@ function renderGrid(lastInteractedGroup = null) {
     wrapper.appendChild(img);
 
     // Image cycling on click
-    // Image cycling on click
-    // Detect which suffix is currently in use for the image
-    for (let i = 0; i < imageSuffixes.length; i++) {
-      if (img.src.includes(imageSuffixes[i])) {
-        currentIndex = i;
-        break;
-      }
-    }
     function handleImageAdvance() {
       const startIndex = (currentIndex + 1) % imageSuffixes.length;
       let attempts = 0;
@@ -372,19 +348,17 @@ function renderGrid(lastInteractedGroup = null) {
     const save = document.createElement("div");
     save.className = "save-icon";
     const isSaved = wishlist.has(product["Article number"]);
-    save.innerHTML = isSaved
-      ? `<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="12" height="12" viewBox="0 0 24 24" fill="black"><path d="M6 2h12a2 2 0 0 1 2 2v18l-8-5-8 5V4a2 2 0 0 1 2-2z"/></svg>`
-      : `<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter"><path d="M6 2h12a2 2 0 0 1 2 2v18l-8-5-8 5V4a2 2 0 0 1 2-2z"/></svg>`;
+    save.innerHTML = getBookmarkSvg(isSaved);
     save.addEventListener("click", () => {
       const articleId = product["Article number"];
       const isCurrentlySaved = wishlist.has(articleId);
 
       if (isCurrentlySaved) {
         wishlist.delete(articleId);
-        save.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter"><path d="M6 2h12a2 2 0 0 1 2 2v18l-8-5-8 5V4a2 2 0 0 1 2-2z"/></svg>`;
+        save.innerHTML = getBookmarkSvg(false);
       } else {
         wishlist.add(articleId);
-        save.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="12" height="12" viewBox="0 0 24 24" fill="black"><path d="M6 2h12a2 2 0 0 1 2 2v18l-8-5-8 5V4a2 2 0 0 1 2-2z"/></svg>`;
+        save.innerHTML = getBookmarkSvg(true);
       }
 
       saveWishlistToLocalStorage();
@@ -401,10 +375,7 @@ function renderGrid(lastInteractedGroup = null) {
       const wishlistGroup = document.getElementById("wishlistFilterGroup");
       if (wishlistGroup && wishlist.size === 1) {
         wishlistGroup.style.display = "flex";
-        if (!wishlistGroup.dataset.initialized) {
-          renderChips("wishlistFilter", ["All", "Saved"]);
-          wishlistGroup.dataset.initialized = "true";
-        }
+        initializeWishlistFilter();
       }
     });
 

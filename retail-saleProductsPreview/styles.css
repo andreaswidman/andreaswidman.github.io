@@ -1,3 +1,8 @@
+:root {
+  --primary-blue: #0018A8;
+  --primary-blue-dark: #46A9FF;
+}
+
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #fff;
@@ -73,7 +78,7 @@ a {
 }
 
 .chip.active {
-  background-color: #0018A8;
+  background-color: var(--primary-blue);
   color: white;
 }
 
@@ -109,7 +114,7 @@ a {
   background: none;
   border: none;
   font-size: 14px;
-  color: #0018A8;
+  color: var(--primary-blue);
   cursor: pointer;
   margin-left: 10px;
   padding: 0;
@@ -184,7 +189,7 @@ a {
 
 .product-name {
   font-size: 12px;
-  color: #0018A8;
+  color: var(--primary-blue);
   text-transform: uppercase;
   margin: 8px 0 3px 10px;
   font-weight: normal;
@@ -204,6 +209,51 @@ a {
   font-weight: normal;
   margin-left: 4px;
   font-size: 12px;
+}
+
+.login-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-input {
+  font-size: 20px;
+  padding: 12px 20px;
+  margin-bottom: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+.login-button {
+  background: black;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 300px;
+  border-radius: 999px;
+}
+
+.login-error {
+  color: red;
+  margin-top: 10px;
+  font-size: 14px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -226,7 +276,7 @@ a {
   }
 
   .chip.active {
-    background-color: #46A9FF;
+    background-color: var(--primary-blue-dark);
     color: white;
   }
 
@@ -245,7 +295,7 @@ a {
   }
 
   .back-to-filters {
-    color: #46A9FF;
+    color: var(--primary-blue-dark);
   }
 
   .image-wrapper {
@@ -257,7 +307,7 @@ a {
   }
 
   .product-name {
-    color: #46A9FF;
+    color: var(--primary-blue-dark);
   }
 
   .brand {
