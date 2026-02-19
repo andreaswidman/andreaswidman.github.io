@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inventory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.demandware.com/xml/impex/inventory/2007-05-31">
+  <inventory-list>
+    <header list-id="Inventory_acne_kr">
+      <default-instock>false</default-instock>
+      <description>BusinessFlow Inventory as of: 2026-02-19T17:30:05.000Z</description>
+      <use-bundle-inventory-only>false</use-bundle-inventory-only>
+      <on-order>false</on-order>
+    </header>
+    <records>
+      <record product-id="A10292-228000">
+        <allocation>2</allocation>
+        <allocation-timestamp>2026-02-19T17:30:05.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="A10413-AB7000">
+        <allocation>1</allocation>
+        <allocation-timestamp>2026-02-19T17:30:05.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="A10460-AAE000">
+        <allocation>403</allocation>
+        <allocation-timestamp>2026-02-19T17:30:05.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="A70196-900032">
+        <allocation>0</allocation>
+        <allocation-timestamp>2026-02-19T17:30:05.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="AC0739-CN2034">
+        <allocation>9</allocation>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="AD0852-AAB380">
+        <allocation>1</allocation>
+        <allocation-timestamp>2026-02-19T17:30:05.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="AE0083-902034">
+        <allocation>9</allocation>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="B00363-900D31">
+        <allocation>109</allocation>
+        <allocation-timestamp>2026-02-19T17:30:05.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="B00393-900D28">
+        <allocation>30</allocation>
+        <allocation-timestamp>2026-02-19T17:14:06.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="B00393-900D30">
+        <allocation>82</allocation>
+        <allocation-timestamp>2026-02-19T17:30:05.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="B70160-BBI050">
+        <allocation>3</allocation>
+        <allocation-timestamp>2026-02-19T17:30:05.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="B90800-900044">
+        <allocation>64</allocation>
+        <allocation-timestamp>2026-02-19T17:14:06.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="B90857-BG3046">
+        <allocation>64</allocation>
+        <allocation-timestamp>2026-02-19T17:30:05.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="B90863-900046">
+        <allocation>29</allocation>
+        <allocation-timestamp>2026-02-19T17:24:03.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="BB0667-J83044">
+        <allocation>0</allocation>
+        <allocation-timestamp>2026-02-19T17:30:05.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="BD0325-900420">
+        <allocation>124</allocation>
+        <allocation-timestamp>2026-02-19T17:30:05.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="C00088-863142">
+        <allocation>16</allocation>
+        <allocation-timestamp>2026-02-19T17:30:05.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="C00090-900143">
+        <allocation>81</allocation>
+        <allocation-timestamp>2026-02-19T17:30:05.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="C00100-900143">
+        <allocation>79</allocation>
+        <allocation-timestamp>2026-02-19T17:30:05.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="C00100-900151">
+        <allocation>56</allocation>
+        <allocation-timestamp>2026-02-19T17:30:05.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="C00116-135144">
+        <allocation>2</allocation>
+        <allocation-timestamp>2026-02-19T17:23:22.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="C10240-900000">
+        <allocation>775</allocation>
+        <allocation-timestamp>2026-02-19T17:30:05.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="C40135-X92000">
+        <allocation>711</allocation>
+        <allocation-timestamp>2026-02-19T17:30:05.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="C40416-900000">
+        <allocation>553</allocation>
+        <allocation-timestamp>2026-02-19T17:30:05.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="C40448-DRN000">
+        <allocation>1246</allocation>
+        <allocation-timestamp>2026-02-19T17:30:05.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="C80238-479000">
+        <allocation>3</allocation>
+        <allocation-timestamp>2026-02-19T17:30:05.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="CA0084-BO9000">
+        <allocation>1228</allocation>
+        <allocation-timestamp>2026-02-19T17:30:05.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="CA0084-DID000">
+        <allocation>160</allocation>
+        <allocation-timestamp>2026-02-19T17:30:05.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="CA0084-DL6000">
+        <allocation>3493</allocation>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="CA0210-29N000">
+        <allocation>3615</allocation>
+        <allocation-timestamp>2026-02-19T17:30:05.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="CA0210-900000">
+        <allocation>959</allocation>
+        <allocation-timestamp>2026-02-19T17:30:05.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="CA0405-DSG000">
+        <allocation>152</allocation>
+        <allocation-timestamp>2026-02-19T17:30:05.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="CI0136-DC6334">
+        <allocation>342</allocation>
+        <allocation-timestamp>2026-02-19T17:30:05.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="CL0197-BM0333">
+        <allocation>4</allocation>
+        <allocation-timestamp>2026-02-19T17:24:16.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="CL0197-BM0334">
+        <allocation>10</allocation>
+        <allocation-timestamp>2026-02-19T17:30:05.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="CL0197-BPA333">
+        <allocation>293</allocation>
+        <allocation-timestamp>2026-02-19T17:24:16.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="CL0197-DJS334">
+        <allocation>184</allocation>
+        <allocation-timestamp>2026-02-19T17:30:05.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="CL0397-AEG333">
+        <allocation>79</allocation>
+        <allocation-timestamp>2026-02-19T17:24:16.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="CL0401-ADM103">
+        <allocation>4</allocation>
+        <allocation-timestamp>2026-02-19T17:30:05.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="CL0431-833335">
+        <allocation>17</allocation>
+        <allocation-timestamp>2026-02-19T17:30:05.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="CL0431-CUE334">
+        <allocation>28</allocation>
+        <allocation-timestamp>2026-02-19T17:30:05.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="CL0460-AEG334">
+        <allocation>0</allocation>
+        <allocation-timestamp>2026-02-19T17:30:05.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="AL0458-CCH104">
+        <allocation>15</allocation>
+        <allocation-timestamp>2026-02-19T17:16:56.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="CL0439-AEG338">
+        <allocation>4</allocation>
+        <allocation-timestamp>2026-02-19T17:24:19.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="A10338-DR1000">
+        <allocation>0</allocation>
+        <allocation-timestamp>2026-02-19T17:30:05.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="BK0739-ALZ050">
+        <allocation>8</allocation>
+        <allocation-timestamp>2026-02-19T17:30:05.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="C00091-228146">
+        <allocation>0</allocation>
+        <allocation-timestamp>2026-02-19T17:30:05.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="CD0018-DWH360">
+        <allocation>13</allocation>
+        <allocation-timestamp>2026-02-19T17:30:05.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="CD0018-DWH370">
+        <allocation>26</allocation>
+        <allocation-timestamp>2026-02-19T17:30:05.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="CD0018-DWH380">
+        <allocation>11</allocation>
+        <allocation-timestamp>2026-02-19T17:30:05.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="CD0018-DWH390">
+        <allocation>2</allocation>
+        <allocation-timestamp>2026-02-19T17:30:05.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+    </records>
+  </inventory-list>
+</inventory>

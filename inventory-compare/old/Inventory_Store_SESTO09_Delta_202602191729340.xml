@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inventory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.demandware.com/xml/impex/inventory/2007-05-31">
+  <inventory-list>
+    <header list-id="Inventory_Store_SESTO09">
+      <default-instock>false</default-instock>
+      <description>BusinessFlow Inventory as of: 2026-02-19T17:29:00.079Z</description>
+      <use-bundle-inventory-only>false</use-bundle-inventory-only>
+      <on-order>false</on-order>
+    </header>
+    <records>
+      <record product-id="A10292-228000">
+        <allocation>0</allocation>
+        <allocation-timestamp>2026-02-19T17:29:33.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="A10338-DR1000">
+        <allocation>0</allocation>
+        <allocation-timestamp>2026-02-19T17:29:33.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="A10413-AB7000">
+        <allocation>0</allocation>
+        <allocation-timestamp>2026-02-19T17:29:33.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="C10240-900000">
+        <allocation>0</allocation>
+        <allocation-timestamp>2026-02-19T17:29:33.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="C40135-X92000">
+        <allocation>0</allocation>
+        <allocation-timestamp>2026-02-19T17:29:33.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="CA0084-BO9000">
+        <allocation>0</allocation>
+        <allocation-timestamp>2026-02-19T17:29:33.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="CA0084-DID000">
+        <allocation>0</allocation>
+        <allocation-timestamp>2026-02-19T17:29:33.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="CA0084-DL6000">
+        <allocation>0</allocation>
+        <allocation-timestamp>2026-02-19T17:29:33.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="CA0210-29N000">
+        <allocation>0</allocation>
+        <allocation-timestamp>2026-02-19T17:29:33.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+      <record product-id="CA0210-900000">
+        <allocation>0</allocation>
+        <allocation-timestamp>2026-02-19T17:29:33.000Z</allocation-timestamp>
+        <perpetual>false</perpetual>
+        <preorder-backorder-handling>none</preorder-backorder-handling>
+        <preorder-backorder-allocation>0</preorder-backorder-allocation>
+        <ats>0</ats>
+      </record>
+    </records>
+  </inventory-list>
+</inventory>
