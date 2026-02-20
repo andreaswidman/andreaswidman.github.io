@@ -23,10 +23,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set build version
-        run: |
-          SHORT_SHA=$(git rev-parse --short HEAD)
-          sed -i "s/BUILD_VERSION/$SHORT_SHA/g" retail-saleProductsPreview/index.html
+      # The 'Set build version' step referencing a deleted folder has been removed
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
