@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>RSS</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    #feed {
+      height: 100vh;
+      overflow-y: auto;
+      scroll-snap-type: y mandatory;
+      scrollbar-width: none;
+    }
+
+    #feed::-webkit-scrollbar {
+      display: none;
+    }
+
+    .post {
+      height: 100vh;
+      width: 100vw;
+      scroll-snap-align: start;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10vh 0;
+      background: #fff;
+      position: relative;
+    }
+
+    .post img {
+      max-width: 100%;
+      max-height: 80vh;
+      object-fit: contain;
+    }
+
+    .spinner {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      border: 2px solid #ddd;
+      border-top-color: #999;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <main id="feed"></main>
+  <script>
+    const CONFIG = {
+      feeds: [
+        'https://www.lifeonsundays.com'
+      ],
+      proxy: 'https://api.allorigins.win/raw?url=',
+      preloadAhead: 3
+    };
+
+    let currentIndex = 0;
+    let isScrolling = false;
+    let isLoading = false;
+    let pageNum = 1;
+    let allImageUrls = [];
+    const preloaded = new Set();
+
+    async function fetchFeed(feedUrl) {
+      const res = await fetch(CONFIG.proxy + encodeURIComponent(feedUrl));
+      return res.text();
+    }
+
+    function parseFeed(xml) {
+      const doc = new DOMParser().parseFromString(xml, 'text/xml');
+      return Array.from(doc.querySelectorAll('item'));
+    }
+
+    function pickBestSrc(img) {
+      const srcset = img.getAttribute('srcset');
+      if (!srcset) return img.getAttribute('src');
+      const best = srcset.split(',')
+        .map(s => {
+          const [url, w] = s.trim().split(/\s+/);
+          return { url, w: parseInt(w) || 0 };
+        })
+        .sort((a, b) => b.w - a.w);
+      return best[0]?.url || img.getAttribute('src');
+    }
+
+    function extractImages(item) {
+      const desc = item.querySelector('description');
+      if (!desc) return [];
+      const doc = new DOMParser().parseFromString(desc.textContent, 'text/html');
+      return Array.from(doc.querySelectorAll('img'))
+        .map(img => pickBestSrc(img))
+        .filter(Boolean);
+    }
+
+    function renderPosts(urls, startIndex) {
+      const feed = document.getElementById('feed');
+      urls.forEach((url, i) => {
+        const idx = startIndex + i;
+        const article = document.createElement('article');
+        article.className = 'post';
+        article.dataset.index = idx;
+
+        const spinner = document.createElement('div');
+        spinner.className = 'spinner';
+        article.appendChild(spinner);
+
+        const img = document.createElement('img');
+        img.src = url;
+        img.alt = '';
+        img.loading = idx < 2 ? 'eager' : 'lazy';
+        img.onload = () => spinner.remove();
+        article.appendChild(img);
+        feed.appendChild(article);
+      });
+    }
+
+    function navigateTo(index) {
+      const posts = document.querySelectorAll('.post');
+      const clamped = Math.max(0, Math.min(index, posts.length - 1));
+      currentIndex = clamped;
+      isScrolling = true;
+      const feed = document.getElementById('feed');
+      feed.scrollTo({ top: clamped * window.innerHeight, behavior: 'smooth' });
+      preloadAround(clamped);
+    }
+
+    function observeScroll() {
+      const feed = document.getElementById('feed');
+      let scrollTimer;
+      feed.addEventListener('scroll', () => {
+        if (isScrolling) return;
+        clearTimeout(scrollTimer);
+        scrollTimer = setTimeout(() => {
+          currentIndex = Math.round(feed.scrollTop / window.innerHeight);
+          preloadAround(currentIndex);
+          if (currentIndex >= allImageUrls.length - 3) loadNextPage();
+        }, 100);
+      });
+      feed.addEventListener('scrollend', () => { isScrolling = false; });
+      if (!('onscrollend' in window)) {
+        let endTimer;
+        feed.addEventListener('scroll', () => {
+          clearTimeout(endTimer);
+          endTimer = setTimeout(() => { isScrolling = false; }, 150);
+        });
+      }
+    }
+
+    function preloadAround(index) {
+      const end = Math.min(allImageUrls.length, index + CONFIG.preloadAhead + 1);
+      for (let i = index; i < end; i++) {
+        if (!preloaded.has(i)) {
+          new Image().src = allImageUrls[i];
+          preloaded.add(i);
+        }
+      }
+    }
+
+    async function loadNextPage() {
+      if (isLoading) return;
+      isLoading = true;
+      const startIndex = allImageUrls.length;
+      const newUrls = [];
+
+      for (const base of CONFIG.feeds) {
+        const feedUrl = pageNum === 1 ? base + '/rss' : base + '/page/' + pageNum + '/rss';
+        try {
+          const xml = await fetchFeed(feedUrl);
+          const items = parseFeed(xml);
+          for (const item of items) newUrls.push(...extractImages(item));
+        } catch (err) {
+          console.warn('Feed error:', feedUrl, err);
+        }
+      }
+
+      pageNum++;
+      if (newUrls.length === 0) { isLoading = false; return; }
+      allImageUrls.push(...newUrls);
+      renderPosts(newUrls, startIndex);
+      preloadAround(currentIndex);
+      isLoading = false;
+    }
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'j' || e.key === 'J') {
+        if (currentIndex >= allImageUrls.length - 3) loadNextPage();
+        navigateTo(currentIndex + 1);
+      }
+      if (e.key === 'k' || e.key === 'K') navigateTo(currentIndex - 1);
+    });
+
+    function checkAuth() {
+      if (sessionStorage.getItem('rss-auth')) return true;
+      const user = prompt('Username');
+      if (!user) return false;
+      const pass = prompt('Password');
+      if (user === 'andreas' && pass === 'pansy') {
+        sessionStorage.setItem('rss-auth', '1');
+        return true;
+      }
+      return false;
+    }
+
+    (async function init() {
+      if (!checkAuth()) return;
+      await loadNextPage();
+      observeScroll();
+    })();
+  </script>
+</body>
+</html>

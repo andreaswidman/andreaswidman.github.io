@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acne Studios - Loose fit jeans - 1981 - Light blue</title>
+  <style>
+    :root {
+      --blue: rgb(0, 24, 168);
+      --black: rgb(0, 0, 0);
+      --white: rgb(255, 255, 255);
+      --gray-border: rgb(194, 194, 194);
+      --gray-light: rgb(235, 235, 235);
+      --alabaster: #f5f5f0;
+      --font: "Helvetica Now Text", Helvetica, Arial, sans-serif;
+      --header-height: 60px;
+      --breadcrumb-height: 31px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font);
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+      color: var(--black);
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* === HEADER === */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--white);
+      height: var(--header-height);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 12px;
+    }
+
+    .header-nav {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .header-nav a {
+      font-size: 12px;
+      font-weight: 400;
+    }
+
+    .header-logo {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .header-logo img {
+      height: 16px;
+      display: block;
+    }
+
+    .header-utils {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .header-utils a {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 12px;
+    }
+
+    /* === BREADCRUMB === */
+    .breadcrumb {
+      height: var(--breadcrumb-height);
+      display: flex;
+      align-items: center;
+      padding: 0 12px;
+      gap: 8px;
+      font-size: 12px;
+      border-bottom: none;
+    }
+
+    .breadcrumb a {
+      color: var(--black);
+    }
+
+    .breadcrumb .separator {
+      margin: 0 2px;
+    }
+
+    .breadcrumb .current {
+      text-decoration: underline;
+    }
+
+    /* === MAIN PDP GRID === */
+    .pdp-grid {
+      display: grid;
+      grid-template-columns: repeat(16, 1fr);
+    }
+
+    /* Left column */
+    .pdp-left {
+      grid-column: 1 / 11;
+    }
+
+    .pdp-gallery-wrapper {
+      position: sticky;
+      top: var(--header-height);
+      height: calc(100vh - var(--header-height));
+      background: var(--white);
+      z-index: 2;
+    }
+
+    .pdp-images {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      height: 100%;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .pdp-images::-webkit-scrollbar {
+      display: none;
+    }
+
+    .pdp-image-item {
+      background: var(--alabaster);
+      flex-shrink: 0;
+      width: 70%;
+      height: 100%;
+      scroll-snap-align: start;
+    }
+
+    .pdp-image-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Gallery navigation controls */
+    .gallery-controls {
+      position: absolute;
+      bottom: 16px;
+      left: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      z-index: 10;
+    }
+
+    .gallery-prev,
+    .gallery-next {
+      width: 40px;
+      height: 40px;
+      border: 1px solid var(--gray-border);
+      background: var(--white);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      font-family: var(--font);
+      color: var(--black);
+    }
+
+    .gallery-prev:hover,
+    .gallery-next:hover {
+      border-color: var(--black);
+    }
+
+    .gallery-counter {
+      font-size: 12px;
+      font-family: var(--font);
+      letter-spacing: 0.3px;
+      min-width: 30px;
+      text-align: center;
+    }
+
+    /* Below-gallery content (accordion, description) — grid row 2, left column */
+    .pdp-below-gallery {
+      grid-column: 1 / 11;
+      padding: 24px 9px;
+    }
+
+    /* Right column - product info */
+    .pdp-info {
+      grid-column: 11 / 17;
+      align-self: start;
+      padding: 45px 9px 40px 9px;
+    }
+
+    /* Product name + price */
+    .product-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 4px;
+    }
+
+    .product-name {
+      font-size: 12px;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    .product-price {
+      font-size: 12px;
+      font-weight: 400;
+      white-space: nowrap;
+    }
+
+    .product-color {
+      font-size: 12px;
+      margin-bottom: 16px;
+      text-transform: none;
+    }
+
+    /* Color swatches */
+    .color-swatches {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 0;
+      margin-bottom: 20px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .color-swatches::-webkit-scrollbar {
+      display: none;
+    }
+
+    .swatch {
+      width: 58px;
+      height: 88px;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    .swatch img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .swatch--active {
+      outline: 1px solid var(--black);
+      outline-offset: 2px;
+    }
+
+    .swatch-more {
+      flex-shrink: 0;
+      font-size: 12px;
+      color: var(--blue);
+      margin-left: 4px;
+    }
+
+    /* Fit predictor + size guide row */
+    .fit-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .fit-predictor {
+      color: var(--blue);
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .fit-predictor .dot {
+      width: 14px;
+      height: 14px;
+      background: var(--blue);
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 8px;
+    }
+
+    .size-guide {
+      color: var(--black);
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      text-decoration: underline;
+    }
+
+    .size-guide-icon {
+      display: inline-flex;
+      gap: 1px;
+      margin-right: 2px;
+      text-decoration: none;
+    }
+
+    .size-guide-icon span {
+      display: inline-block;
+      width: 5px;
+      height: 8px;
+      border: 1px solid var(--black);
+    }
+
+    /* Size selector */
+    .size-label {
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+
+    .size-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 0;
+      margin-bottom: 16px;
+    }
+
+    .size-btn {
+      border: 1px solid var(--gray-border);
+      background: var(--white);
+      padding: 4px 9px 19px;
+      font-size: 12px;
+      font-family: var(--font);
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      cursor: pointer;
+      text-align: left;
+      margin: -0.5px;
+    }
+
+    .size-btn:hover {
+      border-color: var(--black);
+    }
+
+    /* Length selector */
+    .length-label {
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+
+    .length-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      margin-bottom: 12px;
+    }
+
+    .length-btn {
+      border: 1px solid var(--gray-border);
+      background: var(--white);
+      padding: 4px 9px 19px;
+      font-size: 12px;
+      font-family: var(--font);
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      cursor: pointer;
+      text-align: left;
+      margin: -0.5px;
+    }
+
+    .length-btn:hover {
+      border-color: var(--black);
+    }
+
+    /* Petit info box */
+    .petit-info {
+      background: var(--gray-light);
+      padding: 12px;
+      margin-bottom: 16px;
+      font-size: 12px;
+    }
+
+    .petit-info strong {
+      display: block;
+      margin-bottom: 4px;
+      font-weight: 400;
+      font-size: 10px;
+      letter-spacing: 0.5px;
+    }
+
+    .petit-info span {
+      text-transform: none;
+      letter-spacing: 0;
+    }
+
+    /* Out of stock */
+    .out-of-stock {
+      margin-bottom: 12px;
+      font-size: 12px;
+    }
+
+    .out-of-stock a {
+      text-decoration: underline;
+    }
+
+    /* Add to bag row */
+    .add-to-bag-row {
+      display: flex;
+      gap: 0;
+      margin-bottom: 16px;
+      margin-top: 20px;
+    }
+
+    .add-to-bag {
+      flex: 1;
+      background: var(--blue);
+      color: var(--white);
+      border: 1px solid transparent;
+      height: 60px;
+      font-size: 12px;
+      font-family: var(--font);
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      cursor: pointer;
+      font-weight: 400;
+    }
+
+    .wishlist-btn {
+      width: 60px;
+      height: 60px;
+      border: 1px solid var(--blue);
+      background: var(--white);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    /* Accordion items */
+    .accordion-item {
+      border-top: 1px solid var(--gray-border);
+      padding: 14px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .accordion-item:last-of-type {
+      border-bottom: 1px solid var(--gray-border);
+    }
+
+    .accordion-title {
+      font-size: 12px;
+      font-weight: 400;
+    }
+
+    .accordion-title strong {
+      font-weight: 400;
+      text-decoration: underline;
+    }
+
+    .accordion-subtitle {
+      font-size: 12px;
+      color: var(--black);
+      margin-top: 4px;
+      text-transform: none;
+      letter-spacing: 0;
+    }
+
+    .accordion-arrow {
+      font-size: 12px;
+      flex-shrink: 0;
+    }
+
+    .accordion-title-row {
+      display: flex;
+      gap: 8px;
+      align-items: baseline;
+    }
+
+    .accordion-enter-postal {
+      text-transform: uppercase;
+      font-size: 10px;
+      letter-spacing: 0.3px;
+    }
+
+    /* Product description */
+    .product-description {
+      margin-top: 24px;
+      font-size: 12px;
+      text-transform: none;
+      letter-spacing: 0;
+      line-height: 1.6;
+    }
+
+    .product-details {
+      margin-top: 16px;
+      list-style: none;
+      padding: 0;
+    }
+
+    .product-details li {
+      font-size: 12px;
+      text-transform: none;
+      letter-spacing: 0;
+      line-height: 1.8;
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .product-details li::before {
+      content: "\2014";
+      position: absolute;
+      left: 0;
+    }
+
+    .show-more {
+      margin-top: 8px;
+      font-size: 12px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .need-help {
+      margin-top: 20px;
+      font-size: 12px;
+    }
+
+    .need-help a {
+      text-decoration: underline;
+    }
+
+    /* === RECOMMENDED SECTION === */
+    .recommended {
+      margin-top: 0;
+      border-top: 1px solid var(--gray-border);
+    }
+
+    .recommended-title {
+      font-size: 12px;
+      font-weight: 400;
+      padding: 16px 12px;
+    }
+
+    .recommended-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+
+    .rec-card {
+      position: relative;
+    }
+
+    .rec-card-image {
+      width: 100%;
+      aspect-ratio: 2/3;
+      background: var(--alabaster);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gray-border);
+      font-size: 14px;
+    }
+
+    .rec-card-info {
+      padding: 12px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .rec-card-name {
+      font-size: 12px;
+    }
+
+    .rec-card-colors {
+      font-size: 12px;
+      text-transform: none;
+      letter-spacing: 0;
+      color: #666;
+    }
+
+    .rec-card-price {
+      font-size: 12px;
+      text-align: right;
+    }
+
+    .rec-card-quickadd {
+      position: absolute;
+      bottom: 60px;
+      right: 12px;
+      width: 28px;
+      height: 28px;
+      border: 1px solid var(--gray-border);
+      background: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    /* === BACK LINK === */
+    .back-link {
+      padding: 20px 12px;
+      font-size: 12px;
+      border-top: 1px solid var(--gray-border);
+    }
+
+    .back-link a {
+      text-decoration: underline;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* === NEWSLETTER === */
+    .newsletter {
+      padding: 60px 12px;
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .newsletter-title {
+      font-size: 12px;
+      font-weight: 400;
+      margin-bottom: 8px;
+    }
+
+    .newsletter-text {
+      font-size: 12px;
+      text-transform: none;
+      letter-spacing: 0;
+      margin-bottom: 24px;
+      line-height: 1.5;
+    }
+
+    .newsletter-input {
+      width: 100%;
+      max-width: 680px;
+      border: none;
+      border-bottom: 1px solid var(--black);
+      padding: 12px 0;
+      font-size: 12px;
+      font-family: var(--font);
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      outline: none;
+      background: transparent;
+    }
+
+    /* === FOOTER === */
+    .footer {
+      border-top: 1px solid var(--gray-border);
+      padding: 40px 12px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .footer-col-title {
+      font-size: 12px;
+      font-weight: 400;
+      margin-bottom: 16px;
+    }
+
+    .footer-col a {
+      display: block;
+      font-size: 12px;
+      text-transform: none;
+      letter-spacing: 0;
+      margin-bottom: 8px;
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 12px;
+      font-size: 12px;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 16px;
+    }
+
+    .footer-social a {
+      font-size: 12px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <nav class="header-nav">
+      <a href="#">Woman</a>
+      <a href="#">Man</a>
+      <a href="#">Bags</a>
+      <a href="#">Scarves</a>
+    </nav>
+    <div class="header-logo">
+      <img src="https://www.acnestudios.com/on/demandware.static/Sites-acne_us-Site/-/default/dw35200d16/icons/acne_studios_logo.svg" alt="Acne Studios" height="16">
+    </div>
+    <div class="header-utils">
+      <a href="#">Search</a>
+      <a href="#">Help</a>
+      <a href="#">Account</a>
+      <a href="#">01</a>
+    </div>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <nav class="breadcrumb">
+    <a href="#">Man</a>
+    <span class="separator"></span>
+    <a href="#">1981 - Loose Fit</a>
+    <span class="separator"></span>
+    <a href="#" class="current">Loose fit jeans - 1981</a>
+  </nav>
+
+  <!-- MAIN PDP -->
+  <div class="pdp-grid">
+
+    <!-- LEFT COLUMN -->
+    <div class="pdp-left">
+      <div class="pdp-gallery-wrapper">
+        <div class="pdp-images">
+          <div class="pdp-image-item">
+            <img src="https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dw569fff54/images/C0/C00096-/2000x/C00096-228_A.jpg" alt="Model wearing loose fit jeans - front view" loading="eager">
+          </div>
+          <div class="pdp-image-item">
+            <img src="https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwb742b979/images/C0/C00096-/2000x/C00096-228_B.jpg" alt="Model wearing loose fit jeans - side view" loading="lazy">
+          </div>
+          <div class="pdp-image-item">
+            <img src="https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dw766d7e13/images/C0/C00096-/2000x/C00096-228_C.jpg" alt="Model wearing loose fit jeans - back view" loading="lazy">
+          </div>
+          <div class="pdp-image-item">
+            <img src="https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dw5ca09b7d/images/C0/C00096-/2000x/C00096-228_D.jpg" alt="Close-up detail of jeans" loading="lazy">
+          </div>
+          <div class="pdp-image-item">
+            <img src="https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dw6ec3ba04/images/C0/C00096-/2000x/C00096-228_E.jpg" alt="Detail shot of jeans" loading="lazy">
+          </div>
+          <div class="pdp-image-item">
+            <img src="https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dw488a1d39/images/C0/C00096-/2000x/C00096-228_Y.jpg" alt="Flat lay of jeans" loading="lazy">
+          </div>
+        </div>
+        <div class="gallery-controls">
+          <button class="gallery-prev">&larr;</button>
+          <button class="gallery-next">&rarr;</button>
+          <span class="gallery-counter">1 / 6</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Product Info -->
+    <div class="pdp-info">
+      <div class="product-header">
+        <span class="product-name">Loose fit jeans - 1981</span>
+        <span class="product-price">$730</span>
+      </div>
+
+      <div class="product-color">Light blue</div>
+
+      <!-- Color swatches -->
+      <div class="color-swatches">
+        <div class="swatch swatch--active"><img src="https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dw488a1d39/images/C0/C00096-/2000x/C00096-228_Y.jpg" alt="Light blue"></div>
+        <div class="swatch"><img src="https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dw9515d720/images/C0/C00126-/2000x/C00126-AOM_FLAT.jpg" alt="Colour variant"></div>
+        <div class="swatch"><img src="https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwd272e457/images/C0/C00112-/2000x/C00112-969_FLAT.jpg" alt="Colour variant"></div>
+        <div class="swatch"><img src="https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dw7ab128d5/images/C0/C00111-/2000x/C00111-969_FLAT.jpg" alt="Colour variant"></div>
+        <div class="swatch"><img src="https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dw3e621d9c/images/C0/C00093-/2000x/C00093-900_FLAT.jpg" alt="Colour variant"></div>
+        <div class="swatch"><img src="https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwf78b1f53/images/C0/C00081-/2000x/C00081-900_FLAT.jpg" alt="Colour variant"></div>
+        <div class="swatch"><img src="https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dw90734a52/images/C0/C00100-/2000x/C00100-900_FLAT.jpg" alt="Colour variant"></div>
+        <div class="swatch"><img src="https://www.acnestudios.com/dw/image/v2/AAXV_PRD/on/demandware.static/-/Sites-acne-product-catalog/default/dwa6654bef/images/CK/CK0132-/2000x/CK0132-900_FLAT.jpg" alt="Colour variant"></div>
+        <span class="swatch-more">+16</span>
+      </div>
+
+      <!-- Fit predictor + Size guide -->
+      <div class="fit-row">
+        <a href="#" class="fit-predictor">
+          <span class="dot">i</span>
+          Fit Predictor - Calculate your size
+        </a>
+        <a href="#" class="size-guide"><span class="size-guide-icon"><span></span><span></span><span></span></span>Size guide</a>
+      </div>
+
+      <!-- Size selector -->
+      <div class="size-label">Size</div>
+      <div class="size-grid">
+        <button class="size-btn">XXXS</button>
+        <button class="size-btn">XXS</button>
+        <button class="size-btn">XS</button>
+        <button class="size-btn">S</button>
+        <button class="size-btn">M</button>
+        <button class="size-btn">L</button>
+        <button class="size-btn">XL</button>
+        <button class="size-btn">XXL</button>
+      </div>
+
+      <!-- Length selector -->
+      <div class="length-label">Length</div>
+      <div class="length-grid">
+        <button class="length-btn">Regular</button>
+        <button class="length-btn">Petit</button>
+      </div>
+
+      <!-- Petit info -->
+      <div class="petit-info">
+        <strong>Petit length size</strong>
+        <span>Petit has a 7 cm / 2.75" shorter inseam than Regular</span>
+      </div>
+
+      <!-- Out of stock -->
+      <div class="out-of-stock">
+        Out of stock? <a href="#">Get notified</a>
+      </div>
+
+      <!-- Add to bag -->
+      <div class="add-to-bag-row">
+        <button class="add-to-bag">Add to bag</button>
+        <button class="wishlist-btn">&#9825;</button>
+      </div>
+    </div>
+
+    <!-- Below-gallery content (left column, row 2) -->
+    <div class="pdp-below-gallery">
+      <div class="accordion-item">
+        <div>
+          <div class="accordion-title-row">
+            <strong class="accordion-title">Free delivery &amp; returns</strong>
+            <span class="accordion-enter-postal">Enter postal code</span>
+          </div>
+          <div class="accordion-subtitle">Estimated delivery within 2-3 business days.<br>Domestic shipping. Tariffs and import duties included.</div>
+        </div>
+        <span class="accordion-arrow">&#8250;</span>
+      </div>
+
+      <div class="accordion-item">
+        <div>
+          <strong class="accordion-title">Complimentary giftwrapping</strong>
+          <div class="accordion-subtitle">Available at checkout</div>
+        </div>
+        <span class="accordion-arrow">&#8250;</span>
+      </div>
+
+      <div class="accordion-item">
+        <div>
+          <strong class="accordion-title">Pick up in store</strong>
+          <div class="accordion-subtitle">Buy online, pick up today</div>
+        </div>
+        <span class="accordion-arrow">&#8250;</span>
+      </div>
+
+      <p class="product-description">
+        1981 jeans are cut to a loose fit with a low to mid waist, wide baggy leg, and long length. Crafted from authentic worn-in denim, they feature a dirty tint and irregular manual paint marks for a distressed, lived-in look.
+      </p>
+
+      <ul class="product-details">
+        <li>Loose fit</li>
+        <li>Low to mid waist</li>
+        <li>Wide baggy leg</li>
+        <li>Long length</li>
+        <li>5-Pocket construction</li>
+        <li>Button fly</li>
+        <li>Female model is 180 cm / 5'11 and wears a size Small/Regular corresponds to size 36 and denim 27</li>
+      </ul>
+
+      <div class="show-more">+ Show more</div>
+
+      <div class="need-help">
+        <a href="#">Need help?</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- RECOMMENDED -->
+  <section class="recommended">
+    <div class="recommended-title">Recommended</div>
+    <div class="recommended-grid">
+      <div class="rec-card">
+        <div class="rec-card-image"></div>
+        <div class="rec-card-quickadd">+</div>
+        <div class="rec-card-info">
+          <div>
+            <div class="rec-card-name">Camero camera suede shoulder bag</div>
+            <div class="rec-card-colors">2 Colours</div>
+          </div>
+          <div class="rec-card-price">$2,400</div>
+        </div>
+      </div>
+      <div class="rec-card">
+        <div class="rec-card-image"></div>
+        <div class="rec-card-quickadd">+</div>
+        <div class="rec-card-info">
+          <div>
+            <div class="rec-card-name">Logo tote - Year of the horse</div>
+          </div>
+          <div class="rec-card-price">$950</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BACK LINK -->
+  <div class="back-link">
+    <a href="#">&lt; &nbsp; Back to 1981 - Loose Fit</a>
+  </div>
+
+  <!-- NEWSLETTER -->
+  <div class="newsletter">
+    <div class="newsletter-title">Newsletter</div>
+    <div class="newsletter-text">Receive news about Acne Studios collections, Acne Paper, events and sales.</div>
+    <input type="email" class="newsletter-input" placeholder="EMAIL">
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-col-title">Contact us</div>
+        <a href="#">Live chat</a>
+        <a href="#">Call</a>
+        <a href="#">Email</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Help</div>
+        <a href="#">Contact us</a>
+        <a href="#">Order status</a>
+        <a href="#">Register a return</a>
+        <a href="#">FAQs</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Client services</div>
+        <a href="#">Acne Studios Services</a>
+        <a href="#">Account</a>
+        <a href="#">Find a store</a>
+        <a href="#">Product care</a>
+        <a href="#">Gift Cards</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Company</div>
+        <a href="#">About</a>
+        <a href="#">Press</a>
+        <a href="#">Careers</a>
+        <a href="#">Sustainability</a>
+        <a href="#">Legal &amp; Privacy</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="footer-bottom">
+    <span>&copy; 2026 Acne Studios</span>
+    <div class="footer-social">
+      <a href="#">IG</a>
+      <a href="#">FB</a>
+      <a href="#">TW</a>
+      <a href="#">YT</a>
+      <a href="#">PT</a>
+      <a href="#">WB</a>
+    </div>
+    <span>Shipping to United States (English)</span>
+  </div>
+
+  <script>
+    // Gallery horizontal scroll navigation
+    (function() {
+      const gallery = document.querySelector('.pdp-images');
+      const prevBtn = document.querySelector('.gallery-prev');
+      const nextBtn = document.querySelector('.gallery-next');
+      const counter = document.querySelector('.gallery-counter');
+      const items = document.querySelectorAll('.pdp-image-item');
+      const total = items.length;
+
+      function getSlideWidth() {
+        return items[0] ? items[0].offsetWidth : 0;
+      }
+
+      function getCurrentIndex() {
+        const scrollLeft = gallery.scrollLeft;
+        const slideWidth = getSlideWidth();
+        return slideWidth > 0 ? Math.round(scrollLeft / slideWidth) : 0;
+      }
+
+      function updateCounter() {
+        const idx = getCurrentIndex();
+        counter.textContent = (idx + 1) + ' / ' + total;
+      }
+
+      prevBtn.addEventListener('click', function() {
+        const slideWidth = getSlideWidth();
+        gallery.scrollBy({ left: -slideWidth, behavior: 'smooth' });
+      });
+
+      nextBtn.addEventListener('click', function() {
+        const slideWidth = getSlideWidth();
+        gallery.scrollBy({ left: slideWidth, behavior: 'smooth' });
+      });
+
+      gallery.addEventListener('scroll', updateCounter);
+      updateCounter();
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "rss-server",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8081", "-d", "/Users/andreas.widman/Desktop/Sites/andreaswidman.github.io/rss"],
+      "port": 8081
+    }
+  ]
+}
