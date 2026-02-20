@@ -60,9 +60,36 @@
     @keyframes spin {
       to { transform: rotate(360deg); }
     }
+
+    #auth {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      z-index: 10;
+    }
+
+    #auth input {
+      font: 13px/1.4 system-ui, sans-serif;
+      padding: 6px 8px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      outline: none;
+    }
+
+    #auth input:focus {
+      border-color: #999;
+    }
   </style>
 </head>
 <body>
+  <div id="auth">
+    <form>
+      <input name="pass" type="password" autofocus>
+    </form>
+  </div>
   <main id="feed"></main>
   <script>
     const CONFIG = {
@@ -152,7 +179,7 @@
         scrollTimer = setTimeout(() => {
           currentIndex = Math.round(feed.scrollTop / window.innerHeight);
           preloadAround(currentIndex);
-          if (currentIndex >= allImageUrls.length - 3) loadNextPage();
+          if (currentIndex >= allImageUrls.length - 5) loadNextPage();
         }, 100);
       });
       feed.addEventListener('scrollend', () => { isScrolling = false; });
@@ -202,29 +229,38 @@
 
     document.addEventListener('keydown', e => {
       if (e.key === 'j' || e.key === 'J') {
-        if (currentIndex >= allImageUrls.length - 3) loadNextPage();
-        navigateTo(currentIndex + 1);
+        if (currentIndex >= allImageUrls.length - 1) {
+          loadNextPage().then(() => navigateTo(currentIndex + 1));
+        } else {
+          if (currentIndex >= allImageUrls.length - 5) loadNextPage();
+          navigateTo(currentIndex + 1);
+        }
       }
       if (e.key === 'k' || e.key === 'K') navigateTo(currentIndex - 1);
     });
 
-    function checkAuth() {
-      if (sessionStorage.getItem('rss-auth')) return true;
-      const user = prompt('Username');
-      if (!user) return false;
-      const pass = prompt('Password');
-      if (user === 'andreas' && pass === 'pansy') {
-        sessionStorage.setItem('rss-auth', '1');
-        return true;
-      }
-      return false;
+    const AUTH = btoa('pansy');
+    const authEl = document.getElementById('auth');
+
+    function startApp() {
+      authEl.remove();
+      loadNextPage();
+      observeScroll();
     }
 
-    (async function init() {
-      if (!checkAuth()) return;
-      await loadNextPage();
-      observeScroll();
-    })();
+    if (sessionStorage.getItem('rss-auth')) {
+      startApp();
+    } else {
+      authEl.querySelector('form').addEventListener('submit', e => {
+        e.preventDefault();
+        if (btoa(e.target.pass.value) === AUTH) {
+          sessionStorage.setItem('rss-auth', '1');
+          startApp();
+        } else {
+          e.target.pass.value = '';
+        }
+      });
+    }
   </script>
 </body>
 </html>
