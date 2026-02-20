@@ -61,6 +61,12 @@
     }
     .file-item .count { font-weight: 500; color: var(--fg); }
     .file-item.error { color: var(--red-fg); }
+    .file-list-toggle {
+      font-size: 0.8125rem; color: var(--muted); cursor: pointer;
+      padding-top: 0.375rem; display: block;
+      position: relative; z-index: 1;
+    }
+    .file-list-toggle:hover { text-decoration: underline; }
 
     .actions { margin-bottom: 1.5rem; }
     button {
@@ -134,6 +140,7 @@
     }
     tbody tr:last-child td { border-bottom: none; }
     td.num { text-align: right; font-variant-numeric: tabular-nums; }
+    tbody tr:hover { background: hsl(220 13% 97%); }
 
     tr.row-increased { background: var(--green-bg); }
     tr.row-decreased { background: var(--red-bg); }
@@ -352,6 +359,28 @@
           console.error(e);
         }
         fileListEl.appendChild(item);
+      }
+
+      // Truncate file list to 5 visible items
+      const items = fileListEl.querySelectorAll('.file-item');
+      if (items.length > 5) {
+        for (let i = 5; i < items.length; i++) {
+          items[i].style.display = 'none';
+        }
+        const toggle = document.createElement('span');
+        toggle.className = 'file-list-toggle';
+        toggle.textContent = 'Show all ' + items.length + ' files';
+        let expanded = false;
+        toggle.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          expanded = !expanded;
+          for (let i = 5; i < items.length; i++) {
+            items[i].style.display = expanded ? 'flex' : 'none';
+          }
+          toggle.textContent = expanded ? 'Show fewer' : 'Show all ' + items.length + ' files';
+        });
+        fileListEl.appendChild(toggle);
       }
 
       zoneEl.classList.toggle('loaded', dataMap.size > 0);
