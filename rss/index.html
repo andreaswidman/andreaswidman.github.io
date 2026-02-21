@@ -112,10 +112,11 @@
 
     let currentIndex = 0;
     let isScrolling = false;
-    let isLoading = false;
+    let scrollingTimer;
     let feedExhausted = false;
     let pageNum = 1;
     let allImageUrls = [];
+    let loadPromise = null;
     const preloaded = new Set();
 
     async function fetchFeed(feedUrl) {
@@ -181,6 +182,9 @@
       const feed = document.getElementById('feed');
       feed.scrollTo({ top: clamped * window.innerHeight, behavior: 'smooth' });
       preloadAround(clamped);
+      // Safety: always release isScrolling even if scrollend never fires
+      clearTimeout(scrollingTimer);
+      scrollingTimer = setTimeout(() => { isScrolling = false; }, 800);
     }
 
     function observeScroll() {
@@ -226,46 +230,52 @@
       return slide;
     }
 
-    async function loadNextPage() {
-      if (isLoading || feedExhausted) return;
-      isLoading = true;
-      console.log('[feed] loading page', pageNum);
-      const startIndex = allImageUrls.length;
-      const newUrls = [];
-
-      for (const base of CONFIG.feeds) {
-        const feedUrl = pageNum === 1 ? base + '/rss' : base + '/page/' + pageNum + '/rss';
-        try {
-          const xml = await fetchFeed(feedUrl);
-          const items = parseFeed(xml);
-          for (const item of items) newUrls.push(...extractImages(item));
-        } catch (err) {
-          console.warn('Feed error:', feedUrl, err);
+    function loadNextPage() {
+      if (feedExhausted) return Promise.resolve();
+      if (loadPromise) return loadPromise;
+      loadPromise = (async () => {
+        console.log('[feed] loading page', pageNum);
+        const startIndex = allImageUrls.length;
+        const newUrls = [];
+        let fetchError = false;
+        for (const base of CONFIG.feeds) {
+          const feedUrl = pageNum === 1 ? base + '/rss' : base + '/page/' + pageNum + '/rss';
+          try {
+            const xml = await fetchFeed(feedUrl);
+            const items = parseFeed(xml);
+            for (const item of items) newUrls.push(...extractImages(item));
+          } catch (err) {
+            console.warn('Feed error:', feedUrl, err);
+            fetchError = true;
+          }
         }
-      }
-
-      pageNum++;
-      if (newUrls.length === 0) {
-        feedExhausted = true;
-        document.getElementById('loading-slide')?.remove();
-        isLoading = false;
-        return;
-      }
-      allImageUrls.push(...newUrls);
-      renderPosts(newUrls, startIndex);
-      console.log('[feed] loaded', newUrls.length, 'images at index', startIndex);
-      currentIndex = startIndex;
-      preloadAround(currentIndex);
-      isLoading = false;
+        pageNum++;
+        loadPromise = null;
+        if (newUrls.length === 0) {
+          // Only mark exhausted if the feed actually returned nothing (not a network error)
+          if (!fetchError) {
+            feedExhausted = true;
+            document.getElementById('loading-slide')?.remove();
+          }
+          return;
+        }
+        allImageUrls.push(...newUrls);
+        renderPosts(newUrls, startIndex);
+        console.log('[feed] loaded', newUrls.length, 'images at index', startIndex);
+        preloadAround(startIndex);
+        return startIndex;
+      })();
+      return loadPromise;
     }
 
-    document.addEventListener('keydown', e => {
+    document.addEventListener('keydown', async e => {
       if (e.key === 'j' || e.key === 'J') {
         if (currentIndex >= allImageUrls.length - 1) {
           const slide = document.getElementById('loading-slide');
           if (slide) {
             slide.scrollIntoView({ behavior: 'smooth' });
-            loadNextPage();
+            const startIdx = await loadNextPage();
+            if (startIdx != null) navigateTo(startIdx);
           }
         } else {
           if (currentIndex >= allImageUrls.length - 5) loadNextPage();
