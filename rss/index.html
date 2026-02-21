@@ -251,8 +251,8 @@
       }
       allImageUrls.push(...newUrls);
       renderPosts(newUrls, startIndex);
-      preloadAround(currentIndex);
       isLoading = false;
+      navigateTo(startIndex);
     }
 
     document.addEventListener('keydown', e => {
@@ -261,7 +261,7 @@
           const slide = document.getElementById('loading-slide');
           if (slide) {
             slide.scrollIntoView({ behavior: 'smooth' });
-            loadNextPage().then(() => navigateTo(currentIndex + 1));
+            loadNextPage();
           }
         } else {
           if (currentIndex >= allImageUrls.length - 5) loadNextPage();
@@ -278,10 +278,8 @@
       const slide = document.getElementById('loading-slide');
       if (!slide) return;
       const observer = new IntersectionObserver(entries => {
-        if (entries[0].isIntersecting) {
-          loadNextPage().then(() => {
-            if (!feedExhausted) navigateTo(currentIndex + 1);
-          });
+        if (entries[0].isIntersecting && currentIndex >= allImageUrls.length - 1) {
+          loadNextPage();
         }
       }, { root: document.getElementById('feed'), threshold: 0.1 });
       observer.observe(slide);
@@ -289,8 +287,8 @@
 
     async function startApp() {
       authEl.remove();
-      await loadNextPage();
       addLoadingSlide();
+      await loadNextPage();
       observeScroll();
       observeLoadingSlide();
     }
