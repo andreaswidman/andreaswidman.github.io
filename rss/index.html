@@ -68,6 +68,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      position: relative;
     }
 
     #auth {
@@ -228,6 +229,7 @@
     async function loadNextPage() {
       if (isLoading || feedExhausted) return;
       isLoading = true;
+      console.log('[feed] loading page', pageNum);
       const startIndex = allImageUrls.length;
       const newUrls = [];
 
@@ -251,8 +253,10 @@
       }
       allImageUrls.push(...newUrls);
       renderPosts(newUrls, startIndex);
+      console.log('[feed] loaded', newUrls.length, 'images at index', startIndex);
+      currentIndex = startIndex;
+      preloadAround(currentIndex);
       isLoading = false;
-      navigateTo(startIndex);
     }
 
     document.addEventListener('keydown', e => {
