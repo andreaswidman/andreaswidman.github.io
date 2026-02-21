@@ -166,7 +166,9 @@
         img.loading = idx < 2 ? 'eager' : 'lazy';
         img.onload = () => spinner.remove();
         article.appendChild(img);
-        feed.appendChild(article);
+        const slide = document.getElementById('loading-slide');
+        if (slide) feed.insertBefore(article, slide);
+        else feed.appendChild(article);
       });
     }
 
@@ -241,10 +243,12 @@
       }
 
       pageNum++;
-      const slide = document.getElementById('loading-slide');
-      if (slide) slide.remove();
-
-      if (newUrls.length === 0) { feedExhausted = true; isLoading = false; return; }
+      if (newUrls.length === 0) {
+        feedExhausted = true;
+        document.getElementById('loading-slide')?.remove();
+        isLoading = false;
+        return;
+      }
       allImageUrls.push(...newUrls);
       renderPosts(newUrls, startIndex);
       preloadAround(currentIndex);
@@ -254,8 +258,8 @@
     document.addEventListener('keydown', e => {
       if (e.key === 'j' || e.key === 'J') {
         if (currentIndex >= allImageUrls.length - 1) {
-          if (!feedExhausted && !isLoading) {
-            const slide = addLoadingSlide();
+          const slide = document.getElementById('loading-slide');
+          if (slide) {
             slide.scrollIntoView({ behavior: 'smooth' });
             loadNextPage().then(() => navigateTo(currentIndex + 1));
           }
@@ -270,10 +274,25 @@
     const AUTH = btoa('pansy');
     const authEl = document.getElementById('auth');
 
-    function startApp() {
+    function observeLoadingSlide() {
+      const slide = document.getElementById('loading-slide');
+      if (!slide) return;
+      const observer = new IntersectionObserver(entries => {
+        if (entries[0].isIntersecting) {
+          loadNextPage().then(() => {
+            if (!feedExhausted) navigateTo(currentIndex + 1);
+          });
+        }
+      }, { root: document.getElementById('feed'), threshold: 0.1 });
+      observer.observe(slide);
+    }
+
+    async function startApp() {
       authEl.remove();
-      loadNextPage();
+      await loadNextPage();
+      addLoadingSlide();
       observeScroll();
+      observeLoadingSlide();
     }
 
     if (sessionStorage.getItem('rss-auth')) {
