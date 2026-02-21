@@ -23,6 +23,7 @@
       overflow-y: auto;
       scroll-snap-type: y mandatory;
       scrollbar-width: none;
+      overflow-anchor: none;
     }
 
     #feed::-webkit-scrollbar {
@@ -102,9 +103,13 @@
   </div>
   <main id="feed"></main>
   <script>
+    history.scrollRestoration = 'manual';
+
     const CONFIG = {
       feeds: [
-        'https://www.lifeonsundays.com'
+        'https://www.lifeonsundays.com',
+        'http://jamiemclellan.tumblr.com',
+        'http://randomitus.tumblr.com'
       ],
       proxy: 'https://api.allorigins.win/raw?url=',
       preloadAhead: 3
@@ -141,13 +146,14 @@
       return best[0]?.url || img.getAttribute('src');
     }
 
-    function extractImages(item) {
+    function extractItems(item) {
       const desc = item.querySelector('description');
       if (!desc) return [];
       const doc = new DOMParser().parseFromString(desc.textContent, 'text/html');
-      return Array.from(doc.querySelectorAll('img'))
-        .map(img => pickBestSrc(img))
-        .filter(Boolean);
+      const urls = Array.from(doc.querySelectorAll('img')).map(img => pickBestSrc(img)).filter(Boolean);
+      const pubDate = item.querySelector('pubDate')?.textContent;
+      const date = pubDate ? new Date(pubDate) : new Date(0);
+      return urls.map(url => ({ url, date }));
     }
 
     function renderPosts(urls, startIndex) {
@@ -236,29 +242,37 @@
       loadPromise = (async () => {
         console.log('[feed] loading page', pageNum);
         const startIndex = allImageUrls.length;
-        const newUrls = [];
+
+        // Fetch all feeds in parallel
+        const results = await Promise.allSettled(
+          CONFIG.feeds.map(base => {
+            const feedUrl = pageNum === 1 ? base + '/rss' : base + '/page/' + pageNum + '/rss';
+            return fetchFeed(feedUrl).then(xml => parseFeed(xml).flatMap(item => extractItems(item)));
+          })
+        );
+
+        const newItems = [];
         let fetchError = false;
-        for (const base of CONFIG.feeds) {
-          const feedUrl = pageNum === 1 ? base + '/rss' : base + '/page/' + pageNum + '/rss';
-          try {
-            const xml = await fetchFeed(feedUrl);
-            const items = parseFeed(xml);
-            for (const item of items) newUrls.push(...extractImages(item));
-          } catch (err) {
-            console.warn('Feed error:', feedUrl, err);
-            fetchError = true;
-          }
+        for (const result of results) {
+          if (result.status === 'fulfilled') newItems.push(...result.value);
+          else { console.warn('Feed error:', result.reason); fetchError = true; }
         }
+
         pageNum++;
         loadPromise = null;
-        if (newUrls.length === 0) {
-          // Only mark exhausted if the feed actually returned nothing (not a network error)
+
+        if (newItems.length === 0) {
           if (!fetchError) {
             feedExhausted = true;
             document.getElementById('loading-slide')?.remove();
           }
           return;
         }
+
+        // Merge chronologically — newest first
+        newItems.sort((a, b) => b.date - a.date);
+        const newUrls = newItems.map(i => i.url);
+
         allImageUrls.push(...newUrls);
         renderPosts(newUrls, startIndex);
         console.log('[feed] loaded', newUrls.length, 'images at index', startIndex);
@@ -303,6 +317,7 @@
       authEl.remove();
       addLoadingSlide();
       await loadNextPage();
+      document.getElementById('feed').scrollTop = 0;
       observeScroll();
       observeLoadingSlide();
     }
