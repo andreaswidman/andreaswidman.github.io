@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acne Studios — Design System</title>
+  <style>
+    /* ─── IMPORT FALLBACK STACK ─────────────────────────────── */
+    @import url('https://fonts.cdnfonts.com/css/helvetica-now-display');
+
+    :root {
+      /* ── COLOR TOKENS ──────────────────────────────────────── */
+      --color-black:          #000000;
+      --color-white:          #FFFFFF;
+      --color-blue:           #0018A8;   /* Primary CTA */
+      --color-blue-light:     #E8F0FE;   /* Selected state bg */
+      --color-blue-link:      #3860BE;   /* Hyperlink / fit predictor */
+      --color-red:            #DC0000;   /* Error / sale */
+      --color-green:          #007701;   /* In stock / success */
+      --color-alabaster:      #F7F7F7;   /* Page section bg */
+      --color-grey-100:       #F4F4F4;
+      --color-grey-200:       #F2F2F2;   /* Input bg / subtle bg */
+      --color-grey-300:       #E0E0E0;
+      --color-grey-400:       #C2C2C2;   /* Default border */
+      --color-grey-500:       #A0A0A0;
+      --color-grey-600:       #6B6B6B;   /* Secondary text */
+      --color-grey-700:       #555555;
+      --color-apricot-white:  #FFFFEB;   /* Low-stock banner */
+      --color-overlay-35:     rgba(0,0,0,0.35);
+      --color-overlay-50:     rgba(0,0,0,0.50);
+
+      /* ── TYPOGRAPHY TOKENS ─────────────────────────────────── */
+      --font-primary:         "Helvetica Now Text", Helvetica, Arial, sans-serif;
+      --font-micro:           "Helvetica Now Micro", Helvetica, Arial, sans-serif;
+      --font-mono:            "Helvetica Monospaced Pro", "Courier New", monospace;
+
+      --font-size-xs:         8px;
+      --font-size-sm:         10px;
+      --font-size-base:       12px;
+      --font-size-md:         14px;
+      --font-size-lg:         16px;
+      --font-size-xl:         18px;
+
+      --font-weight-thin:     100;
+      --font-weight-regular:  400;
+      --font-weight-medium:   500;
+      --font-weight-semibold: 600;
+      --font-weight-bold:     700;
+
+      --line-height-tight:    16px;
+      --line-height-base:     20px;
+      --line-height-relaxed:  24px;
+
+      --letter-spacing-tight: 0.12px;
+      --letter-spacing-base:  0.3px;
+      --letter-spacing-wide:  0.16px;
+
+      /* ── SPACING TOKENS ────────────────────────────────────── */
+      --space-1:  4px;
+      --space-2:  8px;
+      --space-3:  12px;
+      --space-4:  16px;
+      --space-5:  20px;
+      --space-6:  24px;
+      --space-8:  32px;
+      --space-10: 40px;
+      --space-12: 48px;
+      --space-16: 64px;
+
+      /* ── BORDER ────────────────────────────────────────────── */
+      --border-radius:      0px;     /* Flat — no rounded corners */
+      --border-width:       1px;
+      --border-color:       #C2C2C2;
+      --border-default:     1px solid #C2C2C2;
+      --border-dark:        1px solid #000000;
+      --border-blue:        1px solid #0018A8;
+
+      /* ── ELEVATION / SHADOW ────────────────────────────────── */
+      --shadow-none:  none;          /* Acne uses no shadows */
+
+      /* ── LAYOUT ────────────────────────────────────────────── */
+      --nav-height:          60px;
+      --grid-columns-plp:    4;
+      --grid-gap:            0px;
+      --max-width:           1440px;
+    }
+
+    /* ─── RESET & BASE ──────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; }
+    body {
+      font-family: var(--font-primary);
+      font-size: var(--font-size-base);
+      font-weight: var(--font-weight-regular);
+      line-height: var(--line-height-base);
+      letter-spacing: var(--letter-spacing-base);
+      color: var(--color-black);
+      background: var(--color-white);
+    }
+
+    /* ─── GUIDE LAYOUT ──────────────────────────────────────── */
+    .sg-wrap { max-width: 1200px; margin: 0 auto; padding: 48px 32px 120px; }
+
+    .sg-header {
+      border-bottom: 1px solid var(--color-black);
+      padding-bottom: 24px;
+      margin-bottom: 64px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+    .sg-header h1 {
+      font-family: var(--font-primary);
+      font-size: 32px;
+      font-weight: var(--font-weight-regular);
+      letter-spacing: -0.5px;
+      line-height: 1;
+      text-transform: none;
+    }
+    .sg-header .meta {
+      font-size: var(--font-size-base);
+      color: var(--color-grey-600);
+      letter-spacing: var(--letter-spacing-base);
+    }
+
+    .sg-section { margin-bottom: 72px; }
+    .sg-section-title {
+      font-size: var(--font-size-base);
+      font-weight: var(--font-weight-regular);
+      letter-spacing: var(--letter-spacing-base);
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--color-black);
+      padding-bottom: var(--space-2);
+      margin-bottom: var(--space-8);
+    }
+    .sg-label {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      color: var(--color-grey-600);
+      letter-spacing: 0.5px;
+      margin-top: var(--space-2);
+      display: block;
+    }
+    .sg-grid { display: flex; flex-wrap: wrap; gap: var(--space-4); align-items: flex-start; }
+    .sg-grid--2 { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6); }
+    .sg-grid--3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: var(--space-6); }
+    .sg-grid--4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-4); }
+
+    /* ─── COLOR SWATCHES ────────────────────────────────────── */
+    .swatch-group { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: var(--space-3); }
+    .swatch {
+      display: flex;
+      flex-direction: column;
+    }
+    .swatch-color {
+      height: 80px;
+      border: 1px solid rgba(0,0,0,0.08);
+    }
+    .swatch-name {
+      font-size: 10px;
+      font-weight: var(--font-weight-medium);
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+      margin-top: 6px;
+    }
+    .swatch-hex {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      color: var(--color-grey-600);
+      margin-top: 2px;
+    }
+    .swatch-token {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      color: var(--color-grey-400);
+      margin-top: 1px;
+    }
+
+    /* ─── TYPOGRAPHY SPECIMENS ──────────────────────────────── */
+    .type-row {
+      display: flex;
+      align-items: baseline;
+      gap: 32px;
+      padding: var(--space-4) 0;
+      border-bottom: 1px solid var(--color-grey-200);
+    }
+    .type-meta {
+      min-width: 200px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .type-meta .role {
+      font-size: 10px;
+      font-weight: var(--font-weight-medium);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: var(--color-grey-600);
+    }
+    .type-meta .specs {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      color: var(--color-grey-400);
+      line-height: 1.6;
+    }
+    .type-sample { flex: 1; }
+
+    .t-nav {
+      font-family: var(--font-primary);
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+      line-height: 20px;
+    }
+    .t-body {
+      font-family: var(--font-primary);
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.3px;
+      line-height: 20px;
+      text-transform: none;
+    }
+    .t-label-sm {
+      font-family: var(--font-primary);
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 0.16px;
+      text-transform: uppercase;
+      line-height: 16px;
+    }
+    .t-micro {
+      font-family: var(--font-micro);
+      font-size: 8px;
+      font-weight: 500;
+      letter-spacing: 0.12px;
+      text-transform: uppercase;
+      line-height: 14px;
+    }
+    .t-price {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.3px;
+      line-height: 20px;
+    }
+    .t-product-name {
+      font-family: var(--font-primary);
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+      line-height: 20px;
+    }
+    .t-heading {
+      font-family: var(--font-primary);
+      font-size: 18px;
+      font-weight: 400;
+      letter-spacing: 0.3px;
+      line-height: 24px;
+      text-transform: uppercase;
+    }
+    .t-description {
+      font-family: var(--font-primary);
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.3px;
+      line-height: 20px;
+    }
+    .t-link {
+      font-family: var(--font-primary);
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.3px;
+      color: var(--color-blue);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    /* ─── FONT SPECIMENS (stacked) ──────────────────────────── */
+    .font-block { padding: 24px; border: 1px solid var(--color-grey-200); margin-bottom: 12px; }
+    .font-block .display-text { font-size: 36px; font-weight: 400; letter-spacing: -0.5px; line-height: 1.1; margin-bottom: 12px; }
+    .font-block .font-info { font-family: var(--font-mono); font-size: 10px; color: var(--color-grey-600); letter-spacing: 0.5px; text-transform: uppercase; }
+    .font-block .alpha { font-size: 12px; letter-spacing: 0.3px; color: var(--color-grey-600); margin-top: 8px; line-height: 1.8; }
+
+    /* ─── BUTTONS ────────────────────────────────────────────── */
+    .btn-demo {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-primary);
+      font-size: var(--font-size-base);
+      font-weight: var(--font-weight-regular);
+      letter-spacing: var(--letter-spacing-base);
+      text-transform: uppercase;
+      border-radius: var(--border-radius);
+      cursor: pointer;
+      text-decoration: none;
+      transition: opacity 0.15s ease;
+    }
+    .btn-primary {
+      background-color: var(--color-blue);
+      color: var(--color-white);
+      border: 1px solid var(--color-blue);
+      padding: 14px 24px;
+      min-width: 200px;
+    }
+    .btn-primary:hover { opacity: 0.85; }
+    .btn-secondary {
+      background-color: var(--color-white);
+      color: var(--color-black);
+      border: var(--border-dark);
+      padding: 14px 24px;
+      min-width: 160px;
+    }
+    .btn-ghost {
+      background-color: transparent;
+      color: var(--color-black);
+      border: none;
+      padding: 4px 0 5px;
+      border-bottom: 1px solid var(--color-black);
+    }
+    .btn-ghost-blue {
+      background-color: transparent;
+      color: var(--color-blue);
+      border: none;
+      padding: 4px 0 5px;
+      border-bottom: 1px solid var(--color-blue);
+    }
+    .btn-disabled {
+      background-color: var(--color-grey-200);
+      color: var(--color-grey-400);
+      border: 1px solid var(--color-grey-300);
+      padding: 14px 24px;
+      min-width: 200px;
+      cursor: not-allowed;
+      opacity: 0.6;
+      text-decoration: line-through;
+    }
+    .btn-row { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 24px; }
+    .btn-item { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+
+    /* ─── SIZE SELECTOR ─────────────────────────────────────── */
+    .size-grid { display: flex; flex-wrap: wrap; gap: 0; }
+    .size-btn {
+      font-family: var(--font-primary);
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+      border: 1px solid var(--color-grey-400);
+      background: var(--color-white);
+      color: var(--color-black);
+      padding: 12px 16px;
+      min-width: 64px;
+      cursor: pointer;
+      margin-right: -1px;
+      margin-bottom: -1px;
+      text-align: center;
+    }
+    .size-btn--selected {
+      background: var(--color-blue-light);
+      color: var(--color-blue);
+      border-color: var(--color-blue);
+      z-index: 1;
+      position: relative;
+    }
+    .size-btn--oos {
+      color: var(--color-grey-400);
+      text-decoration: line-through;
+      cursor: not-allowed;
+    }
+
+    /* ─── BADGES / STATUS ───────────────────────────────────── */
+    .badge {
+      display: inline-block;
+      font-family: var(--font-primary);
+      font-size: var(--font-size-base);
+      font-weight: var(--font-weight-regular);
+      letter-spacing: var(--letter-spacing-base);
+      text-transform: uppercase;
+      padding: var(--space-2) var(--space-3);
+    }
+    .badge-low-stock { background: var(--color-apricot-white); color: var(--color-black); }
+    .badge-sale      { background: transparent; color: var(--color-red); }
+    .badge-new       { background: var(--color-black); color: var(--color-white); }
+    .badge-in-stock  { background: transparent; color: var(--color-green); }
+
+    /* ─── FORM ELEMENTS ─────────────────────────────────────── */
+    .as-input {
+      font-family: var(--font-primary);
+      font-size: var(--font-size-base);
+      font-weight: var(--font-weight-regular);
+      letter-spacing: var(--letter-spacing-base);
+      color: var(--color-black);
+      background: var(--color-white);
+      border: var(--border-default);
+      border-radius: var(--border-radius);
+      padding: var(--space-3) var(--space-3);
+      width: 100%;
+      outline: none;
+    }
+    .as-input:focus { border-color: var(--color-black); }
+    .as-input::placeholder { color: var(--color-grey-600); }
+
+    .as-select {
+      font-family: var(--font-primary);
+      font-size: var(--font-size-base);
+      letter-spacing: var(--letter-spacing-base);
+      text-transform: uppercase;
+      color: var(--color-black);
+      background: var(--color-white);
+      border: var(--border-default);
+      padding: var(--space-3) var(--space-3);
+      width: 100%;
+      appearance: none;
+      cursor: pointer;
+    }
+
+    /* ─── ACCORDION ─────────────────────────────────────────── */
+    .accordion-item {
+      border-top: 1px solid var(--color-grey-300);
+    }
+    .accordion-item:last-child { border-bottom: 1px solid var(--color-grey-300); }
+    .accordion-btn {
+      font-family: var(--font-primary);
+      font-size: var(--font-size-base);
+      font-weight: var(--font-weight-regular);
+      letter-spacing: var(--letter-spacing-base);
+      text-transform: uppercase;
+      color: var(--color-blue);
+      background: transparent;
+      border: none;
+      padding: var(--space-4) 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+    .accordion-chevron {
+      width: 12px;
+      height: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ─── BREADCRUMB ────────────────────────────────────────── */
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-family: var(--font-primary);
+      font-size: var(--font-size-base);
+      font-weight: var(--font-weight-regular);
+      letter-spacing: var(--letter-spacing-base);
+      text-transform: capitalize;
+    }
+    .breadcrumb a { color: var(--color-black); text-decoration: none; }
+    .breadcrumb span { color: var(--color-grey-600); }
+    .breadcrumb .current { color: var(--color-black); text-decoration: underline; text-underline-offset: 2px; }
+
+    /* ─── NAV BAR PREVIEW ───────────────────────────────────── */
+    .nav-preview {
+      border: 1px solid var(--color-grey-200);
+      background: var(--color-white);
+    }
+    .nav-top {
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      border-bottom: 1px solid var(--color-grey-200);
+    }
+    .nav-left { display: flex; gap: 0; }
+    .nav-item {
+      font-family: var(--font-primary);
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+      color: var(--color-black);
+      background: none;
+      border: none;
+      padding: 4px 12px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .nav-logo {
+      font-family: var(--font-primary);
+      font-size: 20px;
+      font-weight: 400;
+      letter-spacing: -0.3px;
+      text-align: center;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .nav-right { display: flex; gap: 0; align-items: center; }
+    .nav-icon-btn {
+      font-family: var(--font-primary);
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+      color: var(--color-black);
+      background: none;
+      border: none;
+      padding: 4px 9px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* ─── ICONS ─────────────────────────────────────────────── */
+    .icon-grid { display: flex; flex-wrap: wrap; gap: 32px; }
+    .icon-item { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .icon-box {
+      width: 48px;
+      height: 48px;
+      border: 1px solid var(--color-grey-200);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .icon-name { font-family: var(--font-mono); font-size: 9px; color: var(--color-grey-600); text-align: center; }
+
+    /* ─── PRODUCT TILE ──────────────────────────────────────── */
+    .product-tile {
+      display: grid;
+      grid-template-rows: auto auto auto auto;
+      gap: 0;
+    }
+    .product-tile-img {
+      background: var(--color-alabaster);
+      aspect-ratio: 3/4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-grey-400);
+      font-size: 10px;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+    }
+    .product-tile-name {
+      font-family: var(--font-primary);
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+      color: var(--color-black);
+      line-height: 20px;
+      margin-top: 8px;
+    }
+    .product-tile-colour {
+      font-family: var(--font-primary);
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.3px;
+      color: var(--color-grey-600);
+      line-height: 20px;
+    }
+    .product-tile-price {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+      color: var(--color-black);
+      line-height: 20px;
+    }
+
+    /* ─── SPACING SCALE ─────────────────────────────────────── */
+    .spacing-row { display: flex; align-items: center; gap: 16px; margin-bottom: 12px; }
+    .spacing-bar { background: var(--color-black); height: 12px; }
+    .spacing-info { font-family: var(--font-mono); font-size: 10px; color: var(--color-grey-600); min-width: 200px; }
+
+    /* ─── TOKENS TABLE ──────────────────────────────────────── */
+    .token-table { width: 100%; border-collapse: collapse; }
+    .token-table th {
+      font-family: var(--font-primary);
+      font-size: 10px;
+      font-weight: var(--font-weight-medium);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      text-align: left;
+      padding: 8px 12px;
+      border-bottom: 1px solid var(--color-black);
+      background: var(--color-white);
+    }
+    .token-table td {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      color: var(--color-grey-600);
+      padding: 8px 12px;
+      border-bottom: 1px solid var(--color-grey-200);
+      vertical-align: middle;
+    }
+    .token-table td:first-child { color: var(--color-black); font-weight: 500; }
+    .token-preview { width: 24px; height: 24px; border: 1px solid rgba(0,0,0,0.1); display: inline-block; vertical-align: middle; margin-right: 8px; }
+
+    /* ─── UTILITY ───────────────────────────────────────────── */
+    .mt-4 { margin-top: 16px; }
+    .mt-6 { margin-top: 24px; }
+    .text-mono { font-family: var(--font-mono); }
+    .chip {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 9px;
+      background: var(--color-grey-100);
+      color: var(--color-grey-600);
+      padding: 2px 6px;
+      letter-spacing: 0.3px;
+    }
+    .divider { border: none; border-top: 1px solid var(--color-grey-200); margin: 32px 0; }
+  </style>
+</head>
+<body>
+<div class="sg-wrap">
+
+  <!-- ═══ HEADER ═════════════════════════════════════════════ -->
+  <header class="sg-header">
+    <h1>Acne Studios<br>Design System</h1>
+    <div class="meta">Version 1.0 &nbsp;·&nbsp; February 2026<br>acnestudios.com — Foundations</div>
+  </header>
+
+  <!-- ═══ 1. COLOUR ══════════════════════════════════════════ -->
+  <section class="sg-section">
+    <h2 class="sg-section-title">01 &nbsp; Colour</h2>
+
+    <p style="font-size:12px;color:#6b6b6b;letter-spacing:0.3px;margin-bottom:32px;">
+      Acne Studios uses a restricted palette anchored in black/white with a single brand blue (#0018A8) driving all primary actions and interactive states.
+    </p>
+
+    <h3 style="font-size:10px;letter-spacing:0.5px;text-transform:uppercase;margin-bottom:16px;color:#6b6b6b;">Core</h3>
+    <div class="swatch-group">
+      <div class="swatch">
+        <div class="swatch-color" style="background:#000000;"></div>
+        <span class="swatch-name">Black</span>
+        <span class="swatch-hex">#000000</span>
+        <span class="swatch-token">--color-black</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#FFFFFF;border:1px solid #eee;"></div>
+        <span class="swatch-name">White</span>
+        <span class="swatch-hex">#FFFFFF</span>
+        <span class="swatch-token">--color-white</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#0018A8;"></div>
+        <span class="swatch-name">Brand Blue</span>
+        <span class="swatch-hex">#0018A8</span>
+        <span class="swatch-token">--color-blue</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#E8F0FE;"></div>
+        <span class="swatch-name">Blue Light</span>
+        <span class="swatch-hex">#E8F0FE</span>
+        <span class="swatch-token">--color-blue-light</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#3860BE;"></div>
+        <span class="swatch-name">Blue Link</span>
+        <span class="swatch-hex">#3860BE</span>
+        <span class="swatch-token">--color-blue-link</span>
+      </div>
+    </div>
+
+    <h3 style="font-size:10px;letter-spacing:0.5px;text-transform:uppercase;margin-bottom:16px;color:#6b6b6b;margin-top:32px;">Status</h3>
+    <div class="swatch-group">
+      <div class="swatch">
+        <div class="swatch-color" style="background:#DC0000;"></div>
+        <span class="swatch-name">Error / Sale</span>
+        <span class="swatch-hex">#DC0000</span>
+        <span class="swatch-token">--color-red</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#007701;"></div>
+        <span class="swatch-name">Success</span>
+        <span class="swatch-hex">#007701</span>
+        <span class="swatch-token">--color-green</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#FFFFEB;"></div>
+        <span class="swatch-name">Low Stock</span>
+        <span class="swatch-hex">#FFFFEB</span>
+        <span class="swatch-token">--color-apricot-white</span>
+      </div>
+    </div>
+
+    <h3 style="font-size:10px;letter-spacing:0.5px;text-transform:uppercase;margin-bottom:16px;color:#6b6b6b;margin-top:32px;">Neutrals</h3>
+    <div class="swatch-group">
+      <div class="swatch">
+        <div class="swatch-color" style="background:#F7F7F7;"></div>
+        <span class="swatch-name">Alabaster</span>
+        <span class="swatch-hex">#F7F7F7</span>
+        <span class="swatch-token">--color-alabaster</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#F4F4F4;"></div>
+        <span class="swatch-name">Grey 100</span>
+        <span class="swatch-hex">#F4F4F4</span>
+        <span class="swatch-token">--color-grey-100</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#F2F2F2;"></div>
+        <span class="swatch-name">Grey 200</span>
+        <span class="swatch-hex">#F2F2F2</span>
+        <span class="swatch-token">--color-grey-200</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#E0E0E0;"></div>
+        <span class="swatch-name">Grey 300</span>
+        <span class="swatch-hex">#E0E0E0</span>
+        <span class="swatch-token">--color-grey-300</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#C2C2C2;"></div>
+        <span class="swatch-name">Grey 400</span>
+        <span class="swatch-hex">#C2C2C2</span>
+        <span class="swatch-token">--color-grey-400</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#6B6B6B;"></div>
+        <span class="swatch-name">Grey 600</span>
+        <span class="swatch-hex">#6B6B6B</span>
+        <span class="swatch-token">--color-grey-600</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#555555;"></div>
+        <span class="swatch-name">Grey 700</span>
+        <span class="swatch-hex">#555555</span>
+        <span class="swatch-token">--color-grey-700</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 2. TYPOGRAPHY ══════════════════════════════════════ -->
+  <section class="sg-section">
+    <h2 class="sg-section-title">02 &nbsp; Typography</h2>
+
+    <!-- Font Families -->
+    <div class="font-block">
+      <div class="display-text" style="font-family:'Helvetica Now Text',Helvetica,Arial,sans-serif;">Helvetica Now Text</div>
+      <div class="font-info">PRIMARY — Body, Navigation, Labels, Headings, Buttons</div>
+      <div class="alpha" style="font-family:'Helvetica Now Text',Helvetica,Arial,sans-serif;">
+        ABCDEFGHIJKLMNOPQRSTUVWXYZ &nbsp; abcdefghijklmnopqrstuvwxyz &nbsp; 0123456789
+      </div>
+    </div>
+
+    <div class="font-block">
+      <div class="display-text" style="font-family:'Courier New',monospace;font-size:28px;">Helvetica Monospaced Pro</div>
+      <div class="font-info">MONO — Prices, Quantities, Data values</div>
+      <div class="alpha" style="font-family:'Courier New',monospace;">
+        0123456789 &nbsp; ABCDEFGHIJKLMNOPQRSTUVWXYZ &nbsp; 15 000 KR &nbsp; 6 400 KR
+      </div>
+    </div>
+
+    <div class="font-block">
+      <div class="display-text" style="font-family:Helvetica,Arial,sans-serif;font-size:22px;letter-spacing:0.1px;">Helvetica Now Micro</div>
+      <div class="font-info">MICRO — Badge labels, Tags, Fine-print (8px, weight 500)</div>
+      <div class="alpha" style="font-family:Helvetica,Arial,sans-serif;font-size:8px;letter-spacing:0.12px;font-weight:500;text-transform:uppercase;">
+        NEW ARRIVAL &nbsp; ONLY 1 LEFT &nbsp; FREE RETURNS &nbsp; COMPLIMENTARY GIFTWRAPPING
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Type Scale -->
+    <div class="type-row">
+      <div class="type-meta">
+        <span class="role">Nav / Button</span>
+        <span class="specs">12px · 400 · 0.3px · uppercase · 20px lh</span>
+        <span class="specs">--font-size-base / --font-weight-regular</span>
+      </div>
+      <div class="type-sample">
+        <span class="t-nav">Woman &nbsp; Man &nbsp; Bags &nbsp; Scarves &nbsp; Add to Bag</span>
+      </div>
+    </div>
+
+    <div class="type-row">
+      <div class="type-meta">
+        <span class="role">Product Name</span>
+        <span class="specs">12px · 400 · 0.3px · uppercase · 20px lh</span>
+        <span class="specs">--font-primary</span>
+      </div>
+      <div class="type-sample">
+        <span class="t-product-name">Belted Trenchcoat</span>
+      </div>
+    </div>
+
+    <div class="type-row">
+      <div class="type-meta">
+        <span class="role">Price</span>
+        <span class="specs">12px · 400 · 0.3px · monospace · 20px lh</span>
+        <span class="specs">--font-mono</span>
+      </div>
+      <div class="type-sample">
+        <span class="t-price">15 000 KR &nbsp;&nbsp; 6 400 KR</span>
+      </div>
+    </div>
+
+    <div class="type-row">
+      <div class="type-meta">
+        <span class="role">Body / Description</span>
+        <span class="specs">12px · 400 · 0.3px · none · 20px lh</span>
+        <span class="specs">--font-primary</span>
+      </div>
+      <div class="type-sample">
+        <span class="t-body">Trenchcoat crafted from technical cotton with a contrasting leather collar, throat latch, and a thin attached belt.</span>
+      </div>
+    </div>
+
+    <div class="type-row">
+      <div class="type-meta">
+        <span class="role">Section Heading</span>
+        <span class="specs">18px · 400 · 0.3px · uppercase · 24px lh</span>
+        <span class="specs">--font-size-xl</span>
+      </div>
+      <div class="type-sample">
+        <span class="t-heading">Women's New Arrivals</span>
+      </div>
+    </div>
+
+    <div class="type-row">
+      <div class="type-meta">
+        <span class="role">Label Small</span>
+        <span class="specs">10px · 400 · 0.16px · uppercase · 16px lh</span>
+        <span class="specs">--font-size-sm</span>
+      </div>
+      <div class="type-sample">
+        <span class="t-label-sm">99 Items &nbsp; · &nbsp; Filter &nbsp; · &nbsp; Size guide</span>
+      </div>
+    </div>
+
+    <div class="type-row">
+      <div class="type-meta">
+        <span class="role">Micro Label</span>
+        <span class="specs">8px · 500 · 0.12px · uppercase · 14px lh</span>
+        <span class="specs">--font-micro / --font-size-xs</span>
+      </div>
+      <div class="type-sample">
+        <span class="t-micro">New Arrival &nbsp; &nbsp; Only 1 Left</span>
+      </div>
+    </div>
+
+    <div class="type-row">
+      <div class="type-meta">
+        <span class="role">Link</span>
+        <span class="specs">12px · 400 · 0.3px · blue · underline</span>
+        <span class="specs">--color-blue</span>
+      </div>
+      <div class="type-sample">
+        <a class="t-link" href="#">Get notified &nbsp; · &nbsp; Fit Predictor &nbsp; · &nbsp; Size guide</a>
+      </div>
+    </div>
+
+    <div class="type-row">
+      <div class="type-meta">
+        <span class="role">Secondary Text</span>
+        <span class="specs">12px · 400 · 0.3px · #6B6B6B</span>
+        <span class="specs">--color-grey-600</span>
+      </div>
+      <div class="type-sample">
+        <span class="t-body" style="color:#6b6b6b;">6 Colours &nbsp; · &nbsp; Available at checkout</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 3. SPACING ════════════════════════════════════════ -->
+  <section class="sg-section">
+    <h2 class="sg-section-title">03 &nbsp; Spacing</h2>
+    <p style="font-size:12px;color:#6b6b6b;letter-spacing:0.3px;margin-bottom:24px;">4px base unit. All spacing values are multiples of 4.</p>
+
+    <div class="spacing-row"><div class="spacing-bar" style="width:4px;"></div><span class="spacing-info">--space-1 &nbsp; 4px</span></div>
+    <div class="spacing-row"><div class="spacing-bar" style="width:8px;"></div><span class="spacing-info">--space-2 &nbsp; 8px</span></div>
+    <div class="spacing-row"><div class="spacing-bar" style="width:12px;"></div><span class="spacing-info">--space-3 &nbsp; 12px</span></div>
+    <div class="spacing-row"><div class="spacing-bar" style="width:16px;"></div><span class="spacing-info">--space-4 &nbsp; 16px</span></div>
+    <div class="spacing-row"><div class="spacing-bar" style="width:20px;"></div><span class="spacing-info">--space-5 &nbsp; 20px &nbsp; (line-height-base)</span></div>
+    <div class="spacing-row"><div class="spacing-bar" style="width:24px;"></div><span class="spacing-info">--space-6 &nbsp; 24px</span></div>
+    <div class="spacing-row"><div class="spacing-bar" style="width:32px;"></div><span class="spacing-info">--space-8 &nbsp; 32px</span></div>
+    <div class="spacing-row"><div class="spacing-bar" style="width:40px;"></div><span class="spacing-info">--space-10 &nbsp; 40px</span></div>
+    <div class="spacing-row"><div class="spacing-bar" style="width:48px;"></div><span class="spacing-info">--space-12 &nbsp; 48px</span></div>
+    <div class="spacing-row"><div class="spacing-bar" style="width:64px;"></div><span class="spacing-info">--space-16 &nbsp; 64px &nbsp; (nav height)</span></div>
+  </section>
+
+  <!-- ═══ 4. ICONS ══════════════════════════════════════════ -->
+  <section class="sg-section">
+    <h2 class="sg-section-title">04 &nbsp; Icons</h2>
+    <p style="font-size:12px;color:#6b6b6b;letter-spacing:0.3px;margin-bottom:24px;">
+      Custom SVG icons. Stroke uses <code class="chip">currentColor</code> — colour inherited from parent. No rounded line caps.
+    </p>
+
+    <div class="icon-grid">
+
+      <!-- Burger -->
+      <div class="icon-item">
+        <div class="icon-box">
+          <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="10" height="1" fill="currentColor"></rect>
+            <rect y="3" width="10" height="1" fill="currentColor"></rect>
+            <rect y="6" width="10" height="1" fill="currentColor"></rect>
+          </svg>
+        </div>
+        <span class="icon-name">burger<br>10×7</span>
+      </div>
+
+      <!-- Search -->
+      <div class="icon-item">
+        <div class="icon-box">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="4.5" cy="4.5" r="4" stroke="currentColor"></circle>
+            <rect x="7.086" y="7.793" width="1" height="5.091" transform="rotate(-45 7.086 7.793)" fill="currentColor"></rect>
+          </svg>
+        </div>
+        <span class="icon-name">search<br>12×12</span>
+      </div>
+
+      <!-- Cart / Bag -->
+      <div class="icon-item">
+        <div class="icon-box">
+          <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.5" y="3.5" width="12" height="10" stroke="currentColor"></rect>
+            <path d="M4 3.5V3C4 1.895 5.119 1 6.5 1C7.881 1 9 1.895 9 3V3.5" stroke="currentColor"></path>
+          </svg>
+        </div>
+        <span class="icon-name">bag<br>13×14</span>
+      </div>
+
+      <!-- Wishlist/Heart -->
+      <div class="icon-item">
+        <div class="icon-box">
+          <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 12C7 12 1 8.5 1 4.5C1 2.567 2.567 1 4.5 1C5.598 1 6.575 1.52 7 2.31C7.425 1.52 8.402 1 9.5 1C11.433 1 13 2.567 13 4.5C13 8.5 7 12 7 12Z" stroke="currentColor"></path>
+          </svg>
+        </div>
+        <span class="icon-name">wishlist<br>14×13</span>
+      </div>
+
+      <!-- Account -->
+      <div class="icon-item">
+        <div class="icon-box">
+          <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="6" cy="4" r="3.5" stroke="currentColor"></circle>
+            <path d="M0.5 13.5C0.5 10.738 2.962 8.5 6 8.5C9.038 8.5 11.5 10.738 11.5 13.5" stroke="currentColor"></path>
+          </svg>
+        </div>
+        <span class="icon-name">account<br>12×14</span>
+      </div>
+
+      <!-- Help -->
+      <div class="icon-item">
+        <div class="icon-box">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="7" cy="7" r="6.5" stroke="currentColor"></circle>
+            <path d="M7 10V9M7 4C5.895 4 5 4.895 5 6H6C6 5.448 6.448 5 7 5C7.552 5 8 5.448 8 6C8 7 7 7 7 8V8.5" stroke="currentColor" stroke-linecap="round"></path>
+          </svg>
+        </div>
+        <span class="icon-name">help<br>14×14</span>
+      </div>
+
+      <!-- Chevron Right -->
+      <div class="icon-item">
+        <div class="icon-box">
+          <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L5 5L1 9" stroke="currentColor"></path>
+          </svg>
+        </div>
+        <span class="icon-name">chevron-right<br>6×10</span>
+      </div>
+
+      <!-- Chevron Down -->
+      <div class="icon-item">
+        <div class="icon-box">
+          <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L5 5L9 1" stroke="currentColor"></path>
+          </svg>
+        </div>
+        <span class="icon-name">chevron-down<br>10×6</span>
+      </div>
+
+      <!-- Close / X -->
+      <div class="icon-item">
+        <div class="icon-box">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="1" y1="1" x2="11" y2="11" stroke="currentColor"></line>
+            <line x1="11" y1="1" x2="1" y2="11" stroke="currentColor"></line>
+          </svg>
+        </div>
+        <span class="icon-name">close<br>12×12</span>
+      </div>
+
+      <!-- Plus -->
+      <div class="icon-item">
+        <div class="icon-box">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="6" y1="0" x2="6" y2="12" stroke="currentColor"></line>
+            <line x1="0" y1="6" x2="12" y2="6" stroke="currentColor"></line>
+          </svg>
+        </div>
+        <span class="icon-name">plus<br>12×12</span>
+      </div>
+
+      <!-- Filter -->
+      <div class="icon-item">
+        <div class="icon-box">
+          <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="0" y1="1" x2="14" y2="1" stroke="currentColor"></line>
+            <line x1="0" y1="5" x2="14" y2="5" stroke="currentColor"></line>
+            <line x1="0" y1="9" x2="14" y2="9" stroke="currentColor"></line>
+            <circle cx="4" cy="1" r="2" fill="white" stroke="currentColor"></circle>
+            <circle cx="10" cy="5" r="2" fill="white" stroke="currentColor"></circle>
+            <circle cx="4" cy="9" r="2" fill="white" stroke="currentColor"></circle>
+          </svg>
+        </div>
+        <span class="icon-name">filter<br>14×10</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══ 5. COMPONENTS ══════════════════════════════════════ -->
+  <section class="sg-section">
+    <h2 class="sg-section-title">05 &nbsp; Components</h2>
+
+    <!-- NAV -->
+    <h3 style="font-size:10px;letter-spacing:0.5px;text-transform:uppercase;margin-bottom:16px;color:#6b6b6b;">Navigation Bar</h3>
+    <div class="nav-preview" style="position:relative;">
+      <div class="nav-top">
+        <nav class="nav-left">
+          <button class="nav-item">Woman</button>
+          <button class="nav-item">Man</button>
+          <button class="nav-item">Bags</button>
+          <button class="nav-item">Scarves</button>
+        </nav>
+        <div class="nav-logo" style="position:absolute;left:50%;transform:translateX(-50%);">Acne Studios</div>
+        <div class="nav-right">
+          <button class="nav-icon-btn">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="4.5" cy="4.5" r="4" stroke="currentColor"></circle><rect x="7.086" y="7.793" width="1" height="5.091" transform="rotate(-45 7.086 7.793)" fill="currentColor"></rect></svg>
+            Search
+          </button>
+          <button class="nav-icon-btn">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6.5" stroke="currentColor"></circle></svg>
+            Help
+          </button>
+          <button class="nav-icon-btn">
+            <svg width="12" height="14" viewBox="0 0 12 14" fill="none"><circle cx="6" cy="4" r="3.5" stroke="currentColor"></circle><path d="M0.5 13.5C0.5 10.738 2.962 8.5 6 8.5C9.038 8.5 11.5 10.738 11.5 13.5" stroke="currentColor"></path></svg>
+            Account
+          </button>
+          <button class="nav-icon-btn">
+            <svg width="13" height="14" viewBox="0 0 13 14" fill="none"><rect x="0.5" y="3.5" width="12" height="10" stroke="currentColor"></rect><path d="M4 3.5V3C4 1.895 5.119 1 6.5 1C7.881 1 9 1.895 9 3V3.5" stroke="currentColor"></path></svg>
+            00
+          </button>
+        </div>
+      </div>
+    </div>
+    <span class="sg-label">height: 60px · font: 12px / 400 / uppercase / 0.3px · border-bottom: 1px solid #C2C2C2</span>
+
+    <hr class="divider">
+
+    <!-- BREADCRUMB -->
+    <h3 style="font-size:10px;letter-spacing:0.5px;text-transform:uppercase;margin-bottom:16px;color:#6b6b6b;">Breadcrumb</h3>
+    <nav class="breadcrumb">
+      <a href="#">Clothing</a>
+      <span>›</span>
+      <a href="#">Outerwear</a>
+      <span>›</span>
+      <span class="current">Belted trenchcoat</span>
+    </nav>
+    <span class="sg-label">12px · 400 · capitalize · active underline</span>
+
+    <hr class="divider">
+
+    <!-- BUTTONS -->
+    <h3 style="font-size:10px;letter-spacing:0.5px;text-transform:uppercase;margin-bottom:16px;color:#6b6b6b;">Buttons</h3>
+    <div class="btn-row">
+      <div class="btn-item">
+        <button class="btn-demo btn-primary">Add to Bag</button>
+        <span class="sg-label">Primary · #0018A8 · white text · border-radius: 0</span>
+      </div>
+      <div class="btn-item">
+        <button class="btn-demo btn-secondary">Save to Wishlist</button>
+        <span class="sg-label">Secondary · white bg · black border</span>
+      </div>
+      <div class="btn-item">
+        <button class="btn-demo btn-ghost">Get Notified</button>
+        <span class="sg-label">Ghost · border-bottom only</span>
+      </div>
+      <div class="btn-item">
+        <button class="btn-demo btn-ghost-blue">Size Guide</button>
+        <span class="sg-label">Ghost Blue · --color-blue</span>
+      </div>
+      <div class="btn-item">
+        <button class="btn-demo btn-disabled">Sold Out</button>
+        <span class="sg-label">Disabled / OOS</span>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- SIZE SELECTOR -->
+    <h3 style="font-size:10px;letter-spacing:0.5px;text-transform:uppercase;margin-bottom:16px;color:#6b6b6b;">Size Selector</h3>
+    <div class="size-grid">
+      <button class="size-btn">32</button>
+      <button class="size-btn">34</button>
+      <button class="size-btn size-btn--selected">36</button>
+      <button class="size-btn">40</button>
+      <button class="size-btn size-btn--oos">38</button>
+      <button class="size-btn size-btn--oos">42</button>
+    </div>
+    <span class="sg-label mt-4">Default: 1px solid #C2C2C2 · Selected: bg #E8F0FE / border #0018A8 / color #0018A8 · OOS: strikethrough / #C2C2C2</span>
+
+    <hr class="divider">
+
+    <!-- BADGES -->
+    <h3 style="font-size:10px;letter-spacing:0.5px;text-transform:uppercase;margin-bottom:16px;color:#6b6b6b;">Status Badges</h3>
+    <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center;">
+      <span class="badge badge-low-stock">Only 1 Left</span>
+      <span class="badge badge-sale">Sale</span>
+      <span class="badge badge-new">New Arrival</span>
+      <span class="badge badge-in-stock">In Stock</span>
+    </div>
+    <span class="sg-label mt-4">12px · 400 · uppercase · 0.3px</span>
+
+    <hr class="divider">
+
+    <!-- FORM INPUTS -->
+    <h3 style="font-size:10px;letter-spacing:0.5px;text-transform:uppercase;margin-bottom:16px;color:#6b6b6b;">Form Elements</h3>
+    <div class="sg-grid--3">
+      <div>
+        <input class="as-input" type="text" placeholder="Enter your email" />
+        <span class="sg-label mt-4">Input — default</span>
+      </div>
+      <div>
+        <input class="as-input" type="text" value="Focused state" style="border-color:#000;" />
+        <span class="sg-label mt-4">Input — focused (border: #000)</span>
+      </div>
+      <div>
+        <select class="as-select">
+          <option>Select size</option>
+          <option>XS</option><option>S</option><option>M</option><option>L</option>
+        </select>
+        <span class="sg-label mt-4">Select</span>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- ACCORDION -->
+    <h3 style="font-size:10px;letter-spacing:0.5px;text-transform:uppercase;margin-bottom:16px;color:#6b6b6b;">Accordion</h3>
+    <div style="max-width:520px;">
+      <div class="accordion-item">
+        <button class="accordion-btn">
+          Free Delivery
+          <svg class="accordion-chevron" width="6" height="10" viewBox="0 0 6 10" fill="none"><path d="M1 1L5 5L1 9" stroke="#0018A8"></path></svg>
+        </button>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-btn">
+          Complimentary Giftwrapping
+          <svg class="accordion-chevron" width="6" height="10" viewBox="0 0 6 10" fill="none"><path d="M1 1L5 5L1 9" stroke="#0018A8"></path></svg>
+        </button>
+        <div style="font-size:12px;color:#6b6b6b;padding:0 0 16px;letter-spacing:0.3px;">Available at checkout</div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-btn">
+          Pick Up in Store
+          <svg class="accordion-chevron" width="6" height="10" viewBox="0 0 6 10" fill="none"><path d="M1 1L5 5L1 9" stroke="#0018A8"></path></svg>
+        </button>
+      </div>
+    </div>
+    <span class="sg-label mt-4">Label: #0018A8 · uppercase · border-top 1px solid #E0E0E0 · chevron-right icon</span>
+
+    <hr class="divider">
+
+    <!-- PRODUCT TILE -->
+    <h3 style="font-size:10px;letter-spacing:0.5px;text-transform:uppercase;margin-bottom:16px;color:#6b6b6b;">Product Tile</h3>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;max-width:960px;">
+      <div class="product-tile" style="padding-right:1px;">
+        <div class="product-tile-img">Product Image<br>3:4 ratio</div>
+        <div class="product-tile-name">Belted Trenchcoat</div>
+        <div class="product-tile-colour">6 Colours</div>
+        <div class="product-tile-price">15 000 KR</div>
+      </div>
+      <div class="product-tile" style="padding-right:1px;">
+        <div class="product-tile-img">Product Image<br>3:4 ratio</div>
+        <div class="product-tile-name">Loose Fit Jeans – 2006F</div>
+        <div class="product-tile-colour">4 Colours</div>
+        <div class="product-tile-price">6 200 KR</div>
+      </div>
+      <div class="product-tile" style="padding-right:1px;">
+        <div class="product-tile-img">Product Image<br>3:4 ratio</div>
+        <div class="product-tile-name">Single-Breasted Suit Jacket</div>
+        <div class="product-tile-colour" style="color:#DC0000;">Sale</div>
+        <div class="product-tile-price">10 300 KR</div>
+      </div>
+      <div class="product-tile">
+        <div class="product-tile-img">Product Image<br>3:4 ratio</div>
+        <div class="product-tile-name">Casual Check Trousers</div>
+        <div class="product-tile-colour">2 Colours</div>
+        <div class="product-tile-price">6 400 KR</div>
+      </div>
+    </div>
+    <span class="sg-label mt-4">4-col grid · 3:4 image ratio · name uppercase 12px · price monospace · no border-radius</span>
+
+  </section>
+
+  <!-- ═══ 6. DESIGN RULES ════════════════════════════════════ -->
+  <section class="sg-section">
+    <h2 class="sg-section-title">06 &nbsp; Design Rules</h2>
+
+    <table class="token-table">
+      <thead>
+        <tr>
+          <th>Rule</th>
+          <th>Value</th>
+          <th>Rationale</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Border Radius</td><td>0px — no rounding anywhere</td><td>Sharp, architectural aesthetic</td></tr>
+        <tr><td>Box Shadow</td><td>None</td><td>Flat design language throughout</td></tr>
+        <tr><td>Base font size</td><td>12px — unusually small</td><td>Maximises whitespace, editorial feel</td></tr>
+        <tr><td>Text transform</td><td>uppercase for all UI labels / nav / buttons</td><td>Brand voice: precise, structured</td></tr>
+        <tr><td>Primary action colour</td><td>#0018A8 (not black)</td><td>Singular brand blue for all CTAs</td></tr>
+        <tr><td>Prices</td><td>Monospace font (Helvetica Monospaced Pro)</td><td>Tabular alignment, editorial clarity</td></tr>
+        <tr><td>Letter spacing</td><td>0.3px universal default</td><td>Air and legibility at small size</td></tr>
+        <tr><td>Line height</td><td>20px base (1.67 ratio at 12px)</td><td>Generous for body text at 12px</td></tr>
+        <tr><td>Grid gap</td><td>0px on PLP grid</td><td>Images bleed edge-to-edge</td></tr>
+        <tr><td>Image ratio</td><td>3:4 (portrait) for all product images</td><td>Consistent tile layout</td></tr>
+        <tr><td>Nav height</td><td>60px</td><td>Fixed header, sticky on scroll</td></tr>
+        <tr><td>Interactive link colour</td><td>#3860BE (lighter blue)</td><td>Fit predictor, anchors in body text</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ═══ 7. TOKEN REFERENCE ════════════════════════════════ -->
+  <section class="sg-section">
+    <h2 class="sg-section-title">07 &nbsp; Token Reference</h2>
+    <p style="font-size:12px;color:#6b6b6b;letter-spacing:0.3px;margin-bottom:24px;">
+      All tokens are defined as CSS custom properties in <code class="chip">design-system.css</code> and as structured JSON in <code class="chip">tokens.json</code>.
+    </p>
+
+    <table class="token-table">
+      <thead><tr><th>Token</th><th>Value</th><th>Usage</th></tr></thead>
+      <tbody>
+        <tr><td>--color-black</td><td>#000000</td><td>Default text, borders, primary actions (non-blue)</td></tr>
+        <tr><td>--color-white</td><td>#FFFFFF</td><td>Page background, button text on blue</td></tr>
+        <tr><td>--color-blue</td><td>#0018A8</td><td>Add to Bag, accordion labels, selected states, links</td></tr>
+        <tr><td>--color-blue-light</td><td>#E8F0FE</td><td>Selected size bg</td></tr>
+        <tr><td>--color-blue-link</td><td>#3860BE</td><td>Fit predictor, inline hyperlinks</td></tr>
+        <tr><td>--color-red</td><td>#DC0000</td><td>Sale, error states</td></tr>
+        <tr><td>--color-green</td><td>#007701</td><td>In stock, success</td></tr>
+        <tr><td>--color-alabaster</td><td>#F7F7F7</td><td>Section backgrounds</td></tr>
+        <tr><td>--color-grey-400</td><td>#C2C2C2</td><td>Default border colour</td></tr>
+        <tr><td>--color-grey-600</td><td>#6B6B6B</td><td>Secondary/muted text</td></tr>
+        <tr><td>--color-apricot-white</td><td>#FFFFEB</td><td>Low stock banner bg</td></tr>
+        <tr><td>--font-primary</td><td>"Helvetica Now Text"</td><td>All UI text</td></tr>
+        <tr><td>--font-mono</td><td>"Helvetica Monospaced Pro"</td><td>Prices, quantities</td></tr>
+        <tr><td>--font-micro</td><td>"Helvetica Now Micro"</td><td>Micro badges (8px)</td></tr>
+        <tr><td>--font-size-base</td><td>12px</td><td>Universal body/UI default</td></tr>
+        <tr><td>--letter-spacing-base</td><td>0.3px</td><td>Default spacing</td></tr>
+        <tr><td>--line-height-base</td><td>20px</td><td>Default line height</td></tr>
+        <tr><td>--border-radius</td><td>0px</td><td>All interactive elements — flat</td></tr>
+        <tr><td>--border-color</td><td>#C2C2C2</td><td>Default border</td></tr>
+        <tr><td>--nav-height</td><td>60px</td><td>Header height</td></tr>
+        <tr><td>--space-1 → --space-16</td><td>4px → 64px</td><td>4px base unit scale</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+</div>
+</body>
+</html>

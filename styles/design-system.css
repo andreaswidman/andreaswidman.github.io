@@ -1,0 +1,549 @@
+/**
+ * Acne Studios — Design System
+ * CSS Custom Properties (design tokens)
+ *
+ * Source: acnestudios.com (extracted February 2026)
+ * Version: 1.0.0
+ *
+ * Usage in Claude Code:
+ *   Import this file at the root of your project:
+ *   @import './design-system.css';
+ *
+ *   Then reference tokens anywhere:
+ *   background: var(--color-blue);
+ *   font-size: var(--font-size-base);
+ */
+
+/* ─────────────────────────────────────────────────────────────
+   ROOT TOKENS
+───────────────────────────────────────────────────────────── */
+:root {
+
+  /* ── COLOUR ──────────────────────────────────────────────── */
+
+  /* Core */
+  --color-black:          #000000;
+  --color-white:          #FFFFFF;
+  --color-blue:           #0018A8;   /* Primary CTA — Add to Bag, selected states, accordion labels */
+  --color-blue-light:     #E8F0FE;   /* Selected size tile bg */
+  --color-blue-link:      #3860BE;   /* Inline hyperlinks */
+
+  /* Status */
+  --color-red:            #DC0000;   /* Sale price, error */
+  --color-green:          #007701;   /* In stock, success */
+  --color-apricot-white:  #FFFFEB;   /* Low-stock banner bg */
+
+  /* Neutrals */
+  --color-alabaster:      #F7F7F7;
+  --color-grey-100:       #F4F4F4;
+  --color-grey-200:       #F2F2F2;
+  --color-grey-300:       #E0E0E0;
+  --color-grey-400:       #C2C2C2;   /* Default border */
+  --color-grey-500:       #A0A0A0;
+  --color-grey-600:       #6B6B6B;   /* Secondary text */
+  --color-grey-700:       #555555;
+
+  /* Overlays */
+  --color-overlay-35:     rgba(0, 0, 0, 0.35);
+  --color-overlay-50:     rgba(0, 0, 0, 0.50);
+
+
+  /* ── TYPOGRAPHY ──────────────────────────────────────────── */
+
+  /* Families */
+  --font-primary:         "Helvetica Now Text", Helvetica, Arial, sans-serif;
+  --font-micro:           "Helvetica Now Micro", Helvetica, Arial, sans-serif;
+  --font-mono:            "Helvetica Monospaced Pro", "Courier New", monospace;
+
+  /* Size scale */
+  --font-size-xs:         8px;    /* Micro badges */
+  --font-size-sm:         10px;   /* Small labels */
+  --font-size-base:       12px;   /* Universal default */
+  --font-size-md:         14px;
+  --font-size-lg:         16px;
+  --font-size-xl:         18px;   /* Section headings */
+
+  /* Weight */
+  --font-weight-thin:     100;
+  --font-weight-regular:  400;    /* Default */
+  --font-weight-medium:   500;    /* Micro labels */
+  --font-weight-semibold: 600;
+  --font-weight-bold:     700;
+
+  /* Line height */
+  --line-height-tight:    16px;
+  --line-height-base:     20px;   /* Default */
+  --line-height-relaxed:  24px;
+
+  /* Letter spacing */
+  --letter-spacing-tight: 0.12px; /* Micro */
+  --letter-spacing-wide:  0.16px; /* Small labels */
+  --letter-spacing-base:  0.3px;  /* Universal default */
+
+
+  /* ── SPACING (4px base unit) ─────────────────────────────── */
+
+  --space-1:   4px;
+  --space-2:   8px;
+  --space-3:   12px;
+  --space-4:   16px;
+  --space-5:   20px;  /* = line-height-base */
+  --space-6:   24px;
+  --space-8:   32px;
+  --space-10:  40px;
+  --space-12:  48px;
+  --space-16:  64px;  /* = nav height */
+
+
+  /* ── BORDER ──────────────────────────────────────────────── */
+
+  --border-radius:        0px;           /* No rounding — ever */
+  --border-width:         1px;
+  --border-color:         #C2C2C2;
+  --border-default:       1px solid #C2C2C2;
+  --border-dark:          1px solid #000000;
+  --border-blue:          1px solid #0018A8;
+
+
+  /* ── SHADOW ──────────────────────────────────────────────── */
+
+  --shadow-none:          none;          /* Flat design — no elevation */
+
+
+  /* ── LAYOUT ──────────────────────────────────────────────── */
+
+  --nav-height:           60px;
+  --grid-columns-plp:     4;
+  --grid-gap-plp:         0px;           /* Images bleed edge-to-edge on PLP */
+  --image-ratio-product:  3/4;           /* Portrait product images */
+  --max-width:            1440px;
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   BASE RESET
+───────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family:    var(--font-primary);
+  font-size:      var(--font-size-base);
+  font-weight:    var(--font-weight-regular);
+  line-height:    var(--line-height-base);
+  letter-spacing: var(--letter-spacing-base);
+  color:          var(--color-black);
+  background:     var(--color-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   TYPOGRAPHY UTILITIES
+───────────────────────────────────────────────────────────── */
+
+/* Nav / Button label style */
+.as-nav-label,
+.as-btn-label {
+  font-family:    var(--font-primary);
+  font-size:      var(--font-size-base);
+  font-weight:    var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-base);
+  text-transform: uppercase;
+  line-height:    var(--line-height-base);
+}
+
+/* Product name */
+.as-product-name {
+  font-family:    var(--font-primary);
+  font-size:      var(--font-size-base);
+  font-weight:    var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-base);
+  text-transform: uppercase;
+  line-height:    var(--line-height-base);
+  color:          var(--color-black);
+}
+
+/* Price (monospace) */
+.as-price {
+  font-family:    var(--font-mono);
+  font-size:      var(--font-size-base);
+  font-weight:    var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-base);
+  line-height:    var(--line-height-base);
+}
+
+/* Section heading */
+.as-heading {
+  font-family:    var(--font-primary);
+  font-size:      var(--font-size-xl);
+  font-weight:    var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-base);
+  text-transform: uppercase;
+  line-height:    var(--line-height-relaxed);
+}
+
+/* Secondary / muted text */
+.as-text-muted {
+  color: var(--color-grey-600);
+}
+
+/* Micro label */
+.as-micro {
+  font-family:    var(--font-micro);
+  font-size:      var(--font-size-xs);
+  font-weight:    var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-tight);
+  text-transform: uppercase;
+  line-height:    14px;
+}
+
+/* Hyperlink */
+.as-link {
+  color:                 var(--color-blue);
+  text-decoration:       underline;
+  text-underline-offset: 2px;
+  font-family:           var(--font-primary);
+  font-size:             var(--font-size-base);
+  font-weight:           var(--font-weight-regular);
+  letter-spacing:        var(--letter-spacing-base);
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   BUTTON COMPONENTS
+───────────────────────────────────────────────────────────── */
+
+/* Shared */
+.as-btn {
+  display:         inline-flex;
+  align-items:     center;
+  justify-content: center;
+  font-family:     var(--font-primary);
+  font-size:       var(--font-size-base);
+  font-weight:     var(--font-weight-regular);
+  letter-spacing:  var(--letter-spacing-base);
+  text-transform:  uppercase;
+  border-radius:   var(--border-radius);
+  cursor:          pointer;
+  text-decoration: none;
+  transition:      opacity 0.15s ease;
+  white-space:     nowrap;
+}
+
+/* Primary — Add to Bag */
+.as-btn--primary {
+  background-color: var(--color-blue);
+  color:            var(--color-white);
+  border:           var(--border-blue);
+  padding:          14px var(--space-6);
+}
+.as-btn--primary:hover { opacity: 0.85; }
+
+/* Secondary */
+.as-btn--secondary {
+  background-color: var(--color-white);
+  color:            var(--color-black);
+  border:           var(--border-dark);
+  padding:          14px var(--space-6);
+}
+.as-btn--secondary:hover { background-color: var(--color-grey-100); }
+
+/* Ghost (text link style) */
+.as-btn--ghost {
+  background-color: transparent;
+  color:            var(--color-black);
+  border:           none;
+  border-bottom:    1px solid var(--color-black);
+  padding:          var(--space-1) 0 5px;
+}
+
+/* Ghost Blue */
+.as-btn--ghost-blue {
+  background-color: transparent;
+  color:            var(--color-blue);
+  border:           none;
+  border-bottom:    1px solid var(--color-blue);
+  padding:          var(--space-1) 0 5px;
+}
+
+/* Disabled / OOS */
+.as-btn--disabled,
+.as-btn[disabled] {
+  background-color: var(--color-grey-200);
+  color:            var(--color-grey-400);
+  border:           1px solid var(--color-grey-300);
+  cursor:           not-allowed;
+  opacity:          0.6;
+  text-decoration:  line-through;
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   SIZE SELECTOR
+───────────────────────────────────────────────────────────── */
+
+.as-size-btn {
+  font-family:     var(--font-primary);
+  font-size:       var(--font-size-base);
+  font-weight:     var(--font-weight-regular);
+  letter-spacing:  var(--letter-spacing-base);
+  text-transform:  uppercase;
+  background:      var(--color-white);
+  color:           var(--color-black);
+  border:          var(--border-default);
+  padding:         12px var(--space-4);
+  min-width:       64px;
+  cursor:          pointer;
+  text-align:      center;
+  border-radius:   var(--border-radius);
+  /* Collapse borders between tiles */
+  margin-right:    -1px;
+  margin-bottom:   -1px;
+  position:        relative;
+}
+
+.as-size-btn--selected {
+  background-color: var(--color-blue-light);
+  color:            var(--color-blue);
+  border-color:     var(--color-blue);
+  z-index:          1;
+}
+
+.as-size-btn--oos {
+  color:           var(--color-grey-400);
+  text-decoration: line-through;
+  cursor:          not-allowed;
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   FORM ELEMENTS
+───────────────────────────────────────────────────────────── */
+
+.as-input,
+.as-select,
+.as-textarea {
+  font-family:    var(--font-primary);
+  font-size:      var(--font-size-base);
+  font-weight:    var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-base);
+  color:          var(--color-black);
+  background:     var(--color-white);
+  border:         var(--border-default);
+  border-radius:  var(--border-radius);
+  padding:        var(--space-3);
+  width:          100%;
+  outline:        none;
+  appearance:     none;
+}
+
+.as-input:focus,
+.as-select:focus,
+.as-textarea:focus {
+  border-color: var(--color-black);
+}
+
+.as-input::placeholder {
+  color: var(--color-grey-600);
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   BADGES / STATUS
+───────────────────────────────────────────────────────────── */
+
+.as-badge {
+  display:        inline-block;
+  font-family:    var(--font-primary);
+  font-size:      var(--font-size-base);
+  font-weight:    var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-base);
+  text-transform: uppercase;
+  padding:        var(--space-2) var(--space-3);
+}
+
+.as-badge--low-stock { background: var(--color-apricot-white); color: var(--color-black); }
+.as-badge--sale      { background: transparent;                color: var(--color-red); }
+.as-badge--new       { background: var(--color-black);         color: var(--color-white); }
+.as-badge--in-stock  { background: transparent;                color: var(--color-green); }
+
+
+/* ─────────────────────────────────────────────────────────────
+   ACCORDION
+───────────────────────────────────────────────────────────── */
+
+.as-accordion-item {
+  border-top: 1px solid var(--color-grey-300);
+}
+.as-accordion-item:last-child {
+  border-bottom: 1px solid var(--color-grey-300);
+}
+
+.as-accordion-btn {
+  font-family:     var(--font-primary);
+  font-size:       var(--font-size-base);
+  font-weight:     var(--font-weight-regular);
+  letter-spacing:  var(--letter-spacing-base);
+  text-transform:  uppercase;
+  color:           var(--color-blue);
+  background:      transparent;
+  border:          none;
+  padding:         var(--space-4) 0;
+  width:           100%;
+  display:         flex;
+  justify-content: space-between;
+  align-items:     center;
+  cursor:          pointer;
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   PRODUCT TILE
+───────────────────────────────────────────────────────────── */
+
+.as-product-tile {
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+}
+
+.as-product-tile__image {
+  aspect-ratio: 3/4;
+  background:   var(--color-alabaster);
+  overflow:     hidden;
+}
+
+.as-product-tile__image img {
+  width:      100%;
+  height:     100%;
+  object-fit: cover;
+  display:    block;
+}
+
+.as-product-tile__name {
+  font-family:    var(--font-primary);
+  font-size:      var(--font-size-base);
+  font-weight:    var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-base);
+  text-transform: uppercase;
+  color:          var(--color-black);
+  line-height:    var(--line-height-base);
+  margin-top:     var(--space-2);
+}
+
+.as-product-tile__subtext {
+  font-family:    var(--font-primary);
+  font-size:      var(--font-size-base);
+  font-weight:    var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-base);
+  color:          var(--color-grey-600);
+  line-height:    var(--line-height-base);
+}
+
+.as-product-tile__price {
+  font-family:    var(--font-mono);
+  font-size:      var(--font-size-base);
+  font-weight:    var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-base);
+  color:          var(--color-black);
+  line-height:    var(--line-height-base);
+}
+
+.as-product-tile__price--sale {
+  color: var(--color-red);
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   NAVIGATION
+───────────────────────────────────────────────────────────── */
+
+.as-nav {
+  height:           var(--nav-height);
+  display:          flex;
+  align-items:      center;
+  justify-content:  space-between;
+  padding:          0 var(--space-6);
+  background:       var(--color-white);
+  border-bottom:    1px solid var(--color-grey-200);
+  position:         relative;
+}
+
+.as-nav__item {
+  font-family:     var(--font-primary);
+  font-size:       var(--font-size-base);
+  font-weight:     var(--font-weight-regular);
+  letter-spacing:  var(--letter-spacing-base);
+  text-transform:  uppercase;
+  color:           var(--color-black);
+  background:      transparent;
+  border:          none;
+  padding:         var(--space-1) var(--space-3);
+  cursor:          pointer;
+  text-decoration: none;
+}
+
+.as-nav__logo {
+  font-family:    var(--font-primary);
+  font-size:      20px;
+  font-weight:    var(--font-weight-regular);
+  letter-spacing: -0.3px;
+  position:       absolute;
+  left:           50%;
+  transform:      translateX(-50%);
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   BREADCRUMB
+───────────────────────────────────────────────────────────── */
+
+.as-breadcrumb {
+  display:        flex;
+  align-items:    center;
+  gap:            var(--space-2);
+  font-family:    var(--font-primary);
+  font-size:      var(--font-size-base);
+  font-weight:    var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-base);
+  text-transform: capitalize;
+}
+
+.as-breadcrumb a {
+  color:           var(--color-black);
+  text-decoration: none;
+}
+
+.as-breadcrumb .current {
+  color:                 var(--color-black);
+  text-decoration:       underline;
+  text-underline-offset: 2px;
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   LAYOUT UTILITIES
+───────────────────────────────────────────────────────────── */
+
+/* PLP product grid */
+.as-product-grid {
+  display:               grid;
+  grid-template-columns: repeat(var(--grid-columns-plp), 1fr);
+  gap:                   var(--grid-gap-plp);
+}
+
+/* Section container */
+.as-container {
+  max-width: var(--max-width);
+  margin:    0 auto;
+  padding:   0 var(--space-6);
+}
+
+/* Divider */
+.as-divider {
+  border:     none;
+  border-top: 1px solid var(--color-grey-200);
+  margin:     var(--space-8) 0;
+}
