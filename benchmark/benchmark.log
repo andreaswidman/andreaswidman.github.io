@@ -1,0 +1,358 @@
+[2026-02-24T15:18:55.320Z] === Benchmark run started ===
+[2026-02-24T15:18:55.321Z] URLs: https://www.acnestudios.com
+[2026-02-24T15:18:55.327Z] Category: competition
+[2026-02-24T15:22:01.776Z] === Benchmark run started ===
+[2026-02-24T15:22:01.785Z] URLs: https://www.acnestudios.com
+[2026-02-24T15:22:01.790Z] Category: competition
+[2026-02-24T15:25:43.042Z] === Benchmark run started ===
+[2026-02-24T15:25:43.053Z] URLs: https://www.acnestudios.com
+[2026-02-24T15:25:43.059Z] Category: competition
+[2026-02-24T15:25:43.095Z] Chrome connected on port 9222
+[2026-02-24T15:25:43.105Z] ERROR: Could not create Chrome tab: Invalid url for WebSocket undefined
+[2026-02-24T15:25:43.111Z] 
+Generating report.html...
+[2026-02-24T15:25:43.118Z] Report: /Users/andreas.widman/Desktop/Sites/andreaswidman.github.io/benchmark/report.html
+[2026-02-24T15:25:43.123Z] 
+[2026-02-24T15:25:43.128Z] To view: open benchmark/report.html in Chrome
+[2026-02-24T15:25:43.132Z] For ZIP export, serve locally:  npx serve /Users/andreas.widman/Desktop/Sites/andreaswidman.github.io/benchmark
+[2026-02-24T15:25:43.138Z] === Run complete ===
+[2026-02-24T15:30:18.646Z] === Benchmark run started ===
+[2026-02-24T15:30:18.653Z] URLs: https://www.acnestudios.com
+[2026-02-24T15:30:18.658Z] Category: competition
+[2026-02-24T15:30:18.675Z] Chrome connected on port 9222
+[2026-02-24T15:30:18.767Z] 
+Crawling: acnestudios.com [competition]
+[2026-02-24T15:30:18.804Z]   [1/4] Homepage
+[2026-02-24T15:30:51.299Z]     Screenshot: competitors/acnestudios.com/2026-02-24/homepage-desktop.png
+[2026-02-24T15:30:52.339Z]     Screenshot: competitors/acnestudios.com/2026-02-24/homepage-mobile.png
+[2026-02-24T15:30:52.340Z]   [2/4] PLP
+[2026-02-24T15:31:09.493Z]     Screenshot: competitors/acnestudios.com/2026-02-24/plp-desktop.png
+[2026-02-24T15:31:10.438Z]     Screenshot: competitors/acnestudios.com/2026-02-24/plp-mobile.png
+[2026-02-24T15:31:10.438Z]   [3/4] PDP
+[2026-02-24T15:31:27.292Z]     Screenshot: competitors/acnestudios.com/2026-02-24/pdp-desktop.png
+[2026-02-24T15:31:28.050Z]     Screenshot: competitors/acnestudios.com/2026-02-24/pdp-mobile.png
+[2026-02-24T15:31:28.062Z]   [4/4] Checkout
+[2026-02-24T15:31:28.584Z] Done: acnestudios.com
+[2026-02-24T15:31:28.603Z] 
+Generating report.html...
+[2026-02-24T15:31:28.619Z] Report: /Users/andreas.widman/Desktop/Sites/andreaswidman.github.io/benchmark/report.html
+[2026-02-24T15:31:28.629Z] 
+[2026-02-24T15:31:28.636Z] To view: open benchmark/report.html in Chrome
+[2026-02-24T15:31:28.642Z] For ZIP export, serve locally:  npx serve /Users/andreas.widman/Desktop/Sites/andreaswidman.github.io/benchmark
+[2026-02-24T15:31:28.650Z] === Run complete ===
+[2026-02-24T15:32:03.854Z] === Benchmark run started ===
+[2026-02-24T15:32:03.866Z] URLs: https://www.balenciaga.com/en-se
+[2026-02-24T15:32:03.874Z] Category: competition
+[2026-02-24T15:32:03.893Z] Chrome connected on port 9222
+[2026-02-24T15:32:03.974Z] 
+Crawling: balenciaga.com [competition]
+[2026-02-24T15:32:03.981Z]   [1/4] Homepage
+[2026-02-24T15:32:36.301Z]     Screenshot: competitors/balenciaga.com/2026-02-24/homepage-desktop.png
+[2026-02-24T15:32:37.128Z]     Screenshot: competitors/balenciaga.com/2026-02-24/homepage-mobile.png
+[2026-02-24T15:32:37.129Z]   [2/4] PLP
+[2026-02-24T15:32:40.969Z]     Screenshot: competitors/balenciaga.com/2026-02-24/plp-desktop.png
+[2026-02-24T15:32:41.729Z]     Screenshot: competitors/balenciaga.com/2026-02-24/plp-mobile.png
+[2026-02-24T15:32:41.730Z]   [3/4] PDP
+[2026-02-24T15:32:45.697Z]     Screenshot: competitors/balenciaga.com/2026-02-24/pdp-desktop.png
+[2026-02-24T15:32:46.482Z]     Screenshot: competitors/balenciaga.com/2026-02-24/pdp-mobile.png
+[2026-02-24T15:32:46.483Z]   [4/4] Checkout
+[2026-02-24T15:32:47.013Z] Done: balenciaga.com
+[2026-02-24T15:32:47.030Z] 
+Generating report.html...
+[2026-02-24T15:32:47.042Z] Report: /Users/andreas.widman/Desktop/Sites/andreaswidman.github.io/benchmark/report.html
+[2026-02-24T15:32:47.049Z] 
+[2026-02-24T15:32:47.055Z] To view: open benchmark/report.html in Chrome
+[2026-02-24T15:32:47.059Z] For ZIP export, serve locally:  npx serve /Users/andreas.widman/Desktop/Sites/andreaswidman.github.io/benchmark
+[2026-02-24T15:32:47.062Z] === Run complete ===
+[2026-02-24T15:33:57.882Z] === Benchmark run started ===
+[2026-02-24T15:33:57.893Z] URLs: https://www.givenchy.com/en-se
+[2026-02-24T15:33:57.905Z] Category: competition
+[2026-02-24T15:33:57.924Z] Chrome connected on port 9222
+[2026-02-24T15:33:58.022Z] 
+Crawling: givenchy.com [competition]
+[2026-02-24T15:33:58.055Z]   [1/4] Homepage
+[2026-02-24T15:34:31.445Z]     Screenshot: competitors/givenchy.com/2026-02-24/homepage-desktop.png
+[2026-02-24T15:34:32.374Z]     Screenshot: competitors/givenchy.com/2026-02-24/homepage-mobile.png
+[2026-02-24T15:34:32.375Z]   [2/4] PLP
+[2026-02-24T15:34:36.267Z]     Screenshot: competitors/givenchy.com/2026-02-24/plp-desktop.png
+[2026-02-24T15:34:37.195Z]     Screenshot: competitors/givenchy.com/2026-02-24/plp-mobile.png
+[2026-02-24T15:34:37.196Z]   [3/4] PDP
+[2026-02-24T15:34:41.270Z]     Screenshot: competitors/givenchy.com/2026-02-24/pdp-desktop.png
+[2026-02-24T15:34:42.183Z]     Screenshot: competitors/givenchy.com/2026-02-24/pdp-mobile.png
+[2026-02-24T15:34:42.184Z]   [4/4] Checkout
+[2026-02-24T15:34:42.705Z] Done: givenchy.com
+[2026-02-24T15:34:42.711Z] 
+Generating report.html...
+[2026-02-24T15:34:42.727Z] Report: /Users/andreas.widman/Desktop/Sites/andreaswidman.github.io/benchmark/report.html
+[2026-02-24T15:34:42.736Z] 
+[2026-02-24T15:34:42.744Z] To view: open benchmark/report.html in Chrome
+[2026-02-24T15:34:42.753Z] For ZIP export, serve locally:  npx serve /Users/andreas.widman/Desktop/Sites/andreaswidman.github.io/benchmark
+[2026-02-24T15:34:42.760Z] === Run complete ===
+[2026-02-24T16:07:25.577Z] === Benchmark run started ===
+[2026-02-24T16:07:25.584Z] URLs: https://www.acnestudios.com
+[2026-02-24T16:07:25.587Z] Category: competition
+[2026-02-24T16:07:25.604Z] Chrome connected on port 9222
+[2026-02-24T16:07:30.499Z] === Benchmark run started ===
+[2026-02-24T16:07:30.500Z] URLs: https://www.acnestudios.com
+[2026-02-24T16:07:30.509Z] Category: competition
+[2026-02-24T16:07:30.529Z] Chrome connected on port 9222
+[2026-02-24T16:07:30.617Z] 
+Crawling: acnestudios.com [competition]
+[2026-02-24T16:07:30.636Z]   [1/4] Homepage
+[2026-02-24T16:08:04.671Z]     Screenshot: competitors/acnestudios.com/2026-02-24/homepage-desktop.png
+[2026-02-24T16:08:05.570Z]     Screenshot: competitors/acnestudios.com/2026-02-24/homepage-mobile.png
+[2026-02-24T16:08:05.571Z]   [2/4] PLP
+[2026-02-24T16:08:22.759Z]     Screenshot: competitors/acnestudios.com/2026-02-24/plp-desktop.png
+[2026-02-24T16:08:23.720Z]     Screenshot: competitors/acnestudios.com/2026-02-24/plp-mobile.png
+[2026-02-24T16:08:23.720Z]   [3/4] PDP
+[2026-02-24T16:08:40.557Z]     Screenshot: competitors/acnestudios.com/2026-02-24/pdp-desktop.png
+[2026-02-24T16:08:41.298Z]     Screenshot: competitors/acnestudios.com/2026-02-24/pdp-mobile.png
+[2026-02-24T16:08:41.298Z]   [4/4] Checkout
+[2026-02-24T16:08:41.808Z] Done: acnestudios.com
+[2026-02-24T16:08:41.809Z] 
+Generating report.html...
+[2026-02-24T16:08:41.874Z] Report: /Users/andreas.widman/Desktop/Sites/andreaswidman.github.io/benchmark/report.html
+[2026-02-24T16:08:41.879Z] 
+[2026-02-24T16:08:41.884Z] To view: open benchmark/report.html in Chrome
+[2026-02-24T16:08:41.887Z] For ZIP export, serve locally:  npx serve /Users/andreas.widman/Desktop/Sites/andreaswidman.github.io/benchmark
+[2026-02-24T16:08:41.890Z] === Run complete ===
+[2026-02-24T21:48:53.348Z] === Benchmark run started ===
+[2026-02-24T21:48:53.350Z] URLs: https://www.acnestudios.com/se/en/home, https://www.acnestudios.com/se/en/woman/new-arrivals/, https://www.acnestudios.com/se/en/belted-trenchcoat-khaki-grey/A90696-DGR.html?g=woman, https://www.acnestudios.com/se/en/belted-trenchcoat-khaki-grey/A90696-DGR.html?g=woman#cart, https://www.acnestudios.com/se/en/checkout?stage=shipping#shipping
+[2026-02-24T21:48:53.359Z] Category: competition
+[2026-02-24T21:48:53.391Z] Chrome connected on port 9222
+[2026-02-24T21:49:09.662Z] === Benchmark run started ===
+[2026-02-24T21:49:09.678Z] URLs: https://www.acnestudios.com/se/en/home, https://www.acnestudios.com/se/en/woman/new-arrivals/, https://www.acnestudios.com/se/en/belted-trenchcoat-khaki-grey/A90696-DGR.html?g=woman, https://www.acnestudios.com/se/en/belted-trenchcoat-khaki-grey/A90696-DGR.html?g=woman#cart, https://www.acnestudios.com/se/en/checkout?stage=shipping#shipping
+[2026-02-24T21:49:09.688Z] Category: competition
+[2026-02-24T21:49:09.707Z] Chrome connected on port 9222
+[2026-02-24T21:49:09.716Z] Classified URLs for acnestudios.com:
+[2026-02-24T21:49:09.720Z]   plp → https://www.acnestudios.com/se/en/home
+[2026-02-24T21:49:09.725Z]   plp → https://www.acnestudios.com/se/en/woman/new-arrivals/
+[2026-02-24T21:49:09.729Z]   plp → https://www.acnestudios.com/se/en/belted-trenchcoat-khaki-grey/A90696-DGR.html?g=woman
+[2026-02-24T21:49:09.733Z]   plp → https://www.acnestudios.com/se/en/belted-trenchcoat-khaki-grey/A90696-DGR.html?g=woman#cart
+[2026-02-24T21:49:09.736Z]   checkout → https://www.acnestudios.com/se/en/checkout?stage=shipping#shipping
+[2026-02-24T21:49:09.833Z] 
+Crawling: acnestudios.com [competition]
+[2026-02-24T21:49:09.865Z]   [plp] https://www.acnestudios.com/se/en/home
+[2026-02-24T21:49:43.802Z]     Screenshot: competitors/acnestudios.com/2026-02-24/plp-desktop.png
+[2026-02-24T21:49:44.741Z]     Screenshot: competitors/acnestudios.com/2026-02-24/plp-mobile.png
+[2026-02-24T21:49:44.741Z]   [plp] https://www.acnestudios.com/se/en/woman/new-arrivals/
+[2026-02-24T21:50:17.028Z]     Screenshot: competitors/acnestudios.com/2026-02-24/plp-desktop.png
+[2026-02-24T21:50:17.991Z]     Screenshot: competitors/acnestudios.com/2026-02-24/plp-mobile.png
+[2026-02-24T21:50:17.991Z]   [plp] https://www.acnestudios.com/se/en/belted-trenchcoat-khaki-grey/A90696-DGR.html?g=woman
+[2026-02-24T21:50:50.926Z]     Screenshot: competitors/acnestudios.com/2026-02-24/plp-desktop.png
+[2026-02-24T21:50:51.802Z]     Screenshot: competitors/acnestudios.com/2026-02-24/plp-mobile.png
+[2026-02-24T21:50:51.803Z]   [plp] https://www.acnestudios.com/se/en/belted-trenchcoat-khaki-grey/A90696-DGR.html?g=woman#cart
+[2026-02-24T21:50:55.914Z]     Screenshot: competitors/acnestudios.com/2026-02-24/plp-desktop.png
+[2026-02-24T21:50:56.719Z]     Screenshot: competitors/acnestudios.com/2026-02-24/plp-mobile.png
+[2026-02-24T21:50:56.720Z]   [checkout] https://www.acnestudios.com/se/en/checkout?stage=shipping#shipping
+[2026-02-24T21:51:29.509Z]     Screenshot: competitors/acnestudios.com/2026-02-24/checkout-desktop.png
+[2026-02-24T21:51:30.224Z]     Screenshot: competitors/acnestudios.com/2026-02-24/checkout-mobile.png
+[2026-02-24T21:51:30.225Z] Done: acnestudios.com
+[2026-02-24T21:51:30.242Z] data.js updated. Open report.html to view.
+[2026-02-24T21:51:30.253Z] Report: /Users/andreas.widman/Desktop/Sites/andreaswidman.github.io/benchmark/report.html
+[2026-02-24T21:51:30.268Z] 
+[2026-02-24T21:51:30.288Z] To view: serve locally with  npx serve /Users/andreas.widman/Desktop/Sites/andreaswidman.github.io/benchmark
+[2026-02-24T21:51:30.300Z] === Run complete ===
+[2026-02-24T21:53:33.375Z] === Benchmark run started ===
+[2026-02-24T21:53:33.381Z] URLs: https://www.acnestudios.com/se/en/home, https://www.acnestudios.com/se/en/woman/new-arrivals/, https://www.acnestudios.com/se/en/belted-trenchcoat-khaki-grey/A90696-DGR.html?g=woman, https://www.acnestudios.com/se/en/belted-trenchcoat-khaki-grey/A90696-DGR.html?g=woman#cart, https://www.acnestudios.com/se/en/checkout?stage=shipping#shipping
+[2026-02-24T21:53:33.385Z] Category: competition
+[2026-02-24T21:53:33.400Z] Chrome connected on port 9222
+[2026-02-24T21:53:33.409Z] Classified URLs for acnestudios.com:
+[2026-02-24T21:53:33.415Z]   homepage → https://www.acnestudios.com/se/en/home
+[2026-02-24T21:53:33.419Z]   plp → https://www.acnestudios.com/se/en/woman/new-arrivals/
+[2026-02-24T21:53:33.424Z]   pdp → https://www.acnestudios.com/se/en/belted-trenchcoat-khaki-grey/A90696-DGR.html?g=woman
+[2026-02-24T21:53:33.429Z]   pdp → https://www.acnestudios.com/se/en/belted-trenchcoat-khaki-grey/A90696-DGR.html?g=woman#cart
+[2026-02-24T21:53:33.433Z]   checkout → https://www.acnestudios.com/se/en/checkout?stage=shipping#shipping
+[2026-02-24T21:53:33.536Z] 
+Crawling: acnestudios.com [competition]
+[2026-02-24T21:53:33.601Z]   [homepage] https://www.acnestudios.com/se/en/home
+[2026-02-24T21:54:07.505Z]     Screenshot: competitors/acnestudios.com/2026-02-24/homepage-desktop.png
+[2026-02-24T21:54:08.437Z]     Screenshot: competitors/acnestudios.com/2026-02-24/homepage-mobile.png
+[2026-02-24T21:54:08.438Z]   [plp] https://www.acnestudios.com/se/en/woman/new-arrivals/
+[2026-02-24T21:54:40.647Z]     Screenshot: competitors/acnestudios.com/2026-02-24/plp-desktop.png
+[2026-02-24T21:54:41.612Z]     Screenshot: competitors/acnestudios.com/2026-02-24/plp-mobile.png
+[2026-02-24T21:54:41.612Z]   [pdp] https://www.acnestudios.com/se/en/belted-trenchcoat-khaki-grey/A90696-DGR.html?g=woman
+[2026-02-24T21:55:13.902Z]     Screenshot: competitors/acnestudios.com/2026-02-24/pdp-desktop.png
+[2026-02-24T21:55:14.755Z]     Screenshot: competitors/acnestudios.com/2026-02-24/pdp-mobile.png
+[2026-02-24T21:55:14.755Z]   [pdp] https://www.acnestudios.com/se/en/belted-trenchcoat-khaki-grey/A90696-DGR.html?g=woman#cart
+[2026-02-24T21:55:18.955Z]     Screenshot: competitors/acnestudios.com/2026-02-24/pdp-desktop.png
+[2026-02-24T21:55:19.761Z]     Screenshot: competitors/acnestudios.com/2026-02-24/pdp-mobile.png
+[2026-02-24T21:55:19.761Z]   [checkout] https://www.acnestudios.com/se/en/checkout?stage=shipping#shipping
+[2026-02-24T21:55:52.239Z]     Screenshot: competitors/acnestudios.com/2026-02-24/checkout-desktop.png
+[2026-02-24T21:55:52.954Z]     Screenshot: competitors/acnestudios.com/2026-02-24/checkout-mobile.png
+[2026-02-24T21:55:52.955Z] Done: acnestudios.com
+[2026-02-24T21:55:52.976Z] data.js updated. Open report.html to view.
+[2026-02-24T21:55:52.986Z] Report: /Users/andreas.widman/Desktop/Sites/andreaswidman.github.io/benchmark/report.html
+[2026-02-24T21:55:53.006Z] 
+[2026-02-24T21:55:53.024Z] To view: serve locally with  npx serve /Users/andreas.widman/Desktop/Sites/andreaswidman.github.io/benchmark
+[2026-02-24T21:55:53.038Z] === Run complete ===
+[2026-02-24T22:09:38.205Z] === Benchmark run started ===
+[2026-02-24T22:09:38.212Z] URLs: https://en.louisvuitton.com/eng-nl/homepage?dispatchCountry=SE, https://en.louisvuitton.com/eng-nl/women/ready-to-wear/all-ready-to-wear/_/N-to8aw9x, https://en.louisvuitton.com/eng-nl/products/xl-cuff-denim-jacket-nvprod7310305v/1AK1M9, https://en.louisvuitton.com/eng-nl/cart
+[2026-02-24T22:09:38.217Z] Category: competition
+[2026-02-24T22:09:38.232Z] Chrome connected on port 9222
+[2026-02-24T22:09:38.242Z] Classified URLs for en.louisvuitton.com:
+[2026-02-24T22:09:38.249Z]   plp → https://en.louisvuitton.com/eng-nl/homepage?dispatchCountry=SE
+[2026-02-24T22:09:38.253Z]   plp → https://en.louisvuitton.com/eng-nl/women/ready-to-wear/all-ready-to-wear/_/N-to8aw9x
+[2026-02-24T22:09:38.259Z]   pdp → https://en.louisvuitton.com/eng-nl/products/xl-cuff-denim-jacket-nvprod7310305v/1AK1M9
+[2026-02-24T22:09:38.266Z]   checkout → https://en.louisvuitton.com/eng-nl/cart
+[2026-02-24T22:09:38.368Z] 
+Crawling: en.louisvuitton.com [competition]
+[2026-02-24T22:09:38.396Z]   [plp] https://en.louisvuitton.com/eng-nl/homepage?dispatchCountry=SE
+[2026-02-24T22:10:12.917Z]     Screenshot: competitors/en.louisvuitton.com/2026-02-24/plp-desktop.png
+[2026-02-24T22:10:13.989Z]     Screenshot: competitors/en.louisvuitton.com/2026-02-24/plp-mobile.png
+[2026-02-24T22:10:13.989Z]   [plp] https://en.louisvuitton.com/eng-nl/women/ready-to-wear/all-ready-to-wear/_/N-to8aw9x
+[2026-02-24T22:10:46.670Z]     Screenshot: competitors/en.louisvuitton.com/2026-02-24/plp-desktop.png
+[2026-02-24T22:10:47.503Z]     Screenshot: competitors/en.louisvuitton.com/2026-02-24/plp-mobile.png
+[2026-02-24T22:10:47.504Z]   [pdp] https://en.louisvuitton.com/eng-nl/products/xl-cuff-denim-jacket-nvprod7310305v/1AK1M9
+[2026-02-24T22:11:20.387Z]     Screenshot: competitors/en.louisvuitton.com/2026-02-24/pdp-desktop.png
+[2026-02-24T22:11:21.193Z]     Screenshot: competitors/en.louisvuitton.com/2026-02-24/pdp-mobile.png
+[2026-02-24T22:11:21.195Z]   [checkout] https://en.louisvuitton.com/eng-nl/cart
+[2026-02-24T22:11:53.458Z]     Screenshot: competitors/en.louisvuitton.com/2026-02-24/checkout-desktop.png
+[2026-02-24T22:11:54.278Z]     Screenshot: competitors/en.louisvuitton.com/2026-02-24/checkout-mobile.png
+[2026-02-24T22:11:54.280Z] Done: en.louisvuitton.com
+[2026-02-24T22:11:54.315Z] data.js updated. Open report.html to view.
+[2026-02-24T22:11:54.325Z] Report: /Users/andreas.widman/Desktop/Sites/andreaswidman.github.io/benchmark/report.html
+[2026-02-24T22:11:54.332Z] 
+[2026-02-24T22:11:54.341Z] To view: serve locally with  npx serve /Users/andreas.widman/Desktop/Sites/andreaswidman.github.io/benchmark
+[2026-02-24T22:11:54.353Z] === Run complete ===
+[2026-02-24T22:13:50.016Z] === Benchmark run started ===
+[2026-02-24T22:13:50.016Z] URLs: https://en.louisvuitton.com/eng-nl/homepage?dispatchCountry=SE, https://en.louisvuitton.com/eng-nl/women/ready-to-wear/all-ready-to-wear/_/N-to8aw9x, https://en.louisvuitton.com/eng-nl/products/xl-cuff-denim-jacket-nvprod7310305v/1AK1M9, https://en.louisvuitton.com/eng-nl/cart
+[2026-02-24T22:13:50.023Z] Category: competition
+[2026-02-24T22:13:50.040Z] Chrome connected on port 9222
+[2026-02-24T22:13:50.049Z] Classified URLs for en.louisvuitton.com:
+[2026-02-24T22:13:50.054Z]   homepage → https://en.louisvuitton.com/eng-nl/homepage?dispatchCountry=SE
+[2026-02-24T22:13:50.058Z]   plp → https://en.louisvuitton.com/eng-nl/women/ready-to-wear/all-ready-to-wear/_/N-to8aw9x
+[2026-02-24T22:13:50.064Z]   pdp → https://en.louisvuitton.com/eng-nl/products/xl-cuff-denim-jacket-nvprod7310305v/1AK1M9
+[2026-02-24T22:13:50.068Z]   checkout → https://en.louisvuitton.com/eng-nl/cart
+[2026-02-24T22:13:50.164Z] 
+Crawling: en.louisvuitton.com [competition]
+[2026-02-24T22:13:50.205Z]   [homepage] https://en.louisvuitton.com/eng-nl/homepage?dispatchCountry=SE
+[2026-02-24T22:14:24.855Z]     Screenshot: competitors/en.louisvuitton.com/2026-02-24/homepage-desktop.png
+[2026-02-24T22:14:26.251Z]     Screenshot: competitors/en.louisvuitton.com/2026-02-24/homepage-mobile.png
+[2026-02-24T22:14:26.252Z]   [plp] https://en.louisvuitton.com/eng-nl/women/ready-to-wear/all-ready-to-wear/_/N-to8aw9x
+[2026-02-24T22:14:58.394Z]     Screenshot: competitors/en.louisvuitton.com/2026-02-24/plp-desktop.png
+[2026-02-24T22:14:59.225Z]     Screenshot: competitors/en.louisvuitton.com/2026-02-24/plp-mobile.png
+[2026-02-24T22:14:59.226Z]   [pdp] https://en.louisvuitton.com/eng-nl/products/xl-cuff-denim-jacket-nvprod7310305v/1AK1M9
+[2026-02-24T22:15:31.076Z]     Screenshot: competitors/en.louisvuitton.com/2026-02-24/pdp-desktop.png
+[2026-02-24T22:15:31.901Z]     Screenshot: competitors/en.louisvuitton.com/2026-02-24/pdp-mobile.png
+[2026-02-24T22:15:31.901Z]   [checkout] https://en.louisvuitton.com/eng-nl/cart
+[2026-02-24T22:16:03.770Z]     Screenshot: competitors/en.louisvuitton.com/2026-02-24/checkout-desktop.png
+[2026-02-24T22:16:04.559Z]     Screenshot: competitors/en.louisvuitton.com/2026-02-24/checkout-mobile.png
+[2026-02-24T22:16:04.574Z] Done: en.louisvuitton.com
+[2026-02-24T22:16:04.585Z] data.js updated. Open report.html to view.
+[2026-02-24T22:16:04.591Z] Report: /Users/andreas.widman/Desktop/Sites/andreaswidman.github.io/benchmark/report.html
+[2026-02-24T22:16:04.595Z] 
+[2026-02-24T22:16:04.599Z] To view: serve locally with  npx serve /Users/andreas.widman/Desktop/Sites/andreaswidman.github.io/benchmark
+[2026-02-24T22:16:04.603Z] === Run complete ===
+[2026-02-24T22:19:33.349Z] === Benchmark run started ===
+[2026-02-24T22:19:33.349Z] === Benchmark run started ===
+[2026-02-24T22:19:33.360Z] URLs: https://www.jacquemus.com/en_se, https://www.jacquemus.com/en_se/le-paysan-new-in-women, https://www.jacquemus.com/en_se/the-turismo-shopper-bag/BAU00434AC09A04150.html, https://www.jacquemus.com/en_se/checkout?stage=customer#customer
+[2026-02-24T22:19:33.360Z] URLs: https://www.givenchy.com/us/en-US/homepage, https://www.givenchy.com/us/en-US/women/ready-to-wear/, https://www.givenchy.com/us/en-US/medium-the-snatch-bag-in-grained-leather/BB516SB2DK-001.html, https://www.givenchy.com/us/en-US/checkoutLogin
+[2026-02-24T22:19:33.371Z] Category: competition
+[2026-02-24T22:19:33.371Z] Category: competition
+[2026-02-24T22:19:33.392Z] Chrome connected on port 9222
+[2026-02-24T22:19:33.392Z] Chrome connected on port 9222
+[2026-02-24T22:19:33.403Z] Classified URLs for jacquemus.com:
+[2026-02-24T22:19:33.405Z] Classified URLs for givenchy.com:
+[2026-02-24T22:19:33.413Z]   homepage → https://www.givenchy.com/us/en-US/homepage
+[2026-02-24T22:19:33.413Z]   plp → https://www.jacquemus.com/en_se
+[2026-02-24T22:19:33.418Z]   plp → https://www.givenchy.com/us/en-US/women/ready-to-wear/
+[2026-02-24T22:19:33.418Z]   plp → https://www.jacquemus.com/en_se/le-paysan-new-in-women
+[2026-02-24T22:19:33.472Z]   pdp → https://www.givenchy.com/us/en-US/medium-the-snatch-bag-in-grained-leather/BB516SB2DK-001.html
+[2026-02-24T22:19:33.473Z]   pdp → https://www.jacquemus.com/en_se/the-turismo-shopper-bag/BAU00434AC09A04150.html
+[2026-02-24T22:19:33.477Z]   checkout → https://www.givenchy.com/us/en-US/checkoutLogin
+[2026-02-24T22:19:33.477Z]   checkout → https://www.jacquemus.com/en_se/checkout?stage=customer#customer
+[2026-02-24T22:19:33.620Z] 
+Crawling: givenchy.com [competition]
+[2026-02-24T22:19:33.615Z] 
+Crawling: jacquemus.com [competition]
+[2026-02-24T22:19:33.648Z]   [homepage] https://www.givenchy.com/us/en-US/homepage
+[2026-02-24T22:19:33.648Z]   [plp] https://www.jacquemus.com/en_se
+[2026-02-24T22:20:08.090Z]     Screenshot: competitors/jacquemus.com/2026-02-24/plp-desktop.png
+[2026-02-24T22:20:08.819Z]     Screenshot: competitors/givenchy.com/2026-02-24/homepage-desktop.png
+[2026-02-24T22:20:09.649Z]     Screenshot: competitors/jacquemus.com/2026-02-24/plp-mobile.png
+[2026-02-24T22:20:09.649Z]   [plp] https://www.jacquemus.com/en_se/le-paysan-new-in-women
+[2026-02-24T22:20:09.940Z]     Screenshot: competitors/givenchy.com/2026-02-24/homepage-mobile.png
+[2026-02-24T22:20:09.957Z]   [plp] https://www.givenchy.com/us/en-US/women/ready-to-wear/
+[2026-02-24T22:20:44.254Z]     Screenshot: competitors/jacquemus.com/2026-02-24/plp-desktop.png
+[2026-02-24T22:20:44.976Z]     Screenshot: competitors/givenchy.com/2026-02-24/plp-desktop.png
+[2026-02-24T22:20:46.181Z]     Screenshot: competitors/jacquemus.com/2026-02-24/plp-mobile.png
+[2026-02-24T22:20:46.182Z]   [pdp] https://www.jacquemus.com/en_se/the-turismo-shopper-bag/BAU00434AC09A04150.html
+[2026-02-24T22:20:48.585Z]     Screenshot: competitors/givenchy.com/2026-02-24/plp-mobile.png
+[2026-02-24T22:20:48.604Z]   [pdp] https://www.givenchy.com/us/en-US/medium-the-snatch-bag-in-grained-leather/BB516SB2DK-001.html
+[2026-02-24T22:21:18.412Z]     Screenshot: competitors/jacquemus.com/2026-02-24/pdp-desktop.png
+[2026-02-24T22:21:19.191Z]     Screenshot: competitors/jacquemus.com/2026-02-24/pdp-mobile.png
+[2026-02-24T22:21:19.192Z]   [checkout] https://www.jacquemus.com/en_se/checkout?stage=customer#customer
+[2026-02-24T22:21:22.611Z]     Screenshot: competitors/givenchy.com/2026-02-24/pdp-desktop.png
+[2026-02-24T22:21:23.876Z]     Screenshot: competitors/givenchy.com/2026-02-24/pdp-mobile.png
+[2026-02-24T22:21:23.876Z]   [checkout] https://www.givenchy.com/us/en-US/checkoutLogin
+[2026-02-24T22:21:51.574Z]     Screenshot: competitors/jacquemus.com/2026-02-24/checkout-desktop.png
+[2026-02-24T22:21:52.335Z]     Screenshot: competitors/jacquemus.com/2026-02-24/checkout-mobile.png
+[2026-02-24T22:21:52.358Z] Done: jacquemus.com
+[2026-02-24T22:21:52.391Z] data.js updated. Open report.html to view.
+[2026-02-24T22:21:52.402Z] Report: /Users/andreas.widman/Desktop/Sites/andreaswidman.github.io/benchmark/report.html
+[2026-02-24T22:21:52.431Z] 
+[2026-02-24T22:21:52.441Z] To view: serve locally with  npx serve /Users/andreas.widman/Desktop/Sites/andreaswidman.github.io/benchmark
+[2026-02-24T22:21:52.450Z] === Run complete ===
+[2026-02-24T22:21:55.842Z]     Screenshot: competitors/givenchy.com/2026-02-24/checkout-desktop.png
+[2026-02-24T22:21:56.610Z]     Screenshot: competitors/givenchy.com/2026-02-24/checkout-mobile.png
+[2026-02-24T22:21:56.613Z] Done: givenchy.com
+[2026-02-24T22:21:56.630Z] data.js updated. Open report.html to view.
+[2026-02-24T22:21:56.643Z] Report: /Users/andreas.widman/Desktop/Sites/andreaswidman.github.io/benchmark/report.html
+[2026-02-24T22:21:56.655Z] 
+[2026-02-24T22:21:56.669Z] To view: serve locally with  npx serve /Users/andreas.widman/Desktop/Sites/andreaswidman.github.io/benchmark
+[2026-02-24T22:21:56.676Z] === Run complete ===
+[2026-02-24T22:22:26.640Z] === Benchmark run started ===
+[2026-02-24T22:22:26.641Z] URLs: https://www.jacquemus.com/en_se, https://www.jacquemus.com/en_se/le-paysan-new-in-women, https://www.jacquemus.com/en_se/the-turismo-shopper-bag/BAU00434AC09A04150.html, https://www.jacquemus.com/en_se/checkout?stage=customer#customer
+[2026-02-24T22:22:26.645Z] Category: competition
+[2026-02-24T22:22:26.660Z] Chrome connected on port 9222
+[2026-02-24T22:22:26.665Z] Classified URLs for jacquemus.com:
+[2026-02-24T22:22:26.670Z]   homepage → https://www.jacquemus.com/en_se
+[2026-02-24T22:22:26.674Z]   plp → https://www.jacquemus.com/en_se/le-paysan-new-in-women
+[2026-02-24T22:22:26.679Z]   pdp → https://www.jacquemus.com/en_se/the-turismo-shopper-bag/BAU00434AC09A04150.html
+[2026-02-24T22:22:26.683Z]   checkout → https://www.jacquemus.com/en_se/checkout?stage=customer#customer
+[2026-02-24T22:22:26.775Z] 
+Crawling: jacquemus.com [competition]
+[2026-02-24T22:22:26.782Z]   [homepage] https://www.jacquemus.com/en_se
+[2026-02-24T22:23:01.446Z]     Screenshot: competitors/jacquemus.com/2026-02-24/homepage-desktop.png
+[2026-02-24T22:23:02.329Z]     Screenshot: competitors/jacquemus.com/2026-02-24/homepage-mobile.png
+[2026-02-24T22:23:02.329Z]   [plp] https://www.jacquemus.com/en_se/le-paysan-new-in-women
+[2026-02-24T22:23:35.724Z]     Screenshot: competitors/jacquemus.com/2026-02-24/plp-desktop.png
+[2026-02-24T22:23:37.361Z]     Screenshot: competitors/jacquemus.com/2026-02-24/plp-mobile.png
+[2026-02-24T22:23:37.361Z]   [pdp] https://www.jacquemus.com/en_se/the-turismo-shopper-bag/BAU00434AC09A04150.html
+[2026-02-24T22:24:09.439Z]     Screenshot: competitors/jacquemus.com/2026-02-24/pdp-desktop.png
+[2026-02-24T22:24:10.222Z]     Screenshot: competitors/jacquemus.com/2026-02-24/pdp-mobile.png
+[2026-02-24T22:24:10.222Z]   [checkout] https://www.jacquemus.com/en_se/checkout?stage=customer#customer
+[2026-02-24T22:24:42.679Z]     Screenshot: competitors/jacquemus.com/2026-02-24/checkout-desktop.png
+[2026-02-24T22:24:43.422Z]     Screenshot: competitors/jacquemus.com/2026-02-24/checkout-mobile.png
+[2026-02-24T22:24:43.424Z] Done: jacquemus.com
+[2026-02-24T22:24:43.438Z] data.js updated. Open report.html to view.
+[2026-02-24T22:24:43.449Z] Report: /Users/andreas.widman/Desktop/Sites/andreaswidman.github.io/benchmark/report.html
+[2026-02-24T22:24:43.459Z] 
+[2026-02-24T22:24:43.479Z] To view: serve locally with  npx serve /Users/andreas.widman/Desktop/Sites/andreaswidman.github.io/benchmark
+[2026-02-24T22:24:43.492Z] === Run complete ===
+[2026-02-24T22:39:39.359Z] === Benchmark run started ===
+[2026-02-24T22:39:39.360Z] URLs: https://www.jacquemus.com/en_se, https://www.jacquemus.com/en_se/le-paysan-new-in-women, https://www.jacquemus.com/en_se/the-lavande-top/TOW00888AW00770100.html
+[2026-02-24T22:39:39.375Z] Category: uncategorized
+[2026-02-24T22:39:39.401Z] Chrome connected on port 9222
+[2026-02-24T22:39:39.410Z] URLs for jacquemus.com:
+[2026-02-24T22:39:39.418Z]   homepage → https://www.jacquemus.com/en_se
+[2026-02-24T22:39:39.424Z]   plp → https://www.jacquemus.com/en_se/le-paysan-new-in-women
+[2026-02-24T22:39:39.429Z]   pdp → https://www.jacquemus.com/en_se/the-lavande-top/TOW00888AW00770100.html
+[2026-02-24T22:39:39.527Z] 
+Crawling: jacquemus.com [uncategorized]
+[2026-02-24T22:39:39.550Z]   [homepage] https://www.jacquemus.com/en_se
+[2026-02-24T22:40:12.807Z]     Screenshot: competitors/jacquemus.com/2026-02-24/homepage-desktop.png
+[2026-02-24T22:40:13.406Z]     Screenshot: competitors/jacquemus.com/2026-02-24/homepage-mobile.png
+[2026-02-24T22:40:13.407Z]   [plp] https://www.jacquemus.com/en_se/le-paysan-new-in-women
+[2026-02-24T22:40:46.528Z]     Screenshot: competitors/jacquemus.com/2026-02-24/plp-desktop.png
+[2026-02-24T22:40:47.704Z]     Screenshot: competitors/jacquemus.com/2026-02-24/plp-mobile.png
+[2026-02-24T22:40:47.705Z]   [pdp] https://www.jacquemus.com/en_se/the-lavande-top/TOW00888AW00770100.html
+[2026-02-24T22:41:18.845Z]     Screenshot: competitors/jacquemus.com/2026-02-24/pdp-desktop.png
+[2026-02-24T22:41:19.332Z]     Screenshot: competitors/jacquemus.com/2026-02-24/pdp-mobile.png
+[2026-02-24T22:41:19.335Z] Done: jacquemus.com
+[2026-02-24T22:41:19.360Z] data.js updated. Open report.html to view.
+[2026-02-24T22:41:19.370Z] Report: /Users/andreas.widman/Desktop/Sites/andreaswidman.github.io/benchmark/report.html
+[2026-02-24T22:41:19.381Z] 
+[2026-02-24T22:41:19.391Z] To view: serve locally with  npx serve /Users/andreas.widman/Desktop/Sites/andreaswidman.github.io/benchmark
+[2026-02-24T22:41:19.405Z] === Run complete ===
