@@ -48,10 +48,38 @@
       opacity: 1;
     }
 
+    .post a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      -webkit-user-select: none;
+      user-select: none;
+      -webkit-touch-callout: none;
+    }
+
     .post img {
       max-width: 100%;
       max-height: 80vh;
       object-fit: contain;
+      display: block;
+    }
+
+    .source-label {
+      position: absolute;
+      bottom: 4vh;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font: 12px/1.4 Georgia, 'Times New Roman', serif;
+      color: #aaa;
+      opacity: 0;
+      transition: opacity 200ms ease;
+      pointer-events: none;
+      letter-spacing: 0.01em;
+    }
+
+    .post.is-holding .source-label {
+      opacity: 1;
     }
 
     .spinner {
@@ -127,7 +155,7 @@
     let scrollingTimer;
     let feedExhausted = false;
     let pageNum = 1;
-    let allImageUrls = [];
+    let allItems = [];
     let loadPromise = null;
     const preloaded = new Set();
 
@@ -153,19 +181,21 @@
       return best[0]?.url || img.getAttribute('src');
     }
 
-    function extractItems(item) {
+    function extractItems(item, feedUrl) {
       const desc = item.querySelector('description');
       if (!desc) return [];
       const doc = new DOMParser().parseFromString(desc.textContent, 'text/html');
       const urls = Array.from(doc.querySelectorAll('img')).map(img => pickBestSrc(img)).filter(Boolean);
       const pubDate = item.querySelector('pubDate')?.textContent;
       const date = pubDate ? new Date(pubDate) : new Date(0);
-      return urls.map(url => ({ url, date }));
+      const link = item.querySelector('link')?.textContent?.trim() || feedUrl;
+      const site = (() => { try { return new URL(feedUrl).hostname.replace(/^www\./, ''); } catch { return feedUrl; } })();
+      return urls.map(url => ({ url, date, link, site }));
     }
 
-    function renderPosts(urls, startIndex) {
+    function renderPosts(items, startIndex) {
       const feed = document.getElementById('feed');
-      urls.forEach((url, i) => {
+      items.forEach((item, i) => {
         const idx = startIndex + i;
         const article = document.createElement('article');
         article.className = 'post';
@@ -175,12 +205,53 @@
         spinner.className = 'spinner';
         article.appendChild(spinner);
 
+        const anchor = document.createElement('a');
+        anchor.href = item.link;
+        anchor.target = '_blank';
+        anchor.rel = 'noopener noreferrer';
+
         const img = document.createElement('img');
-        img.src = url;
+        img.src = item.url;
         img.alt = '';
         img.loading = idx < 2 ? 'eager' : 'lazy';
         img.onload = () => spinner.remove();
-        article.appendChild(img);
+        anchor.appendChild(img);
+        article.appendChild(anchor);
+
+        const label = document.createElement('span');
+        label.className = 'source-label';
+        label.textContent = item.site;
+        article.appendChild(label);
+
+        // Press-and-hold to reveal source label
+        let holdTimer = null;
+        let isHolding = false;
+        let wasHeld = false;
+
+        article.addEventListener('pointerdown', () => {
+          holdTimer = setTimeout(() => {
+            isHolding = true;
+            article.classList.add('is-holding');
+          }, 400);
+        });
+
+        const endHold = () => {
+          clearTimeout(holdTimer);
+          if (isHolding) {
+            wasHeld = true;
+            isHolding = false;
+            article.classList.remove('is-holding');
+          }
+        };
+
+        article.addEventListener('pointerup', endHold);
+        article.addEventListener('pointercancel', endHold);
+        article.addEventListener('contextmenu', e => e.preventDefault());
+
+        anchor.addEventListener('click', e => {
+          if (wasHeld) { wasHeld = false; e.preventDefault(); }
+        });
+
         const slide = document.getElementById('loading-slide');
         if (slide) feed.insertBefore(article, slide);
         else feed.appendChild(article);
@@ -210,7 +281,7 @@
         scrollTimer = setTimeout(() => {
           currentIndex = Math.round(feed.scrollTop / window.innerHeight);
           preloadAround(currentIndex);
-          if (currentIndex >= allImageUrls.length - 5) loadNextPage();
+          if (currentIndex >= allItems.length - 5) loadNextPage();
         }, 100);
       });
       feed.addEventListener('scrollend', () => { isScrolling = false; });
@@ -224,10 +295,10 @@
     }
 
     function preloadAround(index) {
-      const end = Math.min(allImageUrls.length, index + CONFIG.preloadAhead + 1);
+      const end = Math.min(allItems.length, index + CONFIG.preloadAhead + 1);
       for (let i = index; i < end; i++) {
         if (!preloaded.has(i)) {
-          new Image().src = allImageUrls[i];
+          new Image().src = allItems[i].url;
           preloaded.add(i);
         }
       }
@@ -249,13 +320,13 @@
       if (loadPromise) return loadPromise;
       loadPromise = (async () => {
         console.log('[feed] loading page', pageNum);
-        const startIndex = allImageUrls.length;
+        const startIndex = allItems.length;
 
         // Fetch all feeds in parallel
         const results = await Promise.allSettled(
           CONFIG.feeds.map(base => {
             const feedUrl = pageNum === 1 ? base + '/rss' : base + '/page/' + pageNum + '/rss';
-            return fetchFeed(feedUrl).then(xml => parseFeed(xml).flatMap(item => extractItems(item)));
+            return fetchFeed(feedUrl).then(xml => parseFeed(xml).flatMap(item => extractItems(item, base)));
           })
         );
 
@@ -279,11 +350,10 @@
 
         // Merge chronologically — newest first
         newItems.sort((a, b) => b.date - a.date);
-        const newUrls = newItems.map(i => i.url);
 
-        allImageUrls.push(...newUrls);
-        renderPosts(newUrls, startIndex);
-        console.log('[feed] loaded', newUrls.length, 'images at index', startIndex);
+        allItems.push(...newItems);
+        renderPosts(newItems, startIndex);
+        console.log('[feed] loaded', newItems.length, 'images at index', startIndex);
         preloadAround(startIndex);
         return startIndex;
       })();
@@ -292,7 +362,7 @@
 
     document.addEventListener('keydown', async e => {
       if (e.key === 'j' || e.key === 'J') {
-        if (currentIndex >= allImageUrls.length - 1) {
+        if (currentIndex >= allItems.length - 1) {
           const slide = document.getElementById('loading-slide');
           if (slide) {
             slide.scrollIntoView({ behavior: 'smooth' });
@@ -300,7 +370,7 @@
             if (startIdx != null) navigateTo(startIdx);
           }
         } else {
-          if (currentIndex >= allImageUrls.length - 5) loadNextPage();
+          if (currentIndex >= allItems.length - 5) loadNextPage();
           navigateTo(currentIndex + 1);
         }
       }
@@ -316,15 +386,11 @@
       });
     }, { root: document.getElementById('feed'), threshold: 0.5 });
 
-    function observeFade(posts) {
-      posts.forEach(post => fadeObserver.observe(post));
-    }
-
     function observeLoadingSlide() {
       const slide = document.getElementById('loading-slide');
       if (!slide) return;
       const observer = new IntersectionObserver(entries => {
-        if (entries[0].isIntersecting && currentIndex >= allImageUrls.length - 1) {
+        if (entries[0].isIntersecting && currentIndex >= allItems.length - 1) {
           loadNextPage();
         }
       }, { root: document.getElementById('feed'), threshold: 0.1 });
