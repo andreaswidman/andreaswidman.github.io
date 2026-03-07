@@ -35,6 +35,7 @@
       width: 100vw;
       scroll-snap-align: start;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       padding: 10vh 0;
@@ -59,23 +60,19 @@
 
     .post img {
       max-width: 100%;
-      max-height: 80vh;
+      max-height: 75vh;
       object-fit: contain;
       display: block;
     }
 
     .source-label {
-      position: absolute;
-      bottom: 4vh;
-      left: 0;
-      right: 0;
+      margin-top: 8px;
       text-align: center;
-      font: 12px/1.4 Georgia, 'Times New Roman', serif;
-      color: #aaa;
+      font: 12px/1.4 system-ui, -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      color: #000;
       opacity: 0;
       transition: opacity 200ms ease;
       pointer-events: none;
-      letter-spacing: 0.01em;
     }
 
     .post.is-holding .source-label {
