@@ -126,6 +126,24 @@
     #auth input:focus {
       border-color: #999;
     }
+
+    #new-posts-pill {
+      position: fixed;
+      top: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #000;
+      color: #fff;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font: 12px/1.4 system-ui, -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      z-index: 100;
+      cursor: pointer;
+      display: none;
+      white-space: nowrap;
+      -webkit-user-select: none;
+      user-select: none;
+    }
   </style>
 </head>
 <body>
@@ -134,6 +152,7 @@
       <input name="pass" type="password" autofocus>
     </form>
   </div>
+  <div id="new-posts-pill">↑ New posts</div>
   <main id="feed"></main>
   <script>
     history.scrollRestoration = 'manual';
@@ -156,6 +175,9 @@
     let allItems = [];
     let loadPromise = null;
     const preloaded = new Set();
+    const INACTIVE_THRESHOLD = 5 * 60_000; // 5 minutes
+    let hiddenAt = null;
+    let pendingNewItems = [];
 
     async function fetchFeed(feedUrl) {
       const res = await fetch(CONFIG.proxy + encodeURIComponent(feedUrl));
@@ -191,47 +213,50 @@
       return urls.map(url => ({ url, date, link, site }));
     }
 
+    function createPostEl(item, idx) {
+      const article = document.createElement('article');
+      article.className = 'post';
+      article.dataset.index = idx;
+
+      const spinner = document.createElement('div');
+      spinner.className = 'spinner';
+      article.appendChild(spinner);
+
+      const anchor = document.createElement('a');
+      anchor.href = item.link;
+      anchor.target = '_blank';
+      anchor.rel = 'noopener noreferrer';
+
+      const img = document.createElement('img');
+      img.src = item.url;
+      img.alt = '';
+      img.loading = idx < 2 ? 'eager' : 'lazy';
+      img.onload = () => spinner.remove();
+      anchor.appendChild(img);
+      article.appendChild(anchor);
+
+      const label = document.createElement('span');
+      label.className = 'source-label';
+      label.textContent = item.site;
+      article.appendChild(label);
+
+      anchor.addEventListener('click', e => {
+        e.preventDefault();
+        article.classList.toggle('is-holding');
+      });
+
+      anchor.addEventListener('dblclick', e => {
+        e.preventDefault();
+        window.open(anchor.href, '_blank', 'noopener');
+      });
+
+      return article;
+    }
+
     function renderPosts(items, startIndex) {
       const feed = document.getElementById('feed');
       items.forEach((item, i) => {
-        const idx = startIndex + i;
-        const article = document.createElement('article');
-        article.className = 'post';
-        article.dataset.index = idx;
-
-        const spinner = document.createElement('div');
-        spinner.className = 'spinner';
-        article.appendChild(spinner);
-
-        const anchor = document.createElement('a');
-        anchor.href = item.link;
-        anchor.target = '_blank';
-        anchor.rel = 'noopener noreferrer';
-
-        const img = document.createElement('img');
-        img.src = item.url;
-        img.alt = '';
-        img.loading = idx < 2 ? 'eager' : 'lazy';
-        img.onload = () => spinner.remove();
-        anchor.appendChild(img);
-        article.appendChild(anchor);
-
-        const label = document.createElement('span');
-        label.className = 'source-label';
-        label.textContent = item.site;
-        article.appendChild(label);
-
-        // Single click toggles source label; double-click opens link
-        anchor.addEventListener('click', e => {
-          e.preventDefault();
-          article.classList.toggle('is-holding');
-        });
-
-        anchor.addEventListener('dblclick', e => {
-          e.preventDefault();
-          window.open(anchor.href, '_blank', 'noopener');
-        });
-
+        const article = createPostEl(item, startIndex + i);
         const slide = document.getElementById('loading-slide');
         if (slide) feed.insertBefore(article, slide);
         else feed.appendChild(article);
@@ -386,13 +411,61 @@
       observeLoadingSlide();
     }
 
-    if (sessionStorage.getItem('rss-auth')) {
+    async function checkForNewPosts() {
+      const since = allItems[0]?.date ?? new Date(0);
+      const results = await Promise.allSettled(
+        CONFIG.feeds.map(base =>
+          fetchFeed(base + '/rss').then(xml => parseFeed(xml).flatMap(item => extractItems(item, base)))
+        )
+      );
+      const fresh = [];
+      for (const r of results) {
+        if (r.status === 'fulfilled') fresh.push(...r.value.filter(item => item.date > since));
+      }
+      fresh.sort((a, b) => b.date - a.date);
+      pendingNewItems = fresh;
+      document.getElementById('new-posts-pill').style.display = 'block';
+    }
+
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'hidden') {
+        hiddenAt = Date.now();
+      } else if (hiddenAt !== null && Date.now() - hiddenAt >= INACTIVE_THRESHOLD && allItems.length > 0) {
+        checkForNewPosts();
+        hiddenAt = null;
+      } else {
+        hiddenAt = null;
+      }
+    });
+
+    document.getElementById('new-posts-pill').addEventListener('click', () => {
+      const pill = document.getElementById('new-posts-pill');
+      pill.style.display = 'none';
+      const items = pendingNewItems;
+      pendingNewItems = [];
+      if (items.length === 0) return;
+
+      allItems = [...items, ...allItems];
+      preloaded.clear();
+
+      const feed = document.getElementById('feed');
+      const firstPost = feed.querySelector('.post');
+      const fragment = document.createDocumentFragment();
+      items.forEach((item, i) => fragment.appendChild(createPostEl(item, i)));
+      feed.insertBefore(fragment, firstPost);
+
+      feed.scrollTop = 0;
+      currentIndex = 0;
+      preloadAround(0);
+    });
+
+    if (document.cookie.split(';').some(c => c.trim().startsWith('rss-auth='))) {
       startApp();
     } else {
       authEl.querySelector('form').addEventListener('submit', e => {
         e.preventDefault();
         if (btoa(e.target.pass.value) === AUTH) {
-          sessionStorage.setItem('rss-auth', '1');
+          document.cookie = 'rss-auth=1; max-age=31536000; path=/; SameSite=Strict';
           startApp();
         } else {
           e.target.pass.value = '';
