@@ -4,6 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="RSS">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link id="apple-touch-icon" rel="apple-touch-icon">
+  <link id="favicon" rel="icon" type="image/jpeg">
   <title>RSS</title>
   <style>
     *, *::before, *::after {
@@ -367,6 +374,13 @@
       authEl.remove();
       addLoadingSlide();
       await loadNextPage();
+
+      if (allItems.length > 0) {
+        const iconUrl = allItems[0].url;
+        document.getElementById('apple-touch-icon').href = iconUrl;
+        document.getElementById('favicon').href = iconUrl;
+      }
+
       document.getElementById('feed').scrollTop = 0;
       observeScroll();
       observeLoadingSlide();
