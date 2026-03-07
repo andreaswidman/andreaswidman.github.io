@@ -41,12 +41,6 @@
       padding: 10vh 0;
       background: #fff;
       position: relative;
-      opacity: 0;
-      transition: opacity 300ms ease;
-    }
-
-    .post.is-visible {
-      opacity: 1;
     }
 
     .post a {
@@ -234,7 +228,6 @@
         const slide = document.getElementById('loading-slide');
         if (slide) feed.insertBefore(article, slide);
         else feed.appendChild(article);
-        fadeObserver.observe(article);
       });
     }
 
@@ -358,12 +351,6 @@
 
     const AUTH = btoa('pansy');
     const authEl = document.getElementById('auth');
-
-    const fadeObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        entry.target.classList.toggle('is-visible', entry.intersectionRatio >= 0.5);
-      });
-    }, { root: document.getElementById('feed'), threshold: 0.5 });
 
     function observeLoadingSlide() {
       const slide = document.getElementById('loading-slide');
