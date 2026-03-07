@@ -223,33 +223,15 @@
         label.textContent = item.site;
         article.appendChild(label);
 
-        // Press-and-hold to reveal source label
-        let holdTimer = null;
-        let isHolding = false;
-        let wasHeld = false;
-
-        article.addEventListener('pointerdown', () => {
-          holdTimer = setTimeout(() => {
-            isHolding = true;
-            article.classList.add('is-holding');
-          }, 400);
+        // Single click toggles source label; double-click opens link
+        anchor.addEventListener('click', e => {
+          e.preventDefault();
+          article.classList.toggle('is-holding');
         });
 
-        const endHold = () => {
-          clearTimeout(holdTimer);
-          if (isHolding) {
-            wasHeld = true;
-            isHolding = false;
-            article.classList.remove('is-holding');
-          }
-        };
-
-        article.addEventListener('pointerup', endHold);
-        article.addEventListener('pointercancel', endHold);
-        article.addEventListener('contextmenu', e => e.preventDefault());
-
-        anchor.addEventListener('click', e => {
-          if (wasHeld) { wasHeld = false; e.preventDefault(); }
+        anchor.addEventListener('dblclick', e => {
+          e.preventDefault();
+          window.open(anchor.href, '_blank', 'noopener');
         });
 
         const slide = document.getElementById('loading-slide');
