@@ -418,14 +418,19 @@
 
     async function checkForNewPosts() {
       const since = allItems[0]?.date ?? new Date(0);
+      const existingUrls = new Set(allItems.map(i => i.url));
       const results = await Promise.allSettled(
-        CONFIG.feeds.map(base =>
-          fetchFeed(base + '/rss').then(xml => parseFeed(xml).flatMap(item => extractItems(item, base)))
-        )
+        CONFIG.feeds.map(async base => {
+          const feedUrl = base + '/rss';
+          // Bypass both client feedCache and browser HTTP cache to always get fresh data
+          const text = await fetch(CONFIG.proxy + encodeURIComponent(feedUrl), { cache: 'no-cache' }).then(r => r.text());
+          feedCache.set(feedUrl, { text, ts: Date.now() });
+          return parseFeed(text).flatMap(item => extractItems(item, base));
+        })
       );
       const fresh = [];
       for (const r of results) {
-        if (r.status === 'fulfilled') fresh.push(...r.value.filter(item => item.date > since));
+        if (r.status === 'fulfilled') fresh.push(...r.value.filter(item => item.date > since && !existingUrls.has(item.url)));
       }
       fresh.sort((a, b) => b.date - a.date);
       pendingNewItems = fresh;
