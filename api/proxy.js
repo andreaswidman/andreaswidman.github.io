@@ -3,6 +3,7 @@ const ALLOWED_HOSTS = [
   'www.lifeonsundays.com',
   'jamiemclellan.tumblr.com',
   'randomitus.tumblr.com',
+  'yama-bato.tumblr.com',
 ];
 
 export default async function handler(req, res) {
