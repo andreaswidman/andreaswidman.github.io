@@ -175,13 +175,17 @@
     let allItems = [];
     let loadPromise = null;
     const preloaded = new Set();
+    const feedCache = new Map(); // url → { text, ts }
     const INACTIVE_THRESHOLD = 5 * 60_000; // 5 minutes
     let hiddenAt = null;
     let pendingNewItems = [];
 
     async function fetchFeed(feedUrl) {
-      const res = await fetch(CONFIG.proxy + encodeURIComponent(feedUrl));
-      return res.text();
+      const cached = feedCache.get(feedUrl);
+      if (cached && Date.now() - cached.ts < INACTIVE_THRESHOLD) return cached.text;
+      const text = await fetch(CONFIG.proxy + encodeURIComponent(feedUrl)).then(r => r.text());
+      feedCache.set(feedUrl, { text, ts: Date.now() });
+      return text;
     }
 
     function parseFeed(xml) {
