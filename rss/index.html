@@ -428,7 +428,9 @@
       }
       fresh.sort((a, b) => b.date - a.date);
       pendingNewItems = fresh;
-      document.getElementById('new-posts-pill').style.display = 'block';
+      if (fresh.length > 0) {
+        document.getElementById('new-posts-pill').style.display = 'block';
+      }
     }
 
     document.addEventListener('visibilitychange', () => {
