@@ -76,6 +76,14 @@
       pointer-events: none;
     }
 
+    .reblog-btn {
+      margin-left: 10px;
+      cursor: pointer;
+      text-decoration: underline;
+      color: #555;
+      pointer-events: auto;
+    }
+
     .post.is-holding .source-label {
       opacity: 1;
     }
@@ -242,6 +250,25 @@
       const label = document.createElement('span');
       label.className = 'source-label';
       label.textContent = item.site;
+
+      if (item.site.endsWith('tumblr.com')) {
+        const reblogBtn = document.createElement('span');
+        reblogBtn.className = 'reblog-btn';
+        reblogBtn.textContent = 'reblog';
+        reblogBtn.addEventListener('click', async e => {
+          e.stopPropagation();
+          reblogBtn.textContent = 'reblogging…';
+          try {
+            const res = await fetch('/api/reblog?postUrl=' + encodeURIComponent(item.link));
+            const json = await res.json();
+            reblogBtn.textContent = res.ok ? '✓ reblogged' : '✗ ' + (json.error || 'error');
+          } catch {
+            reblogBtn.textContent = '✗ error';
+          }
+        });
+        label.appendChild(reblogBtn);
+      }
+
       article.appendChild(label);
 
       anchor.addEventListener('click', e => {
