@@ -259,7 +259,9 @@
           e.stopPropagation();
           reblogBtn.textContent = 'reblogging…';
           try {
-            const res = await fetch('/api/reblog?postUrl=' + encodeURIComponent(item.link));
+            const res = await fetch('/api/reblog?postUrl=' + encodeURIComponent(item.link), {
+              headers: { 'X-Reblog-Secret': REBLOG_SECRET }
+            });
             const json = await res.json();
             reblogBtn.textContent = res.ok ? '✓ reblogged' : '✗ ' + (json.error || 'error');
           } catch {
@@ -412,6 +414,7 @@
       if (e.key === 'k' || e.key === 'K') navigateTo(currentIndex - 1);
     });
 
+    const REBLOG_SECRET = 'b4766b49ffc86952d1357f00ec16f284106cd056ef156c63';
     const authEl = document.getElementById('auth');
 
     function observeLoadingSlide() {

@@ -30,13 +30,18 @@ function buildAuthHeader(method, url, bodyParams, consumerKey, consumerSecret, a
 }
 
 export default async function handler(req, res) {
+  const secret = req.headers['x-reblog-secret'];
+  if (!secret || secret !== process.env.REBLOG_SECRET) {
+    return res.status(401).json({ error: 'Unauthorized' });
+  }
+
   const { postUrl } = req.query;
   if (!postUrl) return res.status(400).json({ error: 'Missing postUrl' });
 
   let parsed;
   try { parsed = new URL(postUrl); } catch { return res.status(400).json({ error: 'Invalid postUrl' }); }
 
-  if (!parsed.hostname.endsWith('tumblr.com')) {
+  if (!parsed.hostname.endsWith('.tumblr.com')) {
     return res.status(400).json({ error: 'Not a Tumblr URL' });
   }
 
