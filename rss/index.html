@@ -114,7 +114,21 @@
       z-index: 10;
     }
 
-    #auth input {
+    #auth button {
+      font: 16px/1.4 system-ui, sans-serif;
+      padding: 10px 24px;
+      background: #000;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    #passkey-setup {
+      margin-top: 16px;
+    }
+
+    #passkey-setup input {
       font: 20px/1.4 system-ui, sans-serif;
       padding: 10px 14px;
       border: 1px solid #ccc;
@@ -123,8 +137,14 @@
       width: 240px;
     }
 
-    #auth input:focus {
+    #passkey-setup input:focus {
       border-color: #999;
+    }
+
+    #passkey-error {
+      margin-top: 10px;
+      font: 14px/1.4 system-ui, sans-serif;
+      color: #c00;
     }
 
     #new-posts-pill {
@@ -148,9 +168,15 @@
 </head>
 <body>
   <div id="auth">
-    <form>
-      <input name="pass" type="password" autofocus>
-    </form>
+    <div id="auth-inner">
+      <button id="passkey-signin" type="button">Sign in</button>
+      <div id="passkey-setup" style="display:none">
+        <form>
+          <input name="code" type="password" placeholder="Setup code" autofocus>
+        </form>
+        <p id="passkey-error" style="display:none"></p>
+      </div>
+    </div>
   </div>
   <div id="new-posts-pill">↑ New posts</div>
   <main id="feed"></main>
@@ -388,7 +414,7 @@
       if (e.key === 'k' || e.key === 'K') navigateTo(currentIndex - 1);
     });
 
-    const AUTH = btoa('pansy');
+    const SETUP_CODE = btoa('pansy'); // REMOVE THIS LINE IN DEPLOY 2
     const authEl = document.getElementById('auth');
 
     function observeLoadingSlide() {
@@ -473,18 +499,65 @@
       preloadAround(0);
     });
 
+    async function passkeyAuth() {
+      try {
+        await navigator.credentials.get({
+          publicKey: {
+            challenge: crypto.getRandomValues(new Uint8Array(32)),
+            rpId: location.hostname,
+            userVerification: 'required'
+          }
+        });
+        document.cookie = 'rss-auth=1; max-age=31536000; path=/; SameSite=Strict';
+        startApp();
+      } catch {
+        document.getElementById('passkey-signin').style.display = 'none';
+        document.getElementById('passkey-setup').style.display = '';
+        document.getElementById('passkey-setup').querySelector('input').focus();
+      }
+    }
+
+    // REMOVE passkeyRegister AND SETUP_CODE IN DEPLOY 2
+    async function passkeyRegister(code) {
+      if (btoa(code) !== SETUP_CODE) {
+        const err = document.getElementById('passkey-error');
+        err.textContent = 'Wrong code.';
+        err.style.display = '';
+        return;
+      }
+      try {
+        await navigator.credentials.create({
+          publicKey: {
+            challenge: crypto.getRandomValues(new Uint8Array(32)),
+            rp: { id: location.hostname, name: 'RSS' },
+            user: { id: new Uint8Array([1]), name: 'owner', displayName: 'Owner' },
+            pubKeyCredParams: [{ type: 'public-key', alg: -7 }],
+            authenticatorSelection: {
+              authenticatorAttachment: 'platform',
+              userVerification: 'required',
+              residentKey: 'required'
+            }
+          }
+        });
+        document.cookie = 'rss-auth=1; max-age=31536000; path=/; SameSite=Strict';
+        startApp();
+      } catch {
+        const err = document.getElementById('passkey-error');
+        err.textContent = 'Registration failed.';
+        err.style.display = '';
+      }
+    }
+
     if (document.cookie.split(';').some(c => c.trim().startsWith('rss-auth='))) {
       startApp();
     } else {
-      authEl.querySelector('form').addEventListener('submit', e => {
+      document.getElementById('passkey-signin').addEventListener('click', passkeyAuth);
+      // REMOVE THIS LISTENER IN DEPLOY 2
+      document.getElementById('passkey-setup').querySelector('form').addEventListener('submit', e => {
         e.preventDefault();
-        if (btoa(e.target.pass.value) === AUTH) {
-          document.cookie = 'rss-auth=1; max-age=31536000; path=/; SameSite=Strict';
-          startApp();
-        } else {
-          e.target.pass.value = '';
-        }
+        passkeyRegister(e.target.code.value);
       });
+      passkeyAuth();
     }
   </script>
 </body>
