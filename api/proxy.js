@@ -6,6 +6,7 @@ const ALLOWED_HOSTS = [
   'yama-bato.tumblr.com',
   'lohlover.tumblr.com',
   'thiscouldbeawesome.tumblr.com',
+  'notes.analogdialog.com',
 ];
 
 export default async function handler(req, res) {
