@@ -202,8 +202,9 @@ body {
 
 /* Hyperlink */
 .as-link {
-  color:           var(--color-blue);
-  text-decoration: none;
+  color:                 var(--color-blue);
+  text-decoration:       underline;
+  text-underline-offset: 2px;
   font-family:           var(--font-primary);
   font-size:             var(--font-size-base);
   font-weight:           var(--font-weight-regular);
