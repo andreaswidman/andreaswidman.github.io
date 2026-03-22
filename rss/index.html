@@ -187,6 +187,34 @@
     #mode-indicator.visible {
       opacity: 1;
     }
+
+    #ptr {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 5;
+      pointer-events: none;
+    }
+
+    #ptr .ptr-spinner {
+      width: 22px;
+      height: 22px;
+      border: 2px solid #ddd;
+      border-top-color: #999;
+      border-radius: 50%;
+      opacity: 0;
+      transition: opacity 150ms ease;
+    }
+
+    #ptr.ptr-loading .ptr-spinner {
+      opacity: 1;
+      animation: spin 0.8s linear infinite;
+    }
   </style>
 </head>
 <body>
@@ -197,6 +225,7 @@
   </div>
   <div id="new-posts-pill">↑ New posts</div>
   <div id="mode-indicator"></div>
+  <div id="ptr"><div class="ptr-spinner"></div></div>
   <div id="stage">
     <main id="feed"></main>
     <main id="feed-tcba"></main>
@@ -383,6 +412,7 @@
         loadTcbaNextPage();
         observeTcbaScroll();
         observeTcbaLoadingSlide();
+        addPullToRefresh(document.getElementById('feed-tcba'), pullRefreshTcba);
       }
     }
 
@@ -399,6 +429,58 @@
         const dy = e.changedTouches[0].clientY - sy;
         if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) {
           switchMode(dx < 0 ? 1 : 0);
+        }
+      }, { passive: true });
+    }
+
+    // ── Pull to refresh ──────────────────────────────────────────────────────
+
+    function addPullToRefresh(feedEl, refreshFn) {
+      const ptr = document.getElementById('ptr');
+      const ptrSpinner = ptr.querySelector('.ptr-spinner');
+      const THRESHOLD = 80;
+      let startY = 0;
+      let pulling = false;
+      let refreshing = false;
+
+      feedEl.addEventListener('touchstart', e => {
+        if (refreshing || feedEl.scrollTop > 0) return;
+        startY = e.touches[0].clientY;
+        pulling = true;
+      }, { passive: true });
+
+      feedEl.addEventListener('touchmove', e => {
+        if (!pulling || refreshing) return;
+        if (feedEl.scrollTop > 0) { pulling = false; return; }
+        const dy = e.touches[0].clientY - startY;
+        if (dy <= 0) { pulling = false; return; }
+        e.preventDefault();
+        feedEl.style.transform = `translateY(${Math.min(dy * 0.4, THRESHOLD)}px)`;
+        ptrSpinner.style.opacity = Math.min(dy / THRESHOLD, 1);
+      }, { passive: false });
+
+      feedEl.addEventListener('touchend', e => {
+        if (!pulling) return;
+        const dy = e.changedTouches[0].clientY - startY;
+        pulling = false;
+        ptrSpinner.style.opacity = '';
+
+        const snapBack = () => {
+          feedEl.style.transition = 'transform 280ms cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+          feedEl.style.transform = '';
+          feedEl.addEventListener('transitionend', () => { feedEl.style.transition = ''; }, { once: true });
+        };
+
+        if (dy >= THRESHOLD && !refreshing) {
+          refreshing = true;
+          ptr.classList.add('ptr-loading');
+          snapBack();
+          refreshFn().finally(() => {
+            refreshing = false;
+            ptr.classList.remove('ptr-loading');
+          });
+        } else {
+          snapBack();
         }
       }, { passive: true });
     }
@@ -674,6 +756,7 @@
       observeLoadingSlide();
       addSwipeListener(document.getElementById('feed'));
       addSwipeListener(document.getElementById('feed-tcba'));
+      addPullToRefresh(document.getElementById('feed'), pullRefreshMain);
     }
 
     async function checkForNewPosts() {
@@ -696,6 +779,66 @@
       if (fresh.length > 0) {
         document.getElementById('new-posts-pill').style.display = 'block';
       }
+    }
+
+    async function pullRefreshMain() {
+      const since = allItems[0]?.date ?? new Date(0);
+      const existingUrls = new Set(allItems.map(i => i.url));
+      const results = await Promise.allSettled(
+        CONFIG.feeds.map(async base => {
+          const feedUrl = base + '/rss';
+          const text = await fetch(CONFIG.proxy + encodeURIComponent(feedUrl), { cache: 'no-cache' }).then(r => r.text());
+          feedCache.set(feedUrl, { text, ts: Date.now() });
+          return parseFeed(text).flatMap(item => extractItems(item, base));
+        })
+      );
+      const fresh = [];
+      for (const r of results) {
+        if (r.status === 'fulfilled') fresh.push(...r.value.filter(item => item.date > since && !existingUrls.has(item.url)));
+      }
+      fresh.sort((a, b) => b.date - a.date);
+      if (fresh.length === 0) return;
+
+      allItems = [...fresh, ...allItems];
+      preloaded.clear();
+      const feed = document.getElementById('feed');
+      const firstPost = feed.querySelector('.post');
+      const fragment = document.createDocumentFragment();
+      fresh.forEach((item, i) => fragment.appendChild(createPostEl(item, i)));
+      feed.insertBefore(fragment, firstPost);
+      feed.scrollTop = 0;
+      currentIndex = 0;
+      preloadAround(0);
+      document.getElementById('new-posts-pill').style.display = 'none';
+      pendingNewItems = [];
+    }
+
+    async function pullRefreshTcba() {
+      const since = tcbaAllItems[0]?.date ?? new Date(0);
+      const existingUrls = new Set(tcbaAllItems.map(i => i.url));
+      let fresh = [];
+      try {
+        const feedUrl = TCBA_FEED + '/rss';
+        const text = await fetch(CONFIG.proxy + encodeURIComponent(feedUrl), { cache: 'no-cache' }).then(r => r.text());
+        feedCache.set(feedUrl, { text, ts: Date.now() });
+        const items = parseFeed(text).flatMap(item => extractItems(item, TCBA_FEED));
+        fresh = items.filter(item => item.date > since && !existingUrls.has(item.url));
+      } catch (e) {
+        console.warn('[tcba] refresh error:', e);
+      }
+      fresh.sort((a, b) => b.date - a.date);
+      if (fresh.length === 0) return;
+
+      tcbaAllItems = [...fresh, ...tcbaAllItems];
+      tcbaPreloaded.clear();
+      const feed = document.getElementById('feed-tcba');
+      const firstPost = feed.querySelector('.post');
+      const fragment = document.createDocumentFragment();
+      fresh.forEach((item, i) => fragment.appendChild(createPostEl(item, i)));
+      feed.insertBefore(fragment, firstPost);
+      feed.scrollTop = 0;
+      tcbaCurrentIndex = 0;
+      tcbaPreloadAround(0);
     }
 
     document.addEventListener('visibilitychange', () => {
