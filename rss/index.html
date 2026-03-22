@@ -578,7 +578,10 @@
         pageNum++;
         loadPromise = null;
 
-        if (newItems.length === 0) {
+        const seenUrls = new Set(allItems.map(i => i.url));
+        const freshItems = newItems.filter(i => !seenUrls.has(i.url));
+
+        if (freshItems.length === 0) {
           if (!fetchError) {
             feedExhausted = true;
             document.getElementById('loading-slide')?.remove();
@@ -586,10 +589,10 @@
           return;
         }
 
-        newItems.sort((a, b) => b.date - a.date);
-        allItems.push(...newItems);
-        renderPosts(newItems, startIndex, 'feed');
-        console.log('[feed] loaded', newItems.length, 'images at index', startIndex);
+        freshItems.sort((a, b) => b.date - a.date);
+        allItems.push(...freshItems);
+        renderPosts(freshItems, startIndex, 'feed');
+        console.log('[feed] loaded', freshItems.length, 'images at index', startIndex);
         preloadAround(startIndex);
         return startIndex;
       })();
