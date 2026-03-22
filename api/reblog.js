@@ -41,10 +41,6 @@ export default async function handler(req, res) {
   let parsed;
   try { parsed = new URL(postUrl); } catch { return res.status(400).json({ error: 'Invalid postUrl' }); }
 
-  if (!parsed.hostname.endsWith('.tumblr.com')) {
-    return res.status(400).json({ error: 'Not a Tumblr URL' });
-  }
-
   // Extract post ID from path: /post/{id}/...
   const match = parsed.pathname.match(/^\/post\/(\d+)/);
   if (!match) return res.status(400).json({ error: 'Could not parse post ID from URL' });
