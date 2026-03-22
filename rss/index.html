@@ -313,7 +313,7 @@
       label.className = 'source-label';
       label.textContent = item.site;
 
-      if (item.site.endsWith('tumblr.com')) {
+      if (item.link.includes('tumblr.com')) {
         const reblogBtn = document.createElement('span');
         reblogBtn.className = 'reblog-btn';
         reblogBtn.textContent = 'reblog';
