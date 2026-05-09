@@ -25,15 +25,31 @@
       background: #fff;
     }
 
-    #feed {
+    #stage {
+      display: flex;
+      width: 200vw;
       height: 100vh;
+      will-change: transform;
+      transition: transform 420ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    #stage.is-switching {
+      pointer-events: none;
+    }
+
+    #feed,
+    #feed-tcba {
+      height: 100vh;
+      width: 100vw;
+      flex-shrink: 0;
       overflow-y: auto;
       scroll-snap-type: y mandatory;
       scrollbar-width: none;
       overflow-anchor: none;
     }
 
-    #feed::-webkit-scrollbar {
+    #feed::-webkit-scrollbar,
+    #feed-tcba::-webkit-scrollbar {
       display: none;
     }
 
@@ -76,6 +92,14 @@
       pointer-events: none;
     }
 
+    .reblog-btn {
+      margin-left: 10px;
+      cursor: pointer;
+      text-decoration: underline;
+      color: #555;
+      pointer-events: auto;
+    }
+
     .post.is-holding .source-label {
       opacity: 1;
     }
@@ -94,7 +118,8 @@
       to { transform: rotate(360deg); }
     }
 
-    #loading-slide {
+    #loading-slide,
+    #loading-slide-tcba {
       height: 100vh;
       width: 100vw;
       scroll-snap-align: start;
@@ -114,17 +139,14 @@
       z-index: 10;
     }
 
-    #auth input {
-      font: 20px/1.4 system-ui, sans-serif;
-      padding: 10px 14px;
-      border: 1px solid #ccc;
-      border-radius: 3px;
-      outline: none;
-      width: 240px;
-    }
-
-    #auth input:focus {
-      border-color: #999;
+    #auth button {
+      font: 16px/1.4 system-ui, sans-serif;
+      padding: 10px 24px;
+      background: #000;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
     }
 
     #new-posts-pill {
@@ -144,16 +166,70 @@
       -webkit-user-select: none;
       user-select: none;
     }
+
+    #mode-indicator {
+      position: fixed;
+      top: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.55);
+      color: #fff;
+      padding: 5px 14px;
+      border-radius: 20px;
+      font: 11px/1.4 system-ui, -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      z-index: 100;
+      opacity: 0;
+      transition: opacity 300ms ease;
+      pointer-events: none;
+      white-space: nowrap;
+    }
+
+    #mode-indicator.visible {
+      opacity: 1;
+    }
+
+    #ptr {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 5;
+      pointer-events: none;
+    }
+
+    #ptr .ptr-spinner {
+      width: 22px;
+      height: 22px;
+      border: 2px solid #ddd;
+      border-top-color: #999;
+      border-radius: 50%;
+      opacity: 0;
+      transition: opacity 150ms ease;
+    }
+
+    #ptr.ptr-loading .ptr-spinner {
+      opacity: 1;
+      animation: spin 0.8s linear infinite;
+    }
   </style>
 </head>
 <body>
   <div id="auth">
-    <form>
-      <input name="pass" type="password" autofocus>
-    </form>
+    <div id="auth-inner">
+      <button id="passkey-signin" type="button">Sign in</button>
+    </div>
   </div>
   <div id="new-posts-pill">↑ New posts</div>
-  <main id="feed"></main>
+  <div id="mode-indicator"></div>
+  <div id="ptr"><div class="ptr-spinner"></div></div>
+  <div id="stage">
+    <main id="feed"></main>
+    <main id="feed-tcba"></main>
+  </div>
   <script>
     history.scrollRestoration = 'manual';
 
@@ -162,12 +238,17 @@
         'https://www.lifeonsundays.com',
         'http://jamiemclellan.tumblr.com',
         'https://yama-bato.tumblr.com',
-        'https://saintmarc.tumblr.com'
+        'https://saintmarc.tumblr.com',
+        'https://lohlover.tumblr.com',
+        'https://notes.analogdialog.com'
       ],
       proxy: '/api/proxy?url=',
       preloadAhead: 3
     };
 
+    const TCBA_FEED = 'https://thiscouldbeawesome.tumblr.com';
+
+    // ── Main feed state ──────────────────────────────────────────────────────
     let currentIndex = 0;
     let isScrolling = false;
     let scrollingTimer;
@@ -180,6 +261,22 @@
     const INACTIVE_THRESHOLD = 5 * 60_000; // 5 minutes
     let hiddenAt = null;
     let pendingNewItems = [];
+
+    // ── TCBA feed state ──────────────────────────────────────────────────────
+    let tcbaCurrentIndex = 0;
+    let tcbaIsScrolling = false;
+    let tcbaScrollingTimer;
+    let tcbaFeedExhausted = false;
+    let tcbaPageNum = 1;
+    let tcbaAllItems = [];
+    let tcbaLoadPromise = null;
+    const tcbaPreloaded = new Set();
+    let tcbaInitialized = false;
+
+    // ── Mode ─────────────────────────────────────────────────────────────────
+    let currentMode = 0; // 0 = main, 1 = tcba
+
+    // ── Shared helpers ───────────────────────────────────────────────────────
 
     async function fetchFeed(feedUrl) {
       const cached = feedCache.get(feedUrl);
@@ -243,6 +340,27 @@
       const label = document.createElement('span');
       label.className = 'source-label';
       label.textContent = item.site;
+
+      if (item.url.includes('tumblr.com')) {
+        const reblogBtn = document.createElement('span');
+        reblogBtn.className = 'reblog-btn';
+        reblogBtn.textContent = 'reblog';
+        reblogBtn.addEventListener('click', async e => {
+          e.stopPropagation();
+          reblogBtn.textContent = 'reblogging…';
+          try {
+            const res = await fetch('/api/reblog?postUrl=' + encodeURIComponent(item.link), {
+              headers: { 'X-Reblog-Secret': REBLOG_SECRET }
+            });
+            const json = await res.json();
+            reblogBtn.textContent = res.ok ? '✓ reblogged' : '✗ ' + (json.error || 'error');
+          } catch {
+            reblogBtn.textContent = '✗ error';
+          }
+        });
+        label.appendChild(reblogBtn);
+      }
+
       article.appendChild(label);
 
       anchor.addEventListener('click', e => {
@@ -255,28 +373,138 @@
         window.open(anchor.href, '_blank', 'noopener');
       });
 
+      // Double-tap on whitespace (the article background, not the image) → switch mode
+      let lastTapTime = 0;
+      article.addEventListener('click', e => {
+        if (e.target !== article) return;
+        const now = Date.now();
+        if (now - lastTapTime < 300) switchMode(currentMode === 0 ? 1 : 0);
+        lastTapTime = now;
+      });
+
       return article;
     }
 
-    function renderPosts(items, startIndex) {
-      const feed = document.getElementById('feed');
+    // ── Mode switch ──────────────────────────────────────────────────────────
+
+    let modeIndicatorTimer;
+    function showModeIndicator(label) {
+      const el = document.getElementById('mode-indicator');
+      el.textContent = label;
+      el.classList.add('visible');
+      clearTimeout(modeIndicatorTimer);
+      modeIndicatorTimer = setTimeout(() => el.classList.remove('visible'), 1400);
+    }
+
+    function switchMode(mode) {
+      if (mode === currentMode) return;
+      currentMode = mode;
+      const stage = document.getElementById('stage');
+      stage.classList.add('is-switching');
+      stage.style.transform = `translateX(${-mode * 100}vw)`;
+      stage.addEventListener('transitionend', () => stage.classList.remove('is-switching'), { once: true });
+      showModeIndicator(mode === 0 ? 'Main feed' : 'thiscouldbeawesome');
+
+      if (mode === 1 && !tcbaInitialized) {
+        tcbaInitialized = true;
+        addLoadingSlide('feed-tcba');
+        loadTcbaNextPage();
+        observeTcbaScroll();
+        observeTcbaLoadingSlide();
+        addPullToRefresh(document.getElementById('feed-tcba'), pullRefreshTcba);
+      }
+    }
+
+    // ── Swipe to switch mode ─────────────────────────────────────────────────
+
+    function addSwipeListener(el) {
+      let sx, sy;
+      el.addEventListener('touchstart', e => {
+        sx = e.touches[0].clientX;
+        sy = e.touches[0].clientY;
+      }, { passive: true });
+      el.addEventListener('touchend', e => {
+        const dx = e.changedTouches[0].clientX - sx;
+        const dy = e.changedTouches[0].clientY - sy;
+        if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) {
+          switchMode(dx < 0 ? 1 : 0);
+        }
+      }, { passive: true });
+    }
+
+    // ── Pull to refresh ──────────────────────────────────────────────────────
+
+    function addPullToRefresh(feedEl, refreshFn) {
+      const ptr = document.getElementById('ptr');
+      const ptrSpinner = ptr.querySelector('.ptr-spinner');
+      const THRESHOLD = 80;
+      let startY = 0;
+      let pulling = false;
+      let refreshing = false;
+
+      feedEl.addEventListener('touchstart', e => {
+        if (refreshing || feedEl.scrollTop > 0) return;
+        startY = e.touches[0].clientY;
+        pulling = true;
+      }, { passive: true });
+
+      feedEl.addEventListener('touchmove', e => {
+        if (!pulling || refreshing) return;
+        if (feedEl.scrollTop > 0) { pulling = false; return; }
+        const dy = e.touches[0].clientY - startY;
+        if (dy <= 0) { pulling = false; return; }
+        e.preventDefault();
+        feedEl.style.transform = `translateY(${Math.min(dy * 0.4, THRESHOLD)}px)`;
+        ptrSpinner.style.opacity = Math.min(dy / THRESHOLD, 1);
+      }, { passive: false });
+
+      feedEl.addEventListener('touchend', e => {
+        if (!pulling) return;
+        const dy = e.changedTouches[0].clientY - startY;
+        pulling = false;
+        ptrSpinner.style.opacity = '';
+
+        const snapBack = () => {
+          feedEl.style.transition = 'transform 280ms cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+          feedEl.style.transform = '';
+          feedEl.addEventListener('transitionend', () => { feedEl.style.transition = ''; }, { once: true });
+        };
+
+        if (dy >= THRESHOLD && !refreshing) {
+          refreshing = true;
+          ptr.classList.add('ptr-loading');
+          snapBack();
+          refreshFn().finally(() => {
+            refreshing = false;
+            ptr.classList.remove('ptr-loading');
+          });
+        } else {
+          snapBack();
+        }
+      }, { passive: true });
+    }
+
+    // ── Main feed ────────────────────────────────────────────────────────────
+
+    function renderPosts(items, startIndex, feedId = 'feed') {
+      const feed = document.getElementById(feedId);
+      const slideId = feedId === 'feed' ? 'loading-slide' : 'loading-slide-tcba';
       items.forEach((item, i) => {
         const article = createPostEl(item, startIndex + i);
-        const slide = document.getElementById('loading-slide');
+        const slide = document.getElementById(slideId);
         if (slide) feed.insertBefore(article, slide);
         else feed.appendChild(article);
       });
     }
 
     function navigateTo(index) {
-      const posts = document.querySelectorAll('.post');
+      const posts = document.querySelectorAll('#feed .post');
       const clamped = Math.max(0, Math.min(index, posts.length - 1));
       currentIndex = clamped;
       isScrolling = true;
       const feed = document.getElementById('feed');
       feed.scrollTo({ top: clamped * window.innerHeight, behavior: 'smooth' });
       preloadAround(clamped);
-      // Safety: always release isScrolling even if scrollend never fires
       clearTimeout(scrollingTimer);
       scrollingTimer = setTimeout(() => { isScrolling = false; }, 800);
     }
@@ -313,10 +541,11 @@
       }
     }
 
-    function addLoadingSlide() {
-      const feed = document.getElementById('feed');
+    function addLoadingSlide(feedId = 'feed') {
+      const feed = document.getElementById(feedId);
+      const slideId = feedId === 'feed' ? 'loading-slide' : 'loading-slide-tcba';
       const slide = document.createElement('article');
-      slide.id = 'loading-slide';
+      slide.id = slideId;
       const spinner = document.createElement('div');
       spinner.className = 'spinner';
       slide.appendChild(spinner);
@@ -331,7 +560,6 @@
         console.log('[feed] loading page', pageNum);
         const startIndex = allItems.length;
 
-        // Fetch all feeds in parallel
         const results = await Promise.allSettled(
           CONFIG.feeds.map(base => {
             const feedUrl = pageNum === 1 ? base + '/rss' : base + '/page/' + pageNum + '/rss';
@@ -349,7 +577,10 @@
         pageNum++;
         loadPromise = null;
 
-        if (newItems.length === 0) {
+        const seenUrls = new Set(allItems.map(i => i.url));
+        const freshItems = newItems.filter(i => !seenUrls.has(i.url));
+
+        if (freshItems.length === 0) {
           if (!fetchError) {
             feedExhausted = true;
             document.getElementById('loading-slide')?.remove();
@@ -357,37 +588,15 @@
           return;
         }
 
-        // Merge chronologically — newest first
-        newItems.sort((a, b) => b.date - a.date);
-
-        allItems.push(...newItems);
-        renderPosts(newItems, startIndex);
-        console.log('[feed] loaded', newItems.length, 'images at index', startIndex);
+        freshItems.sort((a, b) => b.date - a.date);
+        allItems.push(...freshItems);
+        renderPosts(freshItems, startIndex, 'feed');
+        console.log('[feed] loaded', freshItems.length, 'images at index', startIndex);
         preloadAround(startIndex);
         return startIndex;
       })();
       return loadPromise;
     }
-
-    document.addEventListener('keydown', async e => {
-      if (e.key === 'j' || e.key === 'J') {
-        if (currentIndex >= allItems.length - 1) {
-          const slide = document.getElementById('loading-slide');
-          if (slide) {
-            slide.scrollIntoView({ behavior: 'smooth' });
-            const startIdx = await loadNextPage();
-            if (startIdx != null) navigateTo(startIdx);
-          }
-        } else {
-          if (currentIndex >= allItems.length - 5) loadNextPage();
-          navigateTo(currentIndex + 1);
-        }
-      }
-      if (e.key === 'k' || e.key === 'K') navigateTo(currentIndex - 1);
-    });
-
-    const AUTH = btoa('pansy');
-    const authEl = document.getElementById('auth');
 
     function observeLoadingSlide() {
       const slide = document.getElementById('loading-slide');
@@ -400,9 +609,142 @@
       observer.observe(slide);
     }
 
+    // ── TCBA feed ────────────────────────────────────────────────────────────
+
+    function navigateTcbaTo(index) {
+      const posts = document.querySelectorAll('#feed-tcba .post');
+      const clamped = Math.max(0, Math.min(index, posts.length - 1));
+      tcbaCurrentIndex = clamped;
+      tcbaIsScrolling = true;
+      const feed = document.getElementById('feed-tcba');
+      feed.scrollTo({ top: clamped * window.innerHeight, behavior: 'smooth' });
+      tcbaPreloadAround(clamped);
+      clearTimeout(tcbaScrollingTimer);
+      tcbaScrollingTimer = setTimeout(() => { tcbaIsScrolling = false; }, 800);
+    }
+
+    function tcbaPreloadAround(index) {
+      const end = Math.min(tcbaAllItems.length, index + CONFIG.preloadAhead + 1);
+      for (let i = index; i < end; i++) {
+        if (!tcbaPreloaded.has(i)) {
+          new Image().src = tcbaAllItems[i].url;
+          tcbaPreloaded.add(i);
+        }
+      }
+    }
+
+    function loadTcbaNextPage() {
+      if (tcbaFeedExhausted) return Promise.resolve();
+      if (tcbaLoadPromise) return tcbaLoadPromise;
+      tcbaLoadPromise = (async () => {
+        console.log('[tcba] loading page', tcbaPageNum);
+        const startIndex = tcbaAllItems.length;
+        const feedUrl = tcbaPageNum === 1
+          ? TCBA_FEED + '/rss'
+          : TCBA_FEED + '/page/' + tcbaPageNum + '/rss';
+
+        let newItems = [];
+        try {
+          const xml = await fetchFeed(feedUrl);
+          newItems = parseFeed(xml).flatMap(item => extractItems(item, TCBA_FEED));
+        } catch (e) {
+          console.warn('[tcba] feed error:', e);
+        }
+
+        tcbaPageNum++;
+        tcbaLoadPromise = null;
+
+        if (newItems.length === 0) {
+          tcbaFeedExhausted = true;
+          document.getElementById('loading-slide-tcba')?.remove();
+          return;
+        }
+
+        newItems.sort((a, b) => b.date - a.date);
+        tcbaAllItems.push(...newItems);
+        renderPosts(newItems, startIndex, 'feed-tcba');
+        console.log('[tcba] loaded', newItems.length, 'images at index', startIndex);
+        tcbaPreloadAround(startIndex);
+        return startIndex;
+      })();
+      return tcbaLoadPromise;
+    }
+
+    function observeTcbaScroll() {
+      const feed = document.getElementById('feed-tcba');
+      let scrollTimer;
+      feed.addEventListener('scroll', () => {
+        if (tcbaIsScrolling) return;
+        clearTimeout(scrollTimer);
+        scrollTimer = setTimeout(() => {
+          tcbaCurrentIndex = Math.round(feed.scrollTop / window.innerHeight);
+          tcbaPreloadAround(tcbaCurrentIndex);
+          if (tcbaCurrentIndex >= tcbaAllItems.length - 5) loadTcbaNextPage();
+        }, 100);
+      });
+      feed.addEventListener('scrollend', () => { tcbaIsScrolling = false; });
+      if (!('onscrollend' in window)) {
+        let endTimer;
+        feed.addEventListener('scroll', () => {
+          clearTimeout(endTimer);
+          endTimer = setTimeout(() => { tcbaIsScrolling = false; }, 150);
+        });
+      }
+    }
+
+    function observeTcbaLoadingSlide() {
+      const slide = document.getElementById('loading-slide-tcba');
+      if (!slide) return;
+      const observer = new IntersectionObserver(entries => {
+        if (entries[0].isIntersecting && tcbaCurrentIndex >= tcbaAllItems.length - 1) {
+          loadTcbaNextPage();
+        }
+      }, { root: document.getElementById('feed-tcba'), threshold: 0.1 });
+      observer.observe(slide);
+    }
+
+    // ── Keyboard navigation ──────────────────────────────────────────────────
+
+    document.addEventListener('keydown', async e => {
+      if (currentMode === 0) {
+        if (e.key === 'j' || e.key === 'J') {
+          if (currentIndex >= allItems.length - 1) {
+            const slide = document.getElementById('loading-slide');
+            if (slide) {
+              slide.scrollIntoView({ behavior: 'smooth' });
+              const startIdx = await loadNextPage();
+              if (startIdx != null) navigateTo(startIdx);
+            }
+          } else {
+            if (currentIndex >= allItems.length - 5) loadNextPage();
+            navigateTo(currentIndex + 1);
+          }
+        }
+        if (e.key === 'k' || e.key === 'K') navigateTo(currentIndex - 1);
+      } else {
+        if (e.key === 'j' || e.key === 'J') {
+          if (tcbaCurrentIndex >= tcbaAllItems.length - 1) {
+            const slide = document.getElementById('loading-slide-tcba');
+            if (slide) {
+              slide.scrollIntoView({ behavior: 'smooth' });
+              const startIdx = await loadTcbaNextPage();
+              if (startIdx != null) navigateTcbaTo(startIdx);
+            }
+          } else {
+            if (tcbaCurrentIndex >= tcbaAllItems.length - 5) loadTcbaNextPage();
+            navigateTcbaTo(tcbaCurrentIndex + 1);
+          }
+        }
+        if (e.key === 'k' || e.key === 'K') navigateTcbaTo(tcbaCurrentIndex - 1);
+      }
+    });
+
+    const REBLOG_SECRET = 'b4766b49ffc86952d1357f00ec16f284106cd056ef156c63';
+    const authEl = document.getElementById('auth');
+
     async function startApp() {
       authEl.remove();
-      addLoadingSlide();
+      addLoadingSlide('feed');
       await loadNextPage();
 
       if (allItems.length > 0) {
@@ -414,6 +756,9 @@
       document.getElementById('feed').scrollTop = 0;
       observeScroll();
       observeLoadingSlide();
+      addSwipeListener(document.getElementById('feed'));
+      addSwipeListener(document.getElementById('feed-tcba'));
+      addPullToRefresh(document.getElementById('feed'), pullRefreshMain);
     }
 
     async function checkForNewPosts() {
@@ -422,7 +767,6 @@
       const results = await Promise.allSettled(
         CONFIG.feeds.map(async base => {
           const feedUrl = base + '/rss';
-          // Bypass both client feedCache and browser HTTP cache to always get fresh data
           const text = await fetch(CONFIG.proxy + encodeURIComponent(feedUrl), { cache: 'no-cache' }).then(r => r.text());
           feedCache.set(feedUrl, { text, ts: Date.now() });
           return parseFeed(text).flatMap(item => extractItems(item, base));
@@ -437,6 +781,66 @@
       if (fresh.length > 0) {
         document.getElementById('new-posts-pill').style.display = 'block';
       }
+    }
+
+    async function pullRefreshMain() {
+      const since = allItems[0]?.date ?? new Date(0);
+      const existingUrls = new Set(allItems.map(i => i.url));
+      const results = await Promise.allSettled(
+        CONFIG.feeds.map(async base => {
+          const feedUrl = base + '/rss';
+          const text = await fetch(CONFIG.proxy + encodeURIComponent(feedUrl), { cache: 'no-cache' }).then(r => r.text());
+          feedCache.set(feedUrl, { text, ts: Date.now() });
+          return parseFeed(text).flatMap(item => extractItems(item, base));
+        })
+      );
+      const fresh = [];
+      for (const r of results) {
+        if (r.status === 'fulfilled') fresh.push(...r.value.filter(item => item.date > since && !existingUrls.has(item.url)));
+      }
+      fresh.sort((a, b) => b.date - a.date);
+      if (fresh.length === 0) return;
+
+      allItems = [...fresh, ...allItems];
+      preloaded.clear();
+      const feed = document.getElementById('feed');
+      const firstPost = feed.querySelector('.post');
+      const fragment = document.createDocumentFragment();
+      fresh.forEach((item, i) => fragment.appendChild(createPostEl(item, i)));
+      feed.insertBefore(fragment, firstPost);
+      feed.scrollTop = 0;
+      currentIndex = 0;
+      preloadAround(0);
+      document.getElementById('new-posts-pill').style.display = 'none';
+      pendingNewItems = [];
+    }
+
+    async function pullRefreshTcba() {
+      const since = tcbaAllItems[0]?.date ?? new Date(0);
+      const existingUrls = new Set(tcbaAllItems.map(i => i.url));
+      let fresh = [];
+      try {
+        const feedUrl = TCBA_FEED + '/rss';
+        const text = await fetch(CONFIG.proxy + encodeURIComponent(feedUrl), { cache: 'no-cache' }).then(r => r.text());
+        feedCache.set(feedUrl, { text, ts: Date.now() });
+        const items = parseFeed(text).flatMap(item => extractItems(item, TCBA_FEED));
+        fresh = items.filter(item => item.date > since && !existingUrls.has(item.url));
+      } catch (e) {
+        console.warn('[tcba] refresh error:', e);
+      }
+      fresh.sort((a, b) => b.date - a.date);
+      if (fresh.length === 0) return;
+
+      tcbaAllItems = [...fresh, ...tcbaAllItems];
+      tcbaPreloaded.clear();
+      const feed = document.getElementById('feed-tcba');
+      const firstPost = feed.querySelector('.post');
+      const fragment = document.createDocumentFragment();
+      fresh.forEach((item, i) => fragment.appendChild(createPostEl(item, i)));
+      feed.insertBefore(fragment, firstPost);
+      feed.scrollTop = 0;
+      tcbaCurrentIndex = 0;
+      tcbaPreloadAround(0);
     }
 
     document.addEventListener('visibilitychange', () => {
@@ -471,18 +875,28 @@
       preloadAround(0);
     });
 
+    async function passkeyAuth() {
+      try {
+        await navigator.credentials.get({
+          publicKey: {
+            challenge: crypto.getRandomValues(new Uint8Array(32)),
+            rpId: location.hostname,
+            userVerification: 'required'
+          }
+        });
+        document.cookie = 'rss-auth=1; max-age=31536000; path=/; SameSite=Strict';
+        startApp();
+      } catch {
+        document.getElementById('passkey-signin').disabled = true;
+        document.getElementById('passkey-signin').textContent = 'No access';
+      }
+    }
+
     if (document.cookie.split(';').some(c => c.trim().startsWith('rss-auth='))) {
       startApp();
     } else {
-      authEl.querySelector('form').addEventListener('submit', e => {
-        e.preventDefault();
-        if (btoa(e.target.pass.value) === AUTH) {
-          document.cookie = 'rss-auth=1; max-age=31536000; path=/; SameSite=Strict';
-          startApp();
-        } else {
-          e.target.pass.value = '';
-        }
-      });
+      document.getElementById('passkey-signin').addEventListener('click', passkeyAuth);
+      passkeyAuth();
     }
   </script>
 </body>
