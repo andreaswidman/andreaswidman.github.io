@@ -43,12 +43,19 @@ export default async function handler(req, res) {
   let parsed;
   try { parsed = new URL(postUrl); } catch { return res.status(400).json({ error: 'Invalid postUrl' }); }
 
-  // Extract post ID from path: /post/{id}/...
-  const match = parsed.pathname.match(/^\/post\/(\d+)/);
-  if (!match) return res.status(400).json({ error: 'Could not parse post ID from URL' });
-
-  const blog = parsed.hostname;
-  const postId = match[1];
+  // Post URLs are either https://{blog}/post/{id}/... or https://www.tumblr.com/{blog}/{id}
+  let blog, postId;
+  const blogPost = parsed.pathname.match(/^\/post\/(\d+)/);
+  const dashPost = parsed.hostname === 'www.tumblr.com' && parsed.pathname.match(/^\/([^/]+)\/(\d+)/);
+  if (blogPost) {
+    blog = parsed.hostname;
+    postId = blogPost[1];
+  } else if (dashPost) {
+    blog = `${dashPost[1]}.tumblr.com`;
+    postId = dashPost[2];
+  } else {
+    return res.status(400).json({ error: 'Could not parse post ID from URL' });
+  }
 
   const consumerKey = process.env.TUMBLR_CONSUMER_KEY;
   const consumerSecret = process.env.TUMBLR_CONSUMER_SECRET;
