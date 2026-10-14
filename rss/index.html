@@ -104,13 +104,17 @@
       opacity: 1;
     }
 
+    .spinner,
+    #ptr .ptr-spinner {
+      border: 2px solid #ddd;
+      border-top-color: #999;
+      border-radius: 50%;
+    }
+
     .spinner {
       position: absolute;
       width: 24px;
       height: 24px;
-      border: 2px solid #ddd;
-      border-top-color: #999;
-      border-radius: 50%;
       animation: spin 0.8s linear infinite;
     }
 
@@ -118,8 +122,7 @@
       to { transform: rotate(360deg); }
     }
 
-    #loading-slide,
-    #loading-slide-tcba {
+    .loading-slide {
       height: 100vh;
       width: 100vw;
       scroll-snap-align: start;
@@ -204,9 +207,6 @@
     #ptr .ptr-spinner {
       width: 22px;
       height: 22px;
-      border: 2px solid #ddd;
-      border-top-color: #999;
-      border-radius: 50%;
       opacity: 0;
       transition: opacity 150ms ease;
     }
@@ -234,47 +234,37 @@
     history.scrollRestoration = 'manual';
 
     const CONFIG = {
-      feeds: [
-        'https://www.lifeonsundays.com',
-        'http://jamiemclellan.tumblr.com',
-        'https://yama-bato.tumblr.com',
-        'https://saintmarc.tumblr.com',
-        'https://lohlover.tumblr.com',
-        'https://notes.analogdialog.com'
-      ],
       proxy: '/api/proxy?url=',
       preloadAhead: 3
     };
 
-    const TCBA_FEED = 'https://thiscouldbeawesome.tumblr.com';
-
-    // ── Main feed state ──────────────────────────────────────────────────────
-    let currentIndex = 0;
-    let isScrolling = false;
-    let scrollingTimer;
-    let feedExhausted = false;
-    let pageNum = 1;
-    let allItems = [];
-    let loadPromise = null;
-    const preloaded = new Set();
     const feedCache = new Map(); // url → { text, ts }
     const INACTIVE_THRESHOLD = 5 * 60_000; // 5 minutes
     let hiddenAt = null;
     let pendingNewItems = [];
 
-    // ── TCBA feed state ──────────────────────────────────────────────────────
-    let tcbaCurrentIndex = 0;
-    let tcbaIsScrolling = false;
-    let tcbaScrollingTimer;
-    let tcbaFeedExhausted = false;
-    let tcbaPageNum = 1;
-    let tcbaAllItems = [];
-    let tcbaLoadPromise = null;
-    const tcbaPreloaded = new Set();
-    let tcbaInitialized = false;
+    // ── Feeds (0 = main, 1 = tcba) ───────────────────────────────────────────
+    let mainFeed, tcbaFeed;
+    let currentMode = 0;
+    const currentFeed = () => (currentMode === 0 ? mainFeed : tcbaFeed);
 
-    // ── Mode ─────────────────────────────────────────────────────────────────
-    let currentMode = 0; // 0 = main, 1 = tcba
+    function createFeed(id, sources) {
+      return {
+        el: document.getElementById(id),
+        sources,                // every feed base URL
+        active: [...sources],   // bases that still have older pages
+        items: [],
+        seen: new Set(),
+        index: 0,
+        page: 1,
+        exhausted: false,
+        loadPromise: null,
+        scrolling: false,
+        scrollingTimer: null,
+        preloadedUpTo: -1,
+        slide: null
+      };
+    }
 
     // ── Shared helpers ───────────────────────────────────────────────────────
 
@@ -284,11 +274,6 @@
       const text = await fetch(CONFIG.proxy + encodeURIComponent(feedUrl)).then(r => r.text());
       feedCache.set(feedUrl, { text, ts: Date.now() });
       return text;
-    }
-
-    function parseFeed(xml) {
-      const doc = new DOMParser().parseFromString(xml, 'text/xml');
-      return Array.from(doc.querySelectorAll('item'));
     }
 
     function pickBestSrc(img) {
@@ -303,7 +288,7 @@
       return best[0]?.url || img.getAttribute('src');
     }
 
-    function extractItems(item, feedUrl) {
+    function extractItems(item, feedUrl, site) {
       const desc = item.querySelector('description');
       if (!desc) return [];
       const doc = new DOMParser().parseFromString(desc.textContent, 'text/html');
@@ -311,9 +296,17 @@
       const pubDate = item.querySelector('pubDate')?.textContent;
       const date = pubDate ? new Date(pubDate) : new Date(0);
       const link = item.querySelector('link')?.textContent?.trim() || feedUrl;
-      const site = (() => { try { return new URL(feedUrl).hostname.replace(/^www\./, ''); } catch { return feedUrl; } })();
       return urls.map(url => ({ url, date, link, site }));
     }
+
+    function parseItems(xml, base) {
+      const site = (() => { try { return new URL(base).hostname.replace(/^www\./, ''); } catch { return base; } })();
+      const doc = new DOMParser().parseFromString(xml, 'text/xml');
+      return Array.from(doc.querySelectorAll('item')).flatMap(item => extractItems(item, base, site));
+    }
+
+    const byNewest = (a, b) => b.date - a.date;
+    const unseen = (feed, items) => items.filter(i => !feed.seen.has(i.url));
 
     function createPostEl(item, idx) {
       const article = document.createElement('article');
@@ -341,7 +334,7 @@
       label.className = 'source-label';
       label.textContent = item.site;
 
-      if (item.url.includes('tumblr.com')) {
+      if (item.url.includes('tumblr.com') && /\/post\/\d+/.test(item.link)) {
         const reblogBtn = document.createElement('span');
         reblogBtn.className = 'reblog-btn';
         reblogBtn.textContent = 'reblog';
@@ -350,6 +343,7 @@
           reblogBtn.textContent = 'reblogging…';
           try {
             const res = await fetch('/api/reblog?postUrl=' + encodeURIComponent(item.link), {
+              method: 'POST',
               headers: { 'X-Reblog-Secret': REBLOG_SECRET }
             });
             const json = await res.json();
@@ -405,14 +399,7 @@
       stage.addEventListener('transitionend', () => stage.classList.remove('is-switching'), { once: true });
       showModeIndicator(mode === 0 ? 'Main feed' : 'thiscouldbeawesome');
 
-      if (mode === 1 && !tcbaInitialized) {
-        tcbaInitialized = true;
-        addLoadingSlide('feed-tcba');
-        loadTcbaNextPage();
-        observeTcbaScroll();
-        observeTcbaLoadingSlide();
-        addPullToRefresh(document.getElementById('feed-tcba'), pullRefreshTcba);
-      }
+      if (mode === 1 && !tcbaFeed.slide) mountFeed(tcbaFeed);
     }
 
     // ── Swipe to switch mode ─────────────────────────────────────────────────
@@ -484,258 +471,168 @@
       }, { passive: true });
     }
 
-    // ── Main feed ────────────────────────────────────────────────────────────
+    // ── Feed behaviour (shared by main + tcba) ───────────────────────────────
 
-    function renderPosts(items, startIndex, feedId = 'feed') {
-      const feed = document.getElementById(feedId);
-      const slideId = feedId === 'feed' ? 'loading-slide' : 'loading-slide-tcba';
-      items.forEach((item, i) => {
-        const article = createPostEl(item, startIndex + i);
-        const slide = document.getElementById(slideId);
-        if (slide) feed.insertBefore(article, slide);
-        else feed.appendChild(article);
-      });
-    }
-
-    function navigateTo(index) {
-      const posts = document.querySelectorAll('#feed .post');
-      const clamped = Math.max(0, Math.min(index, posts.length - 1));
-      currentIndex = clamped;
-      isScrolling = true;
-      const feed = document.getElementById('feed');
-      feed.scrollTo({ top: clamped * window.innerHeight, behavior: 'smooth' });
-      preloadAround(clamped);
-      clearTimeout(scrollingTimer);
-      scrollingTimer = setTimeout(() => { isScrolling = false; }, 800);
-    }
-
-    function observeScroll() {
-      const feed = document.getElementById('feed');
-      let scrollTimer;
-      feed.addEventListener('scroll', () => {
-        if (isScrolling) return;
-        clearTimeout(scrollTimer);
-        scrollTimer = setTimeout(() => {
-          currentIndex = Math.round(feed.scrollTop / window.innerHeight);
-          preloadAround(currentIndex);
-          if (currentIndex >= allItems.length - 5) loadNextPage();
-        }, 100);
-      });
-      feed.addEventListener('scrollend', () => { isScrolling = false; });
-      if (!('onscrollend' in window)) {
-        let endTimer;
-        feed.addEventListener('scroll', () => {
-          clearTimeout(endTimer);
-          endTimer = setTimeout(() => { isScrolling = false; }, 150);
-        });
-      }
-    }
-
-    function preloadAround(index) {
-      const end = Math.min(allItems.length, index + CONFIG.preloadAhead + 1);
-      for (let i = index; i < end; i++) {
-        if (!preloaded.has(i)) {
-          new Image().src = allItems[i].url;
-          preloaded.add(i);
-        }
-      }
-    }
-
-    function addLoadingSlide(feedId = 'feed') {
-      const feed = document.getElementById(feedId);
-      const slideId = feedId === 'feed' ? 'loading-slide' : 'loading-slide-tcba';
+    function addLoadingSlide(feed) {
       const slide = document.createElement('article');
-      slide.id = slideId;
+      slide.className = 'loading-slide';
       const spinner = document.createElement('div');
       spinner.className = 'spinner';
       slide.appendChild(spinner);
-      feed.appendChild(slide);
-      return slide;
+      feed.el.appendChild(slide);
+      feed.slide = slide;
     }
 
-    function loadNextPage() {
-      if (feedExhausted) return Promise.resolve();
-      if (loadPromise) return loadPromise;
-      loadPromise = (async () => {
-        console.log('[feed] loading page', pageNum);
-        const startIndex = allItems.length;
-
-        const results = await Promise.allSettled(
-          CONFIG.feeds.map(base => {
-            const feedUrl = pageNum === 1 ? base + '/rss' : base + '/page/' + pageNum + '/rss';
-            return fetchFeed(feedUrl).then(xml => parseFeed(xml).flatMap(item => extractItems(item, base)));
-          })
-        );
-
-        const newItems = [];
-        let fetchError = false;
-        for (const result of results) {
-          if (result.status === 'fulfilled') newItems.push(...result.value);
-          else { console.warn('Feed error:', result.reason); fetchError = true; }
-        }
-
-        pageNum++;
-        loadPromise = null;
-
-        const seenUrls = new Set(allItems.map(i => i.url));
-        const freshItems = newItems.filter(i => !seenUrls.has(i.url));
-
-        if (freshItems.length === 0) {
-          if (!fetchError) {
-            feedExhausted = true;
-            document.getElementById('loading-slide')?.remove();
-          }
-          return;
-        }
-
-        freshItems.sort((a, b) => b.date - a.date);
-        allItems.push(...freshItems);
-        renderPosts(freshItems, startIndex, 'feed');
-        console.log('[feed] loaded', freshItems.length, 'images at index', startIndex);
-        preloadAround(startIndex);
-        return startIndex;
-      })();
-      return loadPromise;
+    function renderPosts(feed, items, startIndex) {
+      const before = feed.slide?.parentNode ? feed.slide : null;
+      items.forEach((item, i) => feed.el.insertBefore(createPostEl(item, startIndex + i), before));
     }
 
-    function observeLoadingSlide() {
-      const slide = document.getElementById('loading-slide');
-      if (!slide) return;
-      const observer = new IntersectionObserver(entries => {
-        if (entries[0].isIntersecting && currentIndex >= allItems.length - 1) {
-          loadNextPage();
-        }
-      }, { root: document.getElementById('feed'), threshold: 0.1 });
-      observer.observe(slide);
+    function prependItems(feed, items) {
+      items.forEach(i => feed.seen.add(i.url));
+      feed.items.unshift(...items);
+      feed.preloadedUpTo = -1;
+      const fragment = document.createDocumentFragment();
+      items.forEach((item, i) => fragment.appendChild(createPostEl(item, i)));
+      feed.el.insertBefore(fragment, feed.el.querySelector('.post'));
+      feed.el.scrollTop = 0;
+      feed.index = 0;
+      preloadAround(feed, 0);
     }
 
-    // ── TCBA feed ────────────────────────────────────────────────────────────
-
-    function navigateTcbaTo(index) {
-      const posts = document.querySelectorAll('#feed-tcba .post');
-      const clamped = Math.max(0, Math.min(index, posts.length - 1));
-      tcbaCurrentIndex = clamped;
-      tcbaIsScrolling = true;
-      const feed = document.getElementById('feed-tcba');
-      feed.scrollTo({ top: clamped * window.innerHeight, behavior: 'smooth' });
-      tcbaPreloadAround(clamped);
-      clearTimeout(tcbaScrollingTimer);
-      tcbaScrollingTimer = setTimeout(() => { tcbaIsScrolling = false; }, 800);
+    function navigateTo(feed, index) {
+      feed.index = Math.max(0, Math.min(index, feed.items.length - 1));
+      feed.scrolling = true;
+      feed.el.scrollTo({ top: feed.index * window.innerHeight, behavior: 'smooth' });
+      preloadAround(feed, feed.index);
+      clearTimeout(feed.scrollingTimer);
+      feed.scrollingTimer = setTimeout(() => { feed.scrolling = false; }, 800);
     }
 
-    function tcbaPreloadAround(index) {
-      const end = Math.min(tcbaAllItems.length, index + CONFIG.preloadAhead + 1);
-      for (let i = index; i < end; i++) {
-        if (!tcbaPreloaded.has(i)) {
-          new Image().src = tcbaAllItems[i].url;
-          tcbaPreloaded.add(i);
-        }
-      }
-    }
-
-    function loadTcbaNextPage() {
-      if (tcbaFeedExhausted) return Promise.resolve();
-      if (tcbaLoadPromise) return tcbaLoadPromise;
-      tcbaLoadPromise = (async () => {
-        console.log('[tcba] loading page', tcbaPageNum);
-        const startIndex = tcbaAllItems.length;
-        const feedUrl = tcbaPageNum === 1
-          ? TCBA_FEED + '/rss'
-          : TCBA_FEED + '/page/' + tcbaPageNum + '/rss';
-
-        let newItems = [];
-        try {
-          const xml = await fetchFeed(feedUrl);
-          newItems = parseFeed(xml).flatMap(item => extractItems(item, TCBA_FEED));
-        } catch (e) {
-          console.warn('[tcba] feed error:', e);
-        }
-
-        tcbaPageNum++;
-        tcbaLoadPromise = null;
-
-        if (newItems.length === 0) {
-          tcbaFeedExhausted = true;
-          document.getElementById('loading-slide-tcba')?.remove();
-          return;
-        }
-
-        newItems.sort((a, b) => b.date - a.date);
-        tcbaAllItems.push(...newItems);
-        renderPosts(newItems, startIndex, 'feed-tcba');
-        console.log('[tcba] loaded', newItems.length, 'images at index', startIndex);
-        tcbaPreloadAround(startIndex);
-        return startIndex;
-      })();
-      return tcbaLoadPromise;
-    }
-
-    function observeTcbaScroll() {
-      const feed = document.getElementById('feed-tcba');
+    function observeScroll(feed) {
       let scrollTimer;
-      feed.addEventListener('scroll', () => {
-        if (tcbaIsScrolling) return;
+      feed.el.addEventListener('scroll', () => {
+        if (feed.scrolling) return;
         clearTimeout(scrollTimer);
         scrollTimer = setTimeout(() => {
-          tcbaCurrentIndex = Math.round(feed.scrollTop / window.innerHeight);
-          tcbaPreloadAround(tcbaCurrentIndex);
-          if (tcbaCurrentIndex >= tcbaAllItems.length - 5) loadTcbaNextPage();
+          feed.index = Math.round(feed.el.scrollTop / window.innerHeight);
+          preloadAround(feed, feed.index);
+          if (feed.index >= feed.items.length - 5) loadNextPage(feed);
         }, 100);
       });
-      feed.addEventListener('scrollend', () => { tcbaIsScrolling = false; });
-      if (!('onscrollend' in window)) {
-        let endTimer;
-        feed.addEventListener('scroll', () => {
-          clearTimeout(endTimer);
-          endTimer = setTimeout(() => { tcbaIsScrolling = false; }, 150);
-        });
+      feed.el.addEventListener('scrollend', () => { feed.scrolling = false; });
+    }
+
+    function observeLoadingSlide(feed) {
+      const observer = new IntersectionObserver(entries => {
+        if (entries[0].isIntersecting && feed.index >= feed.items.length - 1) loadNextPage(feed);
+      }, { root: feed.el, threshold: 0.1 });
+      observer.observe(feed.slide);
+    }
+
+    function preloadAround(feed, index) {
+      const end = Math.min(feed.items.length, index + CONFIG.preloadAhead + 1);
+      for (let i = Math.max(index, feed.preloadedUpTo + 1); i < end; i++) {
+        new Image().src = feed.items[i].url;
+      }
+      feed.preloadedUpTo = Math.max(feed.preloadedUpTo, end - 1);
+    }
+
+    function loadNextPage(feed) {
+      if (feed.exhausted) return;
+      feed.loadPromise ??= fetchPage(feed).finally(() => { feed.loadPromise = null; });
+      return feed.loadPromise;
+    }
+
+    async function fetchPage(feed) {
+      const startIndex = feed.items.length;
+      const bases = feed.active;
+      const results = await Promise.allSettled(bases.map(base => {
+        const feedUrl = feed.page === 1 ? base + '/rss' : base + '/page/' + feed.page + '/rss';
+        return fetchFeed(feedUrl).then(xml => parseItems(xml, base));
+      }));
+      feed.page++;
+
+      const newItems = [];
+      const emptyBases = new Set();
+      let fetchError = false;
+      results.forEach((result, i) => {
+        if (result.status === 'rejected') {
+          console.warn('Feed error:', result.reason);
+          fetchError = true;
+        } else if (result.value.length === 0) {
+          emptyBases.add(bases[i]); // no older pages left for this source
+        } else {
+          newItems.push(...result.value);
+        }
+      });
+      feed.active = bases.filter(base => !emptyBases.has(base));
+
+      const fresh = unseen(feed, newItems).sort(byNewest);
+      if (fresh.length > 0) {
+        fresh.forEach(i => feed.seen.add(i.url));
+        feed.items.push(...fresh);
+        renderPosts(feed, fresh, startIndex);
+        preloadAround(feed, startIndex);
+      }
+
+      if (!fetchError && (fresh.length === 0 || feed.active.length === 0)) {
+        feed.exhausted = true;
+        feed.slide?.remove();
+      }
+      return fresh.length > 0 ? startIndex : undefined;
+    }
+
+    async function fetchLatest(feed) {
+      const since = feed.items[0]?.date ?? new Date(0);
+      const results = await Promise.allSettled(feed.sources.map(async base => {
+        const feedUrl = base + '/rss';
+        const text = await fetch(CONFIG.proxy + encodeURIComponent(feedUrl), { cache: 'no-cache' }).then(r => r.text());
+        feedCache.set(feedUrl, { text, ts: Date.now() });
+        return parseItems(text, base);
+      }));
+      results.forEach(r => { if (r.status === 'rejected') console.warn('Refresh error:', r.reason); });
+      const found = results.flatMap(r => (r.status === 'fulfilled' ? r.value : []));
+      return unseen(feed, found.filter(item => item.date > since)).sort(byNewest);
+    }
+
+    async function pullRefresh(feed) {
+      const fresh = await fetchLatest(feed);
+      if (fresh.length === 0) return;
+      prependItems(feed, fresh);
+      if (feed === mainFeed) {
+        document.getElementById('new-posts-pill').style.display = 'none';
+        pendingNewItems = [];
       }
     }
 
-    function observeTcbaLoadingSlide() {
-      const slide = document.getElementById('loading-slide-tcba');
-      if (!slide) return;
-      const observer = new IntersectionObserver(entries => {
-        if (entries[0].isIntersecting && tcbaCurrentIndex >= tcbaAllItems.length - 1) {
-          loadTcbaNextPage();
-        }
-      }, { root: document.getElementById('feed-tcba'), threshold: 0.1 });
-      observer.observe(slide);
+    function mountFeed(feed) {
+      addLoadingSlide(feed);
+      const firstPage = loadNextPage(feed);
+      observeScroll(feed);
+      observeLoadingSlide(feed);
+      addPullToRefresh(feed.el, () => pullRefresh(feed));
+      return firstPage;
     }
 
     // ── Keyboard navigation ──────────────────────────────────────────────────
 
     document.addEventListener('keydown', async e => {
-      if (currentMode === 0) {
-        if (e.key === 'j' || e.key === 'J') {
-          if (currentIndex >= allItems.length - 1) {
-            const slide = document.getElementById('loading-slide');
-            if (slide) {
-              slide.scrollIntoView({ behavior: 'smooth' });
-              const startIdx = await loadNextPage();
-              if (startIdx != null) navigateTo(startIdx);
-            }
-          } else {
-            if (currentIndex >= allItems.length - 5) loadNextPage();
-            navigateTo(currentIndex + 1);
-          }
+      const feed = currentFeed();
+      if (!feed) return;
+      const key = e.key.toLowerCase();
+      if (key === 'k') {
+        navigateTo(feed, feed.index - 1);
+      } else if (key === 'j') {
+        if (feed.index >= feed.items.length - 1) {
+          if (!feed.slide?.isConnected) return;
+          feed.slide.scrollIntoView({ behavior: 'smooth' });
+          const startIdx = await loadNextPage(feed);
+          if (startIdx != null) navigateTo(feed, startIdx);
+        } else {
+          if (feed.index >= feed.items.length - 5) loadNextPage(feed);
+          navigateTo(feed, feed.index + 1);
         }
-        if (e.key === 'k' || e.key === 'K') navigateTo(currentIndex - 1);
-      } else {
-        if (e.key === 'j' || e.key === 'J') {
-          if (tcbaCurrentIndex >= tcbaAllItems.length - 1) {
-            const slide = document.getElementById('loading-slide-tcba');
-            if (slide) {
-              slide.scrollIntoView({ behavior: 'smooth' });
-              const startIdx = await loadTcbaNextPage();
-              if (startIdx != null) navigateTcbaTo(startIdx);
-            }
-          } else {
-            if (tcbaCurrentIndex >= tcbaAllItems.length - 5) loadTcbaNextPage();
-            navigateTcbaTo(tcbaCurrentIndex + 1);
-          }
-        }
-        if (e.key === 'k' || e.key === 'K') navigateTcbaTo(tcbaCurrentIndex - 1);
       }
     });
 
@@ -744,109 +641,33 @@
 
     async function startApp() {
       authEl.remove();
-      addLoadingSlide('feed');
-      await loadNextPage();
+      const feeds = await fetch('/feeds.json').then(r => r.json());
+      mainFeed = createFeed('feed', feeds.main);
+      tcbaFeed = createFeed('feed-tcba', [feeds.tcba]);
+      addSwipeListener(mainFeed.el);
+      addSwipeListener(tcbaFeed.el);
+      await mountFeed(mainFeed);
 
-      if (allItems.length > 0) {
-        const iconUrl = allItems[0].url;
+      if (mainFeed.items.length > 0) {
+        const iconUrl = mainFeed.items[0].url;
         document.getElementById('apple-touch-icon').href = iconUrl;
         document.getElementById('favicon').href = iconUrl;
       }
 
-      document.getElementById('feed').scrollTop = 0;
-      observeScroll();
-      observeLoadingSlide();
-      addSwipeListener(document.getElementById('feed'));
-      addSwipeListener(document.getElementById('feed-tcba'));
-      addPullToRefresh(document.getElementById('feed'), pullRefreshMain);
+      mainFeed.el.scrollTop = 0;
     }
 
     async function checkForNewPosts() {
-      const since = allItems[0]?.date ?? new Date(0);
-      const existingUrls = new Set(allItems.map(i => i.url));
-      const results = await Promise.allSettled(
-        CONFIG.feeds.map(async base => {
-          const feedUrl = base + '/rss';
-          const text = await fetch(CONFIG.proxy + encodeURIComponent(feedUrl), { cache: 'no-cache' }).then(r => r.text());
-          feedCache.set(feedUrl, { text, ts: Date.now() });
-          return parseFeed(text).flatMap(item => extractItems(item, base));
-        })
-      );
-      const fresh = [];
-      for (const r of results) {
-        if (r.status === 'fulfilled') fresh.push(...r.value.filter(item => item.date > since && !existingUrls.has(item.url)));
-      }
-      fresh.sort((a, b) => b.date - a.date);
-      pendingNewItems = fresh;
-      if (fresh.length > 0) {
+      pendingNewItems = await fetchLatest(mainFeed);
+      if (pendingNewItems.length > 0) {
         document.getElementById('new-posts-pill').style.display = 'block';
       }
-    }
-
-    async function pullRefreshMain() {
-      const since = allItems[0]?.date ?? new Date(0);
-      const existingUrls = new Set(allItems.map(i => i.url));
-      const results = await Promise.allSettled(
-        CONFIG.feeds.map(async base => {
-          const feedUrl = base + '/rss';
-          const text = await fetch(CONFIG.proxy + encodeURIComponent(feedUrl), { cache: 'no-cache' }).then(r => r.text());
-          feedCache.set(feedUrl, { text, ts: Date.now() });
-          return parseFeed(text).flatMap(item => extractItems(item, base));
-        })
-      );
-      const fresh = [];
-      for (const r of results) {
-        if (r.status === 'fulfilled') fresh.push(...r.value.filter(item => item.date > since && !existingUrls.has(item.url)));
-      }
-      fresh.sort((a, b) => b.date - a.date);
-      if (fresh.length === 0) return;
-
-      allItems = [...fresh, ...allItems];
-      preloaded.clear();
-      const feed = document.getElementById('feed');
-      const firstPost = feed.querySelector('.post');
-      const fragment = document.createDocumentFragment();
-      fresh.forEach((item, i) => fragment.appendChild(createPostEl(item, i)));
-      feed.insertBefore(fragment, firstPost);
-      feed.scrollTop = 0;
-      currentIndex = 0;
-      preloadAround(0);
-      document.getElementById('new-posts-pill').style.display = 'none';
-      pendingNewItems = [];
-    }
-
-    async function pullRefreshTcba() {
-      const since = tcbaAllItems[0]?.date ?? new Date(0);
-      const existingUrls = new Set(tcbaAllItems.map(i => i.url));
-      let fresh = [];
-      try {
-        const feedUrl = TCBA_FEED + '/rss';
-        const text = await fetch(CONFIG.proxy + encodeURIComponent(feedUrl), { cache: 'no-cache' }).then(r => r.text());
-        feedCache.set(feedUrl, { text, ts: Date.now() });
-        const items = parseFeed(text).flatMap(item => extractItems(item, TCBA_FEED));
-        fresh = items.filter(item => item.date > since && !existingUrls.has(item.url));
-      } catch (e) {
-        console.warn('[tcba] refresh error:', e);
-      }
-      fresh.sort((a, b) => b.date - a.date);
-      if (fresh.length === 0) return;
-
-      tcbaAllItems = [...fresh, ...tcbaAllItems];
-      tcbaPreloaded.clear();
-      const feed = document.getElementById('feed-tcba');
-      const firstPost = feed.querySelector('.post');
-      const fragment = document.createDocumentFragment();
-      fresh.forEach((item, i) => fragment.appendChild(createPostEl(item, i)));
-      feed.insertBefore(fragment, firstPost);
-      feed.scrollTop = 0;
-      tcbaCurrentIndex = 0;
-      tcbaPreloadAround(0);
     }
 
     document.addEventListener('visibilitychange', () => {
       if (document.visibilityState === 'hidden') {
         hiddenAt = Date.now();
-      } else if (hiddenAt !== null && Date.now() - hiddenAt >= INACTIVE_THRESHOLD && allItems.length > 0) {
+      } else if (hiddenAt !== null && Date.now() - hiddenAt >= INACTIVE_THRESHOLD && mainFeed?.items.length > 0) {
         checkForNewPosts();
         hiddenAt = null;
       } else {
@@ -855,24 +676,10 @@
     });
 
     document.getElementById('new-posts-pill').addEventListener('click', () => {
-      const pill = document.getElementById('new-posts-pill');
-      pill.style.display = 'none';
+      document.getElementById('new-posts-pill').style.display = 'none';
       const items = pendingNewItems;
       pendingNewItems = [];
-      if (items.length === 0) return;
-
-      allItems = [...items, ...allItems];
-      preloaded.clear();
-
-      const feed = document.getElementById('feed');
-      const firstPost = feed.querySelector('.post');
-      const fragment = document.createDocumentFragment();
-      items.forEach((item, i) => fragment.appendChild(createPostEl(item, i)));
-      feed.insertBefore(fragment, firstPost);
-
-      feed.scrollTop = 0;
-      currentIndex = 0;
-      preloadAround(0);
+      if (items.length > 0) prependItems(mainFeed, items);
     });
 
     async function passkeyAuth() {

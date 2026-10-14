@@ -1,13 +1,8 @@
-const ALLOWED_HOSTS = [
-  'lifeonsundays.com',
-  'www.lifeonsundays.com',
-  'jamiemclellan.tumblr.com',
-  'randomitus.tumblr.com',
-  'yama-bato.tumblr.com',
-  'lohlover.tumblr.com',
-  'thiscouldbeawesome.tumblr.com',
-  'notes.analogdialog.com',
-];
+import feeds from '../feeds.json';
+
+const ALLOWED_HOSTS = new Set(
+  [...feeds.main, feeds.tcba].map(feedUrl => new URL(feedUrl).hostname)
+);
 
 export default async function handler(req, res) {
   const { url } = req.query;
@@ -27,7 +22,7 @@ export default async function handler(req, res) {
     return res.status(403).send('Forbidden protocol');
   }
 
-  if (!ALLOWED_HOSTS.includes(parsed.hostname)) {
+  if (!ALLOWED_HOSTS.has(parsed.hostname)) {
     return res.status(403).send('Forbidden host');
   }
 
@@ -35,8 +30,10 @@ export default async function handler(req, res) {
     const upstream = await fetch(url);
     const xml = await upstream.text();
     res.setHeader('Content-Type', 'application/xml; charset=utf-8');
-    res.setHeader('Cache-Control', 'public, s-maxage=300, stale-while-revalidate=30');
-    res.setHeader('Vercel-CDN-Cache-Control', 'public, s-maxage=300, stale-while-revalidate=30');
+    res.setHeader(
+      'Cache-Control',
+      upstream.ok ? 'public, s-maxage=300, stale-while-revalidate=30' : 'no-store'
+    );
     res.status(upstream.status).send(xml);
   } catch (err) {
     res.status(502).send('Upstream fetch failed');
