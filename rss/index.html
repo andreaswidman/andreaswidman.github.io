@@ -142,6 +142,18 @@
       z-index: 10;
     }
 
+    #auth-inner {
+      display: flex;
+      gap: 8px;
+    }
+
+    #auth input {
+      font: 16px/1.4 system-ui, sans-serif;
+      padding: 10px 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
     #auth button {
       font: 16px/1.4 system-ui, sans-serif;
       padding: 10px 24px;
@@ -219,9 +231,10 @@
 </head>
 <body>
   <div id="auth">
-    <div id="auth-inner">
-      <button id="passkey-signin" type="button">Sign in</button>
-    </div>
+    <form id="auth-inner">
+      <input id="passphrase" type="password" autocomplete="current-password" aria-label="Passphrase" required>
+      <button type="submit">Sign in</button>
+    </form>
   </div>
   <div id="new-posts-pill">↑ New posts</div>
   <div id="mode-indicator"></div>
@@ -343,8 +356,7 @@
           reblogBtn.textContent = 'reblogging…';
           try {
             const res = await fetch('/api/reblog?postUrl=' + encodeURIComponent(item.link), {
-              method: 'POST',
-              headers: { 'X-Reblog-Secret': REBLOG_SECRET }
+              method: 'POST'
             });
             const json = await res.json();
             reblogBtn.textContent = res.ok ? '✓ reblogged' : '✗ ' + (json.error || 'error');
@@ -636,7 +648,6 @@
       }
     });
 
-    const REBLOG_SECRET = 'b4766b49ffc86952d1357f00ec16f284106cd056ef156c63';
     const authEl = document.getElementById('auth');
 
     async function startApp() {
@@ -682,29 +693,25 @@
       if (items.length > 0) prependItems(mainFeed, items);
     });
 
-    async function passkeyAuth() {
+    document.getElementById('auth-inner').addEventListener('submit', async e => {
+      e.preventDefault();
+      const button = e.target.querySelector('button');
+      button.disabled = true;
       try {
-        await navigator.credentials.get({
-          publicKey: {
-            challenge: crypto.getRandomValues(new Uint8Array(32)),
-            rpId: location.hostname,
-            userVerification: 'required'
-          }
+        const res = await fetch('/api/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ passphrase: document.getElementById('passphrase').value })
         });
-        document.cookie = 'rss-auth=1; max-age=31536000; path=/; SameSite=Strict';
-        startApp();
+        if (res.ok) return startApp();
+        button.textContent = res.status === 401 ? 'Wrong passphrase' : 'Error';
       } catch {
-        document.getElementById('passkey-signin').disabled = true;
-        document.getElementById('passkey-signin').textContent = 'No access';
+        button.textContent = 'Error';
       }
-    }
+      button.disabled = false;
+    });
 
-    if (document.cookie.split(';').some(c => c.trim().startsWith('rss-auth='))) {
-      startApp();
-    } else {
-      document.getElementById('passkey-signin').addEventListener('click', passkeyAuth);
-      passkeyAuth();
-    }
+    fetch('/api/login').then(res => { if (res.ok) startApp(); });
   </script>
 </body>
 </html>

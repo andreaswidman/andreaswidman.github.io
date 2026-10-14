@@ -1,4 +1,5 @@
 import crypto from 'crypto';
+import { hasValidSession } from './_session.js';
 
 const TARGET_BLOG = 'thiscouldbeawesome.tumblr.com';
 
@@ -32,10 +33,7 @@ function buildAuthHeader(method, url, bodyParams, consumerKey, consumerSecret, a
 export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
-  const secret = req.headers['x-reblog-secret'];
-  if (!secret || secret !== process.env.REBLOG_SECRET) {
-    return res.status(401).json({ error: 'Unauthorized' });
-  }
+  if (!hasValidSession(req)) return res.status(401).json({ error: 'Unauthorized' });
 
   const { postUrl } = req.query;
   if (!postUrl) return res.status(400).json({ error: 'Missing postUrl' });
