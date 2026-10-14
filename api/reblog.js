@@ -73,7 +73,10 @@ export default async function handler(req, res) {
     const infoRes = await fetch(infoUrl);
     const infoJson = await infoRes.json();
     reblogKey = infoJson?.response?.posts?.[0]?.reblog_key;
-    if (!reblogKey) return res.status(502).json({ error: 'Could not retrieve reblog key' });
+    if (!reblogKey) {
+      const detail = infoJson?.meta?.msg ? `: Tumblr ${infoRes.status} ${infoJson.meta.msg}` : '';
+      return res.status(502).json({ error: 'Could not retrieve reblog key' + detail });
+    }
   } catch {
     return res.status(502).json({ error: 'Failed to fetch post info from Tumblr' });
   }
