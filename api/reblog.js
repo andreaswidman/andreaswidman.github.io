@@ -97,7 +97,8 @@ export default async function handler(req, res) {
     });
     const reblogJson = await reblogRes.json();
     if (!reblogRes.ok) {
-      return res.status(reblogRes.status).json({ error: reblogJson?.meta?.msg || 'Tumblr reblog failed' });
+      const detail = reblogJson?.errors?.[0]?.detail || reblogJson?.meta?.msg || 'reblog failed';
+      return res.status(reblogRes.status).json({ error: `Tumblr ${reblogRes.status}: ${detail}` });
     }
     return res.status(200).json({ ok: true });
   } catch {
