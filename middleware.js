@@ -46,9 +46,9 @@ const LOGIN_PAGE = `<!doctype html>
 </body>
 </html>`;
 
-export default function middleware(request) {
+export default async function middleware(request) {
   const { pathname } = new URL(request.url);
-  if (OPEN.has(pathname) || hasValidSession(request.headers.get('cookie'))) return next();
+  if (OPEN.has(pathname) || await hasValidSession(request.headers.get('cookie'))) return next();
 
   const headers = { 'Cache-Control': 'no-store', 'X-Robots-Tag': 'noindex' };
   if (pathname.startsWith('/api/')) return new Response(null, { status: 401, headers });

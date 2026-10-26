@@ -16,6 +16,6 @@ export default async function handler(req, res) {
     return res.status(401).json({ error: 'Wrong password' });
   }
 
-  res.setHeader('Set-Cookie', sessionCookie());
+  res.setHeader('Set-Cookie', await sessionCookie());
   return res.status(200).json({ ok: true });
 }
