@@ -69,6 +69,8 @@
   button:disabled { opacity: 0.6; }
   button svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
   .status { margin: 12px 0 0; min-height: 1.4em; text-align: center; font-size: 15px; color: var(--note); }
+  .status strong { color: var(--strong); font-weight: 500; }
+  .share { width: 1.1em; height: 1.1em; vertical-align: -0.2em; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 </style>
 </head>
 <body>
@@ -134,11 +136,13 @@
     await subscription.unsubscribe();
   }
 
+  // iOS only allows push from the Home Screen app, and a page can't add itself, so point at the Share button.
+  function showInstallHint() {
+    $('status').innerHTML = 'For reminders, tap <svg class="share" viewBox="0 0 24 24" aria-label="Share"><path d="M12 3v12M8 7l4-4 4 4M6 11H5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-8a1 1 0 0 0-1-1h-1"/></svg> then <strong>Add to Home Screen</strong>.';
+  }
+
   async function setUpReminders() {
-    if (!supported) {
-      $('status').textContent = 'Add this page to your Home Screen to turn on reminders.';
-      return;
-    }
+    if (!supported) return showInstallHint();
     const registration = await navigator.serviceWorker.register('/garbage/sw.js', { scope: '/garbage/' });
     await navigator.serviceWorker.ready;
     showState(!!await registration.pushManager.getSubscription());

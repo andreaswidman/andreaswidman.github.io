@@ -38,7 +38,7 @@ const send = (res, status, body, type = 'application/json') => {
 const FORCE = {
   on: "showState(true); $('remind').hidden = false;",
   error: "showState(false); $('remind').hidden = false; $('status').textContent = 'Reminder limit reached. Remove an old device first.';",
-  unsupported: "$('remind').hidden = true; $('status').textContent = 'Add this page to your Home Screen to turn on reminders.';",
+  unsupported: "$('remind').hidden = true; showInstallHint();",
 };
 
 const pinScheme = (html, scheme) => scheme ? html.replace('@media (prefers-color-scheme: dark)', scheme === 'dark' ? '@media all' : '@media not all') : html;
