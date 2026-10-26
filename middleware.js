@@ -20,7 +20,7 @@ const LOGIN_PAGE = `<!doctype html>
   body { font: 17px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin: 0; padding: 1rem; box-sizing: border-box; min-height: 100dvh; display: grid; place-items: center; background: #f7f7f5; color: #111; }
   form { display: grid; gap: 8px; }
   @media (prefers-color-scheme: dark) { body { background: #000; color: #f5f5f5; } button { background: #1c1c1e; color: #f5f5f7; } }
-  input { font: inherit; padding: 6px 10px; }
+  input { font: inherit; font-size: 22px; padding: 10px 14px; }
   button { font: inherit; min-height: 44px; border: 0; border-radius: 999px; background: #ececea; color: #111; }
   p { color: #767676; margin: 8px 0 0; min-height: 1.4em; }
 </style>
