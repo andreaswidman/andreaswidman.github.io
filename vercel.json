@@ -11,6 +11,16 @@
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=60, must-revalidate" }
       ]
+    },
+    {
+      "source": "/garbage(/.*)?",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "noindex" }
+      ]
     }
+  ],
+  "crons": [
+    { "path": "/api/garbage/cron?utc=19", "schedule": "0 19 * * *" },
+    { "path": "/api/garbage/cron?utc=20", "schedule": "0 20 * * *" }
   ]
 }

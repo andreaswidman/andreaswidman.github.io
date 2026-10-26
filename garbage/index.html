@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Garbage</title>
+<link rel="manifest" href="/garbage/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/garbage/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Garbage">
+<meta name="theme-color" content="#f7f7f5" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --strong: #111;
+    --soft: #86868b;
+    --note: #6e6e73;
+    --pill: #ececea;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #000;
+      --strong: #f5f5f7;
+      --soft: #8e8e93;
+      --note: #98989d;
+      --pill: #1c1c1e;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    padding: 72px 24px max(24px, env(safe-area-inset-bottom));
+    background: var(--bg);
+    color: var(--soft);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  main { flex: 1; }
+  h1 {
+    margin: 0 0 20px;
+    font-size: clamp(30px, 8.7vw, 40px);
+    line-height: 1.25;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+  h1 strong { color: var(--strong); font-weight: 500; }
+  .note { margin: 0; font-size: 17px; color: var(--note); }
+  .note:empty { display: none; }
+  button {
+    align-self: center;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+    padding: 0 20px;
+    border: 0;
+    border-radius: 999px;
+    background: var(--pill);
+    color: var(--strong);
+    font: inherit;
+    font-size: 17px;
+    white-space: nowrap;
+  }
+  button[hidden] { display: none; }
+  button:disabled { opacity: 0.6; }
+  button svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .status { margin: 12px 0 0; min-height: 1.4em; text-align: center; font-size: 15px; color: var(--note); }
+</style>
+</head>
+<body>
+<main>
+  <h1 id="sentence" aria-live="polite"></h1>
+  <p class="note" id="note"></p>
+</main>
+<button id="remind" hidden>
+  <svg id="icon" viewBox="0 0 24 24" aria-hidden="true"></svg>
+  <span id="label">Remind me</span>
+</button>
+<p class="status" id="status" role="status"></p>
+<script>
+  const BELL = '<path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/>';
+  const CHECK = '<path d="M20 6 9 17l-5-5"/>';
+  const $ = id => document.getElementById(id);
+  const supported = 'serviceWorker' in navigator && 'PushManager' in window && 'Notification' in window;
+  const vapidKey = supported ? fetch('/api/garbage/subscribe').then(res => res.json()) : null;
+
+  async function showPickup() {
+    const { parts, note } = await (await fetch('/api/garbage/next')).json();
+    $('sentence').replaceChildren(...parts.map(p => {
+      if (!p.strong) return document.createTextNode(p.t);
+      const strong = document.createElement('strong');
+      strong.textContent = p.t;
+      return strong;
+    }));
+    $('note').textContent = note;
+  }
+
+  function showState(on) {
+    $('icon').innerHTML = on ? CHECK : BELL;
+    $('label').textContent = on ? 'Reminders on' : 'Remind me';
+  }
+
+  const post = (url, body) => fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body),
+  });
+
+  function urlBase64ToUint8Array(base64) {
+    const padded = (base64 + '='.repeat((4 - base64.length % 4) % 4)).replace(/-/g, '+').replace(/_/g, '/');
+    return Uint8Array.from(atob(padded), c => c.charCodeAt(0));
+  }
+
+  async function subscribe(registration) {
+    if (await Notification.requestPermission() !== 'granted') throw new Error('Notifications are blocked for this page.');
+    const { publicKey } = await vapidKey;
+    const subscription = await registration.pushManager.subscribe({
+      userVisibleOnly: true,
+      applicationServerKey: urlBase64ToUint8Array(publicKey),
+    });
+    const res = await post('/api/garbage/subscribe', subscription.toJSON());
+    if (!res.ok) {
+      await subscription.unsubscribe();
+      throw new Error((await res.json()).error || 'Could not turn on reminders.');
+    }
+  }
+
+  async function unsubscribe(subscription) {
+    await post('/api/garbage/unsubscribe', { endpoint: subscription.endpoint });
+    await subscription.unsubscribe();
+  }
+
+  async function setUpReminders() {
+    if (!supported) {
+      $('status').textContent = 'Add this page to your Home Screen to turn on reminders.';
+      return;
+    }
+    const registration = await navigator.serviceWorker.register('/garbage/sw.js', { scope: '/garbage/' });
+    await navigator.serviceWorker.ready;
+    showState(!!await registration.pushManager.getSubscription());
+    $('remind').hidden = false;
+
+    $('remind').addEventListener('click', async () => {
+      $('remind').disabled = true;
+      $('status').textContent = '';
+      try {
+        const subscription = await registration.pushManager.getSubscription();
+        if (subscription) await unsubscribe(subscription);
+        else await subscribe(registration);
+        showState(!subscription);
+      } catch (err) {
+        $('status').textContent = err.message;
+      }
+      $('remind').disabled = false;
+    });
+  }
+
+  showPickup();
+  setUpReminders();
+</script>
+</body>
+</html>

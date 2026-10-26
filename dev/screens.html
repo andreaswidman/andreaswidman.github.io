@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Garbage screens</title>
+<style>
+  body { font: 15px/1.4 -apple-system, BlinkMacSystemFont, sans-serif; margin: 24px; background: #fafaf8; color: #111; }
+  h1, h2 { font-weight: 500; }
+  h1 { font-size: 22px; margin: 0 0 16px; }
+  h2 { font-size: 17px; margin: 40px 0 12px; }
+  .grid { display: flex; flex-wrap: wrap; gap: 32px; }
+  figure { margin: 0; }
+  figcaption { margin-top: 8px; text-align: center; color: #555; }
+  iframe { width: 390px; height: 760px; border: 10px solid #1a1a1a; border-radius: 48px; background: #fff; }
+  button { font: inherit; padding: 8px 16px; border-radius: 999px; border: 1px solid #ccc; background: #fff; cursor: pointer; }
+  .banner { width: 390px; padding: 12px 14px; border-radius: 20px; background: rgba(240, 240, 240, 0.9); box-shadow: 0 1px 6px rgba(0, 0, 0, .15); }
+  .banner b { display: block; }
+  pre { background: #eee; padding: 12px; border-radius: 8px; overflow: auto; max-width: 600px; }
+</style>
+</head>
+<body>
+<h1>/garbage screens</h1>
+<div class="grid" id="grid"></div>
+
+<h2>Notification text</h2>
+<div class="grid" id="banners"></div>
+
+<h2>Real push to this browser</h2>
+<p>Open <a href="/garbage/" target="_blank">/garbage/</a> in a tab, tap <em>Remind me</em> and allow notifications. Then send:</p>
+<p>
+  <button data-today="2026-11-02">Glass and metal (eve of 3 Nov)</button>
+  <button data-today="2026-10-29">Rest and food, paper and plastic (eve of 30 Oct)</button>
+</p>
+<pre id="result">Nothing sent yet.</pre>
+
+<script>
+  const screens = [
+    ['/garbage/?today=2026-10-26&scheme=light', 'Light, regular day'],
+    ['/garbage/?today=2026-11-02&scheme=light&force=on', 'Day before, reminders on'],
+    ['/garbage/?today=2026-10-26&scheme=dark', 'Dark mode'],
+    ['/garbage/?today=2026-11-03&scheme=light', 'Pickup day'],
+    ['/garbage/?today=2026-10-26&scheme=light&force=error', 'Limit reached'],
+    ['/garbage/?today=2026-10-26&scheme=light&force=unsupported', 'iPhone Safari tab (no push)'],
+    ['/dev/login?scheme=light', 'Login'],
+  ];
+  document.getElementById('grid').innerHTML = screens.map(([src, label]) =>
+    `<figure><iframe src="${src}" title="${label}"></iframe><figcaption>${label}</figcaption></figure>`).join('');
+
+  const banner = async (today, label) => {
+    const { title, body } = await (await fetch('/dev/reminder?today=' + today)).json();
+    return `<figure><div class="banner"><b>${title}</b>${body}</div><figcaption>${label}</figcaption></figure>`;
+  };
+  Promise.all([banner('2026-11-02', 'One bin'), banner('2026-10-29', 'Several bins')])
+    .then(html => document.getElementById('banners').innerHTML = html.join(''));
+
+  document.querySelectorAll('button[data-today]').forEach(button => button.addEventListener('click', async () => {
+    const res = await fetch('/dev/push?today=' + button.dataset.today, { method: 'POST' });
+    document.getElementById('result').textContent = JSON.stringify(await res.json(), null, 2);
+  }));
+</script>
+</body>
+</html>
