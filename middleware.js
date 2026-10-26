@@ -2,6 +2,7 @@ import { next } from '@vercel/functions';
 import { hasValidSession } from './api/garbage/_session.js';
 
 export const config = {
+  runtime: 'nodejs',
   matcher: ['/garbage', '/garbage/', '/garbage/index.html', '/api/garbage/:path*'],
 };
 
